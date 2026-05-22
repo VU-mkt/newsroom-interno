@@ -63,7 +63,7 @@
     display: grid; grid-template-columns: 1fr auto 1fr;
     align-items: center; gap: 24px;
   }
-  .masthead-left { }
+  .masthead-left { display: flex; align-items: center; justify-content: flex-start; }
   .masthead-center {
     display: flex; flex-direction: column;
     align-items: center; gap: 8px;
@@ -394,13 +394,9 @@
 <!-- ============ MASTHEAD ============ -->
 <header class="masthead">
   <div class="masthead-inner">
-    <div class="masthead-left"></div>
-    <a class="masthead-center" href="#home">
-      <img src="Logo.blanco.png" alt="VU" style="height: 64px; width: auto; display: block;">
-      <span class="newsroom-label">Newsroom Interno</span>
-    </a>
-    <div class="masthead-right">
+    <div class="masthead-left">
       <a class="website-btn" href="https://vusecurity.com" target="_blank" rel="noopener" title="Ir a vusecurity.com" aria-label="Ir a vusecurity.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor<div class="masthead-right"></div> <a class="website-btn" href="https://vusecurity.com" target="_blank" rel="noopener" title="Ir a vusecurity.com" aria-label="Ir a vusecurity.com">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="9"></circle>
           <path d="M3 12h18"></path>
