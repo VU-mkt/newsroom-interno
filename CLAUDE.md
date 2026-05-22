@@ -4,6 +4,54 @@ Instrucciones para integrar VU ONE en cualquier proyecto Next.js 16 (App Router)
 
 ---
 
+## 🗺 Este proyecto en particular — VU Newsroom Interno (mayo 2026)
+
+Este repo (`vu-mkt/newsroom-interno`) es el **deploy con MFA** del VU Newsroom. **No es el origen del contenido** — solo la capa de auth.
+
+### Arquitectura completa
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│ Routine "vu-newsroom-curaduria-semanal" (Claude Cowork)      │
+│   ↓ pushea contenido diario via GitHub API                   │
+│ vu-mkt/newsroom (repo PRIVADO, origen del HTML)              │
+│   ↓ GitHub Action .github/workflows/sync-to-interno.yml      │
+│ vu-mkt/newsroom-interno (ESTE repo, contenido + auth)        │
+│   ↓ Vercel auto-deploy                                       │
+│ newsroom-interno.vercel.app  (sitio final con MFA)           │
+│   Login: VU ONE Email OTP @vusecurity.com                    │
+└──────────────────────────────────────────────────────────────┘
+```
+
+### Routing de cambios — dónde editar cada cosa
+
+Cuando el usuario diga "cambiá X del newsroom", usar esta tabla para decidir qué repo tocar. **Nunca editar `content/vu_newsroom.html` directamente en ESTE repo** — el Action lo va a sobrescribir en el próximo run de la Routine.
+
+| Tipo de cambio | Repo / archivo a editar | Cómo se aplica |
+|---|---|---|
+| Noticias / briefings / items del día | NO tocar. La Routine lo hace sola diariamente. | Sync automático |
+| HTML, CSS, estructura del newsroom (masthead, layout, copy, secciones, colores del briefing) | `vu-mkt/newsroom/vu_newsroom.html` via GitHub API con `$env:GITHUB_TOKEN` | Push → Action sync → Vercel redeploy |
+| Logos / imágenes del newsroom | `vu-mkt/newsroom/*.png` via GitHub API | Push → Action sync → Vercel redeploy |
+| Página `/login`, dashboard, flujo de auth, env vars | ESTE repo (`newsroom-interno`) → `app/login/page.tsx`, `app/route.ts`, `lib/session.ts`, `app/api/auth/*` | Push → Vercel redeploy |
+| Botón flotante de logout (estilo, posición) | ESTE repo → `app/route.ts` (constante `LOGOUT_BUTTON`, inyectado en runtime antes de `</body>`) | Push → Vercel redeploy |
+| Sync entre repos / Action | `vu-mkt/newsroom/.github/workflows/sync-to-interno.yml` | Push → corre en el próximo evento |
+| Reglas/criterios de la Routine | `C:/Users/JuanLundahl/.claude/scheduled-tasks/vu-newsroom-curaduria-semanal/SKILL.md` | Activo en el próximo run |
+| Skill canónica del VU Journalist | `C:/Users/JuanLundahl/OneDrive*/Documentos/Claude Cowork/Agents/VU Division/VU Journalist/marketing-vu-journalist.md` | Activo en próxima invocación |
+| Permisos PowerShell de la Routine (zero prompts) | `C:/Users/JuanLundahl/OneDrive*/Documentos/Claude Cowork/Outputs/VU Journalist/.claude/settings.json` | Activo inmediato |
+
+### Patrones recurrentes
+
+- **Edición del HTML del newsroom**: usar script PowerShell con `Invoke-RestMethod` + `$env:GITHUB_TOKEN`. **Importante**: si hacés múltiples reemplazos, NO calcular índices de string ANTES de modificar — usar `String.Replace` toda en una pasada, o re-encontrar índices después de cada `.Replace`. (Bug histórico: 2026-05-22, corte mid-SVG por índice stale.)
+- **El logout button se inyecta en runtime** en `app/route.ts` justo antes de `</body>`. NO está hardcoded en el HTML del newsroom (eso garantiza que el sync no lo pise).
+- **Schema de claims VU ONE en `demos.prod.vu-one.com` business Marketing**: el claim key correcto es `email_address` (singular, string), NO `email_addresses` (plural, array). Ver `app/api/auth/send-otp/route.ts`.
+
+### Drift conocido
+
+- `lib/session.ts` originalmente usaba `process.env.AUTH_SECRET` — corregido a `SESSION_SECRET` para alinear con `.env.example`.
+- `proxy.ts` (middleware) fue **eliminado** por bug Next.js 16 + Vercel ([thread](https://community.vercel.com/t/next-js-16-middleware-returns-404-sitewide-on-vercel/39029)). La auth ahora vive en `app/route.ts` como route handler.
+
+---
+
 ## ⚠ Drift status (mayo 2026)
 
 El SDK cubre la integración VU ONE base (auth + face) pero NO incluye los helpers más recientes del main app. Antes de usar el SDK en producción, verificar si necesitás portear:
