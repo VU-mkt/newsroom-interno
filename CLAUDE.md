@@ -66,7 +66,7 @@ VU ONE usa `x-original-host` para identificar a qué instancia apuntar en ambien
 
 ### Claim keys
 
-- **Email**: usar `email_addresses: { value: [email], isIdentifier: true }`. El claim key `email` (sin `_addresses`) devuelve error 4000 "Name is required".
+- **Email**: usar `email_address: { value: email, isIdentifier: true }` (singular, valor string). La versión anterior de este doc decía `email_addresses` (plural) y `value: [email]` (array) — **incorrecto** en al menos `demos.prod.vu-one.com` business Marketing, devuelve `4312 ACCOUNT.CLAIM_SCHEMA_VALIDATION_ERROR`. Verificar el schema real del tenant con `GET /api/v1/businesses/{id}/identifier-claim-schema?accountType=CUSTOMER` antes de asumir el nombre.
 - **Claims nuevos**: usar `POST /api/v1/claim-values`. El `PATCH /api/v1/owners/{type}/{id}/claim-values/{key}` solo funciona si el claim ya existe (error 5400 si no existe).
 
 ### TOTP por accountName
@@ -153,7 +153,7 @@ const body = { accountId, ...FACE_DEVICE, selfieList: [...] };
 
 | Código | Causa | Fix |
 |--------|-------|-----|
-| 4000 "Name is required" | Claim key `email` inválido | Usar `email_addresses` como claim key |
+| 4312 "ACCOUNT.CLAIM_SCHEMA_VALIDATION_ERROR" | Claim key o tipo de valor no coincide con el schema del tenant | Verificar schema con `GET /api/v1/businesses/{id}/identifier-claim-schema?accountType=CUSTOMER`. Para `demos.prod.vu-one.com` Marketing: `email_address` (singular) con `value` como string |
 | 5000 "Identifier claim already exists" | Cuenta ya existe con ese email | Buscar con `GET /api/v1/accounts/identifier?filter={email}&identifierType=ALL`, leer `content[0].accountId` |
 | 5400 "Claim value not found" | PATCH en claim inexistente | Usar `POST /api/v1/claim-values` para crear |
 | 409 "TOTP already exists" | Re-enroll de TOTP | DELETE el factor existente y volver a POST |

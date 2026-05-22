@@ -56,11 +56,10 @@ export async function POST(req: NextRequest) {
 
       const identity = await identityRes.json();
 
-      // NOTA: Sin 'claims' porque el schema de este business no define ninguno
-      // (additionalProperties: false + properties: {}). El admin de VU ONE
-      // debe definir el schema (ej. email_addresses) para soportar dedupe.
-      // Mientras tanto, cada login crea identity+account nuevos (no podemos
-      // buscar por claim). El OTP se envía igual via emailAddress (paso 4).
+      // NOTA: el claim key correcto para este tenant es 'email_address'
+      // (singular) y el valor debe ser STRING (no array). El CLAUDE.md
+      // del SDK estaba mal: usaba 'email_addresses' (plural) + array.
+      // Verificado via GET /api/v1/businesses/{id}/identifier-claim-schema?accountType=CUSTOMER
       const accountRes = await fetch(`${baseUrl}/api/v1/accounts`, {
         method: 'POST',
         headers,
@@ -69,6 +68,7 @@ export async function POST(req: NextRequest) {
           businessId,
           identityId: identity.id,
           lifecycleState: 'ACTIVE',
+          claims: { email_address: { value: email, isIdentifier: true } },
         }),
       });
 
