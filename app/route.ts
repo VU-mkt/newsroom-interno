@@ -25,7 +25,13 @@ export async function GET(req: NextRequest) {
       path.join(process.cwd(), 'content', 'vu_newsroom.html'),
       'utf-8'
     );
-    return new NextResponse(html, {
+
+    // Inyectar botón de logout antes de </body>. Se hace en runtime para que
+    // /content/vu_newsroom.html sea byte-idéntico al original que la Routine
+    // pushea en vu-mkt/newsroom (sync via GitHub Action no se interfiere).
+    const finalHtml = html.replace(/<\/body>/i, `${LOGOUT_BUTTON}\n</body>`);
+
+    return new NextResponse(finalHtml, {
       status: 200,
       headers: {
         'content-type': 'text/html; charset=utf-8',
@@ -37,3 +43,28 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'Newsroom not found', detail: message }, { status: 500 });
   }
 }
+
+const LOGOUT_BUTTON = `
+<!-- VU ONE Auth: floating logout button (injected at runtime) -->
+<style>
+  #vuone-logout-btn {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 9999;
+    padding: 8px 14px;
+    font: 500 13px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background 0.15s ease;
+  }
+  #vuone-logout-btn:hover { background: rgba(0, 0, 0, 0.92); }
+</style>
+<form id="vuone-logout-form" action="/api/auth/logout" method="GET" style="margin:0;">
+  <button id="vuone-logout-btn" type="submit" title="Cerrar sesión VU ONE">Cerrar sesión</button>
+</form>`;

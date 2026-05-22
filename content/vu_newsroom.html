@@ -465,10 +465,43 @@ const COUNTRIES = {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  date: '2026-05-20',
-  publishedAt: '2026-05-21T08:00:00Z',
+  date: '2026-05-21',
+  publishedAt: '2026-05-22T08:00:00Z',
   sections: {
     global: [
+      {
+        id: 'nyc-health-breach-biometrics-1-8m-may21',
+        title: 'NYC Health breach expone huellas dactilares y palmares de 1,8 millones de personas: los datos biométricos no pueden "reemitirse"',
+        summary: 'Un breach en un proveedor externo de NYC Health + Hospitals comprometió datos de 1,8 millones de personas entre noviembre de 2025 y el 2 de febrero de 2026, incluyendo historial médico, documentos gubernamentales (SSN, pasaportes) y biometría: huellas dactilares y marcas palmares. La alerta pública fue emitida recién el 18 de mayo de 2026. A diferencia de contraseñas o números de cuenta, las huellas son permanentes —"una vez comprometidas, los afectados cargan esa exposición para siempre". El incidente expone la asimetría crítica del dato biométrico en sistemas de salud: la misma característica que lo convierte en autenticador de alta garantía lo transforma en el dato más irreversible de todos.',
+        sourceUrl: 'https://idtechwire.com/nyc-health-hospitals-data-breach-exposed-fingerprints-and-palm-prints/',
+        sourceName: 'ID Tech Wire',
+        date: '2026-05-21', language: 'en', highRelevance: true,
+        topic: 'breach',
+        vertical: 'banca',
+        image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1400&q=80'
+      },
+      {
+        id: 'estonia-eudi-wallet-21m-may21',
+        title: 'Estonia licita €21,65M para su billetera de identidad digital europea: de los pilotos a producción soberana con la arquitectura EUDI',
+        summary: 'La Autoridad de Sistemas de Información de Estonia (RIA) lanzó una licitación de €21,65 millones para construir y operar una billetera de identidad digital nacional conforme a la arquitectura EUDI (European Digital Identity Wallet). El contrato abarca 96 meses —cinco años operativos post-lanzamiento— con entre tres y cinco empresas en la segunda etapa; plazo de presentación: 29 de junio de 2026. El movimiento consolida el giro de la UE desde pilotos hacia despliegues de producción en todos los estados miembros. Estonia —líder mundial en gobierno digital— marca el ritmo del estándar EUDI que llegará como referencia regulatoria a LATAM y presionará a los registros de identidad nacionales a adoptar modelos de credencial selectiva interoperable.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/estonia-launches-e21-65m-procurement-for-eu-digital-identity-wallet',
+        sourceName: 'Biometric Update',
+        date: '2026-05-21', language: 'en', highRelevance: false,
+        topic: 'regulacion',
+        vertical: 'gobierno',
+        image: 'https://images.unsplash.com/photo-1569025690938-a00729c9e1f9?w=1400&q=80'
+      },
+      {
+        id: 'ai-agent-credentials-1password-keycard-may21',
+        title: '1Password y Keycard presentan el primer estándar de delegación de credenciales para agentes IA autónomos: identidad verificable y mínimo privilegio',
+        summary: '1Password anunció un servidor MCP que inyecta secretos cifrados en runtime sin escribirlos en disco ni exponerlos al contexto del modelo, en integración con el agente de coding OpenAI Codex; Keycard lanzó una plataforma multi-agente que asigna identidad verificable a cada agente mediante OAuth 2.0 Token Exchange sin API keys estáticas de larga vida. Las soluciones responden a un vacío crítico: los agentes IA autónomos actuales operan con credenciales diseñadas para humanos, lo que amplía masivamente la superficie de ataque. La formalización de estándares de identidad para agentes IA es el próximo frente técnico de la industria y define el espacio donde VU ONE —como plataforma de autenticación de agentes— tiene posición relevante.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/1password-keycard-present-tools-for-secure-ai-agent-credential-delegation',
+        sourceName: 'Biometric Update',
+        date: '2026-05-21', language: 'en', highRelevance: false,
+        topic: 'agentes IA / identidad',
+        vertical: 'fintech',
+        image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1400&q=80'
+      },
       {
         id: 'iproov-injection-1151pct-assurance-may20',
         title: 'Ataques de inyección biométrica crecen 1.151% en un año: la industria abandona el liveness básico y exige "presencia genuina"',
@@ -1100,7 +1133,19 @@ const briefing = {
           vertical: 'fintech', topic: 'fraude / account takeover',
           image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1400&q=80'
         }
-      ], chile: [], peru: [], uruguay: [], ecuador: [],
+      ], chile: [], peru: [
+        {
+          id: 'peru-sismate-hack-alerta-falsa-may21',
+          title: 'Hackeo al Sismate: alerta falsa de terremoto 8,7 llega a millones de celulares en Perú — "Deface Perú" accedió al sistema de emergencias',
+          summary: 'El 20 de mayo entre las 19 y 20 hs, el grupo hackivista "Deface Perú" accedió a la cuenta del proveedor Everbridge del Sismate —el sistema de mensajería de alerta temprana del Ministerio de Transportes y Comunicaciones del Perú— y difundió una falsa alerta de terremoto 8,7 con amenaza de tsunami en la costa central, seguida de mensajes políticos que mencionaban "fraude electoral" y al streamer Curwen, a días de la segunda vuelta presidencial del 7 de junio. El Sismate opera vía Cell Broadcast, que llega a millones de dispositivos sin requerir internet. El incidente expone la vulnerabilidad de infraestructura crítica de emergencias ante ataques a cuentas de proveedores y es parte de un historial de ataques de Deface Perú a plataformas gubernamentales desde 2024.',
+          sourceUrl: 'https://www.infobae.com/peru/2026/05/21/hackean-el-sismate-y-envian-falsa-alerta-de-terremoto-87-en-peru-con-amenaza-de-tsunami-mencionan-a-curwen-y-fraude-electoral/',
+          sourceName: 'Infobae Perú',
+          date: '2026-05-21', language: 'es', highRelevance: true,
+          topic: 'breach',
+          vertical: 'gobierno',
+          image: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=1400&q=80'
+        }
+      ], uruguay: [], ecuador: [],
       costa_rica: [], panama: [], bolivia: [], paraguay: [],
       venezuela: [
         {
@@ -1150,6 +1195,39 @@ const briefing = {
       ]
     },
     competencia: [
+      {
+        id: 'unico-kyc-siloed-fraud-report-may21',
+        title: 'Unico + ID Tech: los sistemas KYC en silos clasifican mal el fraude — un token biométrico intentó apertura en 30 instituciones',
+        summary: 'Un white paper de ID Tech y Unico revela que el fraude de nueva cuenta subió 31% interanual (5,4 millones de víctimas en 2025) mientras las instituciones tratan la pérdida crediticia —el síntoma— en vez del onboarding comprometido —el origen. Los modelos KYC 1:1 no detectan reutilización biométrica coordinada: Unico documentó casos donde una sola firma biométrica intentó apertura en más de 150 ocasiones en ~30 instituciones antes de ser detectada. El reporte aboga por arquitecturas "network-aware" con inteligencia compartida entre instituciones para detectar anillos de fraude e identidades sintéticas a escala —el mismo espacio que VU tiene en roadmap con Identity Link.',
+        sourceUrl: 'https://idtechwire.com/special-report-siloed-kyc-systems-dangerously-misclassify-fraud/',
+        sourceName: 'ID Tech Wire / Unico',
+        date: '2026-05-21', language: 'en', highRelevance: true,
+        competitor: 'Unico', topic: 'fraude / KYC',
+        vertical: 'banca',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=80'
+      },
+      {
+        id: 'clear-q1-2026-results-may21',
+        title: 'CLEAR supera USD 253M en ingresos en Q1 2026 (+19,7%) con 41 millones de miembros y presencia federal via GDIT',
+        summary: 'CLEAR reportó ingresos de USD 253 millones en Q1 2026 (+19,7% interanual) con bookings de USD 291,7M (+40,8%) y EBITDA ajustado de USD 80,6M (margen 31,9%). Los miembros activos CLEAR+ alcanzaron 8,2 millones (+13%) dentro de un total de 41 millones; sus eGates biométricas operan en 43 aeropuertos con rollout completo planificado para 2026. La alianza con GDIT para llevar CLEAR1 —verificación sin contraseña combinando documento + selfie biométrica— a agencias federales de salud y civiles convierte a CLEAR en capa de infraestructura soberana de identidad, el mismo posicionamiento que VU persigue en LATAM. CEO Caryn Seidman Becker: "la identidad ya no es una feature, es fundacional".',
+        sourceUrl: 'https://www.biometricupdate.com/202605/clear-marks-successful-q1-with-new-airport-deployment-partnership',
+        sourceName: 'Biometric Update / CLEAR',
+        date: '2026-05-21', language: 'en', highRelevance: false,
+        competitor: 'CLEAR', topic: 'identidad digital',
+        vertical: 'gobierno',
+        image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1400&q=80'
+      },
+      {
+        id: 'idemia-clear-dot-motus-biometric-may21',
+        title: 'IDEMIA + CLEAR ganan el registro biométrico federal de camioneros en EE.UU.: 50.000 carriers en los primeros días, fin del fraude de identidad múltiple',
+        summary: 'El Departamento de Transporte de EE.UU. desplegó Motus, el nuevo sistema biométrico que reemplaza el Portal FMCSA —que permitía registro con solo nombre y email, habilitando identidades múltiples para evadir sanciones. IDEMIA Public Security provee el motor de matching facial y CLEAR aporta la analítica de detección de fraude; el sistema cruza el Drug and Alcohol Clearinghouse para bloquear conductores con sanciones activas. En los primeros días se registraron 50.000 carriers. El despliegue Motus es un caso de referencia para LATAM: mandatos regulatorios sectoriales que exigen biometría para combatir fraude de identidad en transporte y logística, donde plataformas como VU pueden replicar el modelo.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/us-dot-launches-biometric-trucker-registry-with-idemia-clear-tech',
+        sourceName: 'Biometric Update / US DoT',
+        date: '2026-05-21', language: 'en', highRelevance: false,
+        competitor: 'IDEMIA', topic: 'biometria',
+        vertical: 'gobierno',
+        image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1400&q=80'
+      },
       {
         id: 'veriff-deepfake-report-quiz-may20',
         title: 'Veriff lanza quiz de deepfakes: solo 55% de detección promedio humana — "apenas mejor que lanzar una moneda"',
@@ -1313,7 +1391,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO  = '2026-05-21';
+const TODAY_ISO  = '2026-05-22';
 
 function fmtDate(iso) {
   if (!iso) return '—';
@@ -1608,29 +1686,5 @@ document.addEventListener('DOMContentLoaded', () => {
   route();
 });
 </script>
-
-<!-- VU ONE Auth: floating logout button (injected) -->
-<style>
-  #vuone-logout-btn {
-    position: fixed;
-    top: 16px;
-    right: 16px;
-    z-index: 9999;
-    padding: 8px 14px;
-    font: 500 13px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.78);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 999px;
-    cursor: pointer;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    transition: background 0.15s ease;
-  }
-  #vuone-logout-btn:hover { background: rgba(0, 0, 0, 0.92); }
-</style>
-<form id="vuone-logout-form" action="/api/auth/logout" method="GET" style="margin:0;">
-  <button id="vuone-logout-btn" type="submit" title="Cerrar sesión VU ONE">Cerrar sesión</button>
-</form>
 </body>
 </html>
