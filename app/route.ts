@@ -52,18 +52,22 @@ const LOGOUT_BUTTON = `
     top: 16px;
     right: 16px;
     z-index: 9999;
-    padding: 8px 14px;
+    padding: 10px 18px;
     font: 500 13px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.78);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    background: #F15E37;
+    border: none;
     border-radius: 999px;
     cursor: pointer;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    transition: background 0.15s ease;
+    box-shadow: 0 2px 8px rgba(241,94,55,0.35);
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
   }
-  #vuone-logout-btn:hover { background: rgba(0, 0, 0, 0.92); }
+  #vuone-logout-btn:hover {
+    background: #C44826;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(241,94,55,0.45);
+  }
+  #vuone-logout-btn:active { transform: translateY(0); }
 </style>
 <form id="vuone-logout-form" action="/api/auth/logout" method="GET" style="margin:0;">
   <button id="vuone-logout-btn" type="submit" title="Cerrar sesión VU ONE">Cerrar sesión</button>
