@@ -73,6 +73,11 @@
     letter-spacing: 0.18em; color: var(--vu-gris-light);
     text-transform: uppercase;
   }
+  .newsroom-sublabel {
+    font-family: var(--font-body); font-size: 12px;
+    color: var(--vu-gris-light); font-style: italic;
+    margin-top: 2px;
+  }
   .masthead-right {
     display: flex; align-items: center; justify-content: flex-end;
   }
@@ -81,7 +86,7 @@
   .website-btn {
     display: inline-flex; align-items: center; justify-content: center;
     width: 44px; height: 44px;
-    background: var(--vu-naranja); color: var(--vu-negro);
+    background: var(--vu-naranja); color: var(--vu-blanco);
     border-radius: 12px;
     transition: all 0.15s ease;
     box-shadow: 0 2px 8px rgba(241,94,55,0.25);
@@ -120,7 +125,7 @@
   }
   .toc-link:hover { border-color: var(--vu-naranja); color: var(--vu-naranja); }
   .toc-link.active {
-    background: var(--vu-naranja); color: var(--vu-negro);
+    background: var(--vu-naranja); color: var(--vu-blanco);
     border-color: var(--vu-naranja);
   }
   .toc-link.active .count { background: rgba(0,0,0,0.18); color: var(--vu-negro); border-color: transparent; }
@@ -141,6 +146,11 @@
     display: flex; gap: 16px; flex-wrap: wrap; align-items: center;
     font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em;
     color: var(--vu-gris-light); text-transform: uppercase;
+  }
+  .newsroom-sublabel {
+    font-family: var(--font-body); font-size: 12px;
+    color: var(--vu-gris-light); font-style: italic;
+    margin-top: 2px;
   }
   .legend-item { display: inline-flex; align-items: center; gap: 8px; }
   .legend-swatch { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
@@ -166,12 +176,22 @@
     font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em;
     color: var(--vu-gris-light); text-transform: uppercase;
   }
+  .newsroom-sublabel {
+    font-family: var(--font-body); font-size: 12px;
+    color: var(--vu-gris-light); font-style: italic;
+    margin-top: 2px;
+  }
   .view-tag {
     background: var(--view-color, var(--vu-naranja));
     color: var(--vu-negro);
     padding: 6px 12px; border-radius: 6px;
     font-family: var(--font-mono); font-size: 11px; font-weight: 700;
     letter-spacing: 0.12em; text-transform: uppercase;
+  }
+  .newsroom-sublabel {
+    font-family: var(--font-body); font-size: 12px;
+    color: var(--vu-gris-light); font-style: italic;
+    margin-top: 2px;
   }
 
   #view[data-view="home"]        { --view-color: var(--vu-naranja); }
@@ -279,6 +299,11 @@
     font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em;
     color: var(--vu-gris-light); text-transform: uppercase;
   }
+  .newsroom-sublabel {
+    font-family: var(--font-body); font-size: 12px;
+    color: var(--vu-gris-light); font-style: italic;
+    margin-top: 2px;
+  }
   .list-card .list-side {
     display: flex; flex-direction: column; gap: 4px; align-items: flex-end; min-width: 100px;
   }
@@ -328,6 +353,11 @@
     font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em;
     color: var(--vu-gris-light); text-transform: uppercase;
   }
+  .newsroom-sublabel {
+    font-family: var(--font-body); font-size: 12px;
+    color: var(--vu-gris-light); font-style: italic;
+    margin-top: 2px;
+  }
   .meta a { color: var(--card-color, var(--vu-naranja)); }
   .meta a:hover { text-decoration: underline; }
   .pip { color: var(--vu-gris-dark); }
@@ -347,7 +377,7 @@
   .back-top-btn {
     position: fixed; bottom: 28px; right: 28px;
     width: 48px; height: 48px;
-    background: var(--vu-naranja); color: var(--vu-negro);
+    background: var(--vu-naranja); color: var(--vu-blanco);
     border-radius: 50%; border: none; cursor: pointer;
     display: none; align-items: center; justify-content: center;
     box-shadow: 0 6px 16px rgba(0,0,0,0.4), 0 0 0 1px rgba(241,94,55,0.4);
@@ -396,7 +426,6 @@
   <div class="masthead-inner">
     <div class="masthead-left">
       <a class="website-btn" href="https://vusecurity.com" target="_blank" rel="noopener" title="Ir a vusecurity.com" aria-label="Ir a vusecurity.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor<div class="masthead-right"></div> <a class="website-btn" href="https://vusecurity.com" target="_blank" rel="noopener" title="Ir a vusecurity.com" aria-label="Ir a vusecurity.com">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="9"></circle>
           <path d="M3 12h18"></path>
@@ -405,6 +434,12 @@
         </svg>
       </a>
     </div>
+    <a class="masthead-center" href="#home">
+      <img src="Logo.blanco.png" alt="VU" style="height: 64px; width: auto; display: block;">
+      <span class="newsroom-label">Newsroom Interno</span>
+      <span class="newsroom-sublabel">by Marketing</span>
+    </a>
+    <div class="masthead-right"></div>
   </div>
 </header>
 
