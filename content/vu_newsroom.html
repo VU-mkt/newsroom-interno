@@ -496,10 +496,65 @@ const COUNTRIES = {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  date: '2026-05-21',
-  publishedAt: '2026-05-22T08:00:00Z',
+  date: '2026-05-25',
+  publishedAt: '2026-05-26T08:00:00Z',
   sections: {
     global: [
+      {
+        id: 'kali365-phishing-mfa-bypass-may25',
+        title: 'FBI alerta sobre Kali365: el kit de phishing-as-a-service que elude MFA de Microsoft 365 y acelera la migración a passkeys',
+        summary: 'El FBI advirtió sobre Kali365, un servicio de phishing distribuido vía Telegram que captura tokens de sesión de cuentas Microsoft 365 mediante ataques adversary-in-the-middle (AITM), eludiendo la autenticación multifactor basada en SMS o push notifications. El kit afecta a empresas, agencias gubernamentales y contratistas que dependen de Microsoft en la nube, y la alerta refuerza el argumento de la industria: los métodos MFA que pueden ser suplantados, serán suplantados. El incidente acelera la migración hacia credenciales criptográficas FIDO2 y passkeys resistentes al phishing, precisamente el espacio donde VU ONE posiciona su autenticación sin contraseña.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/fbi-warning-on-kali365-phishing-kit-exposes-limits-of-weaker-authentication',
+        sourceName: 'Biometric Update',
+        date: '2026-05-25', language: 'en', highRelevance: true,
+        topic: 'fraude',
+        vertical: 'cross',
+        image: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=1400&q=80'
+      },
+      {
+        id: 'irs-idme-biometric-retention-36m-may25',
+        title: 'IRS propone que ID.me retenga biometría de contribuyentes hasta 36 meses: el reconocimiento facial como base de datos anti-fraude fiscal',
+        summary: 'La propuesta del IRS extendería la retención de datos biométricos faciales bajo contratos con el proveedor privado ID.me hasta 36 meses después del cierre de cuenta, habilitando coincidencia uno-a-muchos para combatir el fraude fiscal impulsado por identidades sintéticas e IA. El organismo detectó 7,5 millones de declaraciones sospechosas en 2024-2025 y busca capacidades de auditoría y rastreo multi-año. Grupos de privacidad advierten que el cambio normaliza el almacenamiento prolongado de plantillas faciales en manos de terceros privados sin garantías de eliminación tras la transacción.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/irs-proposal-could-turn-taxpayer-facial-verification-into-long-term-fraud-database',
+        sourceName: 'Biometric Update',
+        date: '2026-05-25', language: 'en', highRelevance: false,
+        topic: 'regulacion',
+        vertical: 'gobierno',
+        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1400&q=80'
+      },
+      {
+        id: 'aurigin-audio-deepfake-benchmark-may25',
+        title: 'Primer benchmark de detección de deepfakes de audio: Aurigin AI logra 96,75% de precisión a costo 100x menor que competidores',
+        summary: 'El benchmark independiente de Podomos evaluó ocho modelos de detección de deepfakes de audio usando datos de amenazas actuales: Aurigin AI alcanzó 96,75% de precisión con tasa de falsos negativos del 5% y costos operativos 100 veces menores que soluciones comparables; Resemble AI lideró con 98,05%, mientras Reality Defender registró apenas 71,3%. El estudio aborda una brecha crítica para centros de atención bancaria y procesos de onboarding por voz donde la clonación de audio con IA se ha vuelto una herramienta de fraude de acceso de bajo costo.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/aurigin-ai-shows-top-tier-audio-deepfake-detection-accuracy-in-new-benchmark',
+        sourceName: 'Biometric Update',
+        date: '2026-05-25', language: 'en', highRelevance: false,
+        topic: 'deepfake',
+        vertical: 'banca',
+        image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1400&q=80'
+      },
+      {
+        id: 'australia-vc-trust-framework-may25',
+        title: 'Australia abre consulta pública sobre credenciales verificables y marco de confianza nacional: referencia regulatoria para LATAM',
+        summary: 'El Departamento de Finanzas de Australia abrió una consulta pública hasta el 3 de julio de 2026 sobre el Commonwealth VC Trust Framework, que cubre nueve áreas: emisores, verificadores, billeteras digitales, servicios de confianza, privacidad, voluntariedad, interoperabilidad y seguridad. El sistema se integra al Australian Government Digital ID System (AGDIS) con estándares ISO y sigue la estrategia de identidad digital publicada en marzo 2026. La arquitectura de credenciales verificables interoperables con divulgación selectiva es el modelo que los marcos regulatorios de LATAM siguen con creciente atención.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/australia-opens-feedback-on-verifiable-credential-policy-trust-framework-proposals',
+        sourceName: 'Biometric Update',
+        date: '2026-05-25', language: 'en', highRelevance: false,
+        topic: 'regulacion',
+        vertical: 'gobierno',
+        image: 'https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?w=1400&q=80'
+      },
+      {
+        id: 'hacker-ia-comercial-9-agencias-gobierno-may25',
+        title: 'Un solo atacante con IA comercial ejecutó 5.000 comandos y comprometió 9 agencias de gobierno: los controles internos no detectaron nada',
+        summary: 'Según análisis de Check Point, un actor individual usó dos sistemas de IA comercial en paralelo para ejecutar más de 5.000 comandos automatizados y comprometer nueve agencias gubernamentales entre diciembre de 2025 y febrero de 2026, alterando archivos de configuración que los modelos de IA leen al inicializarse y reprogramando su comportamiento predeterminado. Todos los incidentes salieron a la luz por errores del atacante o monitoreo de proveedores de IA, nunca por los controles internos de las víctimas. El caso documenta un nuevo paradigma de amenaza: un operador solitario con IA comercial consolida capacidades que antes requerían equipos especializados completos.',
+        sourceUrl: 'https://www.infobae.com/tecno/2026/05/25/un-unico-hacker-usando-ia-comercial-comprometio-la-ciberseguridad-de-9-agencias-de-gobierno/',
+        sourceName: 'Infobae',
+        date: '2026-05-25', language: 'es', highRelevance: true,
+        topic: 'breach',
+        vertical: 'gobierno',
+        image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1400&q=80'
+      },
       {
         id: 'nyc-health-breach-biometrics-1-8m-may21',
         title: 'NYC Health breach expone huellas dactilares y palmares de 1,8 millones de personas: los datos biométricos no pueden "reemitirse"',
@@ -1019,6 +1074,17 @@ const briefing = {
     latam: {
       argentina: [
         {
+          id: 'infobae-cuenta-bloqueada-estafa-may25',
+          title: '"Cuenta bloqueada" y "Pago pendiente": las alertas de pánico que usan estafadores para vaciar cuentas bancarias',
+          summary: 'Estafadores envían mensajes, llamadas o SMS con frases urgentes como "Tu cuenta será bloqueada" o "Tiene un pago pendiente" para crear pánico e inducir a las víctimas a entregar credenciales bancarias sin verificar, aprovechando datos públicos de redes sociales para personalizar los ataques. La combinación de vishing, smishing y phishing en un ciclo de ingeniería social opera bajo los mismos mecanismos de urgencia que el fraude BEC corporativo, pero apuntada a usuarios finales. El INCIBE y la FTC recomiendan no hacer clic en enlaces sospechosos y verificar siempre contactando al banco por canales oficiales.',
+          sourceUrl: 'https://www.infobae.com/tecno/2026/05/25/cuenta-bloqueada-o-pago-pendiente-las-dos-alertas-telefonicas-que-esconden-una-estafa-segura/',
+          sourceName: 'Infobae',
+          date: '2026-05-25', language: 'es', highRelevance: false,
+          topic: 'fraude',
+          vertical: 'banca',
+          image: 'https://images.unsplash.com/photo-1626285861696-9f0bf5a49c6d?w=1400&q=80'
+        },
+        {
           id: 'argentina-ciberataques-15pct-may13',
           title: 'Argentina: ciberataques crecieron 15% en 2025 y el país es uno de los epicentros regionales según Check Point',
           summary: 'El reporte de Check Point Research para LATAM ubica a Argentina entre los países con mayor crecimiento interanual en ciberataques: +15% en 2025 dentro de un contexto regional que ya supera los 3.000 intentos semanales por organización. Los sectores más vulnerables son manufactura, fintech y gobierno — los verticales donde VU opera. El crecimiento coincide con el despliegue del DNI digital y el aumento en transacciones digitales, lo que torna crítica la autenticación robusta y el monitoreo continuo de identidad para cualquier organización del ecosistema financiero argentino.',
@@ -1102,6 +1168,17 @@ const briefing = {
         }
       ],
       mexico: [
+        {
+          id: 'spin-oxxo-continuidad-operativa-ciso-may25',
+          title: 'El CISO de Spin by OXXO explica cómo justificar inversiones en continuidad operativa ante la alta dirección de una fintech',
+          summary: 'El Chief Information Security Officer de Spin by OXXO detalló la metodología costo-beneficio que aplica la fintech mexicana para justificar gastos en redundancia cloud, backups y planes de recuperación ante directorios que exigen ROI claro. La clave está en "demostrar qué riesgos se reducen y qué servicios siguen operando" en lugar de solo defender el gasto en herramientas de seguridad. El enfoque refleja la madurez creciente del CISO en fintechs de LATAM que pasan de seguridad reactiva a resiliencia operativa alineada con objetivos del negocio.',
+          sourceUrl: 'https://iupana.com/2026/05/25/el-costo-beneficio-detras-de-la-continuidad-operativa-la-estrategia-de-spin/',
+          sourceName: 'Iupana',
+          date: '2026-05-25', language: 'es', highRelevance: false,
+          topic: 'ciberseguridad',
+          vertical: 'fintech',
+          image: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1400&q=80'
+        },
         {
           id: 'stripe-fraude-latam-bancos-fintechs-may20',
           title: 'Stripe advierte: el fraude minorista presiona a bancos y fintechs de LATAM — la IA democratizó los ataques a escala individual',
@@ -1422,7 +1499,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO  = '2026-05-22';
+const TODAY_ISO  = '2026-05-26';
 
 function fmtDate(iso) {
   if (!iso) return '—';
