@@ -496,10 +496,43 @@ const COUNTRIES = {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  date: '2026-05-25',
-  publishedAt: '2026-05-26T08:00:00Z',
+  date: '2026-05-26',
+  publishedAt: '2026-05-27T08:00:00Z',
   sections: {
     global: [
+      {
+        id: 'philippines-biometrics-otp-fraud-may26',
+        title: 'Filipinas acelera adopción biométrica en banca digital: Vietnam redujo 59% el fraude individual tras implementación obligatoria',
+        summary: 'El Banco Central de Filipinas impulsa la verificación biométrica obligatoria para banca digital luego de que el fraude se triplicara a 10.004 casos con pérdidas de USD 11,4 millones en 2024. El referente regional es Vietnam, donde la obligatoriedad biométrica en 2024 reveló que 86 de 200 millones de cuentas eran ficticias y redujo el fraude individual un 59%. El 58% de adultos filipinos tiene ahora cuenta financiera (vs. 51% antes), ampliando la superficie de ataque y la urgencia de autenticación robusta frente a OTP comprometibles.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/philippines-moves-toward-stronger-biometric-security-as-otp-risks-mount',
+        sourceName: 'Biometric Update',
+        date: '2026-05-26', language: 'en', highRelevance: true,
+        topic: 'biometria',
+        vertical: 'banca',
+        image: 'https://images.unsplash.com/photo-1559526324-593bc073d938?w=1400&q=80'
+      },
+      {
+        id: 'face-morph-detection-eab-border-may26',
+        title: 'Avances en detección de ataques de morfo facial ofrecen esperanza para seguridad fronteriza biométrica',
+        summary: 'Investigadores presentaron nuevos desarrollos en detección de ataques de morfo facial en un workshop de la Asociación Europea de Biometría (EAB). Los morfos generados con modelos de difusión alcanzan hasta 99,8% de efectividad en evasión, mientras que inspectores fronterizos sin entrenamiento aceptan como válidos dos tercios de los casos y solo mejoran un 10% tras capacitación. La competencia de detección basada en video V-MAD en IJCB 2026 recibió 24 submissions, evidenciando la urgencia de datasets y estándares más robustos.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/biometric-face-morph-attack-detection-breakthroughs-offer-border-security-hope',
+        sourceName: 'Biometric Update',
+        date: '2026-05-26', language: 'en', highRelevance: false,
+        topic: 'biometria',
+        vertical: 'gobierno',
+        image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=1400&q=80'
+      },
+      {
+        id: 'uidai-aadhaar-new-app-selective-sharing-may26',
+        title: 'India migra 21 millones de usuarios a nueva app Aadhaar con compartición selectiva de datos biométricos',
+        summary: 'La autoridad india UIDAI inicia la jubilación de mAadhaar con más de 21 millones de descargas del nuevo sistema en tres meses y 2,8 millones de actualizaciones de número móvil completadas. La nueva plataforma permite compartición selectiva de atributos de identidad —el usuario elige qué datos comparte— reforzando privacidad bajo estándares modernos. El servicio gratuito de actualización documental fue extendido hasta el 14 de junio de 2027, dando margen para la migración masiva.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/uidai-shifts-aadhaar-users-to-new-app-with-selective-data-sharing',
+        sourceName: 'Biometric Update',
+        date: '2026-05-26', language: 'en', highRelevance: false,
+        topic: 'identidad digital',
+        vertical: 'gobierno',
+        image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d4?w=1400&q=80'
+      },
       {
         id: 'kali365-phishing-mfa-bypass-may25',
         title: 'FBI alerta sobre Kali365: el kit de phishing-as-a-service que elude MFA de Microsoft 365 y acelera la migración a passkeys',
@@ -1257,6 +1290,17 @@ const briefing = {
       costa_rica: [], panama: [], bolivia: [], paraguay: [],
       venezuela: [
         {
+          id: 'bdt-venezuela-fallas-nomina-may26',
+          title: 'Banco Digital de los Trabajadores de Venezuela colapsa durante pago de nómina pública: fallas en Biopago y tarjetas Bicentenario',
+          summary: 'El BDT, principal banco digital del sector público venezolano, sufrió una falla técnica masiva el 25-26 de mayo que afectó su app móvil, el sistema Biopago y las tarjetas Bicentenario durante el pago de nómina. La institución reconoció el problema en redes sociales mientras usuarios reportaban rechazos de tarjetas en múltiples plataformas. El patrón se repite mensualmente los días 10 y 25 de cada mes, evidenciando una infraestructura de pagos digitales incapaz de sostener picos de demanda previsibles.',
+          sourceUrl: 'https://www.bloomberglinea.com/latinoamerica/venezuela/bdt-lo-que-se-sabe-de-las-fallas-en-el-banco-digital-de-los-trabajadores-hoy-26-de-mayo/',
+          sourceName: 'Bloomberg Línea',
+          date: '2026-05-26', language: 'es', highRelevance: false,
+          topic: 'breach',
+          vertical: 'gobierno',
+          image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1400&q=80'
+        },
+        {
           id: 'appgate-fraud-beat-2026-latam',
           title: 'Fraud Beat 2026 AppGate: 6 países de LATAM con crecimientos de fraude digital de hasta 228%',
           summary: 'El informe Fraud Beat 2026 de AppGate registra crecimientos interanuales en fraude digital durante 2025: Venezuela +228%, Bolivia +170%, Costa Rica +89%, Brasil +53%, Chile +40%, El Salvador +28%. El patrón es consistente en todos: phishing para captura de identidad, account takeover y BEC para extracción de fondos, con el BEC creciendo 136% en el último trimestre de 2025. El fraude ya opera como una cadena industrializada que cubre desde la captura de identidad en redes sociales hasta el retiro de fondos.',
@@ -1303,6 +1347,42 @@ const briefing = {
       ]
     },
     competencia: [
+      {
+        id: 'interac-incode-liveness-ibeta3-canada-may26',
+        title: 'Incode gana exclusividad en Canadá: Interac elige su liveness iBeta Nivel 3 —primera solución sin errores en iOS y Android',
+        summary: 'Interac, la red de pagos más grande de Canadá, eligió a Incode como proveedor exclusivo de verificación de documentos e identidad, incorporando detección pasiva de liveness certificada iBeta Nivel 3 "con cero errores" —primera solución en alcanzar ese estándar en iOS y Android. Las capacidades incluyen detección de deepfakes y protección contra ataques de inyección, con lanzamiento escalonado en Q3 2026. El acuerdo posiciona a Incode como referente de seguridad biométrica de alta certificación para ecosistemas de pagos en Norteamérica.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/interac-deepens-identity-verification-push-with-incode-partnership',
+        sourceName: 'Biometric Update',
+        date: '2026-05-26', language: 'en', highRelevance: true,
+        topic: 'biometria',
+        vertical: 'banca',
+        competitor: 'Incode',
+        image: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?w=1400&q=80'
+      },
+      {
+        id: 'wso2-thunderid-agentic-ai-postquantum-may26',
+        title: 'WSO2 lanza ThunderID open source para agentes de IA: infraestructura de identidad post-cuántica contribuida a OpenWallet Foundation',
+        summary: 'WSO2 contribuyó ThunderID a la OpenWallet Foundation como nueva pila IAM open source diseñada para agentes de IA y preparada para criptografía post-cuántica. La empresa expande su plataforma Agent Fabric —que habilita interacciones digitales autónomas en ecosistemas B2B— y refuerza su alianza con MOSIP para desplegar la plataforma eSignet de SSO e identidad en mercados emergentes. El movimiento apunta a convertirse en infraestructura de identidad base para la economía de agentes autónomos.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/wso2-expands-identity-infrastructure-push-for-agentic-ai-era',
+        sourceName: 'Biometric Update',
+        date: '2026-05-26', language: 'en', highRelevance: false,
+        topic: 'identidad digital',
+        vertical: 'fintech',
+        competitor: 'WSO2',
+        image: 'https://images.unsplash.com/photo-1620714223084-8fcacc2107bd?w=1400&q=80'
+      },
+      {
+        id: 'nec-nz-biometric-age-credential-govtnz-may26',
+        title: 'Nueva Zelanda prepara credencial biométrica de mayoría de edad para wallet digital Govt.nz con tecnología NEC',
+        summary: 'Nueva Zelanda avanza en la Digital Kiwi Access Card —credencial biométrica de verificación de edad— para integrarla a la wallet digital Govt.nz, usando NEC Identity Cloud y estándares de verifiable credentials. El sistema permite a mayores de 18 años mostrar su tarjeta digital al ingresar a bares o eventos, confirmando elegibilidad sin exponer datos adicionales. El lanzamiento se espera en meses, con Hospitality New Zealand resolviendo los detalles finales.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/new-zealand-prepares-biometric-age-credential-for-govt-nz-digital-wallet',
+        sourceName: 'Biometric Update',
+        date: '2026-05-26', language: 'en', highRelevance: false,
+        topic: 'identidad digital',
+        vertical: 'gobierno',
+        competitor: 'NEC',
+        image: 'https://images.unsplash.com/photo-1573167243872-43c6433b9d40?w=1400&q=80'
+      },
       {
         id: 'unico-kyc-siloed-fraud-report-may21',
         title: 'Unico + ID Tech: los sistemas KYC en silos clasifican mal el fraude — un token biométrico intentó apertura en 30 instituciones',
@@ -1499,7 +1579,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO  = '2026-05-26';
+const TODAY_ISO  = '2026-05-27';
 
 function fmtDate(iso) {
   if (!iso) return '—';
