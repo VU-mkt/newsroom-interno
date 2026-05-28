@@ -496,10 +496,65 @@ const COUNTRIES = {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  date: '2026-05-26',
-  publishedAt: '2026-05-27T08:00:00Z',
+  date: '2026-05-27',
+  publishedAt: '2026-05-28T10:00:00Z',
   sections: {
     global: [
+      {
+        id: 'samsung-clear-digital-id-wallet-may27',
+        title: 'Samsung completa la tríada móvil: pasaportes digitales en Samsung Wallet con verificación CLEAR para TSA',
+        summary: 'Samsung se une a Apple y Google al integrar pasaportes digitales en su wallet mediante alianza con CLEAR, permitiendo a usuarios estadounidenses verificar su identidad en más de 250 checkpoints TSA con su teléfono Galaxy. El sistema requiere autenticación biométrica (huella o PIN) y cifra los datos localmente vía Samsung Knox, sin transmitir el documento original al punto de verificación. Con los tres ecosistemas móviles dominantes adoptando credenciales derivadas de pasaportes, la infraestructura de identidad digital se consolida como estándar de facto para viajes domésticos en EE.UU.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/samsung-joins-apple-google-in-expanding-passport-based-digital-ids-in-mobile-wallets',
+        sourceName: 'Biometric Update',
+        date: '2026-05-27', language: 'en', highRelevance: true,
+        topic: 'biometria',
+        vertical: 'cross',
+        image: 'https://images.unsplash.com/photo-1542396601-dca920ea2807?w=1400&q=80'
+      },
+      {
+        id: 'voxmind-voice-deepfake-funding-may27',
+        title: 'Voxmind recauda £546k para detección de voz sintética mientras AWS y Azure abandonan el mercado de biometría de voz',
+        summary: 'La startup londinense Voxmind cerró una ronda pre-seed de £546.491 liderada por Ascension Ventures para comercializar su motor de extracción de frecuencias fonémicas con 99,8% de precisión en detección de deepfakes de voz en menos de 3 segundos. El timing es estratégico: Microsoft retiró Azure Speaker Recognition en septiembre 2025 y AWS cierra Voice ID en mayo 2026, dejando a empresas de servicios financieros, telecomunicaciones y contact centers sin solución de autenticación de voz nativa en la nube. El modelo opera en menos de 500MB sin GPU ni conectividad cloud, priorizando despliegue en dispositivos OEM con un acuerdo ya firmado con un proveedor Fortune 500 de hardware de comunicaciones.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/voxmind-secures-funding-as-firms-seek-defenses-against-voice-deepfakes',
+        sourceName: 'Biometric Update',
+        date: '2026-05-27', language: 'en', highRelevance: true,
+        topic: 'deepfake',
+        vertical: 'cross',
+        image: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1400&q=80'
+      },
+      {
+        id: 'signicat-austria-eudi-wallet-may27',
+        title: 'Signicat integra el eID de Austria y supera 35 identidades nacionales ante el plazo EUDI Wallet 2026',
+        summary: 'Signicat añade el sistema eID de Austria a su hub unificado, alcanzando soporte para más de 35 identidades nacionales europeas y habilitando verificación para el 60% de la población austriaca (6,8 millones de usuarios). La integración responde al período de coexistencia forzosa: los estados miembros deben ofrecer EUDI Wallets antes de fin de 2026, pero muchos coexistirán con eIDs nacionales durante años. Para empresas de servicios financieros, seguros y telecomunicaciones en UE, el soporte simultáneo de eIDs legacy y wallets eIDAS 2.0 se vuelve un requisito operativo inmediato.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/signicat-adds-austria-id-as-europe-prepares-for-eudi-wallet-transition',
+        sourceName: 'Biometric Update',
+        date: '2026-05-27', language: 'en', highRelevance: false,
+        topic: 'regulacion',
+        vertical: 'cross',
+        image: 'https://images.unsplash.com/photo-1519750157634-b6d493a0f77c?w=1400&q=80'
+      },
+      {
+        id: 'didit-6m-identity-fraud-infra-may27',
+        title: 'Didit (YC) suma USD 7,5M en semilla para infraestructura programable de identidad y fraude con API unificada KYC+AML+biometría',
+        summary: 'Didit —startup fundada por los hermanos Rosas en Barcelona y San Francisco (YC W24)— cerró USD 6M adicionales con inversores de EE.UU., Brasil y la UE incluyendo Y Combinator, Pioneer Fund y Rebel Fund, llevando su semilla total a USD 7,5M. La empresa ofrece una API unificada que combina KYC, KYB, biometría, AML y monitoreo de transacciones en tiempo real para 1.500 clientes B2B activos en fintech, cripto, iGaming y gobierno en 220+ países. Con crecimiento superior al 30% mensual y ya rentable, Didit apunta a identidad "programable" con credenciales reutilizables y control de privacidad del usuario.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/didit-raises-6m-to-expand-identity-and-fraud-infrastructure-platform',
+        sourceName: 'Biometric Update',
+        date: '2026-05-27', language: 'en', highRelevance: false,
+        topic: 'identidad',
+        vertical: 'fintech',
+        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1400&q=80'
+      },
+      {
+        id: 'yubico-ingram-india-fips-may27',
+        title: 'YubiKey obtiene validación FIPS 140-3 y llega al mercado corporativo indio vía Ingram Micro mientras crece la demanda de MFA resistente al phishing',
+        summary: 'Yubico amplía distribución en India mediante acuerdo con Ingram Micro —presente en 40+ oficinas en el país— para llevar llaves de autenticación hardware al sector corporativo en finanzas, salud y gobierno. El YubiKey 5 FIPS Series obtiene validación FIPS 140-3 Nivel 2 y Nivel 3 de Seguridad Física, convirtiéndose en el único autenticador autorizado simultáneamente para credenciales PKI del Departamento de Defensa de EE.UU. y passkeys FIDO2. La certificación coincide con la presión regulatoria de mercados globales que exigen MFA resistente al phishing para acceso a sistemas críticos.',
+        sourceUrl: 'https://www.biometricupdate.com/202605/yubico-mfa-security-keys-get-indian-enterprise-distributor-nist-validation',
+        sourceName: 'Biometric Update',
+        date: '2026-05-27', language: 'en', highRelevance: false,
+        topic: 'biometria',
+        vertical: 'gobierno',
+        image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1400&q=80'
+      },
       {
         id: 'philippines-biometrics-otp-fraud-may26',
         title: 'Filipinas acelera adopción biométrica en banca digital: Vietnam redujo 59% el fraude individual tras implementación obligatoria',
@@ -1107,6 +1162,17 @@ const briefing = {
     latam: {
       argentina: [
         {
+          id: 'infobae-mundial-fifa-estafa-may27',
+          title: 'Copa Mundial 2026: oleada de phishing promete USD 500.000 en premios falsos para vaciar cuentas bancarias',
+          summary: 'Kaspersky y KnowBe4 detectaron una escalada de campañas de fraude que explotan la fiebre mundialista mediante sitios clonados de FIFA, correos con premios falsos de hasta USD 500.000 y plataformas de entradas fraudulentas que capturan credenciales bancarias e identidades digitales. FIFA adoptó exclusivamente entradas digitales con QR dinámicos vía su app oficial para 2026, lo que convierte en automáticamente fraudulenta cualquier oferta de entradas físicas o por canales no oficiales. Los países más afectados incluyen Argentina, México, Colombia, España, Perú, Venezuela y Ecuador, con técnicas que combinan ingeniería social, IA y presión temporal.',
+          sourceUrl: 'https://www.infobae.com/tecno/2026/05/27/alerta-copa-mundial-fifa-la-estafa-que-promete-500000-dolares-y-vacia-tu-cuenta-bancaria/',
+          sourceName: 'Infobae',
+          date: '2026-05-27', language: 'es', highRelevance: true,
+          topic: 'fraude',
+          vertical: 'cross',
+          image: 'https://images.unsplash.com/photo-1574706626949-8d8e78e834e7?w=1400&q=80'
+        },
+        {
           id: 'infobae-cuenta-bloqueada-estafa-may25',
           title: '"Cuenta bloqueada" y "Pago pendiente": las alertas de pánico que usan estafadores para vaciar cuentas bancarias',
           summary: 'Estafadores envían mensajes, llamadas o SMS con frases urgentes como "Tu cuenta será bloqueada" o "Tiene un pago pendiente" para crear pánico e inducir a las víctimas a entregar credenciales bancarias sin verificar, aprovechando datos públicos de redes sociales para personalizar los ataques. La combinación de vishing, smishing y phishing en un ciclo de ingeniería social opera bajo los mismos mecanismos de urgencia que el fraude BEC corporativo, pero apuntada a usuarios finales. El INCIBE y la FTC recomiendan no hacer clic en enlaces sospechosos y verificar siempre contactando al banco por canales oficiales.',
@@ -1264,6 +1330,17 @@ const briefing = {
         }
       ],
       colombia: [
+        {
+          id: 'infobae-colombia-elecciones-fraude-may27',
+          title: 'Colombia: expertos alertan por phishing, deepfakes y robo de datos en vísperas de las elecciones presidenciales del 31 de mayo',
+          summary: 'Con las elecciones presidenciales colombianas a cuatro días, expertos en ciberseguridad documentan campañas masivas que combinan sitios institucionales clonados, mensajes falsos de subsidios vía WhatsApp y Telegram, y deepfakes de figuras públicas para robar datos personales y bancarios. El Ministerio TIC activó un plan especial de ciberseguridad con monitoreo de desinformación e IA, mientras Kaspersky registró ataques automatizados a escala masiva contra dispositivos móviles y cuentas en redes sociales. Los métodos más frecuentes incluyen encuestas electorales falsas, citaciones apócrifas a jurados de votación y páginas que imitan la Registraduría para capturar credenciales.',
+          sourceUrl: 'https://www.infobae.com/colombia/2026/05/27/experto-alerto-por-mensajes-con-los-que-buscan-estafar-a-los-colombianos-durante-las-elecciones-2026/',
+          sourceName: 'Infobae Colombia',
+          date: '2026-05-27', language: 'es', highRelevance: true,
+          topic: 'fraude',
+          vertical: 'gobierno',
+          image: 'https://images.unsplash.com/photo-1596003906949-67221c37965c?w=1400&q=80'
+        },
         {
           id: 'nequi-hackeo-cuenta-x-may13',
           title: 'Hackearon la cuenta de X de Nequi: 149.000 seguidores expuestos a fraude cripto durante el incidente',
@@ -1579,7 +1656,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO  = '2026-05-27';
+const TODAY_ISO  = '2026-05-28';
 
 function fmtDate(iso) {
   if (!iso) return '—';
