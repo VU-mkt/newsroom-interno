@@ -473,6 +473,11 @@
   .country-section[open] .country-chevron { transform: rotate(90deg); }
   .country-section .country-items { padding: 14px 18px; display: flex; flex-direction: column; gap: 8px; }
 
+  /* Reserve space for injected logout button (fixed right:24px, ~140px wide) */
+  @media (max-width: 1399px) {
+    .masthead-right { padding-right: 155px; }
+  }
+
   @media (max-width: 900px) {
     .feat-grid { grid-template-columns: 1fr; }
     .feat-card { min-height: 0; }
