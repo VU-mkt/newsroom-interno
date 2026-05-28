@@ -144,6 +144,112 @@
   .toc-link.archivo { margin-left: auto; opacity: 0.85; }
   .toc-link.archivo:hover { opacity: 1; }
 
+  /* =================== TICKER BLOOMBERG =================== */
+  .ticker-bar {
+    background: var(--vu-negro-elev);
+    border-bottom: 1px solid var(--vu-gris-dark);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+  }
+  .ticker-label {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 0 16px;
+    height: 100%;
+    background: var(--vu-naranja);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #fff;
+    white-space: nowrap;
+    z-index: 2;
+  }
+  .ticker-live-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #fff;
+    animation: tickerPulse 1.5s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+  @keyframes tickerPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.4; transform: scale(0.7); }
+  }
+  .ticker-vline {
+    flex-shrink: 0;
+    width: 1px; height: 22px;
+    background: var(--vu-gris-dark);
+  }
+  .ticker-track-wrap {
+    flex: 1;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    mask-image: linear-gradient(to right, transparent 0%, #000 2.5%, #000 97.5%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 2.5%, #000 97.5%, transparent 100%);
+  }
+  .ticker-track-wrap:hover .ticker-track { animation-play-state: paused; }
+  .ticker-track {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: tickerScroll 80s linear infinite;
+    will-change: transform;
+  }
+  @keyframes tickerScroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0 4px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--vu-crema);
+    cursor: pointer;
+    transition: color 0.15s;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .ticker-item:hover { color: var(--vu-naranja); }
+  .ticker-tag {
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    line-height: 1.5;
+  }
+  .ticker-source {
+    font-size: 11.5px;
+    color: var(--vu-gris-light);
+    font-family: var(--font-mono);
+    flex-shrink: 0;
+  }
+  .ticker-item:hover .ticker-source { color: var(--vu-gris-light); }
+  .ticker-sep {
+    display: inline-block;
+    color: var(--vu-gris-dark);
+    font-size: 12px;
+    padding: 0 18px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
   /* =================== LEGEND =================== */
   .legend {
     max-width: 1400px; margin: 22px auto 0;
@@ -523,6 +629,18 @@
     </div>
   </div>
 </header>
+
+<!-- ============ TICKER BLOOMBERG ============ -->
+<div class="ticker-bar" id="tickerBar" aria-label="Titulares en tiempo real" role="marquee">
+  <div class="ticker-label">
+    <span class="ticker-live-dot"></span>
+    LIVE
+  </div>
+  <div class="ticker-vline"></div>
+  <div class="ticker-track-wrap">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+</div>
 
 <!-- ============ NAV ============ -->
 <nav class="sections-nav">
@@ -2109,9 +2227,59 @@ function renderSearch(query) {
    INIT
    ========================================================================= */
 
+/* =========================================================================
+   TICKER BLOOMBERG
+   ========================================================================= */
+
+function initTicker() {
+  const SMETA = {
+    global:      { label: 'GLOBAL',  color: '#3A86FF' },
+    latam:       { label: 'LATAM',   color: '#F15E37' },
+    regulation:  { label: 'REG.',    color: '#9B59B6' },
+    competencia: { label: 'COMP.',   color: '#C44826' },
+    vu:          { label: 'VU',      color: '#06A77D' },
+  };
+
+  const all = [];
+  Object.entries(briefing.sections).forEach(([key, items]) => {
+    if (!SMETA[key]) return;
+    items.forEach(item => all.push({ ...item, _sec: key }));
+  });
+
+  // Prioridad: highRelevance primero, luego por sección
+  const ORDER = ['global','latam','regulation','competencia','vu'];
+  all.sort((a, b) => {
+    if (b.highRelevance !== a.highRelevance) return (b.highRelevance ? 1 : 0) - (a.highRelevance ? 1 : 0);
+    return ORDER.indexOf(a._sec) - ORDER.indexOf(b._sec);
+  });
+
+  const items = all.slice(0, 24);
+
+  const makeItem = (item) => {
+    const m = SMETA[item._sec];
+    const bg = m.color + '28';
+    return `<a class="ticker-item" href="#${item._sec}">` +
+      `<span class="ticker-tag" style="color:${m.color};background:${bg};">${m.label}</span>` +
+      `<span>${item.title}</span>` +
+      `<span class="ticker-source">— ${item.sourceName}</span>` +
+      `</a><span class="ticker-sep" aria-hidden="true">◆</span>`;
+  };
+
+  const html = items.map(makeItem).join('');
+  const track = document.getElementById('tickerTrack');
+  if (!track) return;
+  track.innerHTML = html + html; // duplicado para loop sin corte
+
+  // Duración proporcional al contenido
+  const totalLen = items.reduce((s, i) => s + i.title.length + i.sourceName.length, 0);
+  const dur = Math.max(50, Math.min(120, Math.round(totalLen * 0.13)));
+  track.style.animationDuration = dur + 's';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   buildTOC();
   route();
+  initTicker();
 
   let searchTimer;
   const searchBox = document.getElementById('searchBox');
