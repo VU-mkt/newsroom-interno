@@ -129,11 +129,18 @@
   .toc-link.active .count { background: rgba(0,0,0,0.18); color: var(--vu-negro); border-color: transparent; }
   .toc-link .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
   .toc-link .count {
-    font-size: 10px; padding: 2px 7px;
-    background: var(--vu-negro-soft); border-radius: 999px;
+    font-size: 10px; padding: 2px 8px;
+    border-radius: 999px; font-weight: 600;
+    background: var(--vu-negro-soft);
     color: var(--vu-gris-light);
     border: 1px solid var(--vu-gris-dark);
+    transition: background 0.15s, color 0.15s;
   }
+  .toc-link .count.has-items {
+    background: var(--badge-color, var(--vu-naranja));
+    color: #fff; border-color: transparent;
+  }
+  .toc-link.active .count { background: rgba(0,0,0,0.22); color: #fff; border-color: transparent; }
   .toc-link.archivo { margin-left: auto; opacity: 0.85; }
   .toc-link.archivo:hover { opacity: 1; }
 
@@ -241,6 +248,11 @@
     background-color: var(--vu-negro-soft);
     border-bottom: 1px solid var(--vu-gris-dark);
     position: relative;
+  }
+  .feat-image.img-fallback {
+    background-image: none !important;
+    background: var(--card-color, var(--vu-negro-soft)) !important;
+    opacity: 0.28;
   }
   .feat-card.has-image .feat-image::after {
     content: ''; position: absolute; inset: 0;
@@ -407,6 +419,60 @@
   .footer-inner strong { color: var(--vu-crema); font-weight: 700; }
   .footer-inner .pip { color: var(--vu-gris-dark); }
 
+  /* =================== SEARCH =================== */
+  .search-wrapper {
+    position: relative; display: flex; align-items: center;
+  }
+  .search-wrapper .search-icon {
+    position: absolute; left: 12px; pointer-events: none;
+    width: 14px; height: 14px; color: rgba(255,255,255,0.4);
+  }
+  .search-box {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 999px;
+    padding: 8px 16px 8px 34px;
+    color: var(--vu-crema); font-size: 13px; width: 200px;
+    transition: all 0.2s ease;
+  }
+  .search-box::placeholder { color: rgba(255,255,255,0.35); }
+  .search-box:focus {
+    outline: none;
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.3);
+    width: 240px;
+  }
+
+  /* =================== LATAM BY COUNTRY =================== */
+  .latam-by-country { margin-top: 40px; display: flex; flex-direction: column; gap: 12px; }
+  .country-section { border: 1px solid var(--vu-gris-dark); border-radius: 10px; overflow: hidden; }
+  .country-section summary {
+    list-style: none; cursor: pointer;
+    display: flex; align-items: center; gap: 10px;
+    padding: 13px 18px;
+    background: var(--vu-negro-elev);
+    font-family: var(--font-mono); font-size: 12px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--vu-crema);
+    user-select: none;
+    transition: background 0.15s;
+  }
+  .country-section summary::-webkit-details-marker { display: none; }
+  .country-section summary:hover { background: var(--vu-negro-soft); }
+  .country-section[open] summary { border-bottom: 1px solid var(--vu-gris-dark); }
+  .country-section .country-flag { font-size: 16px; line-height: 1; }
+  .country-section .country-count {
+    margin-left: auto; font-size: 10px; font-weight: 700;
+    background: var(--sec-latam); color: #fff;
+    border-radius: 999px; padding: 2px 8px;
+  }
+  .country-section .country-chevron {
+    font-size: 10px; color: var(--vu-gris-light);
+    transition: transform 0.2s;
+  }
+  .country-section[open] .country-chevron { transform: rotate(90deg); }
+  .country-section .country-items { padding: 14px 18px; display: flex; flex-direction: column; gap: 8px; }
+
   @media (max-width: 900px) {
     .feat-grid { grid-template-columns: 1fr; }
     .feat-card { min-height: 0; }
@@ -414,9 +480,14 @@
   @media (max-width: 768px) {
     .masthead-inner { grid-template-columns: 1fr; gap: 14px; }
     .masthead-right { justify-content: center; }
+    .masthead-center { gap: 10px; }
+    .brand-newsroom { font-size: 28px; }
+    .masthead-center img { height: 32px !important; }
     .list-card { grid-template-columns: 1fr; }
     .list-card .list-side { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
     .view-head h1 { font-size: 22px; }
+    .search-box { width: 160px; }
+    .search-box:focus { width: 180px; }
   }
 </style>
 </head>
@@ -439,7 +510,12 @@
       <img src="logo-blanco-trim.png" alt="VU" style="height: 48px; width: auto; display: block;">
       <span class="brand-newsroom">Newsroom</span>
     </a>
-    <div class="masthead-right"></div>
+    <div class="masthead-right">
+      <div class="search-wrapper">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input class="search-box" id="searchBox" type="search" placeholder="Buscar nota…" autocomplete="off" spellcheck="false">
+      </div>
+    </div>
   </div>
 </header>
 
@@ -1738,10 +1814,10 @@ function metaHTML(it) {
 function featCardHTML(it) {
   const hasImage = !!it.image;
   const imageHTML = hasImage
-    ? `<div class="feat-image" role="img" aria-label="${(it.title||'').replace(/"/g,'&quot;')}" style="background-image:url('${it.image}');"></div>`
-    : '';
+    ? `<div class="feat-image" role="img" aria-label="${(it.title||'').replace(/"/g,'&quot;')}" style="background-image:url('${it.image}');"><img src="${it.image}" style="display:none;position:absolute" aria-hidden="true" onerror="this.parentElement.style.backgroundImage='none';this.parentElement.classList.add('img-fallback');"></div>`
+    : `<div class="feat-image img-fallback"></div>`;
   return `
-    <article class="feat-card card-${it.section} ${it.highRelevance ? 'high' : ''} ${hasImage ? 'has-image' : ''}" onclick="window.open('${it.sourceUrl}','_blank','noopener')">
+    <article class="feat-card card-${it.section} ${it.highRelevance ? 'high' : ''} has-image" onclick="window.open('${it.sourceUrl}','_blank','noopener')">
       ${imageHTML}
       <div class="feat-content">
         <div class="feat-top">${pillsHTML(it)}</div>
@@ -1808,6 +1884,42 @@ function renderListOnly(items, emptyMsg) {
   return `<div class="list-grid">${items.map(listCardHTML).join('')}</div>`;
 }
 
+function renderLatam(items, emptyMsg) {
+  if (!items.length) return `<div class="empty-msg">${emptyMsg}</div>`;
+  const featured = items[0];
+  const sides    = items.slice(1, 4);
+  const topHTML  = `
+    <div class="feat-grid">
+      ${featCardHTML(featured)}
+      <div class="sides">
+        ${sides.map(sideCardHTML).join('') || ''}
+      </div>
+    </div>`;
+  const byCountry = {};
+  items.forEach(it => {
+    if (!byCountry[it.country]) byCountry[it.country] = [];
+    byCountry[it.country].push(it);
+  });
+  const countryOrder = ['argentina','brasil','mexico','colombia','chile','peru','uruguay','ecuador','costa_rica','panama','bolivia','paraguay','venezuela','el_salvador','espana'];
+  const sectionsHTML = countryOrder
+    .filter(c => byCountry[c]?.length)
+    .map(c => {
+      const citems = byCountry[c];
+      const info = COUNTRIES[c] || { flag: '', name: c };
+      return `
+        <details class="country-section">
+          <summary>
+            <span class="country-flag">${info.flag}</span>
+            <span>${info.name}</span>
+            <span class="country-count">${citems.length}</span>
+            <span class="country-chevron">▶</span>
+          </summary>
+          <div class="country-items">${citems.map(listCardHTML).join('')}</div>
+        </details>`;
+    }).join('');
+  return `${topHTML}<div class="latam-by-country">${sectionsHTML}</div>`;
+}
+
 /* =========================================================================
    VIEWS
    ========================================================================= */
@@ -1833,7 +1945,7 @@ const VIEW_CONFIG = {
     title:      'LATAM',
     items:      () => itemsBySection('latam').filter(isFresh).sort(byDateDesc),
     empty:      `Sin novedades de LATAM en los últimos ${FRESH_DAYS} días.`,
-    render:     'featured'
+    render:     'latam'
   },
   competencia: {
     label:      'Competencia',
@@ -1881,9 +1993,11 @@ function renderView(viewKey) {
     </header>
   `;
 
-  const bodyHTML = (cfg.render === 'list')
+  const bodyHTML = cfg.render === 'list'
     ? renderListOnly(items, cfg.empty)
-    : renderFeatured(items, cfg.empty);
+    : cfg.render === 'latam'
+      ? renderLatam(items, cfg.empty)
+      : renderFeatured(items, cfg.empty);
 
   view.innerHTML = headHTML + bodyHTML;
   window.scrollTo({ top: 0, behavior: 'auto' });
@@ -1914,13 +2028,16 @@ function buildTOC() {
     archivo:     'var(--sec-archivo)'
   };
   const nav = document.getElementById('tocNav');
-  nav.innerHTML = order.map(k => `
-    <a class="toc-link ${k === 'archivo' ? 'archivo' : ''}" data-view="${k}" href="#${k}">
-      <span class="dot" style="background:${colors[k]};"></span>
-      <span>${VIEW_CONFIG[k].label}</span>
-      <span class="count">${counts[k]}</span>
-    </a>
-  `).join('');
+  nav.innerHTML = order.map(k => {
+    const c = counts[k];
+    const badgeStyle = c > 0 ? `background:${colors[k]};color:#fff;border-color:transparent;` : '';
+    return `
+      <a class="toc-link ${k === 'archivo' ? 'archivo' : ''}" data-view="${k}" href="#${k}">
+        <span class="dot" style="background:${colors[k]};"></span>
+        <span>${VIEW_CONFIG[k].label}</span>
+        <span class="count ${c > 0 ? 'has-items' : ''}" style="--badge-color:${colors[k]};${badgeStyle}">${c}</span>
+      </a>`;
+  }).join('');
 }
 
 function setActiveTOC(viewKey) {
@@ -1955,12 +2072,53 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 /* =========================================================================
+   SEARCH
+   ========================================================================= */
+
+function renderSearch(query) {
+  const q = query.trim().toLowerCase();
+  if (!q) { route(); return; }
+  const results = collectAll()
+    .filter(it =>
+      (it.title     || '').toLowerCase().includes(q) ||
+      (it.summary   || '').toLowerCase().includes(q) ||
+      (it.sourceName|| '').toLowerCase().includes(q) ||
+      (it.topic     || '').toLowerCase().includes(q) ||
+      (it.competitor|| '').toLowerCase().includes(q)
+    )
+    .sort(byDateDesc);
+  const view = document.getElementById('view');
+  view.dataset.view = 'search';
+  view.innerHTML = `
+    <header class="view-head">
+      <span class="view-tag">Búsqueda</span>
+      <h1>"${query}"</h1>
+      <span class="view-meta">${results.length} ${results.length === 1 ? 'resultado' : 'resultados'}</span>
+    </header>
+    ${renderListOnly(results, 'Sin resultados para esta búsqueda.')}`;
+  window.scrollTo({ top: 0, behavior: 'auto' });
+  document.querySelectorAll('.toc-link').forEach(a => a.classList.remove('active'));
+}
+
+/* =========================================================================
    INIT
    ========================================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
   buildTOC();
   route();
+
+  let searchTimer;
+  const searchBox = document.getElementById('searchBox');
+  if (searchBox) {
+    searchBox.addEventListener('input', e => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => renderSearch(e.target.value), 220);
+    });
+    searchBox.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { searchBox.value = ''; route(); searchBox.blur(); }
+    });
+  }
 });
 </script>
 </body>
