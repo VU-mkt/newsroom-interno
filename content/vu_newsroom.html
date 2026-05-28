@@ -85,19 +85,18 @@
   .website-btn {
     display: inline-flex; align-items: center; justify-content: center;
     width: 44px; height: 44px;
-    background: var(--vu-naranja); color: var(--vu-blanco);
-    border-radius: 12px;
+    background: rgba(255,255,255,0.92); color: #1C1D1E;
+    border-radius: 12px; border: none;
     transition: all 0.15s ease;
-    box-shadow: 0 2px 8px rgba(241,94,55,0.25);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
   }
   .website-btn svg { width: 22px; height: 22px; display: block; }
   .website-btn:hover {
-    background: var(--vu-naranja-deep);
-    color: var(--vu-blanco);
+    background: #ffffff; color: #1C1D1E;
     transform: translateY(-1px);
-    box-shadow: 0 6px 14px rgba(241,94,55,0.4);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.22);
   }
-  .website-btn:active { transform: translateY(0); }
+  .website-btn:active { background: #1C1D1E; color: #ffffff; transform: translateY(0); box-shadow: none; }
 
   /* =================== TOC / SECTIONS NAV =================== */
   .sections-nav {
@@ -378,15 +377,16 @@
   .back-top-btn {
     position: fixed; bottom: 28px; right: 28px;
     width: 48px; height: 48px;
-    background: var(--vu-naranja); color: var(--vu-blanco);
+    background: rgba(255,255,255,0.92); color: #1C1D1E;
     border-radius: 50%; border: none; cursor: pointer;
     display: none; align-items: center; justify-content: center;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.4), 0 0 0 1px rgba(241,94,55,0.4);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     z-index: 100;
     transition: all 0.15s ease;
   }
   .back-top-btn.visible { display: inline-flex; }
-  .back-top-btn:hover { background: var(--vu-naranja-deep); color: var(--vu-blanco); transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,0.5), 0 0 0 1px rgba(241,94,55,0.6); }
+  .back-top-btn:hover { background: #ffffff; color: #1C1D1E; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.28); }
+  .back-top-btn:active { background: #1C1D1E; color: #ffffff; transform: translateY(0); box-shadow: none; }
   .back-top-btn svg { width: 22px; height: 22px; display: block; }
 
   /* =================== FOOTER =================== */
