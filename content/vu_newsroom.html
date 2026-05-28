@@ -790,6 +790,92 @@
     .search-box { width: 160px; }
     .search-box:focus { width: 180px; }
   }
+
+  /* =================== HEATMAP DE ACTIVIDAD =================== */
+  .heatmap-panel {
+    background: var(--vu-negro-elev);
+    border: 1px solid var(--vu-gris-dark);
+    border-radius: 12px;
+    padding: 20px 24px 16px;
+    margin: 32px auto 8px;
+    max-width: 1400px;
+    overflow-x: auto;
+  }
+  .hmap-header {
+    display: flex; align-items: baseline; gap: 12px;
+    margin-bottom: 16px;
+  }
+  .hmap-title {
+    font-family: var(--font-mono);
+    font-size: 11px; font-weight: 500;
+    color: var(--vu-crema); letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .hmap-stats {
+    font-family: var(--font-mono);
+    font-size: 11px; color: var(--vu-gris-light);
+  }
+  .hmap-wrap {
+    display: flex; align-items: flex-start;
+    min-width: max-content;
+  }
+  .hmap-day-col {
+    display: flex; flex-direction: column; gap: 3px;
+    padding-top: 18px; margin-right: 6px; flex-shrink: 0;
+  }
+  .hmap-day-lbl {
+    width: 14px; height: 12px;
+    font-family: var(--font-mono); font-size: 9px;
+    color: var(--vu-gris);
+    display: flex; align-items: center; justify-content: flex-end;
+  }
+  .hmap-right { min-width: 0; }
+  .hmap-months-row {
+    display: flex; gap: 3px; margin-bottom: 4px; height: 14px;
+  }
+  .hmap-month {
+    width: 12px; font-family: var(--font-mono); font-size: 9px;
+    color: var(--vu-gris); white-space: nowrap; overflow: visible;
+    letter-spacing: 0.02em;
+  }
+  .hmap-grid { display: flex; gap: 3px; }
+  .hmap-col { display: flex; flex-direction: column; gap: 3px; }
+  .hmap-cell {
+    width: 12px; height: 12px; border-radius: 2px;
+    cursor: pointer; flex-shrink: 0;
+    transition: transform 0.1s;
+  }
+  .hmap-cell:hover { transform: scale(1.4); position: relative; z-index: 1; }
+  .hmap-cell.l0 { background: var(--vu-negro-soft); }
+  .hmap-cell.l1 { background: rgba(241,94,55,0.22); }
+  .hmap-cell.l2 { background: rgba(241,94,55,0.48); }
+  .hmap-cell.l3 { background: rgba(241,94,55,0.76); }
+  .hmap-cell.l4 { background: var(--vu-naranja); }
+  .hmap-cell.future { background: transparent; border: 1px dashed rgba(255,255,255,0.07); cursor: default; }
+  .hmap-cell.future:hover { transform: none; }
+  .hmap-footer {
+    margin-top: 12px; padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  .hmap-legend {
+    display: flex; align-items: center; gap: 4px;
+    padding-left: 20px;
+  }
+  .hmap-leg-txt {
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--vu-gris); margin: 0 4px;
+  }
+  .hmap-tip {
+    position: fixed;
+    background: rgba(10,10,10,0.96);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--vu-crema);
+    padding: 5px 10px; border-radius: 6px;
+    font-family: var(--font-mono); font-size: 11px;
+    pointer-events: none; z-index: 9600;
+    opacity: 0; transition: opacity 0.12s;
+    white-space: nowrap; letter-spacing: 0.03em;
+  }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
@@ -2480,6 +2566,118 @@ const VIEW_CONFIG = {
   }
 };
 
+/* =========================================================================
+   HEATMAP DE ACTIVIDAD
+   ========================================================================= */
+
+function getHmapLevel(n) {
+  if (!n) return 0;
+  if (n <= 3) return 1;
+  if (n <= 7) return 2;
+  if (n <= 12) return 3;
+  return 4;
+}
+
+function buildHeatmapHTML() {
+  const counts = {};
+  collectAll().forEach(it => {
+    if (it.date) counts[it.date] = (counts[it.date] || 0) + 1;
+  });
+
+  const WEEKS = 20;
+  const now = new Date();
+  const pad = n => String(n).padStart(2, '0');
+  const toStr = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+  const todayStr = toStr(now);
+
+  // Align to Monday of current week, then go back WEEKS-1 more weeks
+  const dow = (now.getDay() + 6) % 7; // Mon=0 … Sun=6
+  const startDate = new Date(now);
+  startDate.setDate(now.getDate() - dow - (WEEKS - 1) * 7);
+
+  const columns = [];
+  const cursor = new Date(startDate);
+  for (let w = 0; w < WEEKS; w++) {
+    const week = [];
+    for (let d = 0; d < 7; d++) {
+      week.push(toStr(cursor));
+      cursor.setDate(cursor.getDate() + 1);
+    }
+    columns.push(week);
+  }
+
+  const DAY_LABELS = ['L','','X','','V','','D'];
+  const MONTH_NAMES = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+
+  let prevM = -1;
+  const monthsRow = columns.map(week => {
+    const d = new Date(week[0] + 'T12:00:00');
+    const m = d.getMonth();
+    const label = m !== prevM ? MONTH_NAMES[m] : '';
+    prevM = m;
+    return `<div class="hmap-month">${label}</div>`;
+  }).join('');
+
+  const gridCols = columns.map(week => {
+    const cells = week.map(ds => {
+      const n = counts[ds] || 0;
+      const cls = ds > todayStr ? 'future' : `l${getHmapLevel(n)}`;
+      return `<div class="hmap-cell ${cls}" data-date="${ds}" data-count="${n}"></div>`;
+    }).join('');
+    return `<div class="hmap-col">${cells}</div>`;
+  }).join('');
+
+  const totalNotes = Object.values(counts).reduce((a,b) => a+b, 0);
+  const activeDays = Object.keys(counts).filter(k => counts[k] > 0).length;
+
+  const dayLabelsHTML = DAY_LABELS.map(l => `<div class="hmap-day-lbl">${l}</div>`).join('');
+  const legendCells = [0,1,2,3,4].map(l => `<div class="hmap-cell l${l}"></div>`).join('');
+
+  return `
+    <div class="heatmap-panel">
+      <div class="hmap-header">
+        <span class="hmap-title">Actividad de cobertura</span>
+        <span class="hmap-stats">${totalNotes} notas · ${activeDays} días activos</span>
+      </div>
+      <div class="hmap-wrap">
+        <div class="hmap-day-col">${dayLabelsHTML}</div>
+        <div class="hmap-right">
+          <div class="hmap-months-row">${monthsRow}</div>
+          <div class="hmap-grid">${gridCols}</div>
+        </div>
+      </div>
+      <div class="hmap-footer">
+        <div class="hmap-legend">
+          <span class="hmap-leg-txt">Menos</span>${legendCells}<span class="hmap-leg-txt">Más</span>
+        </div>
+      </div>
+    </div>
+    <div class="hmap-tip" id="hmapTip"></div>
+  `;
+}
+
+function initHeatmap() {
+  const tip = document.getElementById('hmapTip');
+  if (!tip) return;
+  const DAY_ES  = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+  const MON_ES  = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  document.querySelectorAll('.hmap-cell[data-date]').forEach(cell => {
+    cell.addEventListener('mouseenter', () => {
+      const n = parseInt(cell.dataset.count) || 0;
+      const ds = cell.dataset.date;
+      const d  = new Date(ds + 'T12:00:00');
+      const label = `${DAY_ES[d.getDay()]} ${d.getDate()} ${MON_ES[d.getMonth()]} ${d.getFullYear()}`;
+      tip.textContent = n ? `${n} nota${n !== 1 ? 's' : ''} · ${label}` : `Sin cobertura · ${label}`;
+      tip.style.opacity = '1';
+    });
+    cell.addEventListener('mousemove', e => {
+      tip.style.left = (e.clientX + 14) + 'px';
+      tip.style.top  = (e.clientY - 34) + 'px';
+    });
+    cell.addEventListener('mouseleave', () => { tip.style.opacity = '0'; });
+  });
+}
+
 function renderView(viewKey) {
   const cfg = VIEW_CONFIG[viewKey];
   if (!cfg) return renderView('home');
@@ -2502,8 +2700,10 @@ function renderView(viewKey) {
       ? renderLatam(items, cfg.empty)
       : renderFeatured(items, cfg.empty);
 
-  view.innerHTML = headHTML + bodyHTML;
+  const extraHTML = viewKey === 'home' ? buildHeatmapHTML() : '';
+  view.innerHTML = headHTML + bodyHTML + extraHTML;
   if (viewKey === 'latam') initLatamToggle();
+  if (viewKey === 'home') initHeatmap();
   window.scrollTo({ top: 0, behavior: 'auto' });
 }
 
