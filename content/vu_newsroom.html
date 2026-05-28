@@ -579,30 +579,57 @@
   .country-section[open] .country-chevron { transform: rotate(90deg); }
   .country-section .country-items { padding: 14px 18px; display: flex; flex-direction: column; gap: 8px; }
 
-  /* =================== LATAM MAP =================== */
-  .latam-map-wrap {
-    width: 100%;
-    max-width: 380px;
-    margin: 0 auto 32px;
+  /* =================== LATAM TOGGLE + MAP =================== */
+  .latam-view-toggle {
+    display: flex; gap: 8px; margin: 28px 0 20px;
   }
-  .latam-map-wrap svg { width: 100%; height: auto; display: block; }
-  .latam-map-wrap path {
-    stroke: #0d0d0d;
-    stroke-width: 0.7;
-    stroke-linejoin: round;
-    transition: filter 0.15s, opacity 0.15s;
+  .latam-toggle-btn {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 8px 18px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--vu-gris-dark);
+    border-radius: 999px;
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.05em;
+    color: var(--vu-gris-light);
+    cursor: pointer; transition: all 0.15s;
   }
-  .latam-map-wrap path.map-active { cursor: pointer; }
-  .latam-map-wrap path.map-active:hover { filter: brightness(1.35); }
-  .latam-map-wrap path.map-bg { fill: #1a1a1a; pointer-events: none; }
-  .latam-map-wrap path.map-empty { fill: #252525; cursor: pointer; }
+  .latam-toggle-btn:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.2);
+    color: var(--vu-crema);
+  }
+  .latam-toggle-btn.active {
+    background: var(--sec-latam);
+    border-color: var(--sec-latam);
+    color: #fff;
+  }
+  #latamMapView {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  #latamMapView svg { display: block; width: 100%; height: auto; }
+  #latamMapView .map-bg {
+    fill: #1c1c1c; stroke: #0d0d0d; stroke-width: 0.4;
+    pointer-events: none;
+  }
+  #latamMapView .map-country {
+    stroke: #0d0d0d; stroke-width: 0.4; stroke-linejoin: round;
+    transition: filter 0.12s;
+  }
+  #latamMapView .map-country.has-news { cursor: pointer; }
+  #latamMapView .map-country.has-news:hover { filter: brightness(1.4) drop-shadow(0 0 6px rgba(241,94,55,0.5)); }
   .latam-map-legend {
-    display: flex; gap: 14px; justify-content: center; margin-top: 10px;
+    display: flex; gap: 14px; justify-content: center; margin-top: 12px;
     font-family: var(--font-mono); font-size: 10px;
     color: var(--vu-gris-light); letter-spacing: 0.05em;
   }
   .map-legend-item { display: flex; align-items: center; gap: 5px; }
   .map-legend-swatch { width: 9px; height: 9px; border-radius: 2px; flex-shrink: 0; }
+  .map-loading {
+    text-align: center; padding: 60px 16px;
+    color: var(--vu-gris-light);
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em;
+  }
   .latam-map-tip {
     position: fixed;
     background: rgba(10,10,10,0.96);
@@ -764,6 +791,8 @@
     .search-box:focus { width: 180px; }
   }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
 </head>
 <body>
 
@@ -879,31 +908,28 @@ const COUNTRIES = {
 };
 
 /* =========================================================================
-   LATAM MAP — paths SVG (viewBox 0 0 490 730)
-   Escala: x=(lon+120)*5.5  y=(34-lat)*7.8
+   LATAM MAP — D3 + Natural Earth (world-atlas 110m)
    ========================================================================= */
-const SVG_COUNTRY_PATHS = [
-  { id:'mexico',      d:'M17,16 L127,62 L143,125 L176,140 L162,128 L121,117 L88,109 L66,78 L17,31 Z' },
-  { id:'el_salvador', d:'M163,153 L177,151 L178,163 L162,163 Z' },
-  { id:'costa_rica',  d:'M184,179 L200,179 L204,203 L188,183 Z' },
-  { id:'panama',      d:'M204,203 L237,199 L237,191 L204,191 Z' },
-  { id:'venezuela',   d:'M259,172 L330,179 L325,203 L314,218 L292,242 L259,218 Z' },
-  { id:'colombia',    d:'M237,191 L292,172 L297,250 L264,296 L237,265 Z' },
-  { id:'ecuador',     d:'M215,265 L248,261 L248,300 L228,304 L215,281 Z' },
-  { id:'peru',        d:'M215,265 L259,265 L281,374 L281,406 L248,406 L215,343 Z' },
-  { id:'bolivia',     d:'M281,343 L347,374 L347,437 L281,437 Z' },
-  { id:'brasil',      d:'M385,226 L468,304 L468,343 L451,382 L424,445 L396,484 L385,499 L369,523 L347,515 L347,437 L314,382 L259,343 L259,265 L330,226 Z' },
-  { id:'chile',       d:'M265,394 L281,406 L281,499 L281,577 L275,686 L242,686 L253,577 L264,499 Z' },
-  { id:'paraguay',    d:'M313,437 L347,437 L347,476 L313,476 Z' },
-  { id:'uruguay',     d:'M341,499 L369,499 L369,530 L341,530 Z' },
-  { id:'argentina',   d:'M281,437 L363,437 L363,530 L341,530 L341,561 L311,670 L275,686 L281,577 L281,499 L281,437 Z' },
-];
-const SVG_BG_PATHS = [
-  'M154,125 L171,140 L171,153 L163,153 L162,163 L154,163 Z',  // Guatemala
-  'M171,140 L202,149 L202,163 L178,163 L177,151 L171,153 Z',  // Honduras
-  'M178,163 L202,163 L200,179 L184,179 Z',                    // Nicaragua
-  'M330,179 L385,226 L368,213 L353,195 L330,179 Z',           // Guianas (rough)
-];
+
+// ISO 3166-1 numeric → country key (tracked countries in LATAM section)
+const LATAM_ISO = {
+  32:  'argentina', 68:  'bolivia',    76:  'brasil',    152: 'chile',
+  170: 'colombia',  188: 'costa_rica', 218: 'ecuador',   222: 'el_salvador',
+  484: 'mexico',    591: 'panama',     600: 'paraguay',  604: 'peru',
+  858: 'uruguay',   862: 'venezuela'
+};
+// Background countries (geographic fill, not tracked)
+const LATAM_BG_ISO = new Set([320, 340, 558, 192, 332, 214, 630, 659, 388]);
+// (Guatemala, Honduras, Nicaragua, Cuba, Haiti, Dominican Republic, Puerto Rico, Antigua, Jamaica)
+
+let _worldDataCache = null;
+
+function fetchWorldAtlas() {
+  if (_worldDataCache) return Promise.resolve(_worldDataCache);
+  return fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(d => { _worldDataCache = d; return d; });
+}
 
 function mapCountryColor(count) {
   if (!count) return '#252525';
@@ -912,35 +938,96 @@ function mapCountryColor(count) {
   return '#F15E37';
 }
 
-function buildLatamMap(byCountry) {
-  const bgPaths = SVG_BG_PATHS.map(d =>
-    `<path class="map-bg" d="${d}"/>`
-  ).join('');
+function renderD3LatamMap(byCountry, container) {
+  container.innerHTML = '<div class="map-loading">Cargando mapa…</div>';
 
-  const countryPaths = SVG_COUNTRY_PATHS.map(({ id, d }) => {
-    const count  = (byCountry[id] || []).length;
-    const info   = COUNTRIES[id] || { flag: '', name: id };
-    const fill   = mapCountryColor(count);
-    const cls    = 'map-active' + (count === 0 ? ' map-empty' : '');
-    const tip    = count > 0
-      ? `${info.flag} ${info.name} · ${count} nota${count !== 1 ? 's' : ''}`
-      : `${info.flag} ${info.name} · sin notas`;
-    return `<path class="${cls}" fill="${fill}" data-country="${id}" data-tip="${tip}" data-count="${count}" d="${d}"/>`;
-  }).join('');
+  fetchWorldAtlas().then(world => {
+    const allFeatures = topojson.feature(world, world.objects.countries).features;
+    const bgFeatures      = allFeatures.filter(f => LATAM_BG_ISO.has(+f.id));
+    const trackedFeatures = allFeatures.filter(f => LATAM_ISO[+f.id]);
+    const allLatam        = [...bgFeatures, ...trackedFeatures];
 
-  return `
-    <div class="latam-map-wrap" id="latamMapWrap">
-      <svg viewBox="0 0 490 730" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa LATAM">
-        ${bgPaths}
-        ${countryPaths}
-      </svg>
-      <div class="latam-map-legend">
-        <span class="map-legend-item"><span class="map-legend-swatch" style="background:#252525;"></span>Sin notas</span>
-        <span class="map-legend-item"><span class="map-legend-swatch" style="background:rgba(241,94,55,0.38);"></span>1 nota</span>
-        <span class="map-legend-item"><span class="map-legend-swatch" style="background:rgba(241,94,55,0.68);"></span>2-3 notas</span>
-        <span class="map-legend-item"><span class="map-legend-swatch" style="background:#F15E37;"></span>4+ notas</span>
-      </div>
-    </div>`;
+    container.innerHTML = '';
+    const W = Math.min(container.clientWidth || 480, 520);
+    const H = Math.round(W * 1.55);
+
+    const projection = d3.geoNaturalEarth1();
+    const path       = d3.geoPath().projection(projection);
+    projection.fitSize([W, H], { type: 'FeatureCollection', features: allLatam });
+
+    const svg = d3.select(container).append('svg')
+      .attr('viewBox', `0 0 ${W} ${H}`)
+      .attr('width', '100%')
+      .attr('role', 'img')
+      .attr('aria-label', 'Mapa LATAM interactivo');
+
+    // Background (non-tracked)
+    svg.selectAll('.map-bg')
+      .data(bgFeatures).join('path')
+      .attr('class', 'map-bg')
+      .attr('d', path);
+
+    // Tracked countries
+    const tip = document.getElementById('latamTip');
+    svg.selectAll('.map-country')
+      .data(trackedFeatures).join('path')
+      .attr('class', d => {
+        const count = (byCountry[LATAM_ISO[+d.id]] || []).length;
+        return 'map-country' + (count > 0 ? ' has-news' : '');
+      })
+      .attr('fill', d => mapCountryColor((byCountry[LATAM_ISO[+d.id]] || []).length))
+      .attr('d', path)
+      .on('mouseover', function(event, d) {
+        const id    = LATAM_ISO[+d.id];
+        const info  = COUNTRIES[id] || { flag: '', name: id };
+        const count = (byCountry[id] || []).length;
+        tip.textContent = count > 0
+          ? `${info.flag} ${info.name} · ${count} nota${count !== 1 ? 's' : ''}`
+          : `${info.flag} ${info.name} · sin notas`;
+        tip.style.display = 'block';
+      })
+      .on('mousemove', function(event) {
+        tip.style.left = (event.clientX + 14) + 'px';
+        tip.style.top  = (event.clientY - 32) + 'px';
+      })
+      .on('mouseout', function() {
+        tip.style.display = 'none';
+      })
+      .on('click', function(event, d) {
+        const id    = LATAM_ISO[+d.id];
+        const count = (byCountry[id] || []).length;
+        if (!count) return;
+        tip.style.display = 'none';
+        // Switch to list tab then scroll to country
+        const listBtn = document.querySelector('.latam-toggle-btn[data-tab="list"]');
+        if (listBtn && !listBtn.classList.contains('active')) listBtn.click();
+        setTimeout(() => {
+          const det = document.querySelector(`.country-section[data-country="${id}"]`);
+          if (!det) return;
+          det.open = true;
+          det.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          det.style.outline = '2px solid #F15E37';
+          setTimeout(() => { det.style.outline = ''; }, 1400);
+        }, 80);
+      });
+
+    // Legend
+    const leg = d3.select(container).append('div').attr('class', 'latam-map-legend');
+    [
+      { color: '#252525',              label: 'Sin notas' },
+      { color: 'rgba(241,94,55,0.38)', label: '1 nota'   },
+      { color: 'rgba(241,94,55,0.68)', label: '2-3 notas'},
+      { color: '#F15E37',              label: '4+ notas'  }
+    ].forEach(({ color, label }) => {
+      const item = leg.append('span').attr('class', 'map-legend-item');
+      item.append('span').attr('class', 'map-legend-swatch').style('background', color);
+      item.append('span').text(label);
+    });
+
+  }).catch(err => {
+    container.innerHTML = `<div class="map-loading" style="color:#F15E37">Error al cargar el mapa. Verificá conexión.</div>`;
+    console.error('[LatamMap]', err);
+  });
 }
 
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
@@ -2291,41 +2378,48 @@ function renderLatam(items, emptyMsg) {
           <div class="country-items">${citems.map(listCardHTML).join('')}</div>
         </details>`;
     }).join('');
-  const mapHTML = buildLatamMap(byCountry);
-  return `${topHTML}${mapHTML}<div class="latam-by-country">${sectionsHTML}</div>`;
+  return `
+    ${topHTML}
+    <div class="latam-view-toggle">
+      <button class="latam-toggle-btn active" data-tab="list">☰&nbsp; Por país</button>
+      <button class="latam-toggle-btn" data-tab="map">🗺&nbsp; Mapa</button>
+    </div>
+    <div id="latamListView"><div class="latam-by-country">${sectionsHTML}</div></div>
+    <div id="latamMapView" style="display:none"></div>
+  `;
 }
 
-function initLatamMapEvents() {
-  const wrap = document.getElementById('latamMapWrap');
-  const tip  = document.getElementById('latamTip');
-  if (!wrap || !tip) return;
+function initLatamToggle() {
+  const listView = document.getElementById('latamListView');
+  const mapView  = document.getElementById('latamMapView');
+  const btns     = document.querySelectorAll('.latam-toggle-btn');
+  if (!listView || !mapView || !btns.length) return;
 
-  wrap.addEventListener('mouseover', e => {
-    const path = e.target.closest('path[data-country]');
-    if (!path) return;
-    tip.textContent = path.dataset.tip;
-    tip.style.display = 'block';
+  // Reconstruct byCountry from live data
+  const byCountry = {};
+  VIEW_CONFIG.latam.items().forEach(it => {
+    if (!byCountry[it.country]) byCountry[it.country] = [];
+    byCountry[it.country].push(it);
   });
-  wrap.addEventListener('mousemove', e => {
-    tip.style.left = (e.clientX + 14) + 'px';
-    tip.style.top  = (e.clientY - 32) + 'px';
-  });
-  wrap.addEventListener('mouseout', e => {
-    if (!e.target.closest('path[data-country]')) return;
-    tip.style.display = 'none';
-  });
-  wrap.addEventListener('click', e => {
-    const path = e.target.closest('path[data-country]');
-    if (!path || parseInt(path.dataset.count) === 0) return;
-    tip.style.display = 'none';
-    const country = path.dataset.country;
-    const details = document.querySelector(`.country-section[data-country="${country}"]`);
-    if (!details) return;
-    details.open = true;
-    details.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    details.style.transition = 'outline 0s';
-    details.style.outline = '2px solid #F15E37';
-    setTimeout(() => { details.style.outline = ''; }, 1400);
+
+  let mapRendered = false;
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      if (btn.dataset.tab === 'list') {
+        listView.style.display = '';
+        mapView.style.display  = 'none';
+      } else {
+        listView.style.display = 'none';
+        mapView.style.display  = '';
+        if (!mapRendered) {
+          renderD3LatamMap(byCountry, mapView);
+          mapRendered = true;
+        }
+      }
+    });
   });
 }
 
@@ -2409,7 +2503,7 @@ function renderView(viewKey) {
       : renderFeatured(items, cfg.empty);
 
   view.innerHTML = headHTML + bodyHTML;
-  if (viewKey === 'latam') initLatamMapEvents();
+  if (viewKey === 'latam') initLatamToggle();
   window.scrollTo({ top: 0, behavior: 'auto' });
 }
 
