@@ -24,6 +24,7 @@
 
     --sec-global: #3A86FF;
     --sec-latam: #F15E37;
+    --sec-regulation: #9B59B6;
     --sec-competencia: #C44826;
     --sec-vu: #06A77D;
     --sec-archivo: #888888;
@@ -197,6 +198,7 @@
   #view[data-view="home"]        { --view-color: var(--vu-naranja); }
   #view[data-view="global"]      { --view-color: var(--sec-global); }
   #view[data-view="latam"]       { --view-color: var(--sec-latam); }
+  #view[data-view="regulation"]  { --view-color: var(--sec-regulation); }
   #view[data-view="competencia"] { --view-color: var(--sec-competencia); }
   #view[data-view="vu"]          { --view-color: var(--sec-vu); }
   #view[data-view="archivo"]     { --view-color: var(--sec-archivo); }
@@ -229,6 +231,7 @@
   /* Card section colors */
   .card-global       { --card-color: var(--sec-global); }
   .card-latam        { --card-color: var(--sec-latam); }
+  .card-regulation   { --card-color: var(--sec-regulation); }
   .card-competencia  { --card-color: var(--sec-competencia); }
   .card-vu           { --card-color: var(--sec-vu); }
   .card-archivo      { --card-color: var(--sec-archivo); }
@@ -1647,7 +1650,8 @@ const briefing = {
         topic: 'IA / ciberseguridad',
         image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=80'
       }
-    ]
+    ],
+    regulation: []
   }
 };
 
@@ -1684,6 +1688,7 @@ function byDateDesc(a,b) {
 function collectAll() {
   const out = [];
   briefing.sections.global.forEach(it      => out.push({...it, section: 'global'}));
+  briefing.sections.regulation.forEach(it  => out.push({...it, section: 'regulation'}));
   briefing.sections.competencia.forEach(it => out.push({...it, section: 'competencia'}));
   briefing.sections.vu.forEach(it          => out.push({...it, section: 'vu'}));
   Object.entries(briefing.sections.latam).forEach(([country, items]) => {
@@ -1698,6 +1703,7 @@ function itemsBySection(section) {
 const SECTION_LABEL = {
   global:      'Global',
   latam:       'LATAM',
+  regulation:  'Regulación',
   competencia: 'Competencia',
   vu:          'VU',
   archivo:     'Archivo'
@@ -1813,7 +1819,7 @@ const VIEW_CONFIG = {
   home: {
     label:      'Home',
     title:      `Últimos ${FRESH_DAYS} días`,
-    subtitle:   `Lo más reciente de Global, LATAM, Competencia y VU.`,
+    subtitle:   `Lo más reciente de Global, LATAM, Regulación, Competencia y VU.`,
     items:      () => collectAll().filter(isFresh).sort(byDateDesc),
     empty:      `Sin novedades en los últimos ${FRESH_DAYS} días.`,
     render:     'featured'
@@ -1844,6 +1850,13 @@ const VIEW_CONFIG = {
     title:      'VU Security · Stranieri · VU ONE',
     items:      () => itemsBySection('vu').filter(isFresh).sort(byDateDesc),
     empty:      `Sin novedades de VU en los últimos ${FRESH_DAYS} días.`,
+    render:     'featured'
+  },
+  regulation: {
+    label:      'Regulación',
+    title:      'Regulación',
+    items:      () => itemsBySection('regulation').filter(isFresh).sort(byDateDesc),
+    empty:      `Sin novedades regulatorias en los últimos ${FRESH_DAYS} días.`,
     render:     'featured'
   },
   archivo: {
@@ -1884,11 +1897,12 @@ function renderView(viewKey) {
    ========================================================================= */
 
 function buildTOC() {
-  const order = ['home','global','latam','competencia','vu','archivo'];
+  const order = ['home','global','latam','regulation','competencia','vu','archivo'];
   const counts = {
     home:        VIEW_CONFIG.home.items().length,
     global:      VIEW_CONFIG.global.items().length,
     latam:       VIEW_CONFIG.latam.items().length,
+    regulation:  VIEW_CONFIG.regulation.items().length,
     competencia: VIEW_CONFIG.competencia.items().length,
     vu:          VIEW_CONFIG.vu.items().length,
     archivo:     VIEW_CONFIG.archivo.items().length
@@ -1897,6 +1911,7 @@ function buildTOC() {
     home:        'var(--vu-naranja)',
     global:      'var(--sec-global)',
     latam:       'var(--sec-latam)',
+    regulation:  'var(--sec-regulation)',
     competencia: 'var(--sec-competencia)',
     vu:          'var(--sec-vu)',
     archivo:     'var(--sec-archivo)'
