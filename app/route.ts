@@ -47,29 +47,52 @@ export async function GET(req: NextRequest) {
 const LOGOUT_BUTTON = `
 <!-- VU ONE Auth: floating logout button (injected at runtime) -->
 <style>
-  #vuone-logout-btn {
+  #vuone-logout-form {
     position: fixed;
     top: 28px;
     right: 24px;
     z-index: 9999;
+    margin: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  #vuone-logout-form.vuone-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+  }
+  #vuone-logout-btn {
     padding: 10px 18px;
     font: 500 13px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
     color: #1C1D1E;
-    background: rgba(255,255,255,0.92);
+    background: #F15E37;
     border: none;
     border-radius: 999px;
     cursor: pointer;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-    transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
   }
   #vuone-logout-btn:hover {
-    background: #ffffff;
-    color: #1C1D1E;
+    background: #E04E28;
     transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.28);
   }
-  #vuone-logout-btn:active { background: #1C1D1E; color: #ffffff; transform: translateY(0); box-shadow: none; }
+  #vuone-logout-btn:active { background: #C44826; transform: translateY(0); box-shadow: none; }
 </style>
-<form id="vuone-logout-form" action="/api/auth/logout" method="GET" style="margin:0;">
+<form id="vuone-logout-form" action="/api/auth/logout" method="GET">
   <button id="vuone-logout-btn" type="submit" title="Cerrar sesión VU ONE">Cerrar sesión</button>
-</form>`;
+</form>
+<script>
+(function() {
+  var lastY = 0;
+  var form = document.getElementById('vuone-logout-form');
+  window.addEventListener('scroll', function() {
+    var y = window.scrollY;
+    if (y > lastY && y > 60) {
+      form.classList.add('vuone-hidden');
+    } else {
+      form.classList.remove('vuone-hidden');
+    }
+    lastY = y;
+  }, { passive: true });
+})();
+</script>`;
