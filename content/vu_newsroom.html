@@ -1309,10 +1309,44 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  date: '2026-05-27',
-  publishedAt: '2026-05-28T10:00:00Z',
+  date: '2026-05-28',
+  publishedAt: '2026-05-29T10:00:00Z',
   sections: {
     global: [
+      {
+        id: 'entrust-identity-fraud-report-2026-may28',
+        title: 'Reporte Entrust 2026: deepfakes representan 1 de cada 5 intentos de fraude biométrico; injection attacks suben 40%',
+        summary: 'El séptimo informe anual de fraude de identidad de Entrust documenta que los deepfakes ya representan el 20% de todos los intentos de fraude biométrico, con selfies deepfakeadas creciendo 58% en 2025. Los ataques de inyección aumentaron 40% interanual, permitiendo a los atacantes eludir la captura en vivo durante el onboarding digital. Los documentos de identidad nacionales representan el 46% de los documentos fraudulentos presentados globalmente.',
+        sourceUrl: 'https://ffnews.com/newsarticle/fintech/entrust-2026-identity-fraud-report-reveals-surging-attacks-and-diversifying-tactics/',
+        sourceName: 'FF News',
+        date: '2026-05-28',
+        language: 'en',
+        highRelevance: true,
+        topic: 'identidad',
+      },
+      {
+        id: 'facebook-30k-appsheet-phishing-may28',
+        title: '30.000 cuentas de Facebook comprometidas mediante phishing vía Google AppSheet',
+        summary: 'Una operación de origen vietnamita denominada AccountDumpling usó la dirección legítima noreply@appsheet.com para enviar correos de phishing a titulares de Facebook Business, eludiendo filtros de spam. Aproximadamente 30.000 cuentas fueron comprometidas y revendidas en un storefront criminal con paneles en tiempo real. El investigador Shaked Chen describió la operación como un ciclo criminal-comercial continuo que roba y vende acceso a las mismas cuentas.',
+        sourceUrl: 'https://thehackernews.com/2026/05/30000-facebook-accounts-hacked-via.html',
+        sourceName: 'The Hacker News',
+        date: '2026-05-28',
+        language: 'en',
+        highRelevance: true,
+        topic: 'fraude',
+      },
+      {
+        id: 'signal-phishing-backup-recovery-may28',
+        title: 'Hackers apuntan a claves de recuperación de Signal en nueva ola de phishing',
+        summary: 'TechCrunch reportó una campaña activa de phishing que engaña a usuarios de Signal haciéndose pasar por el soporte oficial para robar la recovery key y acceder a backups cifrados. Varios activistas reportaron mensajes idénticos, aunque la campaña podría dirigirse a múltiples comunidades. Signal advirtió que jamás contacta a usuarios primero ni solicita claves de recuperación.',
+        sourceUrl: 'https://techcrunch.com/2026/05/28/hackers-are-trying-to-steal-signal-users-backups-in-new-wave-of-phishing-attacks/',
+        sourceName: 'TechCrunch',
+        date: '2026-05-28',
+        language: 'en',
+        highRelevance: true,
+        topic: 'fraude',
+      },
+
       {
         id: 'samsung-clear-digital-id-wallet-may27',
         title: 'Samsung completa la tríada móvil: pasaportes digitales en Samsung Wallet con verificación CLEAR para TSA',
@@ -1977,6 +2011,29 @@ const briefing = {
     ],
     latam: {
       argentina: [
+          {
+            id: 'argentina-banda-chino-app-fraude-may28',
+            title: 'Argentina: desbaratan red criminal con apps falsas que robó $3.000M en pesos y US$8M en cripto',
+            summary: 'La Ufeic del Departamento Judicial San Isidro ejecutó 90 allanamientos simultáneos y detuvo a 24 personas lideradas por un ciudadano chino. La organización creó aplicaciones que simulaban ser herramientas de productividad o inversión pero robaban credenciales bancarias, cuentas de redes sociales, billeteras virtuales y códigos de autenticación. El daño total estimado alcanza los $3.000 millones de pesos; se incautaron US$8 millones en criptoactivos y la red operaba también en Chile, Perú, Colombia y México.',
+            sourceUrl: 'https://www.lanacion.com.ar/seguridad/estafas-por-la-web-la-banda-del-chino-una-falsa-app-para-hacer-inversiones-y-el-secuestro-de-us8-nid28052026/',
+            sourceName: 'La Nacion',
+            date: '2026-05-28',
+            language: 'es',
+            highRelevance: true,
+            topic: 'fraude',
+          },
+          {
+            id: 'mundial-2026-estafas-magistv-latam-may28',
+            title: 'Mundial 2026: MagisTV y sitios falsos de apuestas lideran ola de fraudes en Argentina, Colombia y México',
+            summary: 'ESET documentó múltiples vectores de fraude que explotan el Mundial FIFA 2026: apps de streaming ilegales que capturan datos sensibles, portales de apuestas sin licencia, réplicas de FIFA.com para venta de entradas falsas y tokens cripto fraudulentos como worldcup*.fun. El mercado global de apuestas deportivas movió US$84.000 millones en 2023. Los países más afectados son Argentina, Colombia, México, Estados Unidos y Canadá.',
+            sourceUrl: 'https://www.infobae.com/tecno/2026/05/28/magistv-y-sitios-falsos-de-apuestas-encabezan-las-estafas-que-usan-al-mundial-2026-como-excusa/',
+            sourceName: 'Infobae',
+            date: '2026-05-28',
+            language: 'es',
+            highRelevance: true,
+            topic: 'fraude',
+          },
+
         {
           id: 'infobae-mundial-fifa-estafa-may27',
           title: 'Copa Mundial 2026: oleada de phishing promete USD 500.000 en premios falsos para vaciar cuentas bancarias',
@@ -2180,7 +2237,19 @@ const briefing = {
           image: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=1400&q=80'
         }
       ], uruguay: [], ecuador: [],
-      costa_rica: [], panama: [], bolivia: [], paraguay: [],
+      costa_rica: [], panama: [
+          {
+            id: 'panama-ley-524-penas-fraude-may27',
+            title: 'Panamá: Ley 524 aumenta penas por fraude digital e identidad; denuncias crecieron 578% desde 2019',
+            summary: 'Panamá promulgó la Ley 524 que reforma el Código Penal: el delito base pasa a 3-6 años de prisión, con agravantes por fraude cibernético, usurpación de identidad y daño patrimonial entre US$50.000 y US$100.000; los casos graves alcanzan 7-12 años. El impulso legislativo responde a que los expedientes judicializados crecieron 578,3% entre 2019 y 2024, con 26.670 denuncias acumuladas y 5.241 solo en 2024.',
+            sourceUrl: 'https://www.infobae.com/panama/2026/05/27/panama-endurece-penas-por-estafas-tras-aumento-de-denuncias/',
+            sourceName: 'Infobae',
+            date: '2026-05-27',
+            language: 'es',
+            highRelevance: true,
+            topic: 'regulacion',
+          },
+], bolivia: [], paraguay: [],
       venezuela: [
         {
           id: 'bdt-venezuela-fallas-nomina-may26',
@@ -2216,6 +2285,18 @@ const briefing = {
           image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1400&q=80'
         }
       ], espana: [
+          {
+            id: 'espana-hacienda-phishing-smishing-may27',
+            title: 'España: Agencia Tributaria alerta sobre seis modalidades activas de phishing y smishing que suplantan a Hacienda',
+            summary: 'La AEAT emitió una alerta sobre al menos seis modalidades de fraude activas durante la campaña de la Declaración de la Renta: correos falsos prometiendo devoluciones del IRPF, SMS con links a sitios clonados, llamadas suplantando directivos y solicitudes de pago en criptomonedas. Los atacantes usan terminología fiscal real y apariencia institucional para aumentar la credibilidad. La alerta fue difundida por Infobae España.',
+            sourceUrl: 'https://www.infobae.com/espana/2026/05/27/si-recibes-un-mensaje-de-hacienda-podria-ser-una-estafa-la-agencia-tributaria-alerta-de-suplantaciones-en-la-campana-de-la-renta/',
+            sourceName: 'Infobae',
+            date: '2026-05-27',
+            language: 'es',
+            highRelevance: true,
+            topic: 'fraude',
+          },
+
         {
           id: 'catalonia-postquantum-identity-may19',
           title: 'Cataluña invierte €1,2M para blindar su identidad digital ante la computación cuántica: inventario criptográfico y hoja de ruta de migración',
@@ -2240,6 +2321,43 @@ const briefing = {
       ]
     },
     competencia: [
+      {
+        id: 'aws-connect-voice-id-eol-may28',
+        title: 'AWS elimina Amazon Connect Voice ID y recomienda Pindrop como alternativa',
+        summary: 'Amazon Connect Voice ID cerrará definitivamente en mayo de 2026, marcando la salida de AWS del mercado de biometría de voz. Amazon redirige a sus clientes hacia la plataforma de Pindrop con autenticación multifactor de voz y detección de liveness. El retiro se atribuye a desafíos técnicos persistentes con ruido de fondo, variaciones de acento y la creciente amenaza del speech sintético y deepfakes de audio.',
+        sourceUrl: 'https://www.biometricupdate.com/202505/amazon-to-end-support-for-voice-biometrics-recommends-pindrop',
+        sourceName: 'Biometric Update',
+        date: '2026-05-28',
+        language: 'es',
+        highRelevance: true,
+        topic: 'biometria',
+        competitor: 'AWS',
+      },
+      {
+        id: 'microsoft-phishing-35k-users-aitm-may28',
+        title: 'Microsoft revela campaña de phishing AiTM que comprometió 35.000 usuarios en 26 países bypasseando MFA',
+        summary: 'Microsoft Threat Intelligence documentó una campaña de robo de credenciales que apuntó a más de 35.000 usuarios en 13.000 organizaciones en 26 países, con el 92% de los objetivos en EE.UU. La campaña usó plantillas HTML enterprise-style con adversary-in-the-middle para capturar tokens y credenciales de Microsoft en tiempo real, bypaseando MFA. Los sectores más afectados fueron salud y ciencias de la vida (19%), servicios financieros (18%) y tecnología (11%).',
+        sourceUrl: 'https://thehackernews.com/2026/05/microsoft-details-phishing-campaign.html',
+        sourceName: 'The Hacker News',
+        date: '2026-05-28',
+        language: 'es',
+        highRelevance: true,
+        topic: 'fraude',
+        competitor: 'Microsoft',
+      },
+      {
+        id: 'ping-identity-agentic-enterprise-control-plane-may27',
+        title: 'Ping Identity redefine el plano de control de identidad para la empresa agéntica',
+        summary: 'Ping Identity anunció tres nuevas capacidades: Programmable Identity (interfaces headless AI-first con CLI y MCP), Agent Discovery and Governance (ciclo de vida y responsabilidad para agentes de IA), y Privileged Access for Desktop Agents (acceso just-in-time sin exponer secretos). La propuesta posiciona a la identidad como plano de control universal para entornos con más agentes de IA que usuarios humanos.',
+        sourceUrl: 'https://venturebeat.com/security/ping-identity-redefines-the-identity-control-plane-for-the-agentic-enterprise',
+        sourceName: 'VentureBeat',
+        date: '2026-05-27',
+        language: 'es',
+        highRelevance: true,
+        topic: 'identidad',
+        competitor: 'Ping Identity',
+      },
+
       {
         id: 'interac-incode-liveness-ibeta3-canada-may26',
         title: 'Incode gana exclusividad en Canadá: Interac elige su liveness iBeta Nivel 3 —primera solución sin errores en iOS y Android',
@@ -2473,7 +2591,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO  = '2026-05-28';
+const TODAY_ISO  = '2026-05-29';
 
 function fmtDate(iso) {
   if (!iso) return '—';
