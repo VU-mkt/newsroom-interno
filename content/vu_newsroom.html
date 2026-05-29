@@ -67,7 +67,10 @@
   .masthead-left { display: flex; align-items: center; justify-content: flex-start; }
   .masthead-center {
     display: flex; flex-direction: row;
-    align-items: center; gap: 14px;
+    align-items: center; gap: 16px;
+  }
+  .masthead-brand-link {
+    display: flex; align-items: center; gap: 14px;
     text-decoration: none;
   }
   .brand-newsroom {
@@ -85,18 +88,18 @@
   .website-btn {
     display: inline-flex; align-items: center; justify-content: center;
     width: 44px; height: 44px;
-    background: rgba(255,255,255,0.92); color: #1C1D1E;
+    background: #EBE4CA; color: #1C1D1E;
     border-radius: 12px; border: none;
     transition: all 0.15s ease;
     box-shadow: 0 1px 4px rgba(0,0,0,0.15);
   }
   .website-btn svg { width: 22px; height: 22px; display: block; }
   .website-btn:hover {
-    background: #ffffff; color: #1C1D1E;
+    background: #F0EAD5; color: #1C1D1E;
     transform: translateY(-1px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.22);
   }
-  .website-btn:active { background: #1C1D1E; color: #ffffff; transform: translateY(0); box-shadow: none; }
+  .website-btn:active { background: #1C1D1E; color: #EBE4CA; transform: translateY(0); box-shadow: none; }
 
   /* =================== TOC / SECTIONS NAV =================== */
   .sections-nav {
@@ -151,9 +154,15 @@
     height: 40px;
     display: flex;
     align-items: center;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
     user-select: none;
+  }
+  .ticker-search-wrap {
+    flex-shrink: 0;
+    display: flex; align-items: center;
+    padding: 0 12px;
+    position: relative;
   }
   .ticker-label {
     flex-shrink: 0;
@@ -713,7 +722,8 @@
   .search-wrapper {
     position: relative; display: flex; align-items: center;
   }
-  .search-wrapper .search-icon {
+  .search-wrapper .search-icon,
+  .ticker-search-wrap .search-icon {
     position: absolute; left: 12px; pointer-events: none;
     width: 14px; height: 14px; color: rgba(255,255,255,0.4);
   }
@@ -828,7 +838,7 @@
   /* =================== COMMAND PALETTE =================== */
   .cmd-trigger-btn {
     display: inline-flex; align-items: center; gap: 6px;
-    padding: 8px 14px; margin-left: 10px;
+    padding: 8px 14px; margin-left: 0;
     background: rgba(255,255,255,0.08);
     border: 1px solid rgba(255,255,255,0.15);
     border-radius: 999px;
@@ -953,10 +963,6 @@
     font-size: 10px; color: var(--vu-crema);
   }
 
-  /* Reserve space for injected logout button (fixed right:24px, ~140px wide) */
-  @media (max-width: 1399px) {
-    .masthead-right { padding-right: 155px; }
-  }
 
   @media (max-width: 900px) {
     .feat-grid { grid-template-columns: 1fr; }
@@ -1079,20 +1085,17 @@
         </svg>
       </a>
     </div>
-    <a class="masthead-center" href="#home">
-      <img src="logo-blanco-trim.png" alt="VU" style="height: 48px; width: auto; display: block;">
-      <span class="brand-newsroom">Newsroom</span>
-    </a>
-    <div class="masthead-right">
-      <div class="search-wrapper">
-        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
-        <input class="search-box" id="searchBox" type="search" placeholder="Buscar nota…" autocomplete="off" spellcheck="false">
-      </div>
+    <div class="masthead-center">
+      <a class="masthead-brand-link" href="#home">
+        <img src="logo-blanco-trim.png" alt="VU" style="height: 48px; width: auto; display: block;">
+        <span class="brand-newsroom">Newsroom</span>
+      </a>
       <button class="cmd-trigger-btn" id="cmdTriggerBtn" aria-label="Abrir paleta de comandos (Ctrl+K)" title="Ctrl+K">
         <svg class="cmd-trigger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
         ⌘K
       </button>
     </div>
+    <div class="masthead-right"></div>
   </div>
 </header>
 
@@ -1105,6 +1108,11 @@
   <div class="ticker-vline"></div>
   <div class="ticker-track-wrap">
     <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+  <div class="ticker-vline"></div>
+  <div class="ticker-search-wrap">
+    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+    <input class="search-box" id="searchBox" type="search" placeholder="Buscar nota…" autocomplete="off" spellcheck="false">
   </div>
 </div>
 
