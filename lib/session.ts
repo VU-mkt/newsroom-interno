@@ -7,11 +7,14 @@ export type Challenge = {
   accountId?: string;
 };
 
+const SESSION_DURATION_MS  = 8 * 60 * 60 * 1000;
+const SESSION_DURATION_SEC = 8 * 60 * 60;
+
 export function createSession(email: string, accountId: string): string {
   const secret = process.env.SESSION_SECRET;
   if (!secret) throw new Error('Server misconfiguration');
   const payload = Buffer.from(
-    JSON.stringify({ email, accountId, exp: Date.now() + 30 * 60 * 1000 })
+    JSON.stringify({ email, accountId, exp: Date.now() + SESSION_DURATION_MS })
   ).toString('base64url');
   const sig = createHmac('sha256', secret).update(payload).digest('base64url');
   return `${payload}.${sig}`;
@@ -22,7 +25,7 @@ export function setSessionCookie(res: NextResponse, session: string): void {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',
-    maxAge: 30 * 60,
+    maxAge: SESSION_DURATION_SEC,
     path: '/',
   });
 }
