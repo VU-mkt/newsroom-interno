@@ -1403,8 +1403,8 @@ const briefing = {
         "vertical": "cross",
         "image": "https://images.unsplash.com/photo-1542396601-dca920ea2807?w=1400&q=80",
         "actionable": {
-          "type": "oportunidad",
-          "text": "Samsung Wallet + biometría hardware consolida el estándar de identidad móvil en EE.UU. VU puede posicionarse como capa de verificación de identidad reutilizable para ecosistemas Galaxy en LATAM antes de que el rollout llegue a la región."
+          "type": "tendencia",
+          "text": "Los tres ecosistemas móviles dominantes (Apple, Google, Samsung) ya soportan credenciales derivadas de pasaporte. La identidad digital se consolida como estándar de facto en viajes domésticos en EE.UU. — patrón que históricamente llega a LATAM en 12-18 meses."
         }
       },
       {
@@ -1420,8 +1420,8 @@ const briefing = {
         "vertical": "cross",
         "image": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1400&q=80",
         "actionable": {
-          "type": "respuesta-competitiva",
-          "text": "Con AWS Voice ID cerrando en mayo 2026, bancos y contact centers en LATAM quedan sin solución cloud nativa de autenticación de voz. VU puede posicionarse como alternativa biométrica multimodal (voz + cara) para estos clientes en transición urgente."
+          "type": "brecha",
+          "text": "Microsoft retiró Azure Speaker Recognition en sept. 2025 y AWS cierra Voice ID en mayo 2026. Bancos y contact centers en LATAM quedan sin solución cloud nativa de autenticación de voz. El mercado de reemplazo está abierto y sin líder regional claro."
         }
       },
       {
@@ -1450,8 +1450,8 @@ const briefing = {
         "vertical": "fintech",
         "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1400&q=80",
         "actionable": {
-          "type": "alerta-interna",
-          "text": "Didit (YC, 30% growth/mes) ofrece exactamente la propuesta de VU: API unificada KYC+AML+biometría. Monitorear su expansión LATAM y pricing para anticipar competencia directa en fintech y gobierno."
+          "type": "movimiento-competitivo",
+          "text": "Didit (YC W24) crece 30% mensual con API unificada KYC+AML+biometría, ya rentable en 1.500 clientes B2B en 220 países. El segmento de identidad programable está siendo validado por capital de riesgo institucional a escala global."
         }
       },
       {
@@ -3030,12 +3030,12 @@ function metaHTML(it) {
 
 /* ── Card Flip helpers ─────────────────────────────────────────── */
 const ACTIONABLE_TYPE_MAP = {
-  'contacto-comercial':    { icon: '📞', label: 'Contacto Comercial' },
-  'linkedin':              { icon: '💼', label: 'LinkedIn' },
-  'alerta-interna':        { icon: '🔔', label: 'Alerta Interna' },
-  'pr-thought':            { icon: '📣', label: 'PR / Thought Leadership' },
-  'respuesta-competitiva': { icon: '⚡', label: 'Respuesta Competitiva' },
-  'oportunidad':           { icon: '🎯', label: 'Oportunidad' },
+  'tendencia':              { icon: '📈', label: 'Tendencia'              },
+  'movimiento-competitivo': { icon: '⚡', label: 'Movimiento Competitivo' },
+  'ventana':                { icon: '🎯', label: 'Ventana de Mercado'     },
+  'señal-regulatoria':      { icon: '⚖️', label: 'Señal Regulatoria'     },
+  'dato-clave':             { icon: '📊', label: 'Dato Clave'             },
+  'brecha':                 { icon: '🔍', label: 'Brecha de Mercado'      },
 };
 
 function flipBackHTML(it) {
@@ -3045,7 +3045,7 @@ function flipBackHTML(it) {
       <div class="flip-back-header">
         <span class="flip-back-icon">${t.icon}</span>
         <div>
-          <div class="flip-back-label">¿Por qué importa para VU?</div>
+          <div class="flip-back-label">Señal de Mercado</div>
           <div class="flip-back-title">${it.title}</div>
         </div>
       </div>
