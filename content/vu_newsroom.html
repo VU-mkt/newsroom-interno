@@ -627,14 +627,18 @@
   }
   .flip-back-body {
     flex: 1; display: flex; flex-direction: column; gap: 8px;
+    overflow: hidden; min-height: 0;
   }
   .flip-back-label {
     font-family: var(--font-mono); font-size: 10px; font-weight: 700;
     letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--card-color, var(--vu-naranja));
+    flex-shrink: 0;
   }
   .flip-back-text {
     font-size: 14px; color: var(--vu-crema); line-height: 1.6;
+    display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   .flip-back-footer {
     display: flex; align-items: center; justify-content: space-between;
