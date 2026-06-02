@@ -627,18 +627,14 @@
   }
   .flip-back-body {
     flex: 1; display: flex; flex-direction: column; gap: 8px;
-    overflow: hidden; min-height: 0;
   }
   .flip-back-label {
     font-family: var(--font-mono); font-size: 10px; font-weight: 700;
     letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--card-color, var(--vu-naranja));
-    flex-shrink: 0;
   }
   .flip-back-text {
     font-size: 14px; color: var(--vu-crema); line-height: 1.6;
-    display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical;
-    overflow: hidden;
   }
   .flip-back-footer {
     display: flex; align-items: center; justify-content: space-between;
@@ -705,11 +701,12 @@
   .flip-front { flex: 1; }
 
   .feat-card.flip-card .flip-front { padding: 0; min-height: 320px; }
-  .side-card.flip-card .flip-front { padding: 16px 18px; min-height: 0; }
+  .side-card.flip-card .flip-front { padding: 16px 18px; min-height: 220px; }
   .list-card.flip-card .flip-front {
     padding: 14px 18px;
     display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center;
     flex-direction: row;
+    min-height: 200px;
   }
 
   /* =================== SEARCH =================== */
