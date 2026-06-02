@@ -411,8 +411,13 @@
   }
   .list-card {
     padding: 14px 18px;
-    display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center;
+    display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: start;
     flex-direction: row;
+  }
+  .list-card .list-summary {
+    font-family: var(--font-body); font-size: 12.5px; line-height: 1.55;
+    color: var(--vu-gris-light); margin: 5px 0 6px;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
   }
   .list-card h4 {
     font-family: var(--font-display); font-size: 15px; font-weight: 600;
@@ -471,6 +476,18 @@
     background: var(--vu-negro-soft); color: var(--vu-gris-light);
     padding: 3px 6px; border-radius: 4px;
   }
+  .lang-switcher { display: inline-flex; gap: 2px; align-items: center; }
+  .lang-btn {
+    font-family: var(--font-mono); font-size: 9px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    background: var(--vu-negro-soft); color: var(--vu-gris-light);
+    padding: 3px 5px; border-radius: 3px;
+    border: 1px solid transparent; cursor: pointer; line-height: 1;
+    transition: background 0.12s, color 0.12s, border-color 0.12s;
+  }
+  .lang-btn:hover { border-color: var(--vu-gris-dark); color: var(--vu-crema); }
+  .lang-btn.active { background: var(--card-color, var(--vu-naranja)); color: var(--vu-negro); }
+  .lang-btn.loading { opacity: 0.4; pointer-events: none; }
 
   .meta {
     display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
@@ -3008,11 +3025,89 @@ function pillsHTML(it) {
   return parts.join(' ');
 }
 
+window._newsTransCache = {};
+
+function escAttr(s) {
+  return (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function langSwitcherHTML(it) {
+  const lang = it.language || 'es';
+  const id = it.id;
+  return `<span class="lang-switcher">`
+    + `<button class="lang-btn${lang==='es'?' active':''}" onclick="event.stopPropagation();translateSummary(event,'${id}','es')" title="Español">ES</button>`
+    + `<button class="lang-btn${lang==='en'?' active':''}" onclick="event.stopPropagation();translateSummary(event,'${id}','en')" title="English">EN</button>`
+    + `<button class="lang-btn${lang==='pt'?' active':''}" onclick="event.stopPropagation();translateSummary(event,'${id}','pt')" title="Português">PT</button>`
+    + `</span>`;
+}
+
+async function _myMemoryChunk(chunk, from, to) {
+  const res = await fetch('https://api.mymemory.translated.net/get?q=' + encodeURIComponent(chunk) + '&langpair=' + encodeURIComponent(from + '|' + to));
+  if (!res.ok) throw new Error(res.status);
+  const data = await res.json();
+  if (!data.responseData || !data.responseData.translatedText) throw new Error('empty');
+  return data.responseData.translatedText;
+}
+
+async function _myMemoryTranslate(text, from, to) {
+  const LIMIT = 450;
+  if (text.length <= LIMIT) return _myMemoryChunk(text, from, to);
+  const sentences = text.match(/[^.!?]+[.!?]+[\s]*/g) || [text];
+  const chunks = [];
+  let cur = '';
+  for (const s of sentences) {
+    if (cur.length + s.length > LIMIT) { if (cur) chunks.push(cur.trim()); cur = s; }
+    else cur += s;
+  }
+  if (cur.trim()) chunks.push(cur.trim());
+  const parts = await Promise.all(chunks.map(c => _myMemoryChunk(c, from, to)));
+  return parts.join(' ');
+}
+
+async function translateSummary(event, articleId, targetLang) {
+  event.stopPropagation();
+  const btn = event.currentTarget;
+  const sumEl = document.getElementById('sum-' + articleId);
+  if (!sumEl) return;
+  const switcher = btn.closest('.lang-switcher');
+  const allBtns = switcher ? switcher.querySelectorAll('.lang-btn') : [];
+  const originalText = sumEl.dataset.original;
+  const originalLang = sumEl.dataset.lang;
+  if (targetLang === originalLang) {
+    sumEl.textContent = originalText;
+    allBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    return;
+  }
+  const cacheKey = articleId + ':' + targetLang;
+  if (window._newsTransCache[cacheKey]) {
+    sumEl.textContent = window._newsTransCache[cacheKey];
+    allBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    return;
+  }
+  allBtns.forEach(b => b.classList.add('loading'));
+  sumEl.style.opacity = '0.5';
+  try {
+    const translated = await _myMemoryTranslate(originalText, originalLang, targetLang);
+    window._newsTransCache[cacheKey] = translated;
+    sumEl.textContent = translated;
+    allBtns.forEach(b => b.classList.remove('active', 'loading'));
+    btn.classList.add('active');
+  } catch(e) {
+    allBtns.forEach(b => b.classList.remove('loading'));
+    sumEl.textContent = '⚠ Error al traducir.';
+    setTimeout(() => { sumEl.textContent = originalText; }, 2000);
+  } finally {
+    sumEl.style.opacity = '';
+  }
+}
+
 function metaHTML(it) {
   return `
     <div class="meta">
       <span class="date-badge">${fmtDate(it.date)}</span>
-      <span class="lang-badge">${(it.language||'es').toUpperCase()}</span>
+      ${langSwitcherHTML(it)}
       ${it.vertical ? `<span class="pip">·</span><span>${it.vertical}</span>` : ''}
       ${it.topic ? `<span class="pip">·</span><span>${it.topic}</span>` : ''}
       <span class="pip">·</span>
@@ -3200,7 +3295,7 @@ function featCardHTML(it) {
     <div class="feat-content">
       <div class="feat-top">${pillsHTML(it)}</div>
       <h2>${it.title}</h2>
-      <p class="feat-summary">${it.summary}</p>
+      <p class="feat-summary" id="sum-${it.id}" data-original="${escAttr(it.summary)}" data-lang="${it.language||'es'}">${it.summary}</p>
       ${metaHTML(it)}
     </div>`;
   if (it.actionable) {
@@ -3216,10 +3311,10 @@ function sideCardHTML(it) {
   const frontInner = `
     <div class="side-top">${pillsHTML(it)}</div>
     <h3>${it.title}</h3>
-    <p class="side-summary">${it.summary}</p>
+    <p class="side-summary" id="sum-${it.id}" data-original="${escAttr(it.summary)}" data-lang="${it.language||'es'}">${it.summary}</p>
     <div class="meta" style="font-size:10px;">
       <span class="date-badge">${fmtDate(it.date)}</span>
-      <span class="lang-badge">${(it.language||'es').toUpperCase()}</span>
+      ${langSwitcherHTML(it)}
       <a href="${it.sourceUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation();">${it.sourceName} ↗</a>
     </div>`;
   if (it.actionable) {
@@ -3236,6 +3331,7 @@ function listCardHTML(it) {
     <div>
       <div class="side-top">${pillsHTML(it)}</div>
       <h4>${it.title}</h4>
+      <p class="list-summary" id="sum-${it.id}" data-original="${escAttr(it.summary)}" data-lang="${it.language||'es'}">${it.summary}</p>
       <div class="meta">
         <a href="${it.sourceUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation();">${it.sourceName} ↗</a>
         ${it.topic ? `<span class="pip">·</span><span>${it.topic}</span>` : ''}
@@ -3243,7 +3339,7 @@ function listCardHTML(it) {
     </div>
     <div class="list-side">
       <span class="date-badge">${fmtDate(it.date)}</span>
-      <span class="lang-badge">${(it.language||'es').toUpperCase()}</span>
+      ${langSwitcherHTML(it)}
     </div>`;
   if (it.actionable) {
     return wrapFlipCard(frontInner, it, `list-card card-${it.section} ${it.highRelevance ? 'high' : ''}`);
