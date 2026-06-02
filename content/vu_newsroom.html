@@ -612,36 +612,29 @@
     pointer-events: none;
   }
   .flip-back-header {
-    display: flex; align-items: flex-start; gap: 10px;
+    display: flex; align-items: center; gap: 10px;
   }
   .flip-back-icon {
-    font-size: 22px; line-height: 1; flex-shrink: 0; margin-top: 2px;
+    font-size: 24px; line-height: 1; flex-shrink: 0;
+  }
+  .flip-back-type {
+    display: inline-flex; align-items: center;
+    font-family: var(--font-mono); font-size: 10px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--card-color, var(--vu-naranja));
+    color: var(--vu-negro);
+    padding: 4px 10px; border-radius: 4px;
+  }
+  .flip-back-body {
+    flex: 1; display: flex; flex-direction: column; gap: 8px;
   }
   .flip-back-label {
     font-family: var(--font-mono); font-size: 10px; font-weight: 700;
     letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--card-color, var(--vu-naranja));
-    margin-bottom: 4px;
-  }
-  .flip-back-title {
-    font-family: var(--font-display); font-size: 13px; font-weight: 600;
-    color: var(--vu-blanco); line-height: 1.35;
-    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-  }
-  .flip-back-body {
-    flex: 1;
-  }
-  .flip-back-type {
-    display: inline-flex; align-items: center; gap: 5px;
-    font-family: var(--font-mono); font-size: 10px; font-weight: 700;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    background: var(--card-color, var(--vu-naranja));
-    color: var(--vu-negro);
-    padding: 3px 9px; border-radius: 4px;
-    margin-bottom: 10px;
   }
   .flip-back-text {
-    font-size: 14px; color: var(--vu-crema); line-height: 1.55;
+    font-size: 14px; color: var(--vu-crema); line-height: 1.6;
   }
   .flip-back-footer {
     display: flex; align-items: center; justify-content: space-between;
@@ -3044,13 +3037,10 @@ function flipBackHTML(it) {
     <div class="flip-back">
       <div class="flip-back-header">
         <span class="flip-back-icon">${t.icon}</span>
-        <div>
-          <div class="flip-back-label">Señal de Mercado</div>
-          <div class="flip-back-title">${it.title}</div>
-        </div>
+        <div class="flip-back-type">${t.label}</div>
       </div>
       <div class="flip-back-body">
-        <div class="flip-back-type">${t.label}</div>
+        <div class="flip-back-label">Señal de Mercado</div>
         <p class="flip-back-text">${it.actionable.text}</p>
       </div>
       <div class="flip-back-footer">
