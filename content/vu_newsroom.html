@@ -363,8 +363,9 @@
     border-bottom: 1px solid var(--vu-gris-dark);
     position: relative;
   }
-  .feat-card.has-image .feat-image svg {
-    width: 100%; height: 100%; display: block;
+  .feat-card.has-image .feat-image svg,
+  .feat-card.has-image .feat-image img {
+    width: 100%; height: 100%; display: block; object-fit: cover;
   }
   .feat-card.has-image .feat-image::after {
     content: ''; position: absolute; inset: 0;
@@ -1320,10 +1321,58 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-06-01",
-  "publishedAt": "2026-06-02T10:00:00Z",
+  "date": "2026-06-02",
+  "publishedAt": "2026-06-03T13:23:32.524Z",
   "sections": {
     "global": [
+      {
+        "id": "google-android-deepfake-call-detection-jun03",
+        "title": "Google activa protección contra llamadas deepfake en Android a nivel global para combatir fraude por voz con IA",
+        "summary": "Google activó la función 'fake call detection' en Android 12+ de forma global por defecto, comenzando con dispositivos Pixel, usando un apretón de manos cifrado sobre RCS para verificar si el llamante es quien dice ser. Si detecta suplantación, muestra una alerta en pantalla antes de que el usuario responda. La medida responde a pérdidas globales de USD 440 mil millones por fraude de suplantación en 2025, según INTERPOL.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/google-adds-android-protection-against-ai-deepfake-scam-calls/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-06-03",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "deepfake",
+        "vertical": "cross"
+      },
+      {
+        "id": "meta-world-cup-fraud-prevention-jun01",
+        "title": "Meta activa herramientas anti-fraude ante el inicio del Mundial 2026 el 11 de junio",
+        "summary": "Meta implementó IA avanzada, advertencias de seguridad en búsquedas de entradas en Facebook y colaboración con Visa para desmantelar redes que usaban branding del Mundial para dirigir usuarios a sitios de apuestas fraudulentos. La compañía eliminó 2,6 millones de piezas de contenido dañino entre octubre y diciembre de 2025, más del 74% antes de ser reportadas por usuarios. Los países sede —EE.UU., Canadá y México— son los de mayor exposición.",
+        "sourceUrl": "https://www.helpnetsecurity.com/2026/06/01/meta-fifa-world-cup-scams/",
+        "sourceName": "Help Net Security",
+        "date": "2026-06-01",
+        "language": "es",
+        "highRelevance": false,
+        "topic": "fraude-rezagada",
+        "vertical": "retail"
+      },
+      {
+        "id": "unico-84pct-growth-latam-idv-jun02",
+        "title": "Unico reporta crecimiento del 84% en verificación de identidad en Q1 2026 y acelera expansión LATAM",
+        "summary": "La firma brasileña de identidad digital Unico registró un aumento del 84% interanual en transacciones de verificación de identidad durante el primer trimestre de 2026, con ingresos internacionales creciendo un 130%. México triplicó volúmenes con un salto del 204% trimestre a trimestre, y la empresa planea expansión a Argentina. Unico procesó más de 1.500 millones de checks de identidad en 2025 y opera en más de 20 países.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/unico-reports-84-growth-in-idv-volume-as-global-expansion-accelerates",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-02",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "identidad",
+        "vertical": "fintech"
+      },
+      {
+        "id": "instagram-meta-ai-account-hijack-jun02",
+        "title": "Atacantes explotan el chatbot de recuperación de Meta para secuestrar cuentas de Instagram sin robar contraseñas",
+        "summary": "Ciberdelincuentes manipularon mediante ingeniería social el bot de recuperación de cuentas de Meta para vincular direcciones de correo controladas por ellos, habilitando el reseteo de contraseñas sin necesidad de robar credenciales. Cuentas comprometidas de influencers y marcas fueron revendidas en canales de Telegram con valores acumulados superiores a USD 1 millón. Meta corrigió la vulnerabilidad a fines de mayo de 2026; las cuentas con 2FA mediante app autenticadora no fueron afectadas.",
+        "sourceUrl": "https://www.infobae.com/tecno/2026/06/02/usan-la-propia-ia-de-meta-para-secuestrar-cuentas-de-instagram-sin-robar-contrasenas/",
+        "sourceName": "Infobae",
+        "date": "2026-06-02",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "fraude",
+        "vertical": "retail"
+      },
       {
         "id": "digi-yatra-100m-iata-interop-jun01",
         "title": "Digi Yatra supera 100 millones de viajes y valida interoperabilidad biométrica global con IATA en India",
@@ -2221,6 +2270,18 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "argentina-ciberdelitos-50k-2026-jun02",
+          "title": "Argentina: estafas virtuales alcanzaron 50.155 casos en 2025 mientras el delito físico cae un 21%",
+          "summary": "Datos del Sistema Nacional de Información Criminal revelan que las estafas y defraudaciones asistidas virtualmente llegaron a 50.155 hechos en 2025, con la Provincia de Buenos Aires anotando un alza del 52,2% y Corrientes del 91,1%. En paralelo, los ciberdelitos contra menores escalaron un 74,1%, de 848 a 1.476 víctimas. El gobierno aprobó en marzo de 2026 el Plan Federal de Lucha contra el Fraude Ciberasistido 2026-2027 con coordinación entre nación, provincias y entidades financieras.",
+          "sourceUrl": "https://www.lanacion.com.ar/seguridad/las-razones-detras-del-aumento-de-ciberdelitos-en-la-argentina-y-que-se-hace-para-combatirlos-nid02062026/",
+          "sourceName": "La Nacion",
+          "date": "2026-06-02",
+          "language": "es",
+          "highRelevance": true,
+          "topic": "fraude",
+          "vertical": "gobierno"
+        },
+        {
           "id": "argentina-banda-chino-app-fraude-may28",
           "title": "Argentina: desbaratan red criminal con apps falsas que robó $3.000M en pesos y US$8M en cripto",
           "summary": "La Ufeic del Departamento Judicial San Isidro ejecutó 90 allanamientos simultáneos y detuvo a 24 personas lideradas por un ciudadano chino. La organización creó aplicaciones que simulaban ser herramientas de productividad o inversión pero robaban credenciales bancarias, cuentas de redes sociales, billeteras virtuales y códigos de autenticación. El daño total estimado alcanza los $3.000 millones de pesos; se incautaron US$8 millones en criptoactivos y la red operaba también en Chile, Perú, Colombia y México.",
@@ -2573,6 +2634,18 @@ const briefing = {
         }
       ],
       "espana": [
+        {
+          "id": "espana-instagram-meta-secuestro-jun02",
+          "title": "España entre los mercados afectados por la explotación del chatbot de Meta para secuestrar cuentas de Instagram",
+          "summary": "La técnica de manipulación del bot de recuperación de cuentas de Meta afectó cuentas de influencers y marcas en España y otros mercados hispanohablantes, con cuentas revendidas en Telegram por valores superiores a USD 1 millón en conjunto. El vector no requirió robo de contraseñas —solo ingeniería social contra el flujo de autenticación del bot— lo que lo vuelve especialmente difícil de detectar. Meta parchó la vulnerabilidad a fines de mayo de 2026.",
+          "sourceUrl": "https://www.infobae.com/tecno/2026/06/02/usan-la-propia-ia-de-meta-para-secuestrar-cuentas-de-instagram-sin-robar-contrasenas/",
+          "sourceName": "Infobae",
+          "date": "2026-06-02",
+          "language": "es",
+          "highRelevance": false,
+          "topic": "fraude",
+          "vertical": "retail"
+        },
         {
           "id": "espana-hacienda-phishing-smishing-may27",
           "title": "España: Agencia Tributaria alerta sobre seis modalidades activas de phishing y smishing que suplantan a Hacienda",
@@ -2961,7 +3034,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-06-02';
+const TODAY_ISO = '2026-06-03';
 
 function fmtDate(iso) {
   if (!iso) return '—';
@@ -3161,130 +3234,19 @@ function wrapFlipCard(frontHTML, it, articleClass) {
 }
 /* ──────────────────────────────────────────────────────────────── */
 
-/* ── SVG COVER GENERATOR ───────────────────────────────────────────── */
+/* ── SECTION COVER IMAGES ──────────────────────────────────────────── */
+const SECTION_COVERS = {
+  home:        '/covers/Portada-01-Home.png',
+  global:      '/covers/Portada-02-Global.png',
+  latam:       '/covers/Portada-03-LATAM.png',
+  regulation:  '/covers/Portada-04-Regulacion.png',
+  competencia: '/covers/Portada-05-Competencia.png',
+  vu:          '/covers/Portada-06-VU.png',
+};
 function generateCoverSVG(it) {
-  const sec   = (it.section || 'global').toLowerCase();
-  const topic = (it.topic   || '').toLowerCase();
-
-  const COLORS = {
-    global: '#3A86FF', latam: '#F15E37', regulacion: '#9B59B6',
-    competencia: '#C44826', vu: '#06A77D', archivo: '#888888'
-  };
-  const accent = COLORS[sec] || '#F15E37';
-
-  // First keyword as background texture word
-  const bgWord = (it.topic || it.section || '')
-    .split(/[\/·,\s]/)[0].trim().toUpperCase().slice(0, 13);
-
-  // Icon type detection
-  let iconType = 'default';
-  if      (/biometri|liveness|facial|huella|morph|finger/.test(topic))   iconType = 'biometria';
-  else if (/deepfake|ia.gen|face.swap|synthetic|generativa/.test(topic)) iconType = 'deepfake';
-  else if (/fraude|phishing|scam|estafa|injection|ataque/.test(topic))   iconType = 'fraude';
-  else if (/kyc|aml|compli|regulac|normati|gdpr|lgpd|privacy/.test(topic)) iconType = 'regulacion';
-  else if (/identidad|identity|ciam|autenti|auth|credencial/.test(topic)) iconType = 'identidad';
-  else if (/dato|data|brecha|leak|breach/.test(topic))                   iconType = 'datos';
-  else if (/banca|fintech|pago|payment|cripto|banco/.test(topic))        iconType = 'banca';
-
-  const ICONS = {
-    biometria: `
-      <path d="M -72,46 Q 0,-108 72,46" fill="none" stroke="#1C1D1E" stroke-width="1.8" stroke-linecap="round" opacity="0.16"/>
-      <path d="M -56,36 Q 0,-84 56,36" fill="none" stroke="#1C1D1E" stroke-width="2.2" stroke-linecap="round" opacity="0.28"/>
-      <path d="M -40,26 Q 0,-60 40,26" fill="none" stroke="#1C1D1E" stroke-width="2.8" stroke-linecap="round" opacity="0.45"/>
-      <path d="M -24,16 Q 0,-36 24,16" fill="none" stroke="#1C1D1E" stroke-width="3.2" stroke-linecap="round" opacity="0.68"/>
-      <circle cx="0" cy="7" r="13" fill="#1C1D1E"/>
-      <circle cx="0" cy="7" r="5.5" fill="${accent}"/>
-      <line x1="0" y1="20" x2="0" y2="56" stroke="#1C1D1E" stroke-width="2.8" stroke-linecap="round" opacity="0.75"/>
-      <line x1="-18" y1="56" x2="18" y2="56" stroke="#1C1D1E" stroke-width="2.8" stroke-linecap="round" opacity="0.75"/>`,
-    deepfake: `
-      <path d="M -60,0 Q 0,-44 60,0 Q 0,44 -60,0 Z" fill="none" stroke="#1C1D1E" stroke-width="2.8" stroke-linejoin="round" opacity="0.72"/>
-      <circle cx="0" cy="0" r="18" fill="none" stroke="#1C1D1E" stroke-width="2.2" opacity="0.6"/>
-      <circle cx="0" cy="0" r="9" fill="#1C1D1E"/>
-      <circle cx="0" cy="0" r="4" fill="${accent}"/>
-      <line x1="-72" y1="-14" x2="-50" y2="-14" stroke="#1C1D1E" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
-      <line x1="-72" y1="14" x2="-52" y2="14" stroke="#1C1D1E" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
-      <line x1="50" y1="-14" x2="72" y2="-14" stroke="#1C1D1E" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
-      <line x1="52" y1="14" x2="72" y2="14" stroke="#1C1D1E" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
-      <line x1="-60" y1="28" x2="60" y2="28" stroke="${accent}" stroke-width="1.2" opacity="0.5" stroke-linecap="round"/>
-      <line x1="-42" y1="36" x2="42" y2="36" stroke="${accent}" stroke-width="1" opacity="0.28" stroke-linecap="round"/>`,
-    fraude: `
-      <path d="M 0,-58 L 46,-32 L 46,8 Q 46,42 0,58 Q -46,42 -46,8 L -46,-32 Z" fill="none" stroke="#1C1D1E" stroke-width="2.8" stroke-linejoin="round" opacity="0.72"/>
-      <line x1="0" y1="-22" x2="0" y2="12" stroke="#1C1D1E" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
-      <circle cx="0" cy="24" r="4" fill="#1C1D1E" opacity="0.75"/>
-      <circle cx="0" cy="-36" r="7" fill="${accent}"/>
-      <circle cx="0" cy="-36" r="3" fill="#1C1D1E"/>`,
-    regulacion: `
-      <line x1="-56" y1="-2" x2="56" y2="-2" stroke="#1C1D1E" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
-      <line x1="0" y1="-2" x2="0" y2="50" stroke="#1C1D1E" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
-      <line x1="-20" y1="50" x2="20" y2="50" stroke="#1C1D1E" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
-      <line x1="-56" y1="-2" x2="-44" y2="22" stroke="#1C1D1E" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-      <line x1="-64" y1="-2" x2="-44" y2="22" stroke="#1C1D1E" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-      <path d="M -64,22 Q -54,30 -44,22" fill="none" stroke="#1C1D1E" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
-      <line x1="44" y1="-2" x2="56" y2="20" stroke="#1C1D1E" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-      <line x1="64" y1="-2" x2="56" y2="20" stroke="#1C1D1E" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-      <path d="M 44,20 Q 54,28 64,20" fill="none" stroke="#1C1D1E" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
-      <circle cx="0" cy="-2" r="7" fill="${accent}"/>
-      <circle cx="0" cy="-2" r="3" fill="#1C1D1E"/>`,
-    identidad: `
-      <circle cx="0" cy="-32" r="18" fill="none" stroke="#1C1D1E" stroke-width="2.8" opacity="0.72"/>
-      <path d="M -38,12 Q -38,-6 0,-6 Q 38,-6 38,12 L 38,44 Q 38,52 0,52 Q -38,52 -38,44 Z" fill="none" stroke="#1C1D1E" stroke-width="2.5" opacity="0.62"/>
-      <circle cx="0" cy="-32" r="7" fill="${accent}"/>
-      <line x1="-18" y1="28" x2="18" y2="28" stroke="#1C1D1E" stroke-width="2" stroke-linecap="round" opacity="0.32"/>
-      <line x1="-12" y1="39" x2="12" y2="39" stroke="#1C1D1E" stroke-width="2" stroke-linecap="round" opacity="0.22"/>`,
-    datos: `
-      <path d="M -34,-40 L -34,40 L 34,40 L 34,-20 L 14,-40 Z" fill="none" stroke="#1C1D1E" stroke-width="2.8" stroke-linejoin="round" opacity="0.72"/>
-      <path d="M 14,-40 L 14,-20 L 34,-20" fill="none" stroke="#1C1D1E" stroke-width="2.5" opacity="0.55"/>
-      <line x1="-20" y1="-8" x2="20" y2="-8" stroke="#1C1D1E" stroke-width="2" stroke-linecap="round" opacity="0.42"/>
-      <line x1="-20" y1="8" x2="20" y2="8" stroke="#1C1D1E" stroke-width="2" stroke-linecap="round" opacity="0.32"/>
-      <line x1="-20" y1="24" x2="6" y2="24" stroke="#1C1D1E" stroke-width="2" stroke-linecap="round" opacity="0.22"/>
-      <circle cx="20" cy="22" r="10" fill="${accent}"/>
-      <line x1="20" y1="16" x2="20" y2="22" stroke="#1C1D1E" stroke-width="2.5" stroke-linecap="round"/>
-      <circle cx="20" cy="27" r="2" fill="#1C1D1E"/>`,
-    banca: `
-      <path d="M 0,-40 L 52,-10 L -52,-10 Z" fill="none" stroke="#1C1D1E" stroke-width="2.5" stroke-linejoin="round" opacity="0.72"/>
-      <line x1="-52" y1="-10" x2="52" y2="-10" stroke="#1C1D1E" stroke-width="2.5" stroke-linecap="round" opacity="0.72"/>
-      <line x1="-52" y1="38" x2="52" y2="38" stroke="#1C1D1E" stroke-width="2.5" stroke-linecap="round" opacity="0.72"/>
-      <line x1="-36" y1="-10" x2="-36" y2="38" stroke="#1C1D1E" stroke-width="2.5" stroke-linecap="round" opacity="0.58"/>
-      <line x1="0" y1="-10" x2="0" y2="38" stroke="#1C1D1E" stroke-width="2.5" stroke-linecap="round" opacity="0.58"/>
-      <line x1="36" y1="-10" x2="36" y2="38" stroke="#1C1D1E" stroke-width="2.5" stroke-linecap="round" opacity="0.58"/>
-      <circle cx="0" cy="-40" r="7" fill="${accent}"/>
-      <circle cx="0" cy="-40" r="3" fill="#1C1D1E"/>`,
-    default: `
-      <circle cx="0" cy="0" r="14" fill="#1C1D1E" opacity="0.72"/>
-      <circle cx="0" cy="0" r="6" fill="${accent}"/>
-      <circle cx="46" cy="-28" r="8" fill="none" stroke="#1C1D1E" stroke-width="2.5" opacity="0.52"/>
-      <circle cx="50" cy="26" r="8" fill="none" stroke="#1C1D1E" stroke-width="2.5" opacity="0.52"/>
-      <circle cx="-52" cy="10" r="8" fill="none" stroke="#1C1D1E" stroke-width="2.5" opacity="0.52"/>
-      <line x1="9" y1="-8" x2="39" y2="-22" stroke="#1C1D1E" stroke-width="2" opacity="0.38" stroke-linecap="round"/>
-      <line x1="10" y1="6" x2="43" y2="21" stroke="#1C1D1E" stroke-width="2" opacity="0.38" stroke-linecap="round"/>
-      <line x1="-10" y1="4" x2="-45" y2="9" stroke="#1C1D1E" stroke-width="2" opacity="0.38" stroke-linecap="round"/>`
-  };
-
-  const pid = 'dp_' + (it.id || '').replace(/[^a-z0-9]/gi,'').slice(0,12) + '_' + sec;
-  const icon = ICONS[iconType] || ICONS.default;
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" preserveAspectRatio="xMidYMid slice">
-  <defs>
-    <pattern id="${pid}" width="22" height="22" patternUnits="userSpaceOnUse">
-      <circle cx="11" cy="11" r="1" fill="#1C1D1E" opacity="0.15"/>
-    </pattern>
-  </defs>
-  <rect width="480" height="270" fill="#EBE4CA"/>
-  <rect width="480" height="270" fill="url(#${pid})"/>
-  <circle cx="452" cy="118" r="210" fill="none" stroke="#1C1D1E" stroke-width="1" opacity="0.07"/>
-  <circle cx="452" cy="118" r="162" fill="none" stroke="#1C1D1E" stroke-width="1" opacity="0.07"/>
-  <circle cx="452" cy="118" r="116" fill="none" stroke="#1C1D1E" stroke-width="1" opacity="0.07"/>
-  <circle cx="452" cy="118" r="72"  fill="none" stroke="#1C1D1E" stroke-width="1" opacity="0.07"/>
-  <text x="26" y="212" font-family="Arial Black,sans-serif" font-size="56" font-weight="900"
-        fill="#1C1D1E" opacity="0.055" letter-spacing="-0.02em">${bgWord}</text>
-  <g transform="translate(185,115)">${icon}</g>
-  <rect x="0" y="234" width="480" height="36" fill="#1C1D1E"/>
-  <rect x="0" y="234" width="5"   height="36" fill="${accent}"/>
-  <text x="20" y="256" font-family="Courier New,monospace" font-size="10" letter-spacing="0.12em"
-        fill="#EBE4CA" opacity="0.55">${(it.topic||'').toUpperCase()}</text>
-  <text x="460" y="256" font-family="Courier New,monospace" font-size="10" letter-spacing="0.1em"
-        fill="${accent}" text-anchor="end">${sec.toUpperCase()}</text>
-</svg>`;
+  const sec = (it.section || 'global').toLowerCase();
+  const src = SECTION_COVERS[sec] || SECTION_COVERS.global;
+  return `<img src="${src}" alt="${sec}" loading="lazy">`;
 }
 /* ─────────────────────────────────────────────────────────────────── */
 
