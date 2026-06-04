@@ -1321,10 +1321,82 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-06-02",
-  "publishedAt": "2026-06-03T13:23:32.524Z",
-  "sections": {
-    "global": [
+  date: "2026-06-03",
+  publishedAt: "2026-06-04T13:42:34.588Z",
+  sections: {
+    global: [
+      {
+        "id": "sec-regulation-sp-small-firms-deadline-jun26",
+        "title": "La Regulación S-P de la SEC entra en vigor para firmas pequeñas: notificación obligatoria en 30 días tras una brecha de datos",
+        "summary": "Venció el plazo de cumplimiento de las enmiendas a la Regulación S-P de la SEC para firmas pequeñas, exigiendo programas formales de respuesta a incidentes, notificación a clientes afectados en máximo 30 días tras detectar una brecha, y supervisión documentada de proveedores en la nube. Las prioridades de examen 2026 de la SEC apuntan específicamente a protección contra robo de identidad, preparación ante ransomware y supervisión de terceros. Las firmas latinoamericanas con operaciones en EE.UU. deben verificar su cumplimiento.",
+        "sourceUrl": "https://www.pymnts.com/cybersecurity/2026/security-exchange-commission-new-30-day-reporting-rule-puts-vendors-cybersecurity-crosshairs/",
+        "sourceName": "PYMNTS",
+        "date": "2026-06-03",
+        "language": "en",
+        "highRelevance": false,
+        "topic": "regulacion",
+        "vertical": "fintech"
+      },
+      {
+        "id": "poland-age-verification-law-eudi-jun26",
+        "title": "Polonia aprueba ley de verificación de edad y recomienda la EUDI Wallet como mecanismo sin revelación de datos personales",
+        "summary": "Polonia adoptó un paquete legislativo que obliga a sitios web a implementar verificación de edad robusta para restringir el acceso de menores a contenido adulto, recomendando la EUDI Wallet como mecanismo que confirma la edad sin revelar datos personales al proveedor ni al emisor. Polonia planea integrar la verificación anónima en su app mObywatel, que ya sirve a 12 millones de usuarios, antes de fin de 2026. El caso es un referente anticipado para los debates legislativos activos sobre age assurance en Brasil, Argentina y México.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/poland-adopts-age-verification-law-recommends-eudi-wallet-approach",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-03",
+        "language": "en",
+        "highRelevance": false,
+        "topic": "regulacion",
+        "vertical": "gobierno"
+      },
+      {
+        "id": "lseg-daon-fourthline-continuous-identity-jun26",
+        "title": "LSEG, Daon y Fourthline impulsan la verificación de identidad continua más allá de los controles puntuales",
+        "summary": "Tres actores del ecosistema de identidad presentaron iniciativas para reemplazar la verificación puntual por modelos continuos: LSEG lanzó Identity Gateway cubriendo 10 mercados europeos y prometiendo reducir el time-to-market un 80-90%; Daon se integró con ebankIT embebiendo biometría y liveness detection en APIs bancarias; y Fourthline firmó con Anyfin para expansión europea. La tendencia responde al auge del fraude por identidades sintéticas y deepfakes que hacen insuficiente la verificación one-time.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/lseg-daon-and-fourthline-push-identity-verification-beyond-point-checks",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-03",
+        "language": "en",
+        "highRelevance": false,
+        "topic": "biometria",
+        "vertical": "banca"
+      },
+      {
+        "id": "reality-defender-zerofox-deepfake-detection-jun26",
+        "title": "Reality Defender integra detección de deepfakes en ZeroFox: el uso de medios sintéticos por atacantes ya es rutinario según Gartner",
+        "summary": "Reality Defender anunció la integración de su tecnología de detección multimodal de contenido generado por IA en la plataforma de ciberseguridad ZeroFox, cubriendo voz, video e imagen. La alianza permite a los analistas identificar campañas de medios sintéticos, incluyendo suplantación de ejecutivos en earnings calls y phishing basado en videos falsos, antes de que circulen. Gartner advirtió que el uso de deepfakes por atacantes es ya rutinario, y la mayoría de los equipos de seguridad los detectan recién después de que han circulado.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/reality-defender-integrates-deepfake-detection-into-zerofox-platform",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-03",
+        "language": "en",
+        "highRelevance": true,
+        "topic": "deepfake",
+        "vertical": "cross"
+      },
+      {
+        "id": "worst-hacks-breaches-2026-techcrunch",
+        "title": "Los peores hacks de 2026: 30 millones de estudiantes, pasaportes expuestos y 967.000 clientes de fintech",
+        "summary": "TechCrunch documentó los incidentes de ciberseguridad más graves del año: la brecha de Instructure Canvas comprometió datos de más de 30 millones de estudiantes y empleados, una brecha expuso pasaportes y selfies de miles de solicitantes de visa del Reino Unido, y un servidor desprotegido contuvo 1 millón de escaneos de documentos de identidad de huéspedes de hoteles. El ataque de ShinyHunters a la fintech Figure expuso datos de identidad de 967.200 clientes incluyendo nombres, fechas de nacimiento y teléfonos. El patrón común: captura masiva de datos de identidad sin controles de protección post-onboarding.",
+        "sourceUrl": "https://techcrunch.com/2026/06/03/the-worst-hacks-and-breaches-of-2026-so-far/",
+        "sourceName": "TechCrunch",
+        "date": "2026-06-03",
+        "language": "en",
+        "highRelevance": true,
+        "topic": "breach",
+        "vertical": "cross"
+      },
+      {
+        "id": "dashlane-brute-force-2fa-vaults-jun26",
+        "title": "Dashlane sufre ataque de fuerza bruta que vulnera 2FA y expone bóvedas de contraseñas cifradas",
+        "summary": "El 31 de mayo de 2026, actores externos lanzaron un ataque de fuerza bruta contra el sistema de autenticación de dos factores de Dashlane, logrando acceder a aproximadamente 20 cuentas y descargar copias de sus bóvedas de contraseñas cifradas. Las bóvedas contienen contraseñas y credenciales sensibles de los usuarios, aunque Dashlane asegura que solo pueden descifrarse con la contraseña maestra del cliente. La compañía notificó directamente a los afectados y señaló que usuarios con contraseñas maestras débiles corren mayor riesgo.",
+        "sourceUrl": "https://techcrunch.com/2026/06/02/password-manager-dashlane-says-hackers-stole-some-customers-password-vaults/",
+        "sourceName": "TechCrunch",
+        "date": "2026-06-03",
+        "language": "en",
+        "highRelevance": true,
+        "topic": "breach",
+        "vertical": "fintech"
+      },
       {
         "id": "google-android-deepfake-call-detection-jun03",
         "title": "Google activa protección contra llamadas deepfake en Android a nivel global para combatir fraude por voz con IA",
@@ -1462,10 +1534,6 @@ const briefing = {
         "topic": "biometria",
         "vertical": "cross",
         "image": "https://images.unsplash.com/photo-1542396601-dca920ea2807?w=1400&q=80",
-        "actionable": {
-          "type": "tendencia",
-          "text": "Los tres ecosistemas móviles dominantes (Apple, Google, Samsung) ya soportan credenciales derivadas de pasaporte. La identidad digital se consolida como estándar de facto en viajes domésticos en EE.UU. — patrón que históricamente llega a LATAM en 12-18 meses."
-        }
       },
       {
         "id": "voxmind-voice-deepfake-funding-may27",
@@ -1479,10 +1547,6 @@ const briefing = {
         "topic": "deepfake",
         "vertical": "cross",
         "image": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1400&q=80",
-        "actionable": {
-          "type": "brecha",
-          "text": "Microsoft retiró Azure Speaker Recognition en sept. 2025 y AWS cierra Voice ID en mayo 2026. Bancos y contact centers en LATAM quedan sin solución cloud nativa de autenticación de voz. El mercado de reemplazo está abierto y sin líder regional claro."
-        }
       },
       {
         "id": "signicat-austria-eudi-wallet-may27",
@@ -1509,10 +1573,6 @@ const briefing = {
         "topic": "identidad",
         "vertical": "fintech",
         "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1400&q=80",
-        "actionable": {
-          "type": "movimiento-competitivo",
-          "text": "Didit (YC W24) crece 30% mensual con API unificada KYC+AML+biometría, ya rentable en 1.500 clientes B2B en 220 países. El segmento de identidad programable está siendo validado por capital de riesgo institucional a escala global."
-        }
       },
       {
         "id": "yubico-ingram-india-fips-may27",
@@ -2267,7 +2327,7 @@ const briefing = {
         "image": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=1400&q=80"
       }
     ],
-    "latam": {
+    latam: {
       "argentina": [
         {
           "id": "argentina-ciberdelitos-50k-2026-jun02",
@@ -2635,6 +2695,18 @@ const briefing = {
       ],
       "espana": [
         {
+          "id": "espana-fraude-bancario-smishing-barcelona-jun26",
+          "title": "España: 23 detenidos por fraude bancario de 300.000 euros con smishing y vishing en Barcelona y Murcia",
+          "summary": "La Policía española detuvo a 23 personas en Barcelona y Murcia por un fraude bancario que causó pérdidas de 300.000 euros en 48 denuncias. Los delincuentes usaban aplicaciones de spoofing para suplantar el número telefónico de entidades bancarias, enviaban SMS con links a sitios clonados y convencían a las víctimas de compartir credenciales o realizar transferencias bajo pretexto de transacciones no autorizadas. El patrón smishing y vishing con cuentas mulas es idéntico al documentado en Argentina y México.",
+          "sourceUrl": "https://www.infobae.com/espana/agencias/2026/06/02/detenidas-23-personas-en-barcelona-y-murcia-por-un-fraude-bancario-que-estafo-300000/",
+          "sourceName": "Infobae",
+          "date": "2026-06-02",
+          "language": "es",
+          "highRelevance": true,
+          "topic": "fraude",
+          "vertical": "banca"
+        },
+        {
           "id": "espana-instagram-meta-secuestro-jun02",
           "title": "España entre los mercados afectados por la explotación del chatbot de Meta para secuestrar cuentas de Instagram",
           "summary": "La técnica de manipulación del bot de recuperación de cuentas de Meta afectó cuentas de influencers y marcas en España y otros mercados hispanohablantes, con cuentas revendidas en Telegram por valores superiores a USD 1 millón en conjunto. El vector no requirió robo de contraseñas —solo ingeniería social contra el flujo de autenticación del bot— lo que lo vuelve especialmente difícil de detectar. Meta parchó la vulnerabilidad a fines de mayo de 2026.",
@@ -2685,7 +2757,34 @@ const briefing = {
         }
       ]
     },
-    "competencia": [
+    regulation: [],
+    competencia: [
+      {
+        "id": "idemia-nist-elft-fingerprint-speed-jun26",
+        "title": "Idemia lidera velocidad en evaluación NIST de huellas dactilares: 2 minutos frente a los 6 del siguiente competidor",
+        "summary": "Idemia Public Security alcanzó el primer puesto en velocidad de procesamiento en la evaluación NIST ELFT de huellas dactilares latentes, completando búsquedas en aproximadamente 2 minutos frente a los 6 minutos del siguiente competidor. Su algoritmo idemia+0008 logró una tasa Rank-1 Hit de 96,1%, aunque competidores ROC e Innovatrics registraron tasas de precisión superiores (98,2% y 98,6%). El resultado posiciona a Idemia con ventaja operacional de velocidad en un mercado donde la precisión entre vendors converge.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/idemia-emphasizes-speed-advantage-in-latest-nist-elft-fingerprint-evaluation",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-03",
+        "language": "es",
+        "highRelevance": false,
+        "topic": "biometria",
+        "vertical": "gobierno",
+        "competitor": "Idemia"
+      },
+      {
+        "id": "gbg-foresight-identity-decisioning-jun26",
+        "title": "GBG lanza Foresight: plataforma de inteligencia IA para decisiones de identidad más allá del IDV tradicional",
+        "summary": "GBG presentó Foresight, una plataforma de inteligencia impulsada por IA que aprovecha datos de millones de verificaciones de identidad para ofrecer benchmarking de desempeño sectorial, alertas automáticas de fraude y recomendaciones de configuración. La herramienta no requiere integración activa y se posiciona como evolución de la verificación puntual hacia la decisión contextual de identidad. El movimiento consolida la estrategia de GBG de migrar de proveedor de IDV puntual hacia plataforma integral de identity decisioning.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/gbg-continues-shift-from-idv-to-identity-decisioning-with-foresight",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-03",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "biometria",
+        "vertical": "fintech",
+        "competitor": "GBG"
+      },
       {
         "id": "sumsub-300pct-document-fraud-jun01",
         "title": "Sumsub reporta aumento del 311% en fraude de documentos sintéticos y 1.100% en deepfakes — alerta para KYC en LATAM",
@@ -2975,7 +3074,7 @@ const briefing = {
         "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1400&q=80"
       }
     ],
-    "vu": [
+    vu: [
       {
         "id": "vu-modo-scoglio-lima-youtube-may13",
         "title": "VU entrevista a Pablo Scoglio (VP de Desarrollo de MODO) sobre el crecimiento de la billetera y el rol de la identidad",
@@ -3024,8 +3123,7 @@ const briefing = {
         "topic": "IA / ciberseguridad",
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=80"
       }
-    ],
-    "regulation": []
+    ]
   }
 };
 
@@ -3034,7 +3132,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-06-03';
+const TODAY_ISO = '2026-06-04';
 
 function fmtDate(iso) {
   if (!iso) return '—';
