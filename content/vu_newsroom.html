@@ -481,11 +481,13 @@
   .lang-btn { display: none; }
 
   /* =================== GLOBAL LANG SELECTOR =================== */
+  .ticker-lang-sep {
+    margin: 0 6px;
+    flex-shrink: 0;
+  }
   .ticker-lang-wrap {
     display: inline-flex; align-items: center; gap: 1px;
-    padding: 0 14px 0 10px;
-    border-left: 1px solid var(--vu-gris-dark);
-    margin-left: 2px;
+    padding: 0 10px 0 0;
     flex-shrink: 0;
   }
   .ticker-lang-btn {
@@ -1135,6 +1137,7 @@
   <div class="ticker-search-wrap">
     <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
     <input class="search-box" id="searchBox" type="search" placeholder="Buscar nota…" autocomplete="off" spellcheck="false">
+    <div class="ticker-vline ticker-lang-sep"></div>
     <div class="ticker-lang-wrap">
       <button class="ticker-lang-btn active" data-lang="es" onclick="setLanguage('es')">ES</button>
       <button class="ticker-lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
