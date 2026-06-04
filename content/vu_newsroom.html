@@ -3203,7 +3203,7 @@ function escAttr(s) {
 }
 
 function langSwitcherHTML(it) {
-  const lang = it.language || 'es';
+  const lang = (it.language || 'es').split('-')[0].toLowerCase();
   const id = it.id;
   return `<span class="lang-switcher">`
     + `<button class="lang-btn${lang==='es'?' active':''}" onclick="event.stopPropagation();translateSummary(event,'${id}','es')" title="Español">ES</button>`
@@ -3213,7 +3213,7 @@ function langSwitcherHTML(it) {
 }
 
 async function _myMemoryChunk(chunk, from, to) {
-  const res = await fetch('https://api.mymemory.translated.net/get?q=' + encodeURIComponent(chunk) + '&langpair=' + encodeURIComponent(from + '|' + to));
+  const res = await fetch('https://api.mymemory.translated.net/get?q=' + encodeURIComponent(chunk) + '&langpair=' + from + '|' + to);
   if (!res.ok) throw new Error(res.status);
   const data = await res.json();
   if (!data.responseData || !data.responseData.translatedText) throw new Error('empty');
@@ -3355,7 +3355,7 @@ function featCardHTML(it) {
     <div class="feat-content">
       <div class="feat-top">${pillsHTML(it)}</div>
       <h2>${it.title}</h2>
-      <p class="feat-summary" id="sum-${it.id}" data-original="${escAttr(it.summary)}" data-lang="${it.language||'es'}">${it.summary}</p>
+      <p class="feat-summary" id="sum-${it.id}" data-original="${escAttr(it.summary)}" data-lang="${(it.language||'es').split('-')[0].toLowerCase()}">${it.summary}</p>
       ${metaHTML(it)}
     </div>`;
   if (it.actionable) {
@@ -3371,7 +3371,7 @@ function sideCardHTML(it) {
   const frontInner = `
     <div class="side-top">${pillsHTML(it)}</div>
     <h3>${it.title}</h3>
-    <p class="side-summary" id="sum-${it.id}" data-original="${escAttr(it.summary)}" data-lang="${it.language||'es'}">${it.summary}</p>
+    <p class="side-summary" id="sum-${it.id}" data-original="${escAttr(it.summary)}" data-lang="${(it.language||'es').split('-')[0].toLowerCase()}">${it.summary}</p>
     <div class="meta" style="font-size:10px;">
       <span class="date-badge">${fmtDate(it.date)}</span>
       ${langSwitcherHTML(it)}
@@ -3391,7 +3391,7 @@ function listCardHTML(it) {
     <div>
       <div class="side-top">${pillsHTML(it)}</div>
       <h4>${it.title}</h4>
-      <p class="list-summary" id="sum-${it.id}" data-original="${escAttr(it.summary)}" data-lang="${it.language||'es'}">${it.summary}</p>
+      <p class="list-summary" id="sum-${it.id}" data-original="${escAttr(it.summary)}" data-lang="${(it.language||'es').split('-')[0].toLowerCase()}">${it.summary}</p>
       <div class="meta">
         <a href="${it.sourceUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation();">${it.sourceName} ↗</a>
         ${it.topic ? `<span class="pip">·</span><span>${it.topic}</span>` : ''}
