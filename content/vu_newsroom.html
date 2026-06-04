@@ -3196,10 +3196,14 @@ function pillsHTML(it) {
   return parts.join(' ');
 }
 
-window._newsTransCache = {};
-
 function escAttr(s) {
   return (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function sumData(it) {
+  const s = it.summaries || {};
+  const fb = it.summary || '';
+  return `id="sum-${it.id}" data-es="${escAttr(s.es||fb)}" data-en="${escAttr(s.en||fb)}" data-pt="${escAttr(s.pt||fb)}"`;
 }
 
 function langSwitcherHTML(it) {
@@ -3212,66 +3216,16 @@ function langSwitcherHTML(it) {
     + `</span>`;
 }
 
-async function _myMemoryChunk(chunk, from, to) {
-  const res = await fetch('https://api.mymemory.translated.net/get?q=' + encodeURIComponent(chunk) + '&langpair=' + from + '|' + to);
-  if (!res.ok) throw new Error(res.status);
-  const data = await res.json();
-  if (!data.responseData || !data.responseData.translatedText) throw new Error('empty');
-  return data.responseData.translatedText;
-}
-
-async function _myMemoryTranslate(text, from, to) {
-  const LIMIT = 450;
-  if (text.length <= LIMIT) return _myMemoryChunk(text, from, to);
-  const sentences = text.match(/[^.!?]+[.!?]+[\s]*/g) || [text];
-  const chunks = [];
-  let cur = '';
-  for (const s of sentences) {
-    if (cur.length + s.length > LIMIT) { if (cur) chunks.push(cur.trim()); cur = s; }
-    else cur += s;
-  }
-  if (cur.trim()) chunks.push(cur.trim());
-  const parts = await Promise.all(chunks.map(c => _myMemoryChunk(c, from, to)));
-  return parts.join(' ');
-}
-
-async function translateSummary(event, articleId, targetLang) {
+function translateSummary(event, articleId, targetLang) {
   event.stopPropagation();
   const btn = event.currentTarget;
   const sumEl = document.getElementById('sum-' + articleId);
   if (!sumEl) return;
   const switcher = btn.closest('.lang-switcher');
   const allBtns = switcher ? switcher.querySelectorAll('.lang-btn') : [];
-  const originalText = sumEl.dataset.original;
-  const originalLang = sumEl.dataset.lang;
-  if (targetLang === originalLang) {
-    sumEl.textContent = originalText;
-    allBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    return;
-  }
-  const cacheKey = articleId + ':' + targetLang;
-  if (window._newsTransCache[cacheKey]) {
-    sumEl.textContent = window._newsTransCache[cacheKey];
-    allBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    return;
-  }
-  allBtns.forEach(b => b.classList.add('loading'));
-  sumEl.style.opacity = '0.5';
-  try {
-    const translated = await _myMemoryTranslate(originalText, originalLang, targetLang);
-    window._newsTransCache[cacheKey] = translated;
-    sumEl.textContent = translated;
-    allBtns.forEach(b => b.classList.remove('active', 'loading'));
-    btn.classList.add('active');
-  } catch(e) {
-    allBtns.forEach(b => b.classList.remove('loading'));
-    sumEl.textContent = '⚠ Error al traducir.';
-    setTimeout(() => { sumEl.textContent = originalText; }, 2000);
-  } finally {
-    sumEl.style.opacity = '';
-  }
+  sumEl.textContent = sumEl.dataset[targetLang] || sumEl.textContent;
+  allBtns.forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
 }
 
 function metaHTML(it) {
@@ -3355,7 +3309,7 @@ function featCardHTML(it) {
     <div class="feat-content">
       <div class="feat-top">${pillsHTML(it)}</div>
       <h2>${it.title}</h2>
-      <p class="feat-summary" id="sum-${it.id}" data-original="${escAttr(it.summary)}" data-lang="${(it.language||'es').split('-')[0].toLowerCase()}">${it.summary}</p>
+      <p class="feat-summary" ${sumData(it)}>${it.summary}</p>
       ${metaHTML(it)}
     </div>`;
   if (it.actionable) {
@@ -3371,7 +3325,7 @@ function sideCardHTML(it) {
   const frontInner = `
     <div class="side-top">${pillsHTML(it)}</div>
     <h3>${it.title}</h3>
-    <p class="side-summary" id="sum-${it.id}" data-original="${escAttr(it.summary)}" data-lang="${(it.language||'es').split('-')[0].toLowerCase()}">${it.summary}</p>
+    <p class="side-summary" ${sumData(it)}>${it.summary}</p>
     <div class="meta" style="font-size:10px;">
       <span class="date-badge">${fmtDate(it.date)}</span>
       ${langSwitcherHTML(it)}
@@ -3391,7 +3345,7 @@ function listCardHTML(it) {
     <div>
       <div class="side-top">${pillsHTML(it)}</div>
       <h4>${it.title}</h4>
-      <p class="list-summary" id="sum-${it.id}" data-original="${escAttr(it.summary)}" data-lang="${(it.language||'es').split('-')[0].toLowerCase()}">${it.summary}</p>
+      <p class="list-summary" ${sumData(it)}>${it.summary}</p>
       <div class="meta">
         <a href="${it.sourceUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation();">${it.sourceName} ↗</a>
         ${it.topic ? `<span class="pip">·</span><span>${it.topic}</span>` : ''}
