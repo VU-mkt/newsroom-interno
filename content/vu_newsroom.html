@@ -4961,8 +4961,8 @@ function setLanguage(lang) {
   setActiveTOC(v);
   renderView(v);
 
-  // Actualizar resúmenes DESPUÉS del renderView — el DOM ya tiene los data-* frescos
-  document.querySelectorAll('[id^="sum-"]').forEach(el => {
+  // Actualizar títulos y resúmenes DESPUÉS del renderView — el DOM ya tiene los data-* frescos
+  document.querySelectorAll('[id^="tit-"],[id^="sum-"]').forEach(el => {
     const val = el.dataset[lang];
     if (val) el.textContent = val;
   });
@@ -5051,6 +5051,12 @@ function sumData(it) {
   const s = it.summaries || {};
   const fb = it.summary || '';
   return `id="sum-${it.id}" data-es="${escAttr(s.es||fb)}" data-en="${escAttr(s.en||fb)}" data-pt="${escAttr(s.pt||fb)}"`;
+}
+
+function titleData(it) {
+  const tl = it.titles || {};
+  const fb = it.title || '';
+  return `id="tit-${it.id}" data-es="${escAttr(tl.es||fb)}" data-en="${escAttr(tl.en||fb)}" data-pt="${escAttr(tl.pt||fb)}"`;
 }
 
 function langSwitcherHTML(it) {
@@ -5146,7 +5152,7 @@ function featCardHTML(it) {
     ${imageHTML}
     <div class="feat-content">
       <div class="feat-top">${pillsHTML(it)}</div>
-      <h2>${it.title}</h2>
+      <h2 ${titleData(it)}>${it.title}</h2>
       <p class="feat-summary" id="sum-${it.id}" ${sumData(it)}>${it.summary}</p>
       ${metaHTML(it)}
     </div>`;
@@ -5162,7 +5168,7 @@ function featCardHTML(it) {
 function sideCardHTML(it) {
   const frontInner = `
     <div class="side-top">${pillsHTML(it)}</div>
-    <h3>${it.title}</h3>
+    <h3 ${titleData(it)}>${it.title}</h3>
     <p class="side-summary" id="sum-${it.id}" ${sumData(it)}>${it.summary}</p>
     <div class="meta" style="font-size:10px;">
       <span class="date-badge">${fmtDate(it.date)}</span>
@@ -5182,7 +5188,7 @@ function listCardHTML(it) {
   const frontInner = `
     <div>
       <div class="side-top">${pillsHTML(it)}</div>
-      <h4>${it.title}</h4>
+      <h4 ${titleData(it)}>${it.title}</h4>
       <p class="list-summary" id="sum-${it.id}" ${sumData(it)}>${it.summary}</p>
       <div class="meta">
         <a href="${it.sourceUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation();">${it.sourceName} ↗</a>
@@ -5810,7 +5816,7 @@ document.addEventListener('DOMContentLoaded', () => {
   buildTOC();
   route();
   if (currentLang !== 'es') {
-    document.querySelectorAll('[id^="sum-"]').forEach(el => {
+    document.querySelectorAll('[id^="tit-"],[id^="sum-"]').forEach(el => {
       const val = el.dataset[currentLang];
       if (val) el.textContent = val;
     });
