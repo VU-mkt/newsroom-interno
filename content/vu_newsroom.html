@@ -1337,10 +1337,58 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-06-07",
-  "publishedAt": "2026-06-08T13:25:56.188Z",
+  "date": "2026-06-08",
+  "publishedAt": "2026-06-09T13:27:51.420Z",
   "sections": {
     "global": [
+      {
+        "id": "evrotrust-shufti-dach-eidas-jun08",
+        "title": "Evrotrust y Shufti se asocian para escalar verificacion de identidad en DACH bajo eIDAS 2.0",
+        "summary": "El proveedor nacional de eID bulgaro Evrotrust firmo un acuerdo con la firma de verificacion Shufti para expandirse en Alemania, Austria y Suiza. Shufti obtiene acceso a los servicios de Firma Electronica Cualificada (QES) de Evrotrust, que integra las capacidades de verificacion, VideoIdent y KYC de Shufti. La alianza busca posicionarse para el cumplimiento de eIDAS 2.0 y la adopcion de la EUDI Wallet. Evrotrust capto 6,6 millones de euros en noviembre de 2025 para su expansion regional.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/evrotrust-partners-with-shufti-as-it-expands-digital-trust-services-in-dach",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-08",
+        "language": "es",
+        "highRelevance": false,
+        "topic": "identidad",
+        "vertical": "gobierno"
+      },
+      {
+        "id": "biometricupdate-identity-friction-fraud-tradeoff-jun08",
+        "title": "La industria de identidad digital reconsidera el equilibrio entre friccion y fraude",
+        "summary": "Un panel con ejecutivos de Shufti Pro, Scion Compliance y Fincheck debatio por que el modelo binario friccion-versus-fraude es obsoleto. Tom Gadsden (Shufti Pro) advirtio que apilar siete soluciones de verificacion puede provocar una perdida del 5-10% de clientes por capa, rechazando en total a la mitad de los usuarios legitimos. La industria converge hacia enfoques adaptativos basados en riesgo.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/identity-industry-rethinks-fraud-versus-friction-tradeoff",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-08",
+        "language": "es",
+        "highRelevance": false,
+        "topic": "identidad",
+        "vertical": "fintech"
+      },
+      {
+        "id": "ocr-studio-document-collage-deepfake-detection-jun08",
+        "title": "OCR Studio lanza red neuronal para detectar collages de documentos falsos en KYC",
+        "summary": "OCR Studio presento una red neuronal capaz de identificar collages documentales fragmentos de documentos reales combinados para alterar fechas, retratos o datos de identidad usados para enganar sistemas KYC durante el onboarding digital. La arquitectura logra una reduccion de mas de 40 veces en el tamano del modelo de vision computacional sin perder precision, y funciona on-premise sin transmitir datos externos. Tambien actualizo su sistema de deteccion de documentos deepfake generados con ChatGPT, Grok y Midjourney.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/ocr-studio-launches-neural-network-for-document-collages-updates-deepfake-detection",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-08",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "deepfake",
+        "vertical": "fintech"
+      },
+      {
+        "id": "ai-synthetic-id-16-models-vulnerable-jun08",
+        "title": "Auditoria revela que 16 modelos de IA generan documentos de identidad falsos con 92% de exito",
+        "summary": "Una auditoria publicada el 8 de junio encontro que 16 modelos de generacion de imagen IA incluyendo Google Gemini, ChatGPT, Grok, Recraft v4 e Imagen 4 Ultra son capaces de generar documentos de identidad sinteticos realistas (pasaportes, licencias, DNIs) para 17 paises con una tasa de exito del 92% en 75 intentos. Los cinco modelos mas efectivos generaron IDs falsas de menores a traves de interfaces de consumo. El hallazgo eleva la presion sobre todos los proveedores de IDV para fortalecer autenticacion de documentos, liveness detection y defensas contra injection attacks.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/16-major-ai-image-models-found-vulnerable-to-synthetic-id-generation",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-08",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "deepfake",
+        "vertical": "fintech"
+      },
       {
         "id": "pymnts-nacha-ach-fraud-rules-june19-jun06",
         "title": "Nacha extiende el 19 de junio detección de fraude en tiempo real a todos los participantes ACH de EE.UU.",
@@ -3316,6 +3364,18 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "argentina-ciberdelitos-50mil-casos-jun02",
+          "title": "Argentina registro 50.155 casos de fraude virtual en 2025 con aumento del 52% en Buenos Aires",
+          "summary": "Un informe del Ministerio de Seguridad revelo que las estafas y defraudaciones virtuales alcanzaron 50.155 hechos en 2025, un incremento del 2,5% interanual. Buenos Aires provincia reporto el mayor salto: +52,2% (9.594 casos), y los ciberdelitos contra menores crecieron un 74,1%, de 848 a 1.476 victimas. El gobierno lanzo el Plan Federal de Lucha contra el Fraude Ciberasistido 2026-2027 con protocolos de coordinacion entre nacion, provincias, Poder Judicial y entidades financieras.",
+          "sourceUrl": "https://www.lanacion.com.ar/seguridad/las-razones-detras-del-aumento-de-ciberdelitos-en-la-argentina-y-que-se-hace-para-combatirlos-nid02062026/",
+          "sourceName": "La Nacion",
+          "date": "2026-06-02",
+          "language": "es",
+          "highRelevance": true,
+          "topic": "fraude",
+          "vertical": "gobierno"
+        },
+        {
           "id": "argentina-ciberdelitos-50k-2026-jun02",
           "title": "Argentina: estafas virtuales alcanzaron 50.155 casos en 2025 mientras el delito físico cae un 21%",
           "summary": "Datos del Sistema Nacional de Información Criminal revelan que las estafas y defraudaciones asistidas virtualmente llegaron a 50.155 hechos en 2025, con la Provincia de Buenos Aires anotando un alza del 52,2% y Corrientes del 91,1%. En paralelo, los ciberdelitos contra menores escalaron un 74,1%, de 848 a 1.476 víctimas. El gobierno aprobó en marzo de 2026 el Plan Federal de Lucha contra el Fraude Ciberasistido 2026-2027 con coordinación entre nación, provincias y entidades financieras.",
@@ -3997,6 +4057,30 @@ const briefing = {
       ],
       "espana": [
         {
+          "id": "espana-heuristik-biometria-salud-jun08",
+          "title": "Heuristik (Espana) lanza biometria dactilar para identificacion de pacientes en condiciones clinicas extremas",
+          "summary": "La startup espanola Heuristik presento una plataforma de identificacion biometrica basada en red neuronal propia, disenada para reconocer huellas dactilares en condiciones hospitalarias adversas: ensangrentadas, humedas, sucias o con cremas terapeuticas. La empresa cuenta con 20 grupos hospitalarios como clientes en Europa, EE.UU. y Mexico, y prepara un estudio clinico con 100% de precision en identificacion de mas de 100 pacientes. Capto 3,2 millones de euros y apunta a una ronda de 5 millones a fin de 2026.",
+          "sourceUrl": "https://www.biometricupdate.com/202606/heuristik-targets-healthcare-biometrics-with-ai-built-for-clinical-conditions",
+          "sourceName": "Biometric Update",
+          "date": "2026-06-08",
+          "language": "es",
+          "highRelevance": false,
+          "topic": "biometria",
+          "vertical": "salud"
+        },
+        {
+          "id": "espana-avpa-aepd-biometria-eudi-wallet-jun02",
+          "title": "Espana: regulador de datos amenaza la EUDI Wallet al clasificar la biometria facial como dato especial",
+          "summary": "La Age Verification Providers Association (AVPA) advirtio que una resolucion de la AEPD espanola que clasifico las plantillas biometricas faciales como datos de categoria especial bajo GDPR podria hacer inviable la implementacion de la EUDI Wallet en Espana y sentar precedente en toda la UE. La AEPD determino que los proveedores deben ofrecer alternativas no biometricas, debilitando el vinculo no transferible de identidad. Yoti fue multada con 1,1 millones de euros por el mismo regulador.",
+          "sourceUrl": "https://www.biometricupdate.com/202606/avpa-warns-that-spanish-regulators-biometrics-decision-could-tank-eu-wallet-scheme",
+          "sourceName": "Biometric Update",
+          "date": "2026-06-02",
+          "language": "es",
+          "highRelevance": true,
+          "topic": "regulacion",
+          "vertical": "gobierno"
+        },
+        {
           "id": "espana-fraude-bancario-smishing-barcelona-jun26",
           "title": "España: 23 detenidos por fraude bancario de 300.000 euros con smishing y vishing en Barcelona y Murcia",
           "summary": "La Policía española detuvo a 23 personas en Barcelona y Murcia por un fraude bancario que causó pérdidas de 300.000 euros en 48 denuncias. Los delincuentes usaban aplicaciones de spoofing para suplantar el número telefónico de entidades bancarias, enviaban SMS con links a sitios clonados y convencían a las víctimas de compartir credenciales o realizar transferencias bajo pretexto de transacciones no autorizadas. El patrón smishing y vishing con cuentas mulas es idéntico al documentado en Argentina y México.",
@@ -4160,6 +4244,54 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "experian-agent-operating-system-jun02",
+        "title": "Experian lanza Agent Operating System en Money20/20 Europe para IA autonoma en decisioning bancario",
+        "summary": "Experian presento en Money20/20 Europe el Agent Operating System (AOS), integrado en su plataforma Ascend, para habilitar agentes IA que operen de forma autonoma en acceso a datos, decisioning, orquestacion y gobierno para el ciclo completo de lending. La primera integracion es con ServiceNow para deteccion de fraude y riesgo crediticio. El rollout a early adopters esta previsto para finales de 2026, con alcance a 2.300 soluciones de clientes globales.",
+        "sourceUrl": "https://thepaypers.com/fraud-and-fincrime/news/experian-launches-agent-operating-system-for-financial-services",
+        "sourceName": "The Paypers",
+        "date": "2026-06-02",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "fraude",
+        "competitor": "Experian"
+      },
+      {
+        "id": "gbg-foresight-identity-decisioning-jun03",
+        "title": "GBG lanza Foresight, capa de inteligencia IA para decisioning de identidad con benchmarking sectorial",
+        "summary": "GBG presento Foresight, una capa de inteligencia impulsada por IA que permite a las organizaciones comparar el rendimiento de sus journeys de identidad contra pares del sector, recibir recomendaciones de configuracion con resultados explicables y activar alertas automatizadas sin integracion activa. El producto forma parte del reposicionamiento de GBG de proveedor de verificacion a plataforma de identidad y fraude, con asociaciones de datos con Moody's y Equifax.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/gbg-continues-shift-from-idv-to-identity-decisioning-with-foresight",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-03",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "identidad",
+        "competitor": "GBG"
+      },
+      {
+        "id": "ping-identity-control-plane-agentic-jun05",
+        "title": "Ping Identity redefine el identity control plane para la empresa agentiva con gobernanza de agentes IA",
+        "summary": "Ping Identity anuncio capacidades en su plataforma para el escenario agentivo: interfaces AI-first headless con soporte MCP y CLI, descubrimiento y gobierno del ciclo de vida de agentes IA, y acceso privilegiado just-in-time para agentes sin exponer secrets. El CEO Andre Durand declaro que la identidad esta evolucionando de infraestructura de autenticacion a infraestructura de gobierno operacional. El movimiento posiciona a Ping en el debate sobre quien gestiona la identidad de los agentes IA en banca y fintech.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/identity-control-plane-emerges-as-next-battleground-for-ai-agents",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-05",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "identidad",
+        "competitor": "Ping Identity"
+      },
+      {
+        "id": "goode-intelligence-iad-market-report-2026-jun08",
+        "title": "Reporte IAD 2026: proyectan 122M ataques de inyeccion anuales e incluyen a Incode entre los evaluados",
+        "summary": "El 2026 Injection Attack Detection Market Report de Biometric Update y Goode Intelligence proyecta 122 millones de intentos de injection attack en 2026 y mas de 301 millones para 2028, con un volumen de 4 mil millones de verificaciones IAD anuales. El reporte incluye perfiles de Incode, Innovatrics, Identy, Mitek y OZ Forensics entre los proveedores evaluados. La publicacion establece los estandares de certificacion (iBeta, CENS/TS 18099) que el mercado exigira a los proveedores de IDV.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/biometric-update-goode-intelligence-release-2026-iad-report",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-08",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "biometria",
+        "competitor": "Incode"
+      },
       {
         "id": "entrust-identity-week-europe-keynote-jun07",
         "title": "CEO de Entrust presenta keynote en Identity Week Europe 2026 sobre fraude por IA, deepfakes e identidades sintéticas",
@@ -4895,7 +5027,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-06-08';
+const TODAY_ISO = '2026-06-09';
 
 /* =========================================================================
    INTERNACIONALIZACIÓN — ES / EN / PT
