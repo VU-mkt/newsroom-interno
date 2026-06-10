@@ -477,34 +477,6 @@
     background: var(--vu-negro-soft); color: var(--vu-gris-light);
     padding: 3px 6px; border-radius: 4px;
   }
-  .lang-switcher { display: none; }
-  .lang-btn { display: none; }
-
-  /* =================== GLOBAL LANG SELECTOR =================== */
-  .ticker-lang-sep {
-    margin: 0 6px;
-    flex-shrink: 0;
-  }
-  .ticker-lang-wrap {
-    display: inline-flex; align-items: center; gap: 1px;
-    padding: 0 10px 0 0;
-    flex-shrink: 0;
-  }
-  .ticker-lang-btn {
-    font-family: var(--font-mono); font-size: 10px; font-weight: 700;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    background: transparent; border: none;
-    color: rgba(255,255,255,0.32);
-    display: inline-flex; align-items: center; justify-content: center;
-    height: 20px; padding: 0 6px; border-radius: 4px;
-    cursor: pointer; line-height: 1;
-    transition: background 0.12s, color 0.12s;
-  }
-  .ticker-lang-btn:hover { color: var(--vu-crema); }
-  .ticker-lang-btn.active {
-    background: var(--vu-naranja); color: #fff;
-  }
-
   .meta {
     display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
     font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em;
@@ -1138,12 +1110,6 @@
   <div class="ticker-search-wrap">
     <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
     <input class="search-box" id="searchBox" type="search" placeholder="Buscar nota…" autocomplete="off" spellcheck="false">
-    <div class="ticker-vline ticker-lang-sep"></div>
-    <div class="ticker-lang-wrap">
-      <button class="ticker-lang-btn active" data-lang="es" onclick="setLanguage('es')">ES</button>
-      <button class="ticker-lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
-      <button class="ticker-lang-btn" data-lang="pt" onclick="setLanguage('pt')">PT</button>
-    </div>
   </div>
 </div>
 
@@ -5187,16 +5153,7 @@ const briefing = {
 const FRESH_DAYS = 7;
 const TODAY_ISO = '2026-06-10';
 
-/* =========================================================================
-   INTERNACIONALIZACIÓN — ES / EN / PT
-   ========================================================================= */
-
-let currentLang = (() => {
-  try { return localStorage.getItem('vu-lang') || 'es'; } catch(_) { return 'es'; }
-})();
-
 const UI_STRINGS = {
-  es: {
     home_label: 'Home',
     home_title: () => `Últimos ${FRESH_DAYS} días`,
     home_subtitle: () => `Lo más reciente de Global, LATAM, Regulación, Competencia y VU.`,
@@ -5253,182 +5210,12 @@ const UI_STRINGS = {
       'brecha':                 { icon: '🔍', label: 'Brecha de Mercado'      },
     },
     actionableFallback: { icon: '⚡', label: 'Accionable' },
-    footerText1: 'Todas las notas provienen de fuentes verificadas',
-    footerText2: 'Las imágenes utilizadas no contienen copyright',
+
   },
-  en: {
-    home_label: 'Home',
-    home_title: () => `Last ${FRESH_DAYS} days`,
-    home_subtitle: () => `Latest from Global, LATAM, Regulation, Competition and VU.`,
-    home_empty: () => `No news in the last ${FRESH_DAYS} days.`,
-    global_label: 'Global',
-    global_empty: () => `No Global news in the last ${FRESH_DAYS} days.`,
-    latam_label: 'LATAM',
-    latam_empty: () => `No LATAM news in the last ${FRESH_DAYS} days.`,
-    competencia_label: 'Competition',
-    competencia_empty: () => `No Competition news in the last ${FRESH_DAYS} days.`,
-    vu_label: 'VU',
-    vu_title: 'VU Security · Stranieri · VU ONE',
-    vu_empty: () => `No VU news in the last ${FRESH_DAYS} days.`,
-    regulation_label: 'Regulation',
-    regulation_empty: () => `No regulatory news in the last ${FRESH_DAYS} days.`,
-    archivo_label: 'Archive',
-    archivo_title: () => `Archive — over ${FRESH_DAYS} days old`,
-    archivo_empty: 'No archived notes yet.',
-    nota: n => `${n} ${n !== 1 ? 'notes' : 'note'}`,
-    resultado: n => `${n} ${n !== 1 ? 'results' : 'result'}`,
-    searchPlaceholder: 'Search notes…',
-    cmdPlaceholder: 'Search news or navigate…',
-    busqueda: 'Search',
-    sinResultados: 'No results for this search.',
-    sideEmpty: 'No additional notes in this view.',
-    porPais: '☰  By country',
-    mapa: '&#128506;&#160; Map',
-    actividadCobertura: 'Coverage activity',
-    diasActivos: n => `${n} active days`,
-    sinCobertura: 'No coverage',
-    menos: 'Less',
-    mas: 'More',
-    dayLabels: ['M','','W','','F','','S'],
-    monthNames: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-    dayNames: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
-    monthNamesLong: ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'],
-    mapSinNotas: 'no notes',
-    mapLegend: [
-      { color: '#252525',              label: 'No notes'  },
-      { color: 'rgba(241,94,55,0.38)', label: '1 note'   },
-      { color: 'rgba(241,94,55,0.68)', label: '2-3 notes'},
-      { color: '#F15E37',              label: '4+ notes'  }
-    ],
-    cmdNav: [['↑↓','navigate'],['↵','open'],['Esc','close']],
-    fuente: 'Source:',
-    leerNota: 'Read note ↗',
-    senalMercado: 'Market Signal',
-    actionableTypes: {
-      'tendencia':              { icon: '📈', label: 'Trend'             },
-      'movimiento-competitivo': { icon: '⚡', label: 'Competitive Move'  },
-      'ventana':                { icon: '🎯', label: 'Market Window'     },
-      'señal-regulatoria':      { icon: '⚖️', label: 'Regulatory Signal'},
-      'dato-clave':             { icon: '📊', label: 'Key Data'          },
-      'brecha':                 { icon: '🔍', label: 'Market Gap'        },
-    },
-    actionableFallback: { icon: '⚡', label: 'Actionable' },
-    footerText1: 'All notes come from verified sources',
-    footerText2: 'Images used are copyright-free',
-  },
-  pt: {
-    home_label: 'Início',
-    home_title: () => `Últimos ${FRESH_DAYS} dias`,
-    home_subtitle: () => `O mais recente de Global, LATAM, Regulação, Concorrência e VU.`,
-    home_empty: () => `Sem novidades nos últimos ${FRESH_DAYS} dias.`,
-    global_label: 'Global',
-    global_empty: () => `Sem novidades globais nos últimos ${FRESH_DAYS} dias.`,
-    latam_label: 'LATAM',
-    latam_empty: () => `Sem novidades de LATAM nos últimos ${FRESH_DAYS} dias.`,
-    competencia_label: 'Concorrência',
-    competencia_empty: () => `Sem novidades de concorrência nos últimos ${FRESH_DAYS} dias.`,
-    vu_label: 'VU',
-    vu_title: 'VU Security · Stranieri · VU ONE',
-    vu_empty: () => `Sem novidades da VU nos últimos ${FRESH_DAYS} dias.`,
-    regulation_label: 'Regulação',
-    regulation_empty: () => `Sem novidades regulatórias nos últimos ${FRESH_DAYS} dias.`,
-    archivo_label: 'Arquivo',
-    archivo_title: () => `Arquivo — mais de ${FRESH_DAYS} dias`,
-    archivo_empty: 'Ainda não há notas no arquivo.',
-    nota: n => `${n} ${n !== 1 ? 'notas' : 'nota'}`,
-    resultado: n => `${n} ${n !== 1 ? 'resultados' : 'resultado'}`,
-    searchPlaceholder: 'Buscar nota…',
-    cmdPlaceholder: 'Buscar notícias ou navegar…',
-    busqueda: 'Busca',
-    sinResultados: 'Sem resultados para esta busca.',
-    sideEmpty: 'Sem notas adicionais nesta visualização.',
-    porPais: '☰  Por país',
-    mapa: '&#128506;&#160; Mapa',
-    actividadCobertura: 'Atividade de cobertura',
-    diasActivos: n => `${n} dias ativos`,
-    sinCobertura: 'Sem cobertura',
-    menos: 'Menos',
-    mas: 'Mais',
-    dayLabels: ['S','','T','','S','','D'],
-    monthNames: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
-    dayNames: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'],
-    monthNamesLong: ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'],
-    mapSinNotas: 'sem notas',
-    mapLegend: [
-      { color: '#252525',              label: 'Sem notas'  },
-      { color: 'rgba(241,94,55,0.38)', label: '1 nota'    },
-      { color: 'rgba(241,94,55,0.68)', label: '2-3 notas' },
-      { color: '#F15E37',              label: '4+ notas'  }
-    ],
-    cmdNav: [['↑↓','navegar'],['↵','abrir'],['Esc','fechar']],
-    fuente: 'Fonte:',
-    leerNota: 'Ler nota ↗',
-    senalMercado: 'Sinal de Mercado',
-    actionableTypes: {
-      'tendencia':              { icon: '📈', label: 'Tendência'              },
-      'movimiento-competitivo': { icon: '⚡', label: 'Movimento Competitivo' },
-      'ventana':                { icon: '🎯', label: 'Janela de Mercado'      },
-      'señal-regulatoria':      { icon: '⚖️', label: 'Sinal Regulatório'    },
-      'dato-clave':             { icon: '📊', label: 'Dado-Chave'             },
-      'brecha':                 { icon: '🔍', label: 'Brecha de Mercado'      },
-    },
-    actionableFallback: { icon: '⚡', label: 'Acionável' },
-    footerText1: 'Todas as notas provêm de fontes verificadas',
-    footerText2: 'As imagens utilizadas não têm direitos autorais',
-  }
 };
 
-function t() { return UI_STRINGS[currentLang] || UI_STRINGS.es; }
+function t() { return UI_STRINGS; }
 
-function setLanguage(lang) {
-  if (!UI_STRINGS[lang]) return;
-  currentLang = lang;
-  try { localStorage.setItem('vu-lang', lang); } catch(_) {}
-
-  document.querySelectorAll('.ticker-lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
-
-  const sb = document.getElementById('searchBox');
-  if (sb) sb.placeholder = t().searchPlaceholder;
-  const ci = document.getElementById('cmdInput');
-  if (ci) ci.placeholder = t().cmdPlaceholder;
-
-  document.querySelectorAll('.cmd-footer-hint').forEach((hint, i) => {
-    const pair = t().cmdNav[i];
-    if (pair) hint.innerHTML = `<span class="cmd-footer-kbd">${pair[0]}</span> ${pair[1]}`;
-  });
-
-  const f1 = document.getElementById('footerText1');
-  const f2 = document.getElementById('footerText2');
-  if (f1) f1.textContent = t().footerText1;
-  if (f2) f2.textContent = t().footerText2;
-
-  buildTOC();
-  const v = currentView();
-  setActiveTOC(v);
-  renderView(v);
-
-  // Actualizar títulos y resúmenes DESPUÉS del renderView — el DOM ya tiene los data-* frescos
-  document.querySelectorAll('[id^="tit-"],[id^="sum-"]').forEach(el => {
-    const val = el.dataset[lang];
-    if (val) el.textContent = val;
-  });
-}
-
-function applyLangOnInit() {
-  document.querySelectorAll('.ticker-lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === currentLang);
-  });
-  const sb = document.getElementById('searchBox');
-  if (sb) sb.placeholder = t().searchPlaceholder;
-  const ci = document.getElementById('cmdInput');
-  if (ci) ci.placeholder = t().cmdPlaceholder;
-  document.querySelectorAll('.cmd-footer-hint').forEach((hint, i) => {
-    const pair = t().cmdNav[i];
-    if (pair) hint.innerHTML = `<span class="cmd-footer-kbd">${pair[0]}</span> ${pair[1]}`;
-  });
-}
 
 function fmtDate(iso) {
   if (!iso) return '—';
@@ -5496,44 +5283,18 @@ function escAttr(s) {
 }
 
 function sumData(it) {
-  const s = it.summaries || {};
-  const fb = it.summary || '';
-  return `id="sum-${it.id}" data-es="${escAttr(s.es||fb)}" data-en="${escAttr(s.en||fb)}" data-pt="${escAttr(s.pt||fb)}"`;
+  return `id="sum-${it.id}"`;
 }
 
 function titleData(it) {
-  const tl = it.titles || {};
-  const fb = it.title || '';
-  return `id="tit-${it.id}" data-es="${escAttr(tl.es||fb)}" data-en="${escAttr(tl.en||fb)}" data-pt="${escAttr(tl.pt||fb)}"`;
+  return `id="tit-${it.id}"`;
 }
 
-function langSwitcherHTML(it) {
-  const lang = (it.language || 'es').split('-')[0].toLowerCase();
-  const id = it.id;
-  return `<span class="lang-switcher">`
-    + `<button class="lang-btn${lang==='es'?' active':''}" onclick="event.stopPropagation();translateSummary(event,'${id}','es')" title="Español">ES</button>`
-    + `<button class="lang-btn${lang==='en'?' active':''}" onclick="event.stopPropagation();translateSummary(event,'${id}','en')" title="English">EN</button>`
-    + `<button class="lang-btn${lang==='pt'?' active':''}" onclick="event.stopPropagation();translateSummary(event,'${id}','pt')" title="Português">PT</button>`
-    + `</span>`;
-}
-
-function translateSummary(event, articleId, targetLang) {
-  event.stopPropagation();
-  const btn = event.currentTarget;
-  const sumEl = document.getElementById('sum-' + articleId);
-  if (!sumEl) return;
-  const switcher = btn.closest('.lang-switcher');
-  const allBtns = switcher ? switcher.querySelectorAll('.lang-btn') : [];
-  sumEl.textContent = sumEl.dataset[targetLang] || sumEl.textContent;
-  allBtns.forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-}
 
 function metaHTML(it) {
   return `
     <div class="meta">
       <span class="date-badge">${fmtDate(it.date)}</span>
-      ${langSwitcherHTML(it)}
       ${it.vertical ? `<span class="pip">·</span><span>${it.vertical}</span>` : ''}
       ${it.topic ? `<span class="pip">·</span><span>${it.topic}</span>` : ''}
       <span class="pip">·</span>
@@ -5601,7 +5362,7 @@ function featCardHTML(it) {
     <div class="feat-content">
       <div class="feat-top">${pillsHTML(it)}</div>
       <h2 ${titleData(it)}>${it.title}</h2>
-      <p class="feat-summary" id="sum-${it.id}" ${sumData(it)}>${it.summary}</p>
+      <p class="feat-summary" ${sumData(it)}>${it.summary}</p>
       ${metaHTML(it)}
     </div>`;
   if (it.actionable) {
@@ -5617,10 +5378,9 @@ function sideCardHTML(it) {
   const frontInner = `
     <div class="side-top">${pillsHTML(it)}</div>
     <h3 ${titleData(it)}>${it.title}</h3>
-    <p class="side-summary" id="sum-${it.id}" ${sumData(it)}>${it.summary}</p>
+    <p class="side-summary" ${sumData(it)}>${it.summary}</p>
     <div class="meta" style="font-size:10px;">
       <span class="date-badge">${fmtDate(it.date)}</span>
-      ${langSwitcherHTML(it)}
       <a href="${it.sourceUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation();">${it.sourceName} ↗</a>
     </div>`;
   if (it.actionable) {
@@ -5637,7 +5397,7 @@ function listCardHTML(it) {
     <div>
       <div class="side-top">${pillsHTML(it)}</div>
       <h4 ${titleData(it)}>${it.title}</h4>
-      <p class="list-summary" id="sum-${it.id}" ${sumData(it)}>${it.summary}</p>
+      <p class="list-summary" ${sumData(it)}>${it.summary}</p>
       <div class="meta">
         <a href="${it.sourceUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation();">${it.sourceName} ↗</a>
         ${it.topic ? `<span class="pip">·</span><span>${it.topic}</span>` : ''}
@@ -5645,7 +5405,6 @@ function listCardHTML(it) {
     </div>
     <div class="list-side">
       <span class="date-badge">${fmtDate(it.date)}</span>
-      ${langSwitcherHTML(it)}
     </div>`;
   if (it.actionable) {
     return wrapFlipCard(frontInner, it, `list-card card-${it.section} ${it.highRelevance ? 'high' : ''}`);
@@ -6260,15 +6019,8 @@ document.addEventListener('keydown', e => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  applyLangOnInit();
   buildTOC();
   route();
-  if (currentLang !== 'es') {
-    document.querySelectorAll('[id^="tit-"],[id^="sum-"]').forEach(el => {
-      const val = el.dataset[currentLang];
-      if (val) el.textContent = val;
-    });
-  }
   initTicker();
 
   const cmdInput = document.getElementById('cmdInput');
