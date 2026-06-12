@@ -1304,12 +1304,31 @@ function renderD3LatamMap(byCountry, container) {
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
   "date": "2026-06-11",
-  "publishedAt": "2026-06-12T13:24:26.357Z",
+  "publishedAt": "2026-06-12T19:26:41.815Z",
   "sections": {
     "global": [
       {
+        "id": "techcrunch-oracle-peoplesoft-official-advisory-100-companies-jun11",
+        "title": "[ACTUALIZACIÓN] Oracle confirma oficialmente el zero-day de PeopleSoft: 100+ organizaciones comprometidas y datos de identidad de estudiantes en la mira",
+        "summary": "Oracle emitió el aviso oficial sobre CVE-2026-35273, un fallo crítico (CVSS 9.8) en PeopleSoft explotable por internet sin autenticación, que ShinyHunters usó para vulnerar más de 100 organizaciones. Mandiant notificó a 100+ entidades adicionales potencialmente vulnerables; cerca de dos tercios son instituciones de educación superior. Los datos robados incluyen nombre completo, domicilio, teléfono, email, fecha de nacimiento, género, etnia y número de estudiante de cientos de miles de personas, con Oracle recomendando mitigaciones porque al momento del aviso no había parche disponible.",
+        "sourceUrl": "https://techcrunch.com/2026/06/11/oracle-warns-of-security-bug-that-hackers-abused-to-breach-100-companies/",
+        "sourceName": "TechCrunch",
+        "date": "2026-06-11",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "zero-day",
+        "vertical": "gobierno",
+        "actionable": {
+          "type": "brecha",
+          "text": "El aviso oficial de Oracle eleva el incidente de un reporte de actor a una brecha sistémica confirmada: 100+ organizaciones afectadas y 100+ adicionales en riesgo, con dos tercios en educación superior. La exfiltración masiva de identificadores personales sin parche disponible expone a cientos de miles de personas a robo de identidad y fraude de nueva cuenta downstream."
+        }
+      },
+      {
         "id": "bankinfosecurity-ghost-stadium-fifa-phishing-may29",
-        "actionable": {"type":"dato-clave","text":"Ghost Stadium reutilizó el SSO real de PingIdentity y más de 4.000 dominios para clonar el sitio de FIFA, con 47.000 víctimas y pérdidas de hasta 1.000 millones de dólares: el phishing-as-a-service ya opera a escala industrial sobre eventos masivos."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "Ghost Stadium reutilizó el SSO real de PingIdentity y más de 4.000 dominios para clonar el sitio de FIFA, con 47.000 víctimas y pérdidas de hasta 1.000 millones de dólares: el phishing-as-a-service ya opera a escala industrial sobre eventos masivos."
+        },
         "title": "Ghost Stadium: plataforma PhaaS china clona el sitio oficial de FIFA y robó hasta $1B durante el Mundial 2026",
         "summary": "Group-IB identificó Ghost Stadium, plataforma PhaaS de origen chino que replica con precisión el sitio oficial de FIFA usando el SSO real de PingIdentity. La operación registró más de 4.000 dominios fraudulentos desde agosto de 2025, con 47.000 víctimas confirmadas y pérdidas estimadas entre $470M y $1B. Con el Mundial iniciado el 11 de junio, el actor mantiene 3.800 dominios de reemplazo activos hasta el 19 de julio.",
         "sourceUrl": "https://www.bankinfosecurity.com/chinese-phishing-service-scams-thousands-fifa-world-cup-fans-a-31819",
@@ -1333,7 +1352,10 @@ const briefing = {
       },
       {
         "id": "thehackernews-europol-audia6-crypto-laundering-jun11",
-        "actionable": {"type":"dato-clave","text":"AudiA6 procesó más de 336 millones de euros para grupos de ransomware desde 2021 antes de caer; el lavado cripto-as-a-service se consolidó como infraestructura estable del cibercrimen financiero."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "AudiA6 procesó más de 336 millones de euros para grupos de ransomware desde 2021 antes de caer; el lavado cripto-as-a-service se consolidó como infraestructura estable del cibercrimen financiero."
+        },
         "title": "Europol desmantela AudiA6: servicio de lavado cripto que procesó €336M para bandas de ransomware",
         "summary": "En una operación coordinada el 10 de junio, Europol desarticuló AudiA6, plataforma de lavado de criptomonedas utilizada por grupos de ransomware desde 2021. El servicio procesó más de €336 millones en activos ilícitos. El DOJ de EE.UU. imputó a dos ciudadanos rusos con cargos de conspiración para lavado de dinero.",
         "sourceUrl": "https://thehackernews.com/2026/06/europol-disrupts-audia6-crypto.html",
@@ -1345,7 +1367,10 @@ const briefing = {
       },
       {
         "id": "thehackernews-shinyhunters-oracle-peoplesoft-jun11",
-        "actionable": {"type":"dato-clave","text":"ShinyHunters explotó CVE-2026-35273 como zero-day durante 13 días y afectó a más de 100 organizaciones, el 68% universidades de EE.UU.; el advisory de Oracle llegó recién después de la explotación."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "ShinyHunters explotó CVE-2026-35273 como zero-day durante 13 días y afectó a más de 100 organizaciones, el 68% universidades de EE.UU.; el advisory de Oracle llegó recién después de la explotación."
+        },
         "title": "ShinyHunters explotó zero-day en Oracle PeopleSoft para robar datos de más de 100 organizaciones",
         "summary": "El grupo ShinyHunters explotó CVE-2026-35273 (CVSS 9.8, RCE sin autenticación) en Oracle PeopleSoft entre el 27 de mayo y el 9 de junio —durante todo ese período el bug era un zero-day. Mandiant notificó a más de 100 organizaciones afectadas; el 68% son instituciones de educación superior en EE.UU. Oracle publicó su advisory recién el 10 de junio.",
         "sourceUrl": "https://thehackernews.com/2026/06/shinyhunters-exploits-oracle-peoplesoft.html",
@@ -1357,7 +1382,10 @@ const briefing = {
       },
       {
         "id": "biometricupdate-synthetic-identity-fraud-biggest-threat-jun11",
-        "actionable": {"type":"dato-clave","text":"El fraude de identidad sintética alcanzó 2.940 millones de dólares en pérdidas de crédito no garantizado en 2025 y ya es la mayor amenaza de fraude del año, con crecimiento del 16% anual."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "El fraude de identidad sintética alcanzó 2.940 millones de dólares en pérdidas de crédito no garantizado en 2025 y ya es la mayor amenaza de fraude del año, con crecimiento del 16% anual."
+        },
         "title": "Fraude de identidad sintética supera los $2.94B en pérdidas: ya es la amenaza de fraude más grande de 2026",
         "summary": "Un reporte de Mitek Systems y Datos Insights establece que el fraude de identidad sintética se convirtió en la mayor amenaza para instituciones financieras en 2026: el 84% de los ejecutivos lo considera un riesgo moderado o alto. Las pérdidas en crédito no garantizado alcanzaron $2.94B en 2025 (vs. $1.8B en 2020) y el 40% de las instituciones ya reporta ataques vinculados a IA. El fraude sintético crece un 16% anual.",
         "sourceUrl": "https://www.biometricupdate.com/202606/report-finds-synthetic-identity-fraud-becoming-biggest-fraud-threat-in-2026",
@@ -1369,7 +1397,10 @@ const briefing = {
       },
       {
         "id": "biometricupdate-biocatch-digital-trust-ai-agents-jun11",
-        "actionable": {"type":"dato-clave","text":"El 80% de las instituciones financieras ya sufrió ataques iniciados por agentes de IA y 4,4 billones de dólares ilícitos fluyeron por el sistema financiero global en 2025, un 42% más que en 2023."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "El 80% de las instituciones financieras ya sufrió ataques iniciados por agentes de IA y 4,4 billones de dólares ilícitos fluyeron por el sistema financiero global en 2025, un 42% más que en 2023."
+        },
         "title": "El 80% de las instituciones financieras ya sufrió ataques de agentes IA: reporte BioCatch-Nasdaq",
         "summary": "Un informe de BioCatch con datos de Nasdaq y Verafin revela que el 80% de los encuestados ya experimentó ataques iniciados por agentes de IA, el 88% reporta que la IA aumentó la sofisticación del fraude, y $4.4 billones en fondos ilícitos fluyeron por el sistema financiero global en 2025 —un aumento del 42% respecto a 2023. El 84% de líderes de fraude cree que los agentes IA serán la principal vulnerabilidad explotable dentro de un año.",
         "sourceUrl": "https://www.biometricupdate.com/202606/digital-trust-under-threat-from-advanced-fraud-ai-agents-biocatch",
@@ -1381,7 +1412,10 @@ const briefing = {
       },
       {
         "id": "pymnts-fsb-agentic-ai-financial-risk-jun10",
-        "actionable": {"type":"señal-regulatoria","text":"El Financial Stability Board pidió a los bancos tratar a los agentes de IA como empleados sintéticos y establecer controles sobre su acción autónoma, con feedback abierto hasta el 22 de julio de 2026."},
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "El Financial Stability Board pidió a los bancos tratar a los agentes de IA como empleados sintéticos y establecer controles sobre su acción autónoma, con feedback abierto hasta el 22 de julio de 2026."
+        },
         "title": "El Consejo de Estabilidad Financiera urge a bancos a controlar riesgos de IA agéntica: acción autónoma sin supervisión humana como amenaza sistémica",
         "summary": "El FSB (Financial Stability Board) publicó el 10 de junio guías instando a las instituciones financieras a establecer controles sobre sistemas de IA agéntica que pueden actuar de forma autónoma sin supervisión humana. Los riesgos identificados incluyen acciones no autorizadas, mala alineación de objetivos y propagación de disrupciones en sistemas interconectados. El FSB recomienda tratar a los agentes de IA como 'empleados sintéticos' y recopila feedback hasta el 22 de julio de 2026.",
         "sourceUrl": "https://www.pymnts.com/artificial-intelligence-2/2026/agentic-ai-risk-catches-eye-of-financial-stability-board/",
@@ -1394,7 +1428,10 @@ const briefing = {
       },
       {
         "id": "pymnts-synthetic-borrower-deepfake-fraud-jun10",
-        "actionable": {"type":"tendencia","text":"Deepfakes faciales, voz clonada y empleo falsificado permiten construir prestatarios sintéticos que pasan onboarding y underwriting; la detección por anomalías falla porque estas identidades están diseñadas para parecer estadísticamente perfectas."},
+        "actionable": {
+          "type": "tendencia",
+          "text": "Deepfakes faciales, voz clonada y empleo falsificado permiten construir prestatarios sintéticos que pasan onboarding y underwriting; la detección por anomalías falla porque estas identidades están diseñadas para parecer estadísticamente perfectas."
+        },
         "title": "IA construye el prestatario sintético perfecto: deepfakes y clonación de voz superan los controles de onboarding bancario",
         "summary": "Delincuentes despliegan deepfakes faciales, voz clonada y registros de empleo falsificados para crear 'prestatarios sintéticos' que pasan los controles de onboarding y underwriting antes de desaparecer con los fondos del préstamo. El 77% de las cooperativas de crédito en EE.UU. reportó accesos no autorizados en el último año, con fraude en cada etapa del ciclo de vida del cliente. Los sistemas de detección basados en anomalías fallan porque estas identidades están diseñadas para parecer estadísticamente perfectas.",
         "sourceUrl": "https://www.pymnts.com/news/security-and-risk/2026/banks-are-falling-deepfake-borrowers/",
@@ -1407,7 +1444,10 @@ const briefing = {
       },
       {
         "id": "thehackernews-crowdstrike-north-korea-tech-hacks-jun10",
-        "actionable": {"type":"dato-clave","text":"Corea del Norte concentró el 47% de las intrusiones estatales al sector tech entre abril 2025 y mayo 2026, usando deepfakes e IDs falsas para infiltrarse vía onboarding laboral remoto, no por vulnerabilidades técnicas."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "Corea del Norte concentró el 47% de las intrusiones estatales al sector tech entre abril 2025 y mayo 2026, usando deepfakes e IDs falsas para infiltrarse vía onboarding laboral remoto, no por vulnerabilidades técnicas."
+        },
         "title": "Corea del Norte detrás del 47% de los ataques al sector tecnológico global: deepfakes e identidades falsas como vector de entrada",
         "summary": "El grupo 'Famous Chollima' de Corea del Norte representó el 47% de todas las intrusiones patrocinadas por estados contra el sector tecnológico entre abril 2025 y mayo 2026, según CrowdStrike. Los operativos emplean deepfakes y documentos de identidad falsos para infiltrarse como desarrolladores en empresas de EE.UU., Europa y Asia, sustrayendo aproximadamente USD 2 mil millones en criptomonedas solo en 2025. El vector principal es la suplantación de identidad en procesos de onboarding laboral remoto, no vulnerabilidades técnicas.",
         "sourceUrl": "https://techcrunch.com/2026/06/10/north-koreans-behind-nearly-half-of-us-tech-industry-hacks-says-crowdstrike/",
@@ -1468,7 +1508,10 @@ const briefing = {
       },
       {
         "id": "biometricupdate-uk-age-assurance-social-media-device-jun09",
-        "actionable": {"type":"señal-regulatoria","text":"Reino Unido exigirá verificación de edad a nivel de sistema operativo en tres meses, con hasta cinco años de prisión para ejecutivos que incumplan la Online Safety Act, siguiendo el modelo australiano de edad mínima en redes."},
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "Reino Unido exigirá verificación de edad a nivel de sistema operativo en tres meses, con hasta cinco años de prisión para ejecutivos que incumplan la Online Safety Act, siguiendo el modelo australiano de edad mínima en redes."
+        },
         "title": "Reino Unido exige verificación de edad a nivel de sistema operativo con responsabilidad penal para ejecutivos de tech",
         "summary": "El primer ministro Keir Starmer anunció que Apple y Google deben activar detección de contenido explícito a nivel de OS en tres meses, con penas de hasta cinco años de prisión para ejecutivos que incumplan la Online Safety Act. El gobierno planea fijar una edad mínima —posiblemente 16 años— para redes sociales siguiendo el modelo australiano; el 91% de los reportes de abuso infantil en línea en 2024 contenía material autogenerado. La regulación anticipar una tendencia global que afectará a plataformas digitales en LATAM donde la protección de menores sigue siendo una deuda regulatoria pendiente.",
         "sourceUrl": "https://www.biometricupdate.com/202606/uk-promises-age-assurance-for-social-media-device-level-child-safety-controls",
@@ -1481,7 +1524,10 @@ const briefing = {
       },
       {
         "id": "thehackernews-stock-exchange-outlook-breach-5months-jun09",
-        "actionable": {"type":"brecha","text":"Atacantes mantuvieron acceso al correo de un ejecutivo de bolsa durante cinco meses sin detección usando una librería legítima: el caso expone el vacío entre la autenticación puntual y el monitoreo continuo de sesión."},
+        "actionable": {
+          "type": "brecha",
+          "text": "Atacantes mantuvieron acceso al correo de un ejecutivo de bolsa durante cinco meses sin detección usando una librería legítima: el caso expone el vacío entre la autenticación puntual y el monitoreo continuo de sesión."
+        },
         "title": "Atacantes mantuvieron acceso al correo de un ejecutivo de bolsa de valores por cinco meses sin detección",
         "summary": "Atacantes desconocidos mantuvieron acceso al buzón de Outlook de un ejecutivo senior de una bolsa de valores global durante cinco meses usando un stealer construido sobre la librería legítima Aspose.NET. El primer pull extrajo todos los correos desde agosto 2025, regresando cada 2-4 semanas hasta febrero 2026 con exfiltración vía Dropbox y OneDrive Personal; herramientas adicionales robaron credenciales de Windows y contraseñas de aplicaciones. Para los mercados de capitales de LATAM —BYMA, B3, BMV— el caso evidencia que la autenticación puntual es insuficiente sin monitoreo continuo de sesiones.",
         "sourceUrl": "https://thehackernews.com/2026/06/hackers-spied-on-stock-exchange.html",
@@ -1494,7 +1540,10 @@ const briefing = {
       },
       {
         "id": "thehackernews-chrome-v8-zero-day-cve-2026-11645-jun09",
-        "actionable": {"type":"tendencia","text":"Un zero-day activamente explotado en el motor V8 de Chrome permite comprometer la sesión del cliente antes de que llegue al flujo de verificación, recordando que el endpoint es el eslabón previo al onboarding."},
+        "actionable": {
+          "type": "tendencia",
+          "text": "Un zero-day activamente explotado en el motor V8 de Chrome permite comprometer la sesión del cliente antes de que llegue al flujo de verificación, recordando que el endpoint es el eslabón previo al onboarding."
+        },
         "title": "Google parchea zero-day activamente explotado en Chrome V8 (CVE-2026-11645, CVSS 8.8)",
         "summary": "Google lanzó actualizaciones de emergencia para Chrome tras confirmar explotación activa de CVE-2026-11645, una vulnerabilidad de acceso fuera de límites en el motor V8 con CVSS 8.8 que permite ejecución de código arbitrario via página HTML maliciosa en versiones anteriores a Chrome 149.0.7827.103. Google no divulgó detalles sobre los actores para dar tiempo a los usuarios de actualizar. Para plataformas de banca digital y onboarding en LATAM, el zero-day implica que la sesión del cliente puede estar comprometida antes de llegar al flujo de verificación.",
         "sourceUrl": "https://thehackernews.com/2026/06/chrome-v8-zero-day-cve-2026-11645.html",
@@ -1507,7 +1556,10 @@ const briefing = {
       },
       {
         "id": "thehackernews-veeam-rce-cve-2026-44963-jun09",
-        "actionable": {"type":"dato-clave","text":"CVE-2026-44963 (CVSS 9.4) permite ejecución remota de código a cualquier usuario de dominio en Veeam Backup, históricamente un vector frecuente de los grupos Akira, Fog y Cuba para ransomware dirigido."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "CVE-2026-44963 (CVSS 9.4) permite ejecución remota de código a cualquier usuario de dominio en Veeam Backup, históricamente un vector frecuente de los grupos Akira, Fog y Cuba para ransomware dirigido."
+        },
         "title": "Vulnerabilidad crítica en Veeam Backup (CVSS 9.4) permite ejecución remota de código a usuarios de dominio",
         "summary": "Veeam publicó parches para CVE-2026-44963 (CVSS 9.4) en Backup & Replication v12.3.2.4465, que permite a cualquier usuario de dominio autenticado ejecutar código remotamente en el servidor de backup. La vulnerabilidad fue descubierta por el investigador Sina Kheirkhah de watchTowr; el historial de Veeam como vector frecuente de ransomware —grupos Akira, Fog y Cuba— hace urgente el parche disponible en v12.3.2.4854. Las organizaciones con infraestructura crítica en LATAM deben priorizar esta actualización ante la exposición a ransomware dirigido.",
         "sourceUrl": "https://thehackernews.com/2026/06/veeam-backup-replication-rce-flaw-lets.html",
@@ -1520,7 +1572,10 @@ const briefing = {
       },
       {
         "id": "thehackernews-hades-pypi-19-packages-bun-stealer-jun09",
-        "actionable": {"type":"tendencia","text":"La campaña Hades envenenó 19 paquetes PyPI para cosechar secretos de GitHub, npm, AWS, GCP, Azure y Anthropic; el robo de credenciales de desarrollo vía cadena de suministro escala a operaciones coordinadas multi-repositorio."},
+        "actionable": {
+          "type": "tendencia",
+          "text": "La campaña Hades envenenó 19 paquetes PyPI para cosechar secretos de GitHub, npm, AWS, GCP, Azure y Anthropic; el robo de credenciales de desarrollo vía cadena de suministro escala a operaciones coordinadas multi-repositorio."
+        },
         "title": "Campaña Hades envenena 19 paquetes PyPI para robar credenciales de cloud, GitHub y herramientas de IA",
         "summary": "La campaña Hades comprometió 37 artefactos en 19 paquetes del índice PyPI, vinculada a las campañas Miasma y Mini Shai-Hulud. El payload descarga el runtime Bun y ejecuta un stealer ofuscado que cosecha secretos de GitHub, npm, AWS, GCP, Azure, Kubernetes y credenciales de Anthropic, ejecutándose automáticamente al iniciar Python sin intervención del usuario. La coordinación de tres campañas simultáneas (GitHub, npm, PyPI) configura la mayor ofensiva de robo de credenciales de desarrollo registrada en 2026.",
         "sourceUrl": "https://thehackernews.com/2026/06/hades-pypi-attack-19-packages-poisoned.html",
@@ -1533,7 +1588,10 @@ const briefing = {
       },
       {
         "id": "thehackernews-ironworm-miasma-npm-supply-chain-jun09",
-        "actionable": {"type":"tendencia","text":"IronWorm y Miasma comprometieron 57 paquetes npm apuntando a 86 variables con credenciales de OpenAI, Anthropic, AWS y carteras cripto, firmando commits como claude para suplantar a un proveedor confiable."},
+        "actionable": {
+          "type": "tendencia",
+          "text": "IronWorm y Miasma comprometieron 57 paquetes npm apuntando a 86 variables con credenciales de OpenAI, Anthropic, AWS y carteras cripto, firmando commits como claude para suplantar a un proveedor confiable."
+        },
         "title": "IronWorm y variante Miasma comprometen 57 paquetes npm y roban secretos de herramientas de IA y cloud",
         "summary": "Una campaña paralela de cadena de suministro distribuyó IronWorm, un stealer en Rust, y una nueva variante de Miasma a través de 286 versiones maliciosas de 57 paquetes npm. El malware apunta a 86 variables de entorno con credenciales de OpenAI, Anthropic, AWS, Docker, Kubernetes, GitHub y carteras cripto Exodus; los commits maliciosos se enviaron bajo el nombre de autor 'claude' para suplantar a Anthropic. La campaña es parte del mismo ecosistema de ataque que comprometió los repositorios de Microsoft el día anterior.",
         "sourceUrl": "https://thehackernews.com/2026/06/ironworm-and-new-miasma-worm-variant.html",
@@ -1546,7 +1604,10 @@ const briefing = {
       },
       {
         "id": "thehackernews-miasma-worm-73-microsoft-github-jun08",
-        "actionable": {"type":"tendencia","text":"El gusano Miasma infectó 73 repositorios de Microsoft en GitHub en menos de dos minutos, ejecutando código al abrirlos en herramientas de codificación con IA: el entorno de desarrollo se consolida como superficie de robo de credenciales."},
+        "actionable": {
+          "type": "tendencia",
+          "text": "El gusano Miasma infectó 73 repositorios de Microsoft en GitHub en menos de dos minutos, ejecutando código al abrirlos en herramientas de codificación con IA: el entorno de desarrollo se consolida como superficie de robo de credenciales."
+        },
         "title": "Gusano Miasma infecta 73 repositorios de Microsoft en GitHub y roba credenciales de desarrolladores de IA",
         "summary": "El gusano de cadena de suministro Miasma, variante del Mini Shai-Hulud del grupo TeamPCP, comprometió 73 repositorios de GitHub de Microsoft —incluidos Azure y Azure-Samples— en menos de dos minutos. El malware plantó archivos de configuración que ejecutan código automáticamente al abrir los repositorios en herramientas de codificación con IA, robando contraseñas, tokens de autenticación y secretos de desarrollador. GitHub deshabilitó el acceso a todos los repositorios afectados mientras la investigación continúa.",
         "sourceUrl": "https://thehackernews.com/2026/06/miasma-worm-hits-73-microsoft-github.html",
@@ -1583,7 +1644,10 @@ const briefing = {
       },
       {
         "id": "ocr-studio-document-collage-deepfake-detection-jun08",
-        "actionable": {"type":"movimiento-competitivo","text":"OCR Studio lanzó una red neuronal on-premise para detectar collages documentales y documentos deepfake generados con ChatGPT, Grok y Midjourney, reduciendo 40 veces el tamaño del modelo de visión."},
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "OCR Studio lanzó una red neuronal on-premise para detectar collages documentales y documentos deepfake generados con ChatGPT, Grok y Midjourney, reduciendo 40 veces el tamaño del modelo de visión."
+        },
         "title": "OCR Studio lanza red neuronal para detectar collages de documentos falsos en KYC",
         "summary": "OCR Studio presento una red neuronal capaz de identificar collages documentales fragmentos de documentos reales combinados para alterar fechas, retratos o datos de identidad usados para enganar sistemas KYC durante el onboarding digital. La arquitectura logra una reduccion de mas de 40 veces en el tamano del modelo de vision computacional sin perder precision, y funciona on-premise sin transmitir datos externos. Tambien actualizo su sistema de deteccion de documentos deepfake generados con ChatGPT, Grok y Midjourney.",
         "sourceUrl": "https://www.biometricupdate.com/202606/ocr-studio-launches-neural-network-for-document-collages-updates-deepfake-detection",
@@ -1596,7 +1660,10 @@ const briefing = {
       },
       {
         "id": "ai-synthetic-id-16-models-vulnerable-jun08",
-        "actionable": {"type":"dato-clave","text":"Una auditoría halló que 16 modelos de IA generativa —entre ellos Gemini, ChatGPT, Grok e Imagen 4 Ultra— producen documentos de identidad falsos de 17 países con 92% de éxito, algunos incluso de menores."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "Una auditoría halló que 16 modelos de IA generativa —entre ellos Gemini, ChatGPT, Grok e Imagen 4 Ultra— producen documentos de identidad falsos de 17 países con 92% de éxito, algunos incluso de menores."
+        },
         "title": "Auditoria revela que 16 modelos de IA generan documentos de identidad falsos con 92% de exito",
         "summary": "Una auditoria publicada el 8 de junio encontro que 16 modelos de generacion de imagen IA incluyendo Google Gemini, ChatGPT, Grok, Recraft v4 e Imagen 4 Ultra son capaces de generar documentos de identidad sinteticos realistas (pasaportes, licencias, DNIs) para 17 paises con una tasa de exito del 92% en 75 intentos. Los cinco modelos mas efectivos generaron IDs falsas de menores a traves de interfaces de consumo. El hallazgo eleva la presion sobre todos los proveedores de IDV para fortalecer autenticacion de documentos, liveness detection y defensas contra injection attacks.",
         "sourceUrl": "https://www.biometricupdate.com/202606/16-major-ai-image-models-found-vulnerable-to-synthetic-id-generation",
@@ -1609,7 +1676,10 @@ const briefing = {
       },
       {
         "id": "pymnts-nacha-ach-fraud-rules-june19-jun06",
-        "actionable": {"type":"señal-regulatoria","text":"Desde el 19 de junio Nacha extiende el monitoreo de fraude en tiempo real a todos los participantes ACH de EE.UU., desplazando el estándar de commercially reasonable ante pérdidas de 34.000 millones de dólares."},
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "Desde el 19 de junio Nacha extiende el monitoreo de fraude en tiempo real a todos los participantes ACH de EE.UU., desplazando el estándar de commercially reasonable ante pérdidas de 34.000 millones de dólares."
+        },
         "title": "Nacha extiende el 19 de junio detección de fraude en tiempo real a todos los participantes ACH de EE.UU.",
         "summary": "La segunda fase de las nuevas reglas Nacha entra en vigor el 19 de junio de 2026 y extiende los requisitos de monitoreo de fraude en tiempo real a todos los participantes del sistema ACH estadounidense, tras la primera fase implementada el 20 de marzo para grandes originadores. Las instituciones deben adoptar procesos razonablemente destinados a identificar entradas ACH iniciadas por fraude, desplazando el estándar de commercially reasonable. Las fallas en verificación de identidad representan pérdidas de USD 34.000M para el sector financiero.",
         "sourceUrl": "https://www.pymnts.com/fraud-prevention/2026/new-nacha-rules-drive-banks-toward-real-time-fraud-detection/",
@@ -1622,7 +1692,10 @@ const briefing = {
       },
       {
         "id": "biometricupdate-eudi-biometrics-misconceptions-jun06",
-        "actionable": {"type":"señal-regulatoria","text":"La AEPD española clasificó las plantillas biométricas como datos especiales del Art. 9 GDPR y cuestionó el consentimiento condicionado al servicio, lo que amenaza el despliegue del EUDI Wallet en los 27 estados antes de fin de 2026."},
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "La AEPD española clasificó las plantillas biométricas como datos especiales del Art. 9 GDPR y cuestionó el consentimiento condicionado al servicio, lo que amenaza el despliegue del EUDI Wallet en los 27 estados antes de fin de 2026."
+        },
         "title": "Resolución AEPD sobre biometría amenaza despliegue del EUDI Wallet en toda la UE antes de fin de 2026",
         "summary": "Biometric Update reportó que la AEPD española clasificó las plantillas biométricas como datos especiales bajo el Art. 9 del GDPR, argumentando que el consentimiento no puede ser libre si es condición del servicio, lo que podría comprometer el despliegue del EUDI Wallet en los 27 estados miembro con fecha límite a finales de 2026. La AVPA advierte que la resolución obliga a ofrecer el PIN como única alternativa viable, debilitando la seguridad general del esquema. El caso está ante los tribunales españoles y la AVPA exige orientación urgente del EDPB.",
         "sourceUrl": "https://www.biometricupdate.com/202606/biometrics-regulations-misconceptions-threaten-to-undermine-eudi-wallets",
@@ -1635,7 +1708,10 @@ const briefing = {
       },
       {
         "id": "thehackernews-fifa-worldcup-scams-jun07",
-        "actionable": {"type":"dato-clave","text":"Ghost Stadium estafó entre 470 y 1.000 millones de dólares a hinchas del Mundial con 47.000 víctimas y 4.300 dominios fraudulentos; el malware BTMob intercepta OTPs y credenciales FIFA."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "Ghost Stadium estafó entre 470 y 1.000 millones de dólares a hinchas del Mundial con 47.000 víctimas y 4.300 dominios fraudulentos; el malware BTMob intercepta OTPs y credenciales FIFA."
+        },
         "title": "Ghost Stadium: operación china robó hasta USD 1.000M a hinchas del Mundial 2026 con phishing-as-a-service",
         "summary": "Una plataforma china de phishing-as-a-service denominada Ghost Stadium estafó entre USD 470M y USD 1.000M a hinchas del Mundial 2026, con 47.000 víctimas, más de 2.500 credenciales FIFA robadas y más de 4.300 dominios fraudulentos registrados desde agosto de 2025. El malware BTMob, disfrazado como app de streaming, permite acceso remoto, robo de credenciales e interceptación de OTPs. La campaña se distribuyó vía Facebook Ads, Google, Telegram y WhatsApp.",
         "sourceUrl": "https://www.bankinfosecurity.com/chinese-phishing-service-scams-thousands-fifa-world-cup-fans-a-31819",
@@ -1648,7 +1724,10 @@ const briefing = {
       },
       {
         "id": "pymnts-bank-tellers-fraud-detective-jun07",
-        "actionable": {"type":"dato-clave","text":"Las pérdidas por cibercrimen se quintuplicaron de 4.400 a 21.000 millones de dólares entre 2020 y 2025; los bancos entrenan cajeros como primera línea de detección y el fraude de terceros ya es el 71% de los incidentes."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "Las pérdidas por cibercrimen se quintuplicaron de 4.400 a 21.000 millones de dólares entre 2020 y 2025; los bancos entrenan cajeros como primera línea de detección y el fraude de terceros ya es el 71% de los incidentes."
+        },
         "title": "Bancos entrenan cajeros como detectives ante fraude digital que quintuplicó pérdidas a USD 21.000M",
         "summary": "PYMNTS reportó que bancos estadounidenses están entrenando a sus cajeros como primera línea de detección de fraude, en respuesta a un incremento de cinco veces en pérdidas por cibercrimen: de USD 4.400M en 2020 a USD 21.000M en 2025. JPMorgan Chase contrató a una especialista en ciencias del comportamiento para capacitar al personal en la detección de ingeniería social. El fraude por parte de terceros no autorizados ya representa el 71% de los incidentes y pérdidas registradas.",
         "sourceUrl": "https://www.pymnts.com/fraud-prevention/2026/bank-tellers-play-detective-in-face-of-rising-fraud/",
@@ -1749,7 +1828,10 @@ const briefing = {
       },
       {
         "id": "agentic-commerce-identity-trust-gap-mastercard-prove-jun04",
-        "actionable": {"type":"brecha","text":"Mastercard y Worldline completaron la primera transacción agéntica con passkeys y Prove formó un advisory board sobre confianza: la autenticación diseñada para humanos abre ventanas de fraude cuando una IA inicia la transacción."},
+        "actionable": {
+          "type": "brecha",
+          "text": "Mastercard y Worldline completaron la primera transacción agéntica con passkeys y Prove formó un advisory board sobre confianza: la autenticación diseñada para humanos abre ventanas de fraude cuando una IA inicia la transacción."
+        },
         "title": "La industria de identidad cierra filas para resolver el vacío de confianza en el comercio agéntico",
         "summary": "Mastercard y Worldline completaron en Europa la primera transacción agéntica extremo a extremo usando passkeys y trazabilidad criptográfica. En paralelo, Prove lanzó su Executive Advisory Board con representantes de Visa, Barclays, Binance, USAA y ocho instituciones más para definir la infraestructura de confianza cuando una IA actúa en nombre de un usuario. El desafío central: los sistemas de autenticación diseñados para humanos crean ventanas de fraude cuando las transacciones las inicia un agente autónomo.",
         "sourceUrl": "https://www.biometricupdate.com/202606/identity-sector-moves-to-close-trust-gap-in-agentic-commerce",
@@ -1772,7 +1854,10 @@ const briefing = {
       },
       {
         "id": "regula-deepfake-ai-agents-concern-singapore-uk-jun04",
-        "actionable": {"type":"tendencia","text":"El 42% de las organizaciones en Singapur y el 41% en Reino Unido ya señalan deepfakes y agentes de IA como su principal preocupación de identidad; los ataques pasaron de falsificar documentos a imitar el comportamiento completo de la sesión."},
+        "actionable": {
+          "type": "tendencia",
+          "text": "El 42% de las organizaciones en Singapur y el 41% en Reino Unido ya señalan deepfakes y agentes de IA como su principal preocupación de identidad; los ataques pasaron de falsificar documentos a imitar el comportamiento completo de la sesión."
+        },
         "title": "Deepfakes y agentes de IA lideran las amenazas de identidad en 2026: Singapur y UK en máxima alerta",
         "summary": "Un informe de Regula revela que el 42% de las organizaciones en Singapur y el 41% en Reino Unido señalan los deepfakes y los agentes autónomos de IA como su principal preocupación en materia de identidad. En banca y cripto, el 37% reporta niveles similares de alarma. El reporte documenta un giro estructural: los ataques ya no falsifican documentos, sino que imitan comportamientos completos de usuarios legítimos a lo largo de toda la sesión digital.",
         "sourceUrl": "https://www.biometricupdate.com/202606/singapore-and-uk-most-concerned-about-deepfakes-ai-agents-regula",
@@ -1861,7 +1946,10 @@ const briefing = {
       },
       {
         "id": "reality-defender-zerofox-deepfake-detection-jun26",
-        "actionable": {"type":"movimiento-competitivo","text":"Reality Defender integró su detección multimodal de deepfakes en la plataforma ZeroFox, cubriendo voz, video e imagen; Gartner ya considera rutinario el uso de medios sintéticos por atacantes."},
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Reality Defender integró su detección multimodal de deepfakes en la plataforma ZeroFox, cubriendo voz, video e imagen; Gartner ya considera rutinario el uso de medios sintéticos por atacantes."
+        },
         "title": "Reality Defender integra detección de deepfakes en ZeroFox: el uso de medios sintéticos por atacantes ya es rutinario según Gartner",
         "summary": "Reality Defender anunció la integración de su tecnología de detección multimodal de contenido generado por IA en la plataforma de ciberseguridad ZeroFox, cubriendo voz, video e imagen. La alianza permite a los analistas identificar campañas de medios sintéticos, incluyendo suplantación de ejecutivos en earnings calls y phishing basado en videos falsos, antes de que circulen. Gartner advirtió que el uso de deepfakes por atacantes es ya rutinario, y la mayoría de los equipos de seguridad los detectan recién después de que han circulado.",
         "sourceUrl": "https://www.biometricupdate.com/202606/reality-defender-integrates-deepfake-detection-into-zerofox-platform",
@@ -1884,7 +1972,10 @@ const briefing = {
       },
       {
         "id": "worst-hacks-breaches-2026-techcrunch",
-        "actionable": {"type":"tendencia","text":"Los peores hacks de 2026 —30 millones de estudiantes, pasaportes de solicitantes de visa, 967.200 clientes de fintech— comparten un patrón: captura masiva de datos de identidad sin controles de protección post-onboarding."},
+        "actionable": {
+          "type": "tendencia",
+          "text": "Los peores hacks de 2026 —30 millones de estudiantes, pasaportes de solicitantes de visa, 967.200 clientes de fintech— comparten un patrón: captura masiva de datos de identidad sin controles de protección post-onboarding."
+        },
         "title": "Los peores hacks de 2026: 30 millones de estudiantes, pasaportes expuestos y 967.000 clientes de fintech",
         "summary": "TechCrunch documentó los incidentes de ciberseguridad más graves del año: la brecha de Instructure Canvas comprometió datos de más de 30 millones de estudiantes y empleados, una brecha expuso pasaportes y selfies de miles de solicitantes de visa del Reino Unido, y un servidor desprotegido contuvo 1 millón de escaneos de documentos de identidad de huéspedes de hoteles. El ataque de ShinyHunters a la fintech Figure expuso datos de identidad de 967.200 clientes incluyendo nombres, fechas de nacimiento y teléfonos. El patrón común: captura masiva de datos de identidad sin controles de protección post-onboarding.",
         "sourceUrl": "https://techcrunch.com/2026/06/03/the-worst-hacks-and-breaches-of-2026-so-far/",
@@ -1907,7 +1998,10 @@ const briefing = {
       },
       {
         "id": "dashlane-brute-force-2fa-vaults-jun26",
-        "actionable": {"type":"tendencia","text":"Un ataque de fuerza bruta sobre el 2FA de Dashlane permitió descargar bóvedas de contraseñas cifradas de unas 20 cuentas, recordando que los gestores de credenciales son blanco directo y las contraseñas maestras débiles amplían el riesgo."},
+        "actionable": {
+          "type": "tendencia",
+          "text": "Un ataque de fuerza bruta sobre el 2FA de Dashlane permitió descargar bóvedas de contraseñas cifradas de unas 20 cuentas, recordando que los gestores de credenciales son blanco directo y las contraseñas maestras débiles amplían el riesgo."
+        },
         "title": "Dashlane sufre ataque de fuerza bruta que vulnera 2FA y expone bóvedas de contraseñas cifradas",
         "summary": "El 31 de mayo de 2026, actores externos lanzaron un ataque de fuerza bruta contra el sistema de autenticación de dos factores de Dashlane, logrando acceder a aproximadamente 20 cuentas y descargar copias de sus bóvedas de contraseñas cifradas. Las bóvedas contienen contraseñas y credenciales sensibles de los usuarios, aunque Dashlane asegura que solo pueden descifrarse con la contraseña maestra del cliente. La compañía notificó directamente a los afectados y señaló que usuarios con contraseñas maestras débiles corren mayor riesgo.",
         "sourceUrl": "https://techcrunch.com/2026/06/02/password-manager-dashlane-says-hackers-stole-some-customers-password-vaults/",
@@ -1930,7 +2024,10 @@ const briefing = {
       },
       {
         "id": "google-android-deepfake-call-detection-jun03",
-        "actionable": {"type":"movimiento-competitivo","text":"Google activó por defecto la detección de llamadas deepfake en Android 12+ mediante un handshake cifrado sobre RCS, respondiendo a 440.000 millones de dólares en pérdidas por suplantación según INTERPOL."},
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Google activó por defecto la detección de llamadas deepfake en Android 12+ mediante un handshake cifrado sobre RCS, respondiendo a 440.000 millones de dólares en pérdidas por suplantación según INTERPOL."
+        },
         "title": "Google activa protección contra llamadas deepfake en Android a nivel global para combatir fraude por voz con IA",
         "summary": "Google activó la función 'fake call detection' en Android 12+ de forma global por defecto, comenzando con dispositivos Pixel, usando un apretón de manos cifrado sobre RCS para verificar si el llamante es quien dice ser. Si detecta suplantación, muestra una alerta en pantalla antes de que el usuario responda. La medida responde a pérdidas globales de USD 440 mil millones por fraude de suplantación en 2025, según INTERPOL.",
         "sourceUrl": "https://www.bleepingcomputer.com/news/security/google-adds-android-protection-against-ai-deepfake-scam-calls/",
@@ -1975,7 +2072,10 @@ const briefing = {
       },
       {
         "id": "unico-84pct-growth-latam-idv-jun02",
-        "actionable": {"type":"movimiento-competitivo","text":"Unico creció 84% interanual en verificación de identidad en Q1 2026, con ingresos internacionales +130% y México +204% trimestral, y prepara su expansión a Argentina."},
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Unico creció 84% interanual en verificación de identidad en Q1 2026, con ingresos internacionales +130% y México +204% trimestral, y prepara su expansión a Argentina."
+        },
         "title": "Unico reporta crecimiento del 84% en verificación de identidad en Q1 2026 y acelera expansión LATAM",
         "summary": "La firma brasileña de identidad digital Unico registró un aumento del 84% interanual en transacciones de verificación de identidad durante el primer trimestre de 2026, con ingresos internacionales creciendo un 130%. México triplicó volúmenes con un salto del 204% trimestre a trimestre, y la empresa planea expansión a Argentina. Unico procesó más de 1.500 millones de checks de identidad en 2025 y opera en más de 20 países.",
         "sourceUrl": "https://www.biometricupdate.com/202606/unico-reports-84-growth-in-idv-volume-as-global-expansion-accelerates",
@@ -1998,7 +2098,10 @@ const briefing = {
       },
       {
         "id": "instagram-meta-ai-account-hijack-jun02",
-        "actionable": {"type":"tendencia","text":"Atacantes manipularon el bot de recuperación de cuentas de Meta para secuestrar perfiles de Instagram sin robar contraseñas; las cuentas con 2FA por app autenticadora no fueron afectadas."},
+        "actionable": {
+          "type": "tendencia",
+          "text": "Atacantes manipularon el bot de recuperación de cuentas de Meta para secuestrar perfiles de Instagram sin robar contraseñas; las cuentas con 2FA por app autenticadora no fueron afectadas."
+        },
         "title": "Atacantes explotan el chatbot de recuperación de Meta para secuestrar cuentas de Instagram sin robar contraseñas",
         "summary": "Ciberdelincuentes manipularon mediante ingeniería social el bot de recuperación de cuentas de Meta para vincular direcciones de correo controladas por ellos, habilitando el reseteo de contraseñas sin necesidad de robar credenciales. Cuentas comprometidas de influencers y marcas fueron revendidas en canales de Telegram con valores acumulados superiores a USD 1 millón. Meta corrigió la vulnerabilidad a fines de mayo de 2026; las cuentas con 2FA mediante app autenticadora no fueron afectadas.",
         "sourceUrl": "https://www.infobae.com/tecno/2026/06/02/usan-la-propia-ia-de-meta-para-secuestrar-cuentas-de-instagram-sin-robar-contrasenas/",
@@ -2042,7 +2145,10 @@ const briefing = {
       },
       {
         "id": "fbi-ngi-biometric-rfi-jun01",
-        "actionable": {"type":"tendencia","text":"El FBI licita la modernización del sistema NGI —650 millones de huellas y 175 millones de rostros— exigiendo cadena de suministro 100% doméstica, señal de la creciente soberanía e infraestructura biométrica de estado."},
+        "actionable": {
+          "type": "tendencia",
+          "text": "El FBI licita la modernización del sistema NGI —650 millones de huellas y 175 millones de rostros— exigiendo cadena de suministro 100% doméstica, señal de la creciente soberanía e infraestructura biométrica de estado."
+        },
         "title": "El FBI licita modernización del mayor repositorio biométrico gubernamental del mundo: 650 millones de huellas y 175 millones de rostros",
         "summary": "La división CJIS del FBI emitió un RFI solicitando algoritmos biométricos comerciales para modernizar el sistema NGI, que alberga 650 millones de huellas latentes, 175 millones de registros faciales y 2 millones de iris. Los requisitos incluyen certificación FedRAMP High, despliegue en GovCloud, cadena de suministro de software 100% doméstica y habilitación de seguridad Secret; las presentaciones cierran el 30 de junio de 2026. El proceso señala una tendencia global de soberanía e infraestructura biométrica de estado que ya está replicándose en debates regulatorios de LATAM.",
         "sourceUrl": "https://www.biometricupdate.com/202606/fbi-seeks-industry-input-on-biometric-algorithms-for-ngi-modernization",
@@ -2064,7 +2170,10 @@ const briefing = {
       },
       {
         "id": "cisa-github-contractor-identity-breach-jun01",
-        "actionable": {"type":"brecha","text":"Credenciales de AWS GovCloud y certificados SAML de Entra ID de CISA y DHS quedaron expuestos en un repositorio público de un contratista: secretos estáticos en texto plano y acceso administrativo sin rotación como falla estructural de gestión de identidades."},
+        "actionable": {
+          "type": "brecha",
+          "text": "Credenciales de AWS GovCloud y certificados SAML de Entra ID de CISA y DHS quedaron expuestos en un repositorio público de un contratista: secretos estáticos en texto plano y acceso administrativo sin rotación como falla estructural de gestión de identidades."
+        },
         "title": "Credenciales AWS GovCloud de CISA expuestas en GitHub público por contratista: falla sistémica de gestión de identidades",
         "summary": "Un repositorio público de GitHub mantenido por un empleado de Nightwing —contratista de CISA— expuso credenciales privilegiadas de cuentas AWS GovCloud, tokens de acceso y certificados SAML de Entra ID de la Agencia de Ciberseguridad de EE. UU. y del Departamento de Seguridad Nacional. El análisis del 1 de junio enmarca el incidente como falla estructural de gestión de identidades de contratistas: credenciales estáticas, secretos en texto plano y acceso administrativo de larga duración sin controles de rotación, señalando que incluso quienes definen los estándares de seguridad federal son vulnerables a este vector.",
         "sourceUrl": "https://www.biometricupdate.com/202606/github-exposure-points-to-broader-contractor-identity-security-gaps-at-cisa",
@@ -2086,7 +2195,10 @@ const briefing = {
       },
       {
         "id": "malaysia-age-verification-social-media-jun01",
-        "actionable": {"type":"señal-regulatoria","text":"Malasia exige desde el 1 de junio verificación de edad con MyKad y biometría facial vía MyDigital ID en redes sociales, tras 23.367 casos de fraude online y 171,5 millones de dólares en pérdidas en cuatro meses."},
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "Malasia exige desde el 1 de junio verificación de edad con MyKad y biometría facial vía MyDigital ID en redes sociales, tras 23.367 casos de fraude online y 171,5 millones de dólares en pérdidas en cuatro meses."
+        },
         "title": "Malasia impone verificación biométrica obligatoria en redes sociales y registra 23.367 casos de fraude online en cuatro meses",
         "summary": "Desde el 1 de junio de 2026, Malasia exige que los usuarios de redes sociales verifiquen su edad mediante el documento nacional MyKad y biometría facial a través de MyDigital ID, con 12 millones de usuarios activos. El Código de Gestión de Riesgos bajo la Online Safety Act 2025 también obliga a anunciantes a verificar identidad contra documentos emitidos por el gobierno. Entre enero y abril de 2026 se registraron 23.367 casos de fraude online con pérdidas de 680,3 millones de ringgits (~USD 171,5 millones).",
         "sourceUrl": "https://www.biometricupdate.com/202606/malaysia-mandates-age-checks-for-social-media-users-id-verification-for-advertisers",
@@ -2108,7 +2220,10 @@ const briefing = {
       },
       {
         "id": "entrust-identity-fraud-report-2026-may28",
-        "actionable": {"type":"dato-clave","text":"El reporte anual de Entrust documenta que los deepfakes ya son 1 de cada 5 intentos de fraude biométrico, con selfies deepfakeadas +58% e injection attacks +40% interanual."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "El reporte anual de Entrust documenta que los deepfakes ya son 1 de cada 5 intentos de fraude biométrico, con selfies deepfakeadas +58% e injection attacks +40% interanual."
+        },
         "title": "Reporte Entrust 2026: deepfakes representan 1 de cada 5 intentos de fraude biométrico; injection attacks suben 40%",
         "summary": "El séptimo informe anual de fraude de identidad de Entrust documenta que los deepfakes ya representan el 20% de todos los intentos de fraude biométrico, con selfies deepfakeadas creciendo 58% en 2025. Los ataques de inyección aumentaron 40% interanual, permitiendo a los atacantes eludir la captura en vivo durante el onboarding digital. Los documentos de identidad nacionales representan el 46% de los documentos fraudulentos presentados globalmente.",
         "sourceUrl": "https://ffnews.com/newsarticle/fintech/entrust-2026-identity-fraud-report-reveals-surging-attacks-and-diversifying-tactics/",
@@ -2130,7 +2245,10 @@ const briefing = {
       },
       {
         "id": "facebook-30k-appsheet-phishing-may28",
-        "actionable": {"type":"tendencia","text":"La operación AccountDumpling usó la dirección legítima de Google AppSheet para eludir filtros y comprometer unas 30.000 cuentas de Facebook Business, revendidas con paneles en tiempo real."},
+        "actionable": {
+          "type": "tendencia",
+          "text": "La operación AccountDumpling usó la dirección legítima de Google AppSheet para eludir filtros y comprometer unas 30.000 cuentas de Facebook Business, revendidas con paneles en tiempo real."
+        },
         "title": "30.000 cuentas de Facebook comprometidas mediante phishing vía Google AppSheet",
         "summary": "Una operación de origen vietnamita denominada AccountDumpling usó la dirección legítima noreply@appsheet.com para enviar correos de phishing a titulares de Facebook Business, eludiendo filtros de spam. Aproximadamente 30.000 cuentas fueron comprometidas y revendidas en un storefront criminal con paneles en tiempo real. El investigador Shaked Chen describió la operación como un ciclo criminal-comercial continuo que roba y vende acceso a las mismas cuentas.",
         "sourceUrl": "https://thehackernews.com/2026/05/30000-facebook-accounts-hacked-via.html",
@@ -2152,7 +2270,10 @@ const briefing = {
       },
       {
         "id": "signal-phishing-backup-recovery-may28",
-        "actionable": {"type":"tendencia","text":"Una campaña de phishing suplanta al soporte de Signal para robar la recovery key y acceder a backups cifrados; Signal recordó que nunca contacta primero ni pide claves de recuperación."},
+        "actionable": {
+          "type": "tendencia",
+          "text": "Una campaña de phishing suplanta al soporte de Signal para robar la recovery key y acceder a backups cifrados; Signal recordó que nunca contacta primero ni pide claves de recuperación."
+        },
         "title": "Hackers apuntan a claves de recuperación de Signal en nueva ola de phishing",
         "summary": "TechCrunch reportó una campaña activa de phishing que engaña a usuarios de Signal haciéndose pasar por el soporte oficial para robar la recovery key y acceder a backups cifrados. Varios activistas reportaron mensajes idénticos, aunque la campaña podría dirigirse a múltiples comunidades. Signal advirtió que jamás contacta a usuarios primero ni solicita claves de recuperación.",
         "sourceUrl": "https://techcrunch.com/2026/05/28/hackers-are-trying-to-steal-signal-users-backups-in-new-wave-of-phishing-attacks/",
@@ -3613,7 +3734,10 @@ const briefing = {
         },
         {
           "id": "argentina-ciberdelitos-50mil-casos-jun02",
-        "actionable": {"type":"dato-clave","text":"Argentina registró 50.155 casos de fraude virtual en 2025, con Buenos Aires +52% y los ciberdelitos contra menores +74%, lo que motivó el Plan Federal de Lucha contra el Fraude Ciberasistido 2026-2027."},
+          "actionable": {
+            "type": "dato-clave",
+            "text": "Argentina registró 50.155 casos de fraude virtual en 2025, con Buenos Aires +52% y los ciberdelitos contra menores +74%, lo que motivó el Plan Federal de Lucha contra el Fraude Ciberasistido 2026-2027."
+          },
           "title": "Argentina registro 50.155 casos de fraude virtual en 2025 con aumento del 52% en Buenos Aires",
           "summary": "Un informe del Ministerio de Seguridad revelo que las estafas y defraudaciones virtuales alcanzaron 50.155 hechos en 2025, un incremento del 2,5% interanual. Buenos Aires provincia reporto el mayor salto: +52,2% (9.594 casos), y los ciberdelitos contra menores crecieron un 74,1%, de 848 a 1.476 victimas. El gobierno lanzo el Plan Federal de Lucha contra el Fraude Ciberasistido 2026-2027 con protocolos de coordinacion entre nacion, provincias, Poder Judicial y entidades financieras.",
           "sourceUrl": "https://www.lanacion.com.ar/seguridad/las-razones-detras-del-aumento-de-ciberdelitos-en-la-argentina-y-que-se-hace-para-combatirlos-nid02062026/",
@@ -3626,7 +3750,10 @@ const briefing = {
         },
         {
           "id": "argentina-ciberdelitos-50k-2026-jun02",
-        "actionable": {"type":"dato-clave","text":"Las estafas virtuales en Argentina llegaron a 50.155 casos en 2025 mientras el delito físico cayó 21%, con saltos de 52% en Buenos Aires y 91% en Corrientes y +74% en delitos contra menores."},
+          "actionable": {
+            "type": "dato-clave",
+            "text": "Las estafas virtuales en Argentina llegaron a 50.155 casos en 2025 mientras el delito físico cayó 21%, con saltos de 52% en Buenos Aires y 91% en Corrientes y +74% en delitos contra menores."
+          },
           "title": "Argentina: estafas virtuales alcanzaron 50.155 casos en 2025 mientras el delito físico cae un 21%",
           "summary": "Datos del Sistema Nacional de Información Criminal revelan que las estafas y defraudaciones asistidas virtualmente llegaron a 50.155 hechos en 2025, con la Provincia de Buenos Aires anotando un alza del 52,2% y Corrientes del 91,1%. En paralelo, los ciberdelitos contra menores escalaron un 74,1%, de 848 a 1.476 víctimas. El gobierno aprobó en marzo de 2026 el Plan Federal de Lucha contra el Fraude Ciberasistido 2026-2027 con coordinación entre nación, provincias y entidades financieras.",
           "sourceUrl": "https://www.lanacion.com.ar/seguridad/las-razones-detras-del-aumento-de-ciberdelitos-en-la-argentina-y-que-se-hace-para-combatirlos-nid02062026/",
@@ -3649,7 +3776,10 @@ const briefing = {
         },
         {
           "id": "argentina-banda-chino-app-fraude-may28",
-        "actionable": {"type":"dato-clave","text":"Una red liderada por un ciudadano chino usó apps falsas de productividad e inversión para robar credenciales bancarias y cripto por 3.000 millones de pesos y 8 millones de dólares, operando también en Chile, Perú, Colombia y México."},
+          "actionable": {
+            "type": "dato-clave",
+            "text": "Una red liderada por un ciudadano chino usó apps falsas de productividad e inversión para robar credenciales bancarias y cripto por 3.000 millones de pesos y 8 millones de dólares, operando también en Chile, Perú, Colombia y México."
+          },
           "title": "Argentina: desbaratan red criminal con apps falsas que robó $3.000M en pesos y US$8M en cripto",
           "summary": "La Ufeic del Departamento Judicial San Isidro ejecutó 90 allanamientos simultáneos y detuvo a 24 personas lideradas por un ciudadano chino. La organización creó aplicaciones que simulaban ser herramientas de productividad o inversión pero robaban credenciales bancarias, cuentas de redes sociales, billeteras virtuales y códigos de autenticación. El daño total estimado alcanza los $3.000 millones de pesos; se incautaron US$8 millones en criptoactivos y la red operaba también en Chile, Perú, Colombia y México.",
           "sourceUrl": "https://www.lanacion.com.ar/seguridad/estafas-por-la-web-la-banda-del-chino-una-falsa-app-para-hacer-inversiones-y-el-secuestro-de-us8-nid28052026/",
@@ -3671,7 +3801,10 @@ const briefing = {
         },
         {
           "id": "mundial-2026-estafas-magistv-latam-may28",
-        "actionable": {"type":"tendencia","text":"ESET documentó múltiples vectores de fraude sobre el Mundial 2026 —streaming ilegal, apuestas sin licencia, réplicas de FIFA.com y tokens cripto falsos— con Argentina, Colombia y México entre los más afectados."},
+          "actionable": {
+            "type": "tendencia",
+            "text": "ESET documentó múltiples vectores de fraude sobre el Mundial 2026 —streaming ilegal, apuestas sin licencia, réplicas de FIFA.com y tokens cripto falsos— con Argentina, Colombia y México entre los más afectados."
+          },
           "title": "Mundial 2026: MagisTV y sitios falsos de apuestas lideran ola de fraudes en Argentina, Colombia y México",
           "summary": "ESET documentó múltiples vectores de fraude que explotan el Mundial FIFA 2026: apps de streaming ilegales que capturan datos sensibles, portales de apuestas sin licencia, réplicas de FIFA.com para venta de entradas falsas y tokens cripto fraudulentos como worldcup*.fun. El mercado global de apuestas deportivas movió US$84.000 millones en 2023. Los países más afectados son Argentina, Colombia, México, Estados Unidos y Canadá.",
           "sourceUrl": "https://www.infobae.com/tecno/2026/05/28/magistv-y-sitios-falsos-de-apuestas-encabezan-las-estafas-que-usan-al-mundial-2026-como-excusa/",
@@ -3902,7 +4035,10 @@ const briefing = {
       "brasil": [
         {
           "id": "brazil-anpd-age-verification-consultation-jun01",
-        "actionable": {"type":"señal-regulatoria","text":"La ANPD de Brasil abrió consulta pública hasta el 9 de julio sobre verificación de edad con biometría bajo la Ley ECA Digital, distinguiéndola de la verificación de identidad e imponiendo responsabilidades a tiendas de apps, sistemas operativos y plataformas."},
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "La ANPD de Brasil abrió consulta pública hasta el 9 de julio sobre verificación de edad con biometría bajo la Ley ECA Digital, distinguiéndola de la verificación de identidad e imponiendo responsabilidades a tiendas de apps, sistemas operativos y plataformas."
+          },
           "title": "Brasil abre consulta pública sobre verificación de edad con biometría bajo la Ley ECA Digital — plazo al 9 de julio",
           "summary": "La ANPD (Autoridade Nacional de Proteção de Dados) publicó el 1 de junio una guía actualizada de verificación de edad que distingue explícitamente este proceso de la verificación de identidad, e impone una cadena de responsabilidades digitales sobre tiendas de apps, sistemas operativos y plataformas de contenido. La consulta acepta comentarios hasta el 9 de julio de 2026 y contempla métodos biométricos como estimación de edad facial, verificación de documentos y matching facial. Para proveedores de identidad digital en LATAM, Brasil es el mercado más relevante con mayor urgencia regulatoria.",
           "sourceUrl": "https://www.biometricupdate.com/202606/brazils-digital-regulator-invites-comment-on-updates-to-age-verification-guidance",
@@ -3950,7 +4086,10 @@ const briefing = {
       "mexico": [
         {
           "id": "infobae-pirate-streaming-mundial-malware-bancario-jun11",
-        "actionable": {"type":"tendencia","text":"Kaspersky y ESET alertan que plataformas ilegales de streaming del Mundial como Xuper y Magis TV distribuyen malware que captura credenciales bancarias, con 39% de latinoamericanos incapaces de identificar un sitio falso."},
+          "actionable": {
+            "type": "tendencia",
+            "text": "Kaspersky y ESET alertan que plataformas ilegales de streaming del Mundial como Xuper y Magis TV distribuyen malware que captura credenciales bancarias, con 39% de latinoamericanos incapaces de identificar un sitio falso."
+          },
           "title": "Ver el Mundial en plataformas ilegales puede comprometer cuentas bancarias: advierten Kaspersky y ESET",
           "summary": "Con el inicio del Mundial 2026 el 11 de junio, Kaspersky y ESET alertan que plataformas ilegales de streaming como Xuper y Magis TV distribuyen malware capaz de capturar credenciales bancarias. El 39% de los latinoamericanos no puede identificar una página web falsa y el 11% no sabe verificar la legitimidad de un sitio. El riesgo se amplifica durante eventos de alta demanda cuando los usuarios bajan la guardia.",
           "sourceUrl": "https://www.infobae.com/tecno/2026/06/11/por-que-acceder-a-transmisiones-no-oficiales-de-mexico-vs-sudafrica-puede-comprometer-tus-cuentas-bancarias/",
@@ -3963,7 +4102,10 @@ const briefing = {
         },
         {
           "id": "infobae-mexico-curp-chips-ilegales-jun09",
-        "actionable": {"type":"brecha","text":"En México solo el 36% de las líneas móviles estaba registrado al 9 de junio y se venden chips activados con CURP de terceros a 200 pesos: el registro obligatorio exhibe una falla estructural que vincula identidades reales a fraude y extorsión."},
+          "actionable": {
+            "type": "brecha",
+            "text": "En México solo el 36% de las líneas móviles estaba registrado al 9 de junio y se venden chips activados con CURP de terceros a 200 pesos: el registro obligatorio exhibe una falla estructural que vincula identidades reales a fraude y extorsión."
+          },
           "title": "México: periodista descubre su CURP vinculada ilegalmente a chips vendidos en mercado negro — falla estructural del registro obligatorio",
           "summary": "Una investigación periodística reveló que chips de teléfono ya 'registrados' oficialmente se venden en el mercado negro a 200 pesos, usando datos de CURP de terceros para activarlos fraudulentamente. Al 9 de junio, solo 56,2 millones de las 158 millones de líneas activas habían sido registradas — menos del 36%. El sistema anti-fraude de telecomunicaciones exhibe vulnerabilidades que facilitan la vinculación de identidades reales a crímenes de extorsión y fraude telefónico.",
           "sourceUrl": "https://www.infobae.com/mexico/2026/06/09/periodista-investiga-venta-de-chips-registrados-y-descubre-linea-vinculada-a-su-curp-ilegalmente/",
@@ -3976,7 +4118,10 @@ const briefing = {
         },
         {
           "id": "mundial-2026-fraude-dominios-falsos-fifa-mexico-jun04",
-        "actionable": {"type":"dato-clave","text":"En abril se detectaron 9.741 dominios falsos de FIFA —cinco veces el pico de Qatar 2022—, con el grupo chino Ghost Stadium operando réplicas exactas del sitio oficial en 11 idiomas para capturar datos personales y bancarios."},
+          "actionable": {
+            "type": "dato-clave",
+            "text": "En abril se detectaron 9.741 dominios falsos de FIFA —cinco veces el pico de Qatar 2022—, con el grupo chino Ghost Stadium operando réplicas exactas del sitio oficial en 11 idiomas para capturar datos personales y bancarios."
+          },
           "title": "9.741 dominios falsos de FIFA en abril: el fraude digital del Mundial 2026 se dispara cinco veces por encima de Qatar",
           "summary": "El FBI alertó sobre una campaña masiva de sitios falsos que venden entradas, merchandise y paquetes de hospitalidad inexistentes ante el inicio del Mundial (11 de junio, Ciudad de México). En abril se detectaron 9.741 dominios fraudulentos —cinco veces el pico de Qatar 2022— con al menos 4.300 confirmados activos. El grupo chino GHOST STADIUM opera más de 300 dominios con réplicas exactas del sitio oficial de FIFA en 11 idiomas; las víctimas exponen nombre, email, teléfono y datos bancarios.",
           "sourceUrl": "https://www.infobae.com/estados-unidos/2026/05/31/ciberdelincuentes-venden-entradas-mercancia-y-paquetes-de-viaje-falsos-a-dias-del-mundial-2026/",
@@ -4216,7 +4361,10 @@ const briefing = {
       "costa_rica": [
         {
           "id": "costa-rica-secuestro-virtual-600pct-2026-jun03",
-        "actionable": {"type":"dato-clave","text":"Costa Rica pasó de 8 a 58 casos de secuestro virtual entre enero y mayo (más de 600%), usando datos de redes sociales y filtraciones para personalizar la amenaza sin secuestro real; San José concentra el 82%."},
+          "actionable": {
+            "type": "dato-clave",
+            "text": "Costa Rica pasó de 8 a 58 casos de secuestro virtual entre enero y mayo (más de 600%), usando datos de redes sociales y filtraciones para personalizar la amenaza sin secuestro real; San José concentra el 82%."
+          },
           "title": "Costa Rica: denuncias por secuestro virtual casi se cuadruplican en cinco meses con datos robados de redes sociales",
           "summary": "Entre enero y mayo de 2026 se registraron 58 casos de secuestro virtual en Costa Rica, contra apenas 8 en el mismo período de 2025, un incremento superior al 600%. Los delincuentes usan datos personales extraídos de redes sociales y bases de datos filtradas para personalizar la amenaza y aumentar su credibilidad, sin que haya un secuestro real. San José concentra el 82% de los casos; el OIJ coordina con autoridades internacionales.",
           "sourceUrl": "https://www.infobae.com/costa-rica/2026/06/03/el-secuestro-virtual-se-dispara-en-2026-en-costa-rica-denuncias-casi-se-cuadruplican-en-cinco-meses/",
@@ -4351,7 +4499,10 @@ const briefing = {
         },
         {
           "id": "espana-avpa-aepd-biometria-eudi-wallet-jun02",
-        "actionable": {"type":"señal-regulatoria","text":"La AVPA advierte que la resolución de la AEPD que clasifica la biometría facial como dato especial podría hacer inviable la EUDI Wallet en España y sentar precedente en la UE; Yoti ya fue multada con 1,1 millones de euros."},
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "La AVPA advierte que la resolución de la AEPD que clasifica la biometría facial como dato especial podría hacer inviable la EUDI Wallet en España y sentar precedente en la UE; Yoti ya fue multada con 1,1 millones de euros."
+          },
           "title": "Espana: regulador de datos amenaza la EUDI Wallet al clasificar la biometria facial como dato especial",
           "summary": "La Age Verification Providers Association (AVPA) advirtio que una resolucion de la AEPD espanola que clasifico las plantillas biometricas faciales como datos de categoria especial bajo GDPR podria hacer inviable la implementacion de la EUDI Wallet en Espana y sentar precedente en toda la UE. La AEPD determino que los proveedores deben ofrecer alternativas no biometricas, debilitando el vinculo no transferible de identidad. Yoti fue multada con 1,1 millones de euros por el mismo regulador.",
           "sourceUrl": "https://www.biometricupdate.com/202606/avpa-warns-that-spanish-regulators-biometrics-decision-could-tank-eu-wallet-scheme",
@@ -4364,7 +4515,10 @@ const briefing = {
         },
         {
           "id": "espana-fraude-bancario-smishing-barcelona-jun26",
-        "actionable": {"type":"tendencia","text":"23 detenidos en Barcelona y Murcia por un fraude de 300.000 euros con spoofing telefónico, smishing y vishing y cuentas mula, un patrón idéntico al documentado en Argentina y México."},
+          "actionable": {
+            "type": "tendencia",
+            "text": "23 detenidos en Barcelona y Murcia por un fraude de 300.000 euros con spoofing telefónico, smishing y vishing y cuentas mula, un patrón idéntico al documentado en Argentina y México."
+          },
           "title": "España: 23 detenidos por fraude bancario de 300.000 euros con smishing y vishing en Barcelona y Murcia",
           "summary": "La Policía española detuvo a 23 personas en Barcelona y Murcia por un fraude bancario que causó pérdidas de 300.000 euros en 48 denuncias. Los delincuentes usaban aplicaciones de spoofing para suplantar el número telefónico de entidades bancarias, enviaban SMS con links a sitios clonados y convencían a las víctimas de compartir credenciales o realizar transferencias bajo pretexto de transacciones no autorizadas. El patrón smishing y vishing con cuentas mulas es idéntico al documentado en Argentina y México.",
           "sourceUrl": "https://www.infobae.com/espana/agencias/2026/06/02/detenidas-23-personas-en-barcelona-y-murcia-por-un-fraude-bancario-que-estafo-300000/",
@@ -4479,7 +4633,10 @@ const briefing = {
     "regulation": [
       {
         "id": "chile-ley-21719-datos-personales-vigencia-dic2026",
-        "actionable": {"type":"señal-regulatoria","text":"La Ley 21.719 de Chile entra en vigor el 1 de diciembre de 2026 con multas de hasta 1,39 millones de dólares, creando la Agencia de Protección de Datos y categorías especiales para biometría, salud y menores."},
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "La Ley 21.719 de Chile entra en vigor el 1 de diciembre de 2026 con multas de hasta 1,39 millones de dólares, creando la Agencia de Protección de Datos y categorías especiales para biometría, salud y menores."
+        },
         "title": "Chile: Ley 21.719 de Datos Personales entra en vigor el 1 de diciembre de 2026 con multas de hasta USD 1,4M — quedan 6 meses",
         "summary": "La Ley 21.719 de Protección de Datos Personales de Chile entra en plena vigencia el 1 de diciembre de 2026, dejando a organizaciones con menos de seis meses para completar su adecuación. La ley crea la Agencia de Protección de Datos Personales, establece datos biométricos, de salud y de menores como categorías especiales con protección reforzada, y fija multas de hasta 20.000 UTM (aproximadamente USD 1,39M) para incumplimientos. Es la primera reforma estructural al régimen de datos personales chileno desde la Ley 19.628 de 1999.",
         "sourceUrl": "https://www.americaeconomia.com/en/node/290472",
@@ -4492,7 +4649,10 @@ const briefing = {
       },
       {
         "id": "mexico-cnbv-biometria-depositos-cash-jul01",
-        "actionable": {"type":"señal-regulatoria","text":"Desde el 1 de julio los bancos mexicanos exigirán biometría e identificación oficial para operaciones en efectivo mayores a 140.000 pesos, bajo supervisión de la CNBV y con plataforma de intercambio en tiempo real."},
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "Desde el 1 de julio los bancos mexicanos exigirán biometría e identificación oficial para operaciones en efectivo mayores a 140.000 pesos, bajo supervisión de la CNBV y con plataforma de intercambio en tiempo real."
+        },
         "title": "México: desde el 1 de julio bancos exigirán biometría e identificación oficial para operaciones en efectivo mayores a $140.000 pesos",
         "summary": "A partir del 1 de julio de 2026, las instituciones financieras mexicanas requerirán identificación oficial y datos biométricos para cualquier operación en efectivo que supere los $140.000 pesos, bajo normas de la Asociación de Bancos de México y supervisión de la CNBV. La medida busca fortalecer los controles KYC para grandes transacciones y reducir el lavado de dinero, e incluye el desarrollo de una plataforma de intercambio de información en tiempo real para detectar operaciones sospechosas. El deadline vence en 23 días.",
         "sourceUrl": "https://www.infobae.com/mexico/2025/12/25/bancos-exigiran-a-partir-del-2026-identificacion-si-quieres-hacer-este-movimiento/",
@@ -4517,7 +4677,10 @@ const briefing = {
       },
       {
         "id": "spain-aepd-biometrics-eudi-wallet-jun02",
-        "actionable": {"type":"señal-regulatoria","text":"La AEPD española determinó que la biometría facial no puede ser el único mecanismo de verificación en wallets digitales bajo GDPR, amenazando el esquema EUDI Wallet que cada estado debe ofrecer antes de fin de 2026."},
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "La AEPD española determinó que la biometría facial no puede ser el único mecanismo de verificación en wallets digitales bajo GDPR, amenazando el esquema EUDI Wallet que cada estado debe ofrecer antes de fin de 2026."
+        },
         "title": "AEPD España: biometría no puede ser opción única en wallets digitales bajo GDPR — amenaza esquema EUDI Wallet",
         "summary": "La AEPD española determinó que las plantillas biométricas faciales no pueden ofrecerse como único mecanismo de verificación en wallets de identidad digital bajo el GDPR, argumentando que el consentimiento no puede ser libre si es condición del servicio (Art. 7.4) y que los datos biométricos son categoría especial (Art. 9). La AVPA advirtió que la resolución amenaza el esquema EUDI Wallet que cada Estado miembro debe ofrecer antes de fin de 2026. El caso está ante los tribunales españoles y la AVPA exige orientación urgente del EDPB.",
         "sourceUrl": "https://www.biometricupdate.com/202606/avpa-warns-that-spanish-regulators-biometrics-decision-could-tank-eu-wallet-scheme",
@@ -4530,6 +4693,62 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "estonia-thales-eid-remote-update-jun11",
+        "title": "Estonia despliega nuevos eID respaldados por Thales con seguridad actualizable de forma remota",
+        "summary": "Estonia introdujo el 11 de junio una nueva generación de tarjetas de identidad electrónica desarrolladas con Thales, con policarbonato translúcido y capas ópticas anti-manipulación. La arquitectura de software actualizable permite refrescar protocolos de seguridad de forma remota a medida que emergen amenazas criptográficas, manteniendo la protección de la infraestructura de e-gobernanza estonia.",
+        "sourceUrl": "https://idtechwire.com/id-tech-digest-june-11-2026/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-06-11",
+        "language": "es",
+        "highRelevance": false,
+        "topic": "identidad",
+        "competitor": "Thales"
+      },
+      {
+        "id": "idenfy-smart-id-baltic-jun11",
+        "title": "iDenfy integra Smart-ID para onboarding sin escaneo de documentos en mercados bálticos",
+        "summary": "iDenfy integró el 11 de junio la autenticación móvil Smart-ID en su plataforma de cumplimiento para Lituania, Letonia y Estonia, permitiendo onboarding de clientes regionales sin escaneo físico de documentos. La solución se apoya en infraestructura eIDAS de aseguramiento Alto con validación biométrica o PIN, cumpliendo los requisitos de Strong Customer Authentication.",
+        "sourceUrl": "https://idtechwire.com/id-tech-digest-june-11-2026/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-06-11",
+        "language": "es",
+        "highRelevance": false,
+        "topic": "identidad",
+        "competitor": "iDenfy"
+      },
+      {
+        "id": "rubrik-acquires-strata-identity-jun11",
+        "title": "Rubrik adquiere Strata Identity para sumar continuidad y resiliencia de identidad",
+        "summary": "Rubrik anunció el 11 de junio la adquisición de Strata.io, firma de orquestación de identidad, para incorporar capacidades de Identity Continuity. El framework dispara failover automático a proveedores de identidad secundarios cuando el sistema primario es comprometido e incluye reconstrucción automatizada de Active Directory, previniendo bloqueos empresariales durante ataques a la infraestructura de credenciales.",
+        "sourceUrl": "https://idtechwire.com/id-tech-digest-june-11-2026/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-06-11",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "iam",
+        "competitor": "Rubrik",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "La compra de Strata Identity por Rubrik lleva la resiliencia de datos hacia la continuidad de identidad (IAM), señalando una convergencia entre backup/recovery e infraestructura de identidad como nuevo frente competitivo en ciberresiliencia empresarial."
+        }
+      },
+      {
+        "id": "idnow-trust-platform-launch-jun11",
+        "title": "IDnow lanza Trust Platform que unifica verificación de identidad, prevención de fraude y monitoreo continuo",
+        "summary": "IDnow presentó el 11 de junio su IDnow Trust Platform, un framework modular que integra verificación de identidad, prevención de fraude automatizada y servicios de confianza, correlacionando en tiempo real datos de dispositivo, biométricos y de comportamiento. La plataforma habilita monitoreo continuo de identidad a lo largo del ciclo de vida del cliente y se alinea con la regulación europea de billeteras digitales (EUDI Wallet), apuntando a defenderse de deepfakes impulsados por IA.",
+        "sourceUrl": "https://idtechwire.com/id-tech-digest-june-11-2026/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-06-11",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "identidad",
+        "competitor": "IDnow",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "IDnow consolida verificación, antifraude y monitoreo continuo en una sola plataforma orquestada alineada a EUDI Wallet, una arquitectura que el mercado europeo de identidad está adoptando como estándar de defensa contra fraude impulsado por IA."
+        }
+      },
       {
         "id": "wttc-biometrics-digital-identity-travel-jun11",
         "title": "WTTC posiciona biometría e identidad digital como prioridad #1 del turismo global — Amadeus adquiere Idemia PS por €1.2B",
@@ -4544,7 +4763,10 @@ const briefing = {
       },
       {
         "id": "microsoft-mxc-entra-ai-agent-sandbox-jun11",
-        "actionable": {"type":"movimiento-competitivo","text":"Microsoft lanzó en preview Execution Containers (MXC), aislando cada agente de IA bajo su propia identidad Entra e integrándolo con Defender, Intune y Purview, anticipando Agent 365 para julio 2026."},
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Microsoft lanzó en preview Execution Containers (MXC), aislando cada agente de IA bajo su propia identidad Entra e integrándolo con Defender, Intune y Purview, anticipando Agent 365 para julio 2026."
+        },
         "title": "Microsoft lanza MXC: sandbox a nivel de SO para agentes de IA con identidad Entra obligatoria por agente",
         "summary": "Microsoft lanzó Microsoft Execution Containers (MXC) en preview, una capa de aislamiento donde cada agente de IA opera bajo una identidad Entra propia —no una cuenta de servicio compartida. Se integra con Microsoft Defender, Entra ID, Intune y Purview para gobernanza y auditoría de agentes autónomos. Agent 365 llegará en preview en julio 2026.",
         "sourceUrl": "https://venturebeat.com/security/microsoft-launches-mxc-an-os-level-sandbox-for-ai-agents-with-openai-and-nvidia-already-on-board",
@@ -4557,7 +4779,10 @@ const briefing = {
       },
       {
         "id": "microsoft-patch-tuesday-june-2026-record-206",
-        "actionable": {"type":"dato-clave","text":"El Patch Tuesday de junio fue el mayor de la historia con 206 CVEs; 27 son de spoofing y 63 de escalación de privilegios, categorías directamente ligadas a identidad y autenticación."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "El Patch Tuesday de junio fue el mayor de la historia con 206 CVEs; 27 son de spoofing y 63 de escalación de privilegios, categorías directamente ligadas a identidad y autenticación."
+        },
         "title": "Microsoft corrige récord de 206 vulnerabilidades en Patch Tuesday de junio — 27 fallas de spoofing afectan identidad",
         "summary": "El Patch Tuesday de junio 2026 de Microsoft es el más grande de la historia: 206 CVEs parcheados, incluyendo 39 críticos y 3 zero-days divulgados públicamente. De los 206 defectos, 27 son vulnerabilidades de spoofing y 63 de escalación de privilegios, categorías directamente vinculadas a identidad y autenticación. El aumento se atribuye en parte a la detección asistida por IA.",
         "sourceUrl": "https://thehackernews.com/2026/06/microsoft-patches-record-206-flaws.html",
@@ -4570,7 +4795,10 @@ const briefing = {
       },
       {
         "id": "mitek-synthetic-identity-fraud-report-jun11",
-        "actionable": {"type":"dato-clave","text":"Mitek y Datos Insights cifran el fraude sintético en 2.940 millones de dólares de pérdidas crediticias en EE.UU. en 2025, con crecimiento del 16% anual y 40% de instituciones ya golpeadas por ataques con IA."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "Mitek y Datos Insights cifran el fraude sintético en 2.940 millones de dólares de pérdidas crediticias en EE.UU. en 2025, con crecimiento del 16% anual y 40% de instituciones ya golpeadas por ataques con IA."
+        },
         "title": "Mitek y Datos Insights: fraude sintético crece 16% anual y supera $2.94B en pérdidas crediticias en EE.UU.",
         "summary": "El reporte \"Synthetic Identity Crisis\" de Mitek Systems y Datos Insights revela que las pérdidas por crédito no garantizado en EE.UU. alcanzaron $2.94B en 2025 (vs. $1.8B en 2020). El 84% de ejecutivos financieros considera este fraude como riesgo alto o moderado. La IA generativa acelera la escala: 40% de instituciones ya reporta ataques vinculados a IA.",
         "sourceUrl": "https://www.biometricupdate.com/202606/report-finds-synthetic-identity-fraud-becoming-biggest-fraud-threat-in-2026",
@@ -4583,7 +4811,10 @@ const briefing = {
       },
       {
         "id": "biocatch-digital-trust-ai-agents-jun11",
-        "actionable": {"type":"dato-clave","text":"BioCatch reporta que el 84% de líderes de fraude en 25 países ven a los agentes de IA como el mayor vector explotable en 12 meses, con 4,4 billones de dólares ilícitos globales en 2025."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "BioCatch reporta que el 84% de líderes de fraude en 25 países ven a los agentes de IA como el mayor vector explotable en 12 meses, con 4,4 billones de dólares ilícitos globales en 2025."
+        },
         "title": "BioCatch: 84% de líderes bancarios en 25 países advierten que agentes de IA serán el mayor vector de fraude en 12 meses",
         "summary": "El reporte de BioCatch sobre el futuro de la confianza digital revela que el 84% de ejecutivos de fraude, AML y riesgo en 25 países creen que los agentes de IA serán la vulnerabilidad más explotable en el próximo año. El 80% ya reportó ataques liderados por agentes de IA y el 75% reporta pérdidas crecientes. Nasdaq estima $4.4 billones en fondos ilícitos globales en 2025, un +42% respecto a 2023.",
         "sourceUrl": "https://www.biometricupdate.com/202606/digital-trust-under-threat-from-advanced-fraud-ai-agents-biocatch",
@@ -4608,7 +4839,10 @@ const briefing = {
       },
       {
         "id": "jumio-patent-exposure-facetec-ptab-jun10",
-        "actionable": {"type":"movimiento-competitivo","text":"El PTAB desestimó los cuatro recursos de invalidación de Jumio en el litigio de patentes de liveness con FaceTec, eliminando su defensa principal tras haber migrado de FaceTec a iProov en 2021."},
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "El PTAB desestimó los cuatro recursos de invalidación de Jumio en el litigio de patentes de liveness con FaceTec, eliminando su defensa principal tras haber migrado de FaceTec a iProov en 2021."
+        },
         "title": "Jumio enfrenta riesgo legal creciente: fallo PTAB elimina su defensa principal en litigio de patentes de liveness con FaceTec",
         "summary": "Como codemandado en el litigio de FaceTec, Jumio queda en posición de vulnerabilidad legal después de que el PTAB desestimara sus cuatro recursos de invalidación de patentes. Jumio cambió su proveedor de liveness de FaceTec a iProov en 2021, acción que FaceTec alega constituyó infracción de IP. El resultado elimina la defensa principal de Jumio y abre la puerta a medidas cautelares y daños económicos.",
         "sourceUrl": "https://idtechwire.com/facetec-wins-four-ptab-challenges-filed-by-jumio/",
@@ -4621,7 +4855,10 @@ const briefing = {
       },
       {
         "id": "facetec-jumio-iproof-ptab-liveness-patents-jun10",
-        "actionable": {"type":"movimiento-competitivo","text":"FaceTec retuvo sus cuatro patentes core de liveness 3D tras el fallo del PTAB, consolidando un portafolio de 48 patentes y habilitando demandas por infracción contra Jumio e iProov."},
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "FaceTec retuvo sus cuatro patentes core de liveness 3D tras el fallo del PTAB, consolidando un portafolio de 48 patentes y habilitando demandas por infracción contra Jumio e iProov."
+        },
         "title": "FaceTec retiene sus 4 patentes de liveness 3D tras fallo del PTAB: Jumio e iProov quedan expuestos a demandas por infracción",
         "summary": "El Patent Trial and Appeal Board (PTAB) de EE.UU. rechazó los cuatro recursos de invalidación presentados por Jumio contra las patentes de detección de vida 3D de FaceTec (nos. 10,776,471; 11,157,606; 11,693,938; 11,874,910). El fallo consolida el portafolio de 48 patentes de FaceTec y habilita el avance de demandas por infracción contra Jumio e iProov. FaceTec procesa más de 4.200 millones de verificaciones de vida anuales.",
         "sourceUrl": "https://www.biometricupdate.com/202606/appeals-board-upholds-4-facetec-biometric-liveness-detection-patents",
@@ -4634,7 +4871,10 @@ const briefing = {
       },
       {
         "id": "facetec-jumio-patent-ptab-jun09",
-        "actionable": {"type":"ventana","text":"El fallo del PTAB que confirma las patentes de FaceTec deja a Jumio e iProov expuestos a medidas cautelares y daños, abriendo una ventana de cambio de proveedor para sus clientes actuales en LATAM."},
+        "actionable": {
+          "type": "ventana",
+          "text": "El fallo del PTAB que confirma las patentes de FaceTec deja a Jumio e iProov expuestos a medidas cautelares y daños, abriendo una ventana de cambio de proveedor para sus clientes actuales en LATAM."
+        },
         "title": "FaceTec gana todas las apelaciones de patentes: PTAB confirma sus 4 patentes core de liveness 3D frente a Jumio",
         "summary": "El Patent Trial and Appeal Board de EE.UU. rechazó los cuatro inter partes reviews de Jumio, confirmando la validez de las cuatro patentes fundamentales de FaceTec en detección de vida 3D (US 10,776,471; 11,157,606; 11,693,938; 11,874,910). La resolución abre el camino para medidas cautelares y daños contra Jumio e iProov, y se produce en paralelo con el anuncio del nuevo CEO de Jumio, Mark Lorion. La incertidumbre legal sobre Jumio e iProov puede generar oportunidades de cambio de proveedor para sus clientes actuales en LATAM.",
         "sourceUrl": "https://www.biometricupdate.com/202606/appeals-board-upholds-4-facetec-biometric-liveness-detection-patents",
@@ -4648,7 +4888,10 @@ const briefing = {
       },
       {
         "id": "feedzai-iq-score-launch-jun09",
-        "actionable": {"type":"movimiento-competitivo","text":"Feedzai lanzó IQ Score en AWS Marketplace, un scoring de fraude listo desde el día uno apoyado en una red de 9 billones de dólares en transacciones, apuntando a bancos medianos y regionales sin datos históricos propios."},
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Feedzai lanzó IQ Score en AWS Marketplace, un scoring de fraude listo desde el día uno apoyado en una red de 9 billones de dólares en transacciones, apuntando a bancos medianos y regionales sin datos históricos propios."
+        },
         "title": "Feedzai lanza IQ Score: scoring de fraude con red de USD 9 billones para bancos medianos desde el día uno",
         "summary": "El 9 de junio de 2026, Feedzai anunció Feedzai IQ Score, una API única disponible en AWS Marketplace que extrae inteligencia de su red global de USD 9 billones en transacciones para ofrecer scoring de riesgo de fraude listo para usar desde el día uno. El producto promete 4x más fraude detectado y 50% menos alertas frente a enfoques basados en reglas, sin necesidad de datos históricos propios y con valor realizable en días. Apunta directamente a bancos medianos y regionales de LATAM que carecen de volumen de datos interno para entrenar modelos de IA.",
         "sourceUrl": "https://www.prnewswire.com/news-releases/feedzai-opens-9-trillion-fraud-intelligence-network-to-every-bank-delivering-4x-improvement-in-fraud-detection-from-day-one-302794333.html",
@@ -4662,7 +4905,10 @@ const briefing = {
       },
       {
         "id": "experian-agent-operating-system-jun02",
-        "actionable": {"type":"movimiento-competitivo","text":"Experian presentó en Money20/20 Europe su Agent Operating System sobre la plataforma Ascend, habilitando agentes de IA autónomos en decisioning y fraude para el ciclo completo de lending, con rollout a fin de 2026."},
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Experian presentó en Money20/20 Europe su Agent Operating System sobre la plataforma Ascend, habilitando agentes de IA autónomos en decisioning y fraude para el ciclo completo de lending, con rollout a fin de 2026."
+        },
         "title": "Experian lanza Agent Operating System en Money20/20 Europe para IA autonoma en decisioning bancario",
         "summary": "Experian presento en Money20/20 Europe el Agent Operating System (AOS), integrado en su plataforma Ascend, para habilitar agentes IA que operen de forma autonoma en acceso a datos, decisioning, orquestacion y gobierno para el ciclo completo de lending. La primera integracion es con ServiceNow para deteccion de fraude y riesgo crediticio. El rollout a early adopters esta previsto para finales de 2026, con alcance a 2.300 soluciones de clientes globales.",
         "sourceUrl": "https://thepaypers.com/fraud-and-fincrime/news/experian-launches-agent-operating-system-for-financial-services",
@@ -4675,7 +4921,10 @@ const briefing = {
       },
       {
         "id": "gbg-foresight-identity-decisioning-jun03",
-        "actionable": {"type":"movimiento-competitivo","text":"GBG lanzó Foresight, una capa de inteligencia con IA y benchmarking sectorial que marca su giro de proveedor de verificación puntual a plataforma de identity decisioning, con datos de Moody's y Equifax."},
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "GBG lanzó Foresight, una capa de inteligencia con IA y benchmarking sectorial que marca su giro de proveedor de verificación puntual a plataforma de identity decisioning, con datos de Moody's y Equifax."
+        },
         "title": "GBG lanza Foresight, capa de inteligencia IA para decisioning de identidad con benchmarking sectorial",
         "summary": "GBG presento Foresight, una capa de inteligencia impulsada por IA que permite a las organizaciones comparar el rendimiento de sus journeys de identidad contra pares del sector, recibir recomendaciones de configuracion con resultados explicables y activar alertas automatizadas sin integracion activa. El producto forma parte del reposicionamiento de GBG de proveedor de verificacion a plataforma de identidad y fraude, con asociaciones de datos con Moody's y Equifax.",
         "sourceUrl": "https://www.biometricupdate.com/202606/gbg-continues-shift-from-idv-to-identity-decisioning-with-foresight",
@@ -4688,7 +4937,10 @@ const briefing = {
       },
       {
         "id": "ping-identity-control-plane-agentic-jun05",
-        "actionable": {"type":"movimiento-competitivo","text":"Ping Identity extendió su control plane al escenario agéntico con interfaces AI-first, descubrimiento del ciclo de vida de agentes y acceso just-in-time, posicionándose en el debate sobre quién gestiona la identidad de los agentes de IA."},
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Ping Identity extendió su control plane al escenario agéntico con interfaces AI-first, descubrimiento del ciclo de vida de agentes y acceso just-in-time, posicionándose en el debate sobre quién gestiona la identidad de los agentes de IA."
+        },
         "title": "Ping Identity redefine el identity control plane para la empresa agentiva con gobernanza de agentes IA",
         "summary": "Ping Identity anuncio capacidades en su plataforma para el escenario agentivo: interfaces AI-first headless con soporte MCP y CLI, descubrimiento y gobierno del ciclo de vida de agentes IA, y acceso privilegiado just-in-time para agentes sin exponer secrets. El CEO Andre Durand declaro que la identidad esta evolucionando de infraestructura de autenticacion a infraestructura de gobierno operacional. El movimiento posiciona a Ping en el debate sobre quien gestiona la identidad de los agentes IA en banca y fintech.",
         "sourceUrl": "https://www.biometricupdate.com/202606/identity-control-plane-emerges-as-next-battleground-for-ai-agents",
@@ -4701,7 +4953,10 @@ const briefing = {
       },
       {
         "id": "goode-intelligence-iad-market-report-2026-jun08",
-        "actionable": {"type":"dato-clave","text":"El IAD Market Report 2026 de Goode Intelligence proyecta 122 millones de injection attacks este año y 301 millones para 2028, y fija iBeta y CEN/TS 18099 como estándares de certificación que el mercado exigirá."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "El IAD Market Report 2026 de Goode Intelligence proyecta 122 millones de injection attacks este año y 301 millones para 2028, y fija iBeta y CEN/TS 18099 como estándares de certificación que el mercado exigirá."
+        },
         "title": "Reporte IAD 2026: proyectan 122M ataques de inyeccion anuales e incluyen a Incode entre los evaluados",
         "summary": "El 2026 Injection Attack Detection Market Report de Biometric Update y Goode Intelligence proyecta 122 millones de intentos de injection attack en 2026 y mas de 301 millones para 2028, con un volumen de 4 mil millones de verificaciones IAD anuales. El reporte incluye perfiles de Incode, Innovatrics, Identy, Mitek y OZ Forensics entre los proveedores evaluados. La publicacion establece los estandares de certificacion (iBeta, CENS/TS 18099) que el mercado exigira a los proveedores de IDV.",
         "sourceUrl": "https://www.biometricupdate.com/202606/biometric-update-goode-intelligence-release-2026-iad-report",
@@ -4726,7 +4981,10 @@ const briefing = {
       },
       {
         "id": "trulioo-kya-report-jun07",
-        "actionable": {"type":"dato-clave","text":"Trulioo y PYMNTS estiman que los controles de identidad desactualizados cuestan cerca de 100.000 millones de dólares al año, con abandono de onboarding sobre el 60%, e introducen el estándar Know Your Agent para autenticar IA."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "Trulioo y PYMNTS estiman que los controles de identidad desactualizados cuestan cerca de 100.000 millones de dólares al año, con abandono de onboarding sobre el 60%, e introducen el estándar Know Your Agent para autenticar IA."
+        },
         "title": "Trulioo y PYMNTS: controles de identidad desactualizados cuestan USD 100.000M/año; surge estándar Know Your Agent",
         "summary": "Un reporte colaborativo de PYMNTS Intelligence y Trulioo revela que casi dos tercios de las empresas pierden clientes legítimos por exceso de fricción en verificación de identidad, con abandono en onboarding superior al 60%. Los controles de identidad desactualizados cuestan a las organizaciones cerca de USD 100.000M anuales en fraude, rechazos incorrectos y clientes perdidos. El informe introduce el concepto Know Your Agent (KYA) como el nuevo estándar para autenticar agentes de IA que actúan en nombre de consumidores y empresas.",
         "sourceUrl": "https://www.pymnts.com/identity/2026/pymnts-and-trulioo-report-shows-how-better-identity-checks-can-protect-growth/",
@@ -4739,7 +4997,10 @@ const briefing = {
       },
       {
         "id": "thales-ai-ecosystems-insider-threat-jun07",
-        "actionable": {"type":"dato-clave","text":"El Data Threat Report de Thales halla que el 97% de las organizaciones sufrió daño por IA generativa y que el IAM es la prioridad de seguridad número uno para el 52%, mientras el 47% de datos sensibles en la nube sigue sin cifrar."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "El Data Threat Report de Thales halla que el 97% de las organizaciones sufrió daño por IA generativa y que el IAM es la prioridad de seguridad número uno para el 52%, mientras el 47% de datos sensibles en la nube sigue sin cifrar."
+        },
         "title": "Thales: 97% de organizaciones sufrió daño por IA generativa; IAM es prioridad de seguridad número uno en 2026",
         "summary": "El 2026 Data Threat Report de Thales, basado en 3.120 responsables globales, revela que el 97% de las organizaciones sufrió daño por contenido falso generado con IA, el 61% reportó ataques a sus apps de IA y el presupuesto de seguridad para IA creció un 50% interanual. La gestión de identidad y acceso fue identificada como la disciplina de seguridad prioritaria por el 52% de los encuestados, mientras el 47% de los datos sensibles en la nube permanece sin cifrar. Thales advierte que los ecosistemas de IA se convierten en la nueva amenaza interna sin gobernanza adecuada.",
         "sourceUrl": "https://www.biometricupdate.com/202606/thales-warns-ai-ecosystems-could-become-new-insider-threat-without-stronger-governance",
@@ -4764,7 +5025,10 @@ const briefing = {
       },
       {
         "id": "gbg-foresight-identity-decisioning-jun07",
-        "actionable": {"type":"movimiento-competitivo","text":"GBG presentó Foresight, una plataforma de inteligencia para identity decisioning continuo con benchmarking entre pares sin integración activa, consolidando su giro desde la verificación puntual."},
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "GBG presentó Foresight, una plataforma de inteligencia para identity decisioning continuo con benchmarking entre pares sin integración activa, consolidando su giro desde la verificación puntual."
+        },
         "title": "GBG lanza Foresight: plataforma de inteligencia para identity decisioning continuo con benchmarking entre pares",
         "summary": "GBG presentó Foresight, una capa de inteligencia impulsada por IA que permite a organizaciones comparar el rendimiento de sus journeys de identidad contra pares del mismo sector, identificar tendencias de fraude y optimizar onboarding en tiempo real. La plataforma aprovecha datos de millones de verificaciones procesadas en la red de clientes de GBG y no requiere integración con sistemas existentes. El movimiento consolida el giro estratégico de GBG desde la verificación puntual hacia la decisión de identidad continua.",
         "sourceUrl": "https://www.biometricupdate.com/202606/gbg-continues-shift-from-idv-to-identity-decisioning-with-foresight",
@@ -4777,7 +5041,10 @@ const briefing = {
       },
       {
         "id": "microsoft-agent-365-entra-identity-build-jun04",
-        "actionable": {"type":"movimiento-competitivo","text":"Microsoft llevó Agent 365 a disponibilidad general en Build 2026, extendiendo Entra ID, Defender y Purview a un plano único donde cada agente de IA opera bajo identidad gobernada y toda acción es atribuible, a 99 dólares mensuales."},
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Microsoft llevó Agent 365 a disponibilidad general en Build 2026, extendiendo Entra ID, Defender y Purview a un plano único donde cada agente de IA opera bajo identidad gobernada y toda acción es atribuible, a 99 dólares mensuales."
+        },
         "title": "Microsoft convierte a cada agente de IA en una identidad gobernada: Agent 365 sale de preview en Build 2026",
         "summary": "En Microsoft Build 2026 (2-3 de junio), Microsoft lanzó Agent 365 en disponibilidad general, extendiendo Entra ID, Defender y Purview a un único plano de control para observar, gobernar y bloquear agentes de IA sin importar dónde estén alojados. Cada agente opera bajo su propia identidad gobernada en Entra, no bajo cuentas de servicio anónimas compartidas, haciendo toda acción atribuible. El contexto mapping vía Microsoft Defender y los controles de política con bloqueo en tiempo real entran en public preview en junio de 2026 a $99 por mes.",
         "sourceUrl": "https://news.microsoft.com/build-2026/",
@@ -4823,7 +5090,10 @@ const briefing = {
       },
       {
         "id": "gbg-foresight-identity-decisioning-jun26",
-        "actionable": {"type":"movimiento-competitivo","text":"GBG lanzó Foresight, plataforma de inteligencia con IA que aprovecha millones de verificaciones para benchmarking sectorial y alertas de fraude, posicionándose más allá del IDV tradicional hacia la decisión contextual de identidad."},
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "GBG lanzó Foresight, plataforma de inteligencia con IA que aprovecha millones de verificaciones para benchmarking sectorial y alertas de fraude, posicionándose más allá del IDV tradicional hacia la decisión contextual de identidad."
+        },
         "title": "GBG lanza Foresight: plataforma de inteligencia IA para decisiones de identidad más allá del IDV tradicional",
         "summary": "GBG presentó Foresight, una plataforma de inteligencia impulsada por IA que aprovecha datos de millones de verificaciones de identidad para ofrecer benchmarking de desempeño sectorial, alertas automáticas de fraude y recomendaciones de configuración. La herramienta no requiere integración activa y se posiciona como evolución de la verificación puntual hacia la decisión contextual de identidad. El movimiento consolida la estrategia de GBG de migrar de proveedor de IDV puntual hacia plataforma integral de identity decisioning.",
         "sourceUrl": "https://www.biometricupdate.com/202606/gbg-continues-shift-from-idv-to-identity-decisioning-with-foresight",
@@ -4847,7 +5117,10 @@ const briefing = {
       },
       {
         "id": "sumsub-300pct-document-fraud-jun01",
-        "actionable": {"type":"dato-clave","text":"Sumsub reporta que el fraude de documentos sintéticos creció 311% y los deepfakes 1.100% interanual en Norteamérica, mostrando que la IA generativa produce documentos falsos a escala industrial que eluden KYC básico."},
+        "actionable": {
+          "type": "dato-clave",
+          "text": "Sumsub reporta que el fraude de documentos sintéticos creció 311% y los deepfakes 1.100% interanual en Norteamérica, mostrando que la IA generativa produce documentos falsos a escala industrial que eluden KYC básico."
+        },
         "title": "Sumsub reporta aumento del 311% en fraude de documentos sintéticos y 1.100% en deepfakes — alerta para KYC en LATAM",
         "summary": "Sumsub publicó datos de su plataforma correspondientes al Q1 2025 mostrando que el fraude de documentos sintéticos creció 311% en Norteamérica respecto del Q1 2024, mientras que el deepfake fraud aumentó 1.100%. El CEO Andrew Sever advirtió que la IA generativa permite crear documentos falsos a escala industrial que eluden controles KYC básicos. El reporte —publicado el 1 de junio— cubre millones de verificaciones en fintech, ecommerce, healthtech y edtech, y posiciona a Sumsub como fuente de datos de referencia del sector.",
         "sourceUrl": "https://www.biometricupdate.com/202506/sumsub-reveals-300-increase-in-identity-document-fraud",
@@ -4870,7 +5143,10 @@ const briefing = {
       },
       {
         "id": "au10tix-anydoc-authentication-jun01",
-        "actionable": {"type":"movimiento-competitivo","text":"AU10TIX lanzó AnyDoc Authentication, con más de 150 tests de fraude sobre documentos de soporte —facturas, extractos, declaraciones— en 5 a 20 segundos y hasta 99,99% de precisión, extendiendo la autenticación más allá del documento de identidad."},
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "AU10TIX lanzó AnyDoc Authentication, con más de 150 tests de fraude sobre documentos de soporte —facturas, extractos, declaraciones— en 5 a 20 segundos y hasta 99,99% de precisión, extendiendo la autenticación más allá del documento de identidad."
+        },
         "title": "AU10TIX lanza AnyDoc Authentication: 150+ tests de fraude en documentos de soporte con 99,99% de precisión",
         "summary": "AU10TIX presentó AnyDoc Authentication, herramienta que aplica más de 150 tests de detección de falsificaciones sobre documentos no-ID —facturas, extractos bancarios, declaraciones impositivas y licencias comerciales— en 5-20 segundos con precisión de hasta 99,99% y 90% de reducción en revisiones manuales. Apunta a KYC, KYB y AML en finanzas, cripto, salud y educación. El CEO Yair Tal señaló que la prevención de fraude efectiva exige autenticar cada documento de soporte, no solo el documento de identidad primario.",
         "sourceUrl": "https://www.biometricupdate.com/202506/au10tix-launches-authenticity-check-tool-for-non-id-documents",
@@ -4893,7 +5169,10 @@ const briefing = {
       },
       {
         "id": "aws-connect-voice-id-eol-may28",
-        "actionable": {"type":"ventana","text":"AWS cerrará Amazon Connect Voice ID en mayo de 2026 y redirige a Pindrop, dejando un espacio en biometría de voz justo cuando crece la amenaza de speech sintético y deepfakes de audio."},
+        "actionable": {
+          "type": "ventana",
+          "text": "AWS cerrará Amazon Connect Voice ID en mayo de 2026 y redirige a Pindrop, dejando un espacio en biometría de voz justo cuando crece la amenaza de speech sintético y deepfakes de audio."
+        },
         "title": "AWS elimina Amazon Connect Voice ID y recomienda Pindrop como alternativa",
         "summary": "Amazon Connect Voice ID cerrará definitivamente en mayo de 2026, marcando la salida de AWS del mercado de biometría de voz. Amazon redirige a sus clientes hacia la plataforma de Pindrop con autenticación multifactor de voz y detección de liveness. El retiro se atribuye a desafíos técnicos persistentes con ruido de fondo, variaciones de acento y la creciente amenaza del speech sintético y deepfakes de audio.",
         "sourceUrl": "https://www.biometricupdate.com/202505/amazon-to-end-support-for-voice-biometrics-recommends-pindrop",
@@ -4916,7 +5195,10 @@ const briefing = {
       },
       {
         "id": "microsoft-phishing-35k-users-aitm-may28",
-        "actionable": {"type":"tendencia","text":"Microsoft documentó una campaña adversary-in-the-middle que comprometió 35.000 usuarios en 26 países capturando tokens y credenciales en tiempo real y eludiendo MFA; salud y finanzas fueron los sectores más golpeados."},
+        "actionable": {
+          "type": "tendencia",
+          "text": "Microsoft documentó una campaña adversary-in-the-middle que comprometió 35.000 usuarios en 26 países capturando tokens y credenciales en tiempo real y eludiendo MFA; salud y finanzas fueron los sectores más golpeados."
+        },
         "title": "Microsoft revela campaña de phishing AiTM que comprometió 35.000 usuarios en 26 países bypasseando MFA",
         "summary": "Microsoft Threat Intelligence documentó una campaña de robo de credenciales que apuntó a más de 35.000 usuarios en 13.000 organizaciones en 26 países, con el 92% de los objetivos en EE.UU. La campaña usó plantillas HTML enterprise-style con adversary-in-the-middle para capturar tokens y credenciales de Microsoft en tiempo real, bypaseando MFA. Los sectores más afectados fueron salud y ciencias de la vida (19%), servicios financieros (18%) y tecnología (11%).",
         "sourceUrl": "https://thehackernews.com/2026/05/microsoft-details-phishing-campaign.html",
