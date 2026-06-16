@@ -1303,10 +1303,90 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-06-11",
-  "publishedAt": "2026-06-12T19:26:41.815Z",
+  "date": "2026-06-15",
+  "publishedAt": "2026-06-16T10:33:10-03:00",
   "sections": {
     "global": [
+      {
+        "id": "thehackernews-wordpress-plugin-supplychain-backdoor-jun13",
+        "title": "Scripts de plugins de WordPress adulterados plantan backdoors en sitios (PushEngage, OptinMonster, TrustPulse)",
+        "summary": "Sansec reveló el 13 de junio una campaña de supply-chain que adulteró el JavaScript servido por tres plugins de Awesome Motive —PushEngage, OptinMonster y TrustPulse—, presentes en más de 1,2 millones de sitios. Cuando un administrador logueado cargaba el script, el código creaba una cuenta admin bajo control del atacante e instalaba un plugin oculto como puerta trasera. La exposición de OptinMonster y TrustPulse duró ~25 minutos el 12 de junio, pero el script de PushEngage siguió sirviéndose desde algunos servidores del CDN hasta el 14 de junio.",
+        "sourceUrl": "https://thehackernews.com/2026/06/popular-wordpress-plugin-scripts.html",
+        "sourceName": "The Hacker News",
+        "date": "2026-06-13",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "Un ataque de supply-chain sobre JavaScript de plugins masivos convierte el account-takeover administrativo en vector de escala: la creacion silenciosa de cuentas admin elude los controles de phishing y URL filtering porque el codigo se sirve desde dominios y CDNs legitimos."
+        }
+      },
+      {
+        "id": "idtechwire-sphinx-doc-fraud-kyc-kyb-jun12",
+        "title": "Sphinx lanza detección de fraude documental con IA para KYC y KYB",
+        "summary": "La plataforma de automatización de compliance Sphinx (respaldada por Y Combinator) lanzó Sphinx Doc Fraud, un detector de falsificación documental para onboarding de KYC y KYB. El sistema aísla divergencia de plantilla, firmas de producción y anomalías de metadatos para bloquear documentos generados con IA que evaden el OCR convencional, entregando además una explicación auditable por cada documento marcado. Está disponible de inmediato y no requiere integración de código para clientes existentes.",
+        "sourceUrl": "https://idtechwire.com/id-tech-digest-june-12-2026/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-06-12",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "fintech",
+        "topic": "fraude",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "El segmento de deteccion de documentos sinteticos en onboarding se densifica: los proveedores migran de un score unico hacia evidencia forense explicable (plantilla, metadatos, firmas de produccion) como diferenciador frente a documentos crafteados con IA generativa."
+        }
+      },
+      {
+        "id": "idtechwire-ocr-studio-document-collage-age-fraud-jun12",
+        "title": "OCR Studio presenta verificación de edad on-device contra fraude de \"document collage\"",
+        "summary": "OCR Studio debutó un sistema de verificación de edad on-device que detecta el fraude de \"document collage\" —donde el estafador reemplaza solo el campo de fecha de nacimiento sobre un documento por lo demás genuino—. Una red neuronal analiza la consistencia visual local del documento para exponer collages de alta calidad y, desde una sola foto, extrae la fecha de nacimiento y calcula el umbral de edad sin transmitir datos a servidores externos. Apunta a proveedores de servicios digitales en categorías de contenido reguladas, incluidas plataformas bajo obligaciones de protección de menores de la UE.",
+        "sourceUrl": "https://idtechwire.com/id-tech-digest-june-12-2026/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-06-12",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "gaming",
+        "topic": "biometria",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El age assurance avanza hacia deteccion de manipulacion granular a nivel de campo (no solo autenticidad global del documento), un requisito que crece a medida que las obligaciones de proteccion de menores en la UE empujan verificacion de edad robusta en plataformas de contenido."
+        }
+      },
+      {
+        "id": "idtechwire-companies-house-idv-shell-fraud-jun12",
+        "title": "Companies House reporta casi 4 millones de identidades verificadas y 151.000 direcciones fraudulentas eliminadas",
+        "summary": "El registro mercantil británico Companies House informó que casi 4 millones de personas completaron la verificación de identidad bajo el Economic Crime and Corporate Transparency Act 2023, obligatoria para directores y PSCs desde noviembre de 2025. Desde inicios de 2024, el organismo eliminó 151.000 direcciones empresariales fraudulentas usando sus nuevas potestades, atando los nombramientos de directores a registros digitales verificados. La medida ataca el fraude de sociedades pantalla que históricamente explotaba un registro de autoreporte sin controles de identidad.",
+        "sourceUrl": "https://idtechwire.com/id-tech-digest-june-12-2026/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-06-12",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "gobierno",
+        "topic": "biometria",
+        "actionable": {
+          "type": "dato-clave",
+          "text": "La verificacion de identidad obligatoria en registros mercantiles muestra resultados medibles contra fraude de sociedades pantalla (151.000 direcciones removidas), un caso de referencia para regimenes equivalentes de KYB en otros mercados."
+        }
+      },
+      {
+        "id": "infobae-google-android-fake-call-detection-voice-clone-jun12",
+        "title": "Android ya detecta voces falsas generadas con IA en llamadas activas",
+        "summary": "Google anunció el despliegue de Fake Call Detection, una función de seguridad para Android 12+ con la app Phone by Google que alerta ante llamadas donde un estafador imita con IA la voz de un contacto conocido. La función verifica una señal de autenticación entre dispositivos: si un atacante usa un número falsificado y voz generada por IA, esa señal no estará presente y Android advierte al usuario antes de que comparta dinero o datos. Según la Evaluación Global de Amenazas de Fraude Financiero de Interpol (marzo 2026), las estafas por suplantación de identidad superan los USD 400.000 millones en pérdidas a nivel mundial.",
+        "sourceUrl": "https://www.infobae.com/tecno/2026/06/12/tu-celular-android-ya-puede-detectar-voces-falsas-en-una-llamada-activa-esta-funcion/",
+        "sourceName": "Infobae",
+        "date": "2026-06-12",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "banca",
+        "topic": "deepfake",
+        "actionable": {
+          "type": "tendencia",
+          "text": "La clonacion de voz con IA paso de amenaza emergente a vector masivo de fraude de consumo, al punto que los fabricantes de OS movil incorporan deteccion de voz sintetica a nivel de sistema operativo como defensa de primera linea."
+        }
+      },
       {
         "id": "techcrunch-oracle-peoplesoft-official-advisory-100-companies-jun11",
         "title": "[ACTUALIZACIÓN] Oracle confirma oficialmente el zero-day de PeopleSoft: 100+ organizaciones comprometidas y datos de identidad de estudiantes en la mira",
@@ -4694,6 +4774,23 @@ const briefing = {
     ],
     "competencia": [
       {
+        "id": "thales-innovatrics-nist-frif-fingerprint-benchmark-jun12",
+        "title": "Thales debuta fuerte e Innovatrics mejora en el benchmark de huella dactilar FRIF del NIST",
+        "summary": "El NIST publicó nuevos resultados del Friction Ridge Image and Features (FRIF) Exemplar One-to-Many: Thales registró el FNIR más bajo jamás medido en rank-1 (0,0028 rolled-to-rolled y 0,0027 plain-to-rolled) y cero errores en identificación Class B. Innovatrics redujo su umbral de similitud de un poco práctico 2.422.541 a 0,916 a FPIR 0,001, volviendo su algoritmo aplicable en escenarios civiles y forenses. Ambos proveedores compiten por contratos gubernamentales de identidad a gran escala.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/thales-makes-strong-debut-in-nists-frif-fingerprint-biometrics-benchmark",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-12",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Thales",
+        "topic": "biometria",
+        "vertical": "gobierno",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Thales e Innovatrics escalan posiciones en el benchmark de huella dactilar del NIST, reforzando sus credenciales para licitaciones de identidad civil y forense a gran escala donde la acreditacion de terceros pesa en la decision de compra."
+        }
+      },
+      {
         "id": "estonia-thales-eid-remote-update-jun11",
         "title": "Estonia despliega nuevos eID respaldados por Thales con seguridad actualizable de forma remota",
         "summary": "Estonia introdujo el 11 de junio una nueva generación de tarjetas de identidad electrónica desarrolladas con Thales, con policarbonato translúcido y capas ópticas anti-manipulación. La arquitectura de software actualizable permite refrescar protocolos de seguridad de forma remota a medida que emergen amenazas criptográficas, manteniendo la protección de la infraestructura de e-gobernanza estonia.",
@@ -5738,7 +5835,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-06-12';
+const TODAY_ISO = '2026-06-16';
 
 const UI_STRINGS = {
     home_label: 'Home',
