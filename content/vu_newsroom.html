@@ -1304,10 +1304,58 @@ function renderD3LatamMap(byCountry, container) {
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
   "date": "2026-06-15",
-  "publishedAt": "2026-06-16T15:00:00-03:00",
+  "publishedAt": "2026-06-16T13:30:00.000Z",
   "regulationLastRun": "2026-06-16",
   "sections": {
     "global": [
+      {
+        "id": "fbi-outsider-enterprise-phishing-takedown-jun14",
+        "title": "El FBI desmantela 'Outsider Enterprise': una fábrica china de phishing con IA que robó 3,8 millones de tarjetas",
+        "summary": "El FBI, junto a Google y Black Lotus Labs, desarticuló la operación de phishing-as-a-service 'Outsider Enterprise' (activa desde 2023) en el marco de la Operación Riptide. La red operaba 9.000 sitios falsos y más de 1 millón de URLs fraudulentas, robó 3,8 millones de registros de tarjetas y causó pérdidas estimadas en USD 1.900 millones; en dos semanas de mayo se enviaron 2,5 millones de SMS de smishing vía AT&T, T-Mobile y Verizon.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/fbi-disrupts-massive-ai-powered-phishing-service-using-a-million-urls/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-06-14",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "banca",
+        "topic": "fraude",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El phishing-as-a-service industrializado con IA permite a redes únicas escalar a millones de URLs y robar tarjetas a escala global, desplazando la defensa desde el endpoint hacia la verificación de identidad del usuario legítimo. El smishing vía operadoras de telecom es el vector de entrada dominante."
+        }
+      },
+      {
+        "id": "ms365-copilot-searchleak-credential-exfiltration-jun15",
+        "title": "'SearchLeak': una falla de un clic en Microsoft 365 Copilot permitía robar emails, archivos y códigos MFA",
+        "summary": "Investigadores de Varonis Threat Labs revelaron SearchLeak (CVE-2026-42824, severidad crítica), una cadena de tres fallas en Microsoft 365 Copilot Enterprise Search que permitía exfiltrar contenido de correo —incluidos códigos de acceso, contraseñas y códigos MFA—, eventos de calendario y documentos de OneDrive/SharePoint con un solo clic sobre un enlace de Microsoft de apariencia legítima. Microsoft ya parcheó la falla; no requiere acción del usuario.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/new-attack-turned-microsoft-365-copilot-into-1-click-data-theft-tool/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-06-15",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "La exfiltración de códigos MFA y credenciales vía asistentes de IA empresariales abre una vía de account takeover que evade los controles tradicionales de phishing: el robo ocurre dentro de una superficie confiable (un enlace de Microsoft), no en una página falsa. Los asistentes de IA con acceso al buzón se consolidan como nueva superficie de fuga de identidad."
+        }
+      },
+      {
+        "id": "thehackernews-unc3753-luna-moth-vishing-legal-financial-extortion-jun10",
+        "title": "Luna Moth (UNC3753) vacía despachos legales y financieros con vishing puro: del primer llamado a la extorsión en un día hábil",
+        "summary": "Google Mandiant/GTIG atribuyó a UNC3753 —Luna Moth, Silent Ransom Group, Chatty Spider— una campaña de robo de datos y extorsión que golpeó a decenas de firmas legales, profesionales y financieras en EE.UU. entre enero y mayo de 2026. El grupo no usa malware ni cifrado: entra por voice phishing (vishing) e ingeniería social, instala herramientas RMM legítimas y suele completar el ciclo —contacto, exfiltración y extorsión— en un solo día hábil. Su data leak site ya lista cerca de 100 organizaciones víctimas.",
+        "sourceUrl": "https://thehackernews.com/2026/06/unc3753-used-vishing-and-physical.html",
+        "sourceName": "The Hacker News",
+        "date": "2026-06-10",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "ciberseguridad",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El vishing sin malware consolida un modelo de fraude donde el eslabón comprometido es la persona, no el endpoint: el atacante se autentica como un usuario legítimo y completa exfiltración y extorsión en la misma jornada, dejando a los controles centrados en archivos y firmas sin ventana de reacción."
+        }
+      },
       {
         "id": "thehackernews-wordpress-plugin-supplychain-backdoor-jun13",
         "title": "Scripts de plugins de WordPress adulterados plantan backdoors en sitios (PushEngage, OptinMonster, TrustPulse)",
