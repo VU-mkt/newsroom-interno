@@ -1303,11 +1303,27 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-06-15",
-  "publishedAt": "2026-06-16T13:30:00.000Z",
+  "date": "2026-06-16",
+  "publishedAt": "2026-06-17T13:30:00.000Z",
   "regulationLastRun": "2026-06-16",
   "sections": {
     "global": [
+      {
+        "id": "novo-nordisk-fulcrumsec-leak-credenciales-jun16",
+        "title": "FulcrumSec filtra 1,3 TB de Novo Nordisk tras un rescate rechazado de US$25M, con credenciales IT y datos de 11.500 pacientes",
+        "summary": "El grupo FulcrumSec comenzó a filtrar 1,3 TB de datos robados a Novo Nordisk luego de que la farmacéutica rechazara un rescate de US$25 millones, incluyendo información de ensayos clínicos de unos 11.500 pacientes pseudo-anonimizados, 30 modelos de IA, 70 datasets y credenciales de sistemas IT (tokens de GitHub y de registro de contenedores Azure). Según el grupo, el acceso inicial ocurrió en marzo vía credenciales expuestas en código del lado cliente, lo que habilitó movimiento lateral; expertos advierten que la integridad de la información comprometida no puede garantizarse.",
+        "sourceUrl": "https://www.bankinfosecurity.com/hackers-begin-to-leak-novo-nordisks-stolen-data-a-31989",
+        "sourceName": "BankInfoSecurity",
+        "date": "2026-06-16",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "El acceso inicial vía secretos hardcodeados (tokens de GitHub y Azure) en código del lado cliente reafirma que la gestión de credenciales no humanas y secretos es un vector de brecha tan crítico como el robo de identidad de usuarios. El caso refuerza la demanda de monitoreo de identidad de máquinas y rotación de secretos en pipelines de desarrollo."
+        }
+      },
       {
         "id": "fbi-outsider-enterprise-phishing-takedown-jun14",
         "title": "El FBI desmantela 'Outsider Enterprise': una fábrica china de phishing con IA que robó 3,8 millones de tarjetas",
@@ -4459,7 +4475,24 @@ const briefing = {
           }
         }
       ],
-      "chile": [],
+      "chile": [
+        {
+          "id": "bancoestado-mesa-antifraude-transaccional-chile-jun16",
+          "title": "BancoEstado y la Fiscalía de Chile crean una mesa antifraude tras detectar 7.000 casos de autofraude transaccional",
+          "summary": "BancoEstado y el Ministerio Público de Chile formalizaron una mesa intersectorial contra el fraude transaccional y el crimen organizado, centrada en un esquema sistemático de 'autofraude' donde clientes desconocen falsamente sus propias transacciones para obtener reembolsos indebidos bajo la Ley N°20.009. El banco presentó en 2024 una querella documentando más de 7.000 casos con un patrón idéntico y busca colaborar en la reconstrucción de flujos de dinero, identificación de beneficiarios y detección de lavado de activos y asociación ilícita.",
+          "sourceUrl": "https://www.emol.com/noticias/Economia/2026/06/16/1203010/bancoestado-ministerio-publico-fraude.html",
+          "sourceName": "Emol",
+          "date": "2026-06-16",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "La Ley 20.009 de reembolso automático en Chile generó un efecto secundario de fraude de primera parte (first-party fraud) a escala —7.000 casos en una sola entidad— que ahora empuja a bancos y fiscalía a coordinarse. La verificación de identidad fuerte en el momento de la disputa y la trazabilidad de beneficiarios se vuelven palancas centrales del mercado antifraude transaccional regional."
+          }
+        }
+      ],
       "peru": [
         {
           "id": "peru-sismate-hack-alerta-falsa-may21",
@@ -4854,6 +4887,23 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "unico-vs-serasa-experian-clearsale-biometria-jun16",
+        "title": "Unico demanda a Serasa Experian y ClearSale por uso no autorizado de biometría facial en Brasil — el mayor pleito idtech de LATAM del año",
+        "summary": "Unico, la mayor red de identidad digital de LATAM (Brasil), presentó demandas penal y civil contra Serasa Experian y su subsidiaria ClearSale por acceder presuntamente a su tecnología de autenticación facial sin autorización ni pago, a través del intermediario Skill Tecnologia, que tenía contrato exclusivo solo para Banco do Brasil. La denuncia identifica 1,4 millones de transacciones fraudulentas y datos de hasta 22 millones de brasileños en consultas irregulares, con bancos como Inter, BTG e Itaú afectados. Serasa Experian niega todas las acusaciones y el proceso está bajo secreto de sumario.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/unico-accuses-experian-subsidiary-of-freeloading-face-biometrics-verifications",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-16",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "fintech",
+        "topic": "biometria",
+        "competitor": "Experian / ClearSale",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Dos competidores de foco antifraude (Experian y su subsidiaria ClearSale) quedan expuestos en un litigio de biometría facial en el mercado financiero brasileño, el más grande de LATAM. La disputa pone en cuestión la cadena de licenciamiento y la procedencia de la tecnología de verificación facial que los burós usan para competir por clientes bancarios en la región."
+        }
+      },
       {
         "id": "thales-innovatrics-nist-frif-fingerprint-benchmark-jun12",
         "title": "Thales debuta fuerte e Innovatrics mejora en el benchmark de huella dactilar FRIF del NIST",
@@ -5916,7 +5966,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-06-16';
+const TODAY_ISO = '2026-06-17';
 
 const UI_STRINGS = {
     home_label: 'Home',
