@@ -1303,11 +1303,71 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-06-17",
-  "publishedAt": "2026-06-18T13:30:00.000Z",
+  "date": "2026-06-18",
+  "publishedAt": "2026-06-19T13:34:32.576Z",
   "regulationLastRun": "2026-06-16",
   "sections": {
     "global": [
+      {
+        "id": "fortibleed-74k-fortinet-credenciales-jun18",
+        "title": "FortiBleed: 74.000 credenciales de firewalls Fortinet expuestas abren la puerta a account takeover corporativo",
+        "summary": "Un grupo cibercriminal de habla rusa filtró credenciales de administrador contenidas en archivos de configuración de casi 74.000 firewalls y gateways VPN FortiGate en 194 países. Cosecharon hashes de autenticación SSL VPN mediante ataques automatizados, los crackearon con un clúster de 45 GPU y usaron las contraseñas para infiltrarse en entornos Active Directory. Al menos cuatro organizaciones sufrieron compromiso total, incluyendo un contratista de defensa de la OTAN con exfiltración de documentos clasificados; entre las afectadas figuran Samsung, Siemens, Foxconn, Oracle, Accenture y DHL.",
+        "sourceUrl": "https://www.helpnetsecurity.com/2026/06/18/fortinet-fortibleed-data-leak/",
+        "sourceName": "Help Net Security",
+        "date": "2026-06-18",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "La filtración convierte el perímetro VPN en vector directo de robo de credenciales y movimiento lateral hacia Active Directory: una vez dentro, el atacante hereda identidades válidas y la autenticación tradicional deja de discriminar al intruso del usuario legítimo. El caso refuerza la tendencia de que el control de acceso se juega cada vez más en la capa de identidad y verificación continua, no en el firewall."
+        }
+      },
+      {
+        "id": "msg-shinyhunters-26m-registros-biometria-jun18",
+        "title": "ShinyHunters filtra 26 millones de registros de Madison Square Garden, incluyendo datos de reconocimiento facial de asistentes",
+        "summary": "Tras impago del rescate en la fecha límite del 15 de junio, ShinyHunters publicó más de 42 GB (más de 26 millones de registros) de Madison Square Garden Entertainment, con operaciones de ticketing, detalles de cuentas de clientes y documentos corporativos de los Knicks y los Rangers. Los archivos referencian datos personales como direcciones y contactos de celebridades. Una demanda colectiva alega que se accedió a datos biométricos sensibles capturados por los sistemas de vigilancia y reconocimiento facial de MSG durante eventos de 2025. La intrusión ocurrió el 5 de junio.",
+        "sourceUrl": "https://www.bankinfosecurity.com/breach-roundup-shinyhunters-leaks-26m-msg-records-a-32019",
+        "sourceName": "BankInfoSecurity",
+        "date": "2026-06-18",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "retail",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "El caso une dos riesgos: exposición de PII para fraude e identidad sintética, y exposición de plantillas biométricas faciales capturadas sin consentimiento claro, que alimentan tanto litigio como suplantación. La captura biométrica masiva en entornos físicos sin gobernanza de datos se está convirtiendo en pasivo legal y fuente de fraude a la vez."
+        }
+      },
+      {
+        "id": "klue-battlecards-salesforce-oauth-token-theft-jun18",
+        "title": "Robo de tokens OAuth en Klue Battlecards: terceros comprometidos vacían instancias de Salesforce de sus clientes",
+        "summary": "Atacantes comprometieron la integración de Klue Battlecards e insertaron código malicioso (desde el 11 de junio) para cosechar tokens OAuth de clientes, ejecutando luego scripts Python automatizados contra entornos Salesforce durante casi 24 horas. Con credenciales OAuth legítimas, los atacantes se autenticaron como Klue y extrajeron datos CRM. Klue —con 190.000 usuarios a septiembre de 2025— desactivó todas las credenciales OAuth y suspendió integraciones con Salesforce, HubSpot, Google Drive, Slack y Zoom. Huntress confirmó pérdida de contactos comerciales y cotizaciones, y recibió amenazas de extorsión 48 horas después.",
+        "sourceUrl": "https://www.bankinfosecurity.com/attackers-steal-salesforce-data-from-klue-battlecards-users-a-32011",
+        "sourceName": "BankInfoSecurity",
+        "date": "2026-06-18",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El ataque no robó contraseñas: robó identidades delegadas (tokens OAuth) de una app de terceros, eludiendo MFA porque el token ya estaba autenticado. La cadena de suministro de identidad —integraciones SaaS con permisos persistentes— se consolida como superficie de account takeover que la autenticación de usuario final no detiene."
+        }
+      },
+      {
+        "id": "kodak-shinyhunters-2-2m-pii-jun17",
+        "title": "Kodak confirma brecha reclamada por ShinyHunters: 2,2 millones de registros con PII de clientes en riesgo de extorsión",
+        "summary": "Kodak confirmó una brecha de datos atribuida a la banda de extorsión ShinyHunters, que afirma haber comprometido más de 2,2 millones de registros con información personal identificable (PII) de clientes y datos corporativos internos, fijando como fecha límite de filtración el 18 de junio de 2026. La empresa reconoció que los atacantes obtuvieron una cantidad limitada de datos y contrató expertos externos y a las fuerzas del orden, sin precisar si hubo compromiso de sistemas internos.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/kodak-confirms-data-breach-claimed-by-shinyhunters-extortion-gang/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-06-17",
+        "language": "en",
+        "highRelevance": false,
+        "vertical": "retail",
+        "topic": "breach"
+      },
       {
         "id": "facephi-agentic-physical-ai-kyc-jun16",
         "title": "El KYC de un solo momento ya no alcanza: Facephi formaliza la verificación continua con IA agéntica contra deepfakes e identidades sintéticas",
@@ -4968,6 +5028,40 @@ const briefing = {
     ],
     "competencia": [
       {
+        "id": "accenture-dragos-runzero-netrise-ot-cyber-acquisition-jun18",
+        "title": "Accenture acuerda comprar Dragos, runZero y NetRise por ~US$4.175B para seguridad OT de infraestructura crítica",
+        "summary": "Accenture anunció el 18 de junio de 2026 la adquisición de una participación mayoritaria en Dragos y del 100% de runZero y NetRise, con un valor empresarial combinado de aproximadamente US$4.175 mil millones. Las tres compañías suman cerca de US$208 millones de ingresos recurrentes anuales a junio de 2026, un crecimiento interanual del 53%. El cierre se espera en agosto o septiembre de 2026, sujeto a aprobaciones regulatorias.",
+        "sourceUrl": "https://newsroom.accenture.com/news/2026/accenture-to-strengthen-critical-infrastructure-defense-with-end-to-end-cybersecurity-platform-in-age-of-ai-driven-cyber-threats-and-geopolitical-risk",
+        "sourceName": "Accenture Newsroom",
+        "date": "2026-06-18",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "M&A",
+        "competitor": "Accenture",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Accenture consolida una plataforma end-to-end de ciberseguridad OT mediante tres adquisiciones simultáneas por US$4.175B, profundizando su apuesta de integradora en detección de amenazas y visibilidad de superficie de ataque para infraestructura crítica. El movimiento refuerza el rol de las grandes consultoras como ensambladoras de capacidades de seguridad vía M&A en lugar de desarrollo propio."
+        }
+      },
+      {
+        "id": "world-tools-for-humanity-enterprise-proof-of-humanity-pivot-jun17",
+        "title": "World (Tools for Humanity) pivota a proof-of-humanity empresarial con Okta, Zoom y DocuSign como socios",
+        "summary": "Biometric Update reportó el 17 de junio de 2026 que Tools for Humanity reorienta World ID desde un experimento de identidad cripto hacia proof-of-personhood empresarial, cobrando a empresas y manteniendo el servicio gratuito para usuarios finales. La compañía, valuada en US$2.5 mil millones y con 450 millones de usuarios de World ID, consolida operaciones en cinco mercados (EE.UU., Reino Unido, Alemania, Japón y Corea del Sur) tras recortes que dejan unos 500 empleados. Okta, Zoom y DocuSign figuran como socios empresariales; Zoom planea integrar la tecnología Deep Face de World ID para detectar identidades sintéticas en videollamadas.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/world-shifts-from-crypto-identity-experiment-to-enterprise-proof-of-humanity",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-17",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "biometria",
+        "competitor": "Okta",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "La adopción empresarial de proof-of-humanity de alto aseguramiento crece como respuesta a deepfakes e identidades sintéticas, con Okta, Zoom y DocuSign validando demanda corporativa por verificación de humanidad integrada en flujos de trabajo y video. La integración de Deep Face de World ID en Zoom para detectar identidades sintéticas en videollamadas marca una expansión del antifraude biométrico hacia canales de comunicación en tiempo real."
+        }
+      },
+      {
         "id": "unico-vs-serasa-experian-clearsale-biometria-jun16",
         "title": "Unico demanda a Serasa Experian y ClearSale por uso no autorizado de biometría facial en Brasil — el mayor pleito idtech de LATAM del año",
         "summary": "Unico, la mayor red de identidad digital de LATAM (Brasil), presentó demandas penal y civil contra Serasa Experian y su subsidiaria ClearSale por acceder presuntamente a su tecnología de autenticación facial sin autorización ni pago, a través del intermediario Skill Tecnologia, que tenía contrato exclusivo solo para Banco do Brasil. La denuncia identifica 1,4 millones de transacciones fraudulentas y datos de hasta 22 millones de brasileños en consultas irregulares, con bancos como Inter, BTG e Itaú afectados. Serasa Experian niega todas las acusaciones y el proceso está bajo secreto de sumario.",
@@ -6046,7 +6140,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-06-18';
+const TODAY_ISO = '2026-06-19';
 
 const UI_STRINGS = {
     home_label: 'Home',
