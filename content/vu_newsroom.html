@@ -1303,11 +1303,27 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-06-18",
-  "publishedAt": "2026-06-19T13:34:32.576Z",
-  "regulationLastRun": "2026-06-16",
+  "date": "2026-06-21",
+  "publishedAt": "2026-06-22T13:35:39.936Z",
+  "regulationLastRun": "2026-06-22",
   "sections": {
     "global": [
+      {
+        "id": "klue-oauth-icarus-salesforce-extortion",
+        "title": "Brecha OAuth en Klue: el grupo Icarus reclama el ataque y crece la lista de víctimas del robo de datos de Salesforce",
+        "summary": "El grupo de extorsión Icarus reclamó el 19 de junio el ataque a Klue y publicó su lista de víctimas: un atacante usó una credencial legacy comprometida para obtener tokens OAuth y acceder durante casi 24 horas, mediante scripts contra la API REST de Salesforce, a entornos de clientes. Entre los afectados confirmados figuran firmas de ciberseguridad e inteligencia como Recorded Future, Tanium, Jamf, Sprout Social, Gong, Insurity y Huntress, con robo de contactos comerciales, comunicaciones de ventas y precios. Salesforce deshabilitó la integración de la app Klue Battlecards en respuesta al incidente.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/klue-oauth-breach-victim-list-grows-as-icarus-hackers-claim-attack/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-06-19",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "El vector no fue una vulnerabilidad de Salesforce sino tokens OAuth de un proveedor SaaS de terceros y una credencial legacy olvidada, confirmando que la cadena de suministro de identidad de integraciones es hoy el eslabón más explotado en el robo de datos B2B. Que firmas de ciberseguridad de primera línea figuren entre las víctimas eleva el caso del gobierno de identidad de máquina y la rotación de tokens."
+        }
+      },
       {
         "id": "fortibleed-74k-fortinet-credenciales-jun18",
         "title": "FortiBleed: 74.000 credenciales de firewalls Fortinet expuestas abren la puerta a account takeover corporativo",
@@ -4934,6 +4950,62 @@ const briefing = {
     },
     "regulation": [
       {
+        "id": "eu-prum-biometric-data-sharing-non-eu-consultation",
+        "title": "La Comisión Europea abre consulta para compartir datos biométricos policiales con países fuera de la UE",
+        "summary": "La Comisión Europea abrió el 12 de junio una consulta pública (cierra el 7 de agosto de 2026) sobre un marco recíproco para intercambio automatizado de perfiles de ADN, huellas, datos de reconocimiento facial y antecedentes policiales con terceros países 'de confianza' como Reino Unido, Balcanes Occidentales, Ucrania, Moldavia y Canadá. El marco se construye sobre el Reglamento Prüm II (ampliado en 2024) y la adopción está prevista para el Q4 2026; la Comisión podría modificar o revocar el estatus de socio por incumplimiento.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/europe-seeks-feedback-on-plan-for-sharing-biometric-data-with-non-eu-law-enforcement",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-16",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "Comisión Europea",
+        "topic": "regulacion",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "El intercambio transfronterizo de biometría sensible (ADN, facial, huellas) con terceros países entra en fase de consulta formal en la UE, fijando garantías de minimización y protección de datos que condicionarán a proveedores de identidad que operen o transfieran datos hacia/desde Europa."
+        }
+      },
+      {
+        "id": "us-fair-elections-act-ai-deepfake-deception",
+        "title": "Senadores de EE.UU. presentan el FAIR Act contra el engaño electoral generado con IA",
+        "summary": "Los senadores Jeff Merkley y Alex Padilla presentaron el 15 de junio el Fraudulent Artificial Intelligence Regulations Elections Act (FAIR), que prohíbe la distribución consciente de contenido electoral falso generado con IA destinado a impedir el voto (horarios, lugares, elegibilidad o suplantación de funcionarios electorales). El proyecto otorga al Fiscal General autoridad para acciones civiles —medidas cautelares e injunctions— y crea un derecho privado de acción, sin tipificar delito penal; aplica solo a elecciones federales.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/us-senators-propose-curbs-on-ai-generated-election-deception",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-15",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "Congreso de EE.UU. (Senado)",
+        "topic": "regulacion",
+        "actionable": {
+          "type": "tendencia",
+          "text": "La legislación federal estadounidense avanza hacia responsabilizar la distribución de deepfakes de suplantación, consolidando una tendencia regulatoria que exige detección de contenido sintético y verificación de autenticidad de identidad."
+        }
+      },
+      {
+        "id": "malta-mita-idv-procurement-liveness",
+        "title": "Malta licita una plataforma de verificación de identidad con liveness facial por 310.000 €",
+        "summary": "La Malta Information Technology Agency (MITA) abrió el 19 de junio un concurso por 310.000 € para una plataforma cloud de verificación de identidad online con escaneo automatizado de documentos, OCR y comprobación de liveness facial. La solución se integrará en los servicios públicos malteses para verificar la identidad de ciudadanos en trámites administrativos y acceso a beneficios financieros.",
+        "sourceUrl": "https://idtechwire.com/id-tech-digest-june-19-2026/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-06-19",
+        "language": "es",
+        "highRelevance": false,
+        "regulatoryBody": "MITA (Malta Information Technology Agency)",
+        "topic": "regulacion"
+      },
+      {
+        "id": "facewatch-iso-iec-42001-certification",
+        "title": "Facewatch logra la certificación ISO/IEC 42001 de gestión de sistemas de IA para biometría facial",
+        "summary": "El proveedor británico de seguridad retail Facewatch obtuvo el 19 de junio la certificación ISO/IEC 42001 (Sistemas de Gestión de Inteligencia Artificial), demostrando marcos de gobernanza y prevención de sesgos. La certificación responde al escrutinio regulatorio europeo sobre minimización de datos, transparencia algorítmica y prevención proactiva de sesgos en visión computacional de cara al público.",
+        "sourceUrl": "https://idtechwire.com/id-tech-digest-june-19-2026/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-06-19",
+        "language": "es",
+        "highRelevance": false,
+        "regulatoryBody": "ISO/IEC (estándar 42001)",
+        "topic": "regulacion"
+      },
+      {
         "id": "uk-ban-redes-menores-16-age-assurance-jun15",
         "actionable": {
           "type": "señal-regulatoria",
@@ -6140,7 +6212,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-06-19';
+const TODAY_ISO = "2026-06-22";
 
 const UI_STRINGS = {
     home_label: 'Home',
