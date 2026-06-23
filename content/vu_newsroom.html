@@ -1303,11 +1303,55 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-06-21",
-  "publishedAt": "2026-06-22T13:35:39.936Z",
+  "date": "2026-06-22",
+  "publishedAt": "2026-06-23T13:33:25.731Z",
   "regulationLastRun": "2026-06-22",
   "sections": {
     "global": [
+      {
+        "id": "jaredfromsubway-mev-bot-15m-cripto-jun22",
+        "title": "Robo de USD 15 millones al bot MEV JaredFromSubway vía pools de cripto falsos",
+        "summary": "El 22 de junio se reportó el robo de USD 15 millones al bot MEV de Ethereum 'JaredFromSubway'. El atacante manipuló la lógica de detección de oportunidades del bot desplegando pools y tokens falsos que el sistema interpretó como rentables, acumulando permisos (hasta 92,16 WETH aprobados a un contrato controlado por el atacante) antes de ejecutar transferencias de WETH, USDC y USDT. El operador ofreció recompensas por hasta USD 7,5 millones para recuperar parte de los fondos.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/jaredfromsubway-mev-bot-hacked-in-15-million-crypto-theft/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-06-22",
+        "language": "en",
+        "highRelevance": false,
+        "vertical": "fintech",
+        "topic": "fraude"
+      },
+      {
+        "id": "mastra-npm-sapphire-sleet-cripto-jun22",
+        "title": "Norcorea compromete 141 paquetes NPM de Mastra para robar wallets cripto",
+        "summary": "Microsoft atribuyó al grupo norcoreano Sapphire Sleet (BlueNoroff) un ataque a la cadena de suministro que inyectó la dependencia maliciosa 'easy-day-js' en 141 paquetes de Mastra durante una ventana de 45 minutos el 17 de junio; los paquetes suman unos 8 millones de descargas semanales. El malware se hacía pasar por herramientas de Node y apuntaba a más de 160 extensiones de navegador de criptomonedas para robar acceso a wallets. La divulgación pública se hizo el 22 de junio.",
+        "sourceUrl": "https://www.securityweek.com/north-korean-hackers-blamed-for-mastra-npm-supply-chain-attack/",
+        "sourceName": "SecurityWeek",
+        "date": "2026-06-22",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Un actor estatal con motivación financiera empuja el robo de credenciales y wallets hacia la cadena de suministro de software, infectando a desarrolladores aguas arriba. Microsoft recomendó a las víctimas rotar credenciales, tokens y secretos, y endurecer el acceso a wallets."
+        }
+      },
+      {
+        "id": "whatsapp-vbs-rmm-phishing-brasil-mexico-espana-jun22",
+        "title": "Campaña de phishing por WhatsApp con documentos financieros falsos golpea Brasil, México y España",
+        "summary": "Kaspersky reportó el 22 de junio una campaña que compromete cuentas de WhatsApp para enviar archivos VBScript ofuscados disfrazados de documentos financieros. Al ejecutarse, desactivan el UAC e instalan silenciosamente ManageEngine Endpoint Central, dando control remoto del equipo al atacante. La operación abarca más de 11 países, incluidos Brasil, México y España, con indicios de actores de habla china (solapamiento con ValleyRAT y Gh0st RAT).",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/whatsapp-phishing-attack-uses-fake-business-docs-to-hack-pcs/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-06-22",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "fraude",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El abuso de cuentas legítimas de WhatsApp como vector de entrega elimina las señales de remitente desconocido en las que se apoya la concientización tradicional. La presencia de Brasil, México y España en el listado de objetivos confirma a LATAM y España como geografías de interés directo para esta campaña."
+        }
+      },
       {
         "id": "klue-oauth-icarus-salesforce-extortion",
         "title": "Brecha OAuth en Klue: el grupo Icarus reclama el ataque y crece la lista de víctimas del robo de datos de Salesforce",
@@ -4569,6 +4613,22 @@ const briefing = {
       ],
       "colombia": [
         {
+          "id": "colombia-10t-ciberataques-cedulas-jun21",
+          "title": "Colombia acumula 10 billones de intentos de ciberataque y el 42% de los datos filtrados son cédulas y teléfonos",
+          "summary": "Un informe difundido el 21 de junio revela que Colombia sufrió más de 10 billones de intentos de ciberataque en el último año, concentrando el 8% de los incidentes exitosos de LATAM. El 42% de los datos filtrados corresponde a información de identidad (cédulas y teléfonos) y el 18% a datos financieros, con un costo promedio por brecha de 14.000 millones de pesos. Entre las entidades afectadas figuran el Ministerio de Salud, la Universidad de Antioquia y la BPO Emergia.",
+          "sourceUrl": "https://www.infobae.com/tecno/2026/06/21/colombia-sufrio-mas-de-10-billones-de-intentos-de-ciberataques-42-de-los-datos-filtrados-son-cedulas-y-telefonos/",
+          "sourceName": "Infobae",
+          "date": "2026-06-21",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "gobierno",
+          "topic": "breach",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "Los atacantes priorizan datos de identidad (cédula, teléfono) y registros médicos como activos de largo plazo para fraude y extorsión, por encima del beneficio financiero inmediato. Colombia se posiciona como uno de los tres mercados más atacados de LATAM."
+          }
+        },
+        {
           "id": "infobae-colombia-elecciones-fraude-may27",
           "title": "Colombia: expertos alertan por phishing, deepfakes y robo de datos en vísperas de las elecciones presidenciales del 31 de mayo",
           "summary": "Con las elecciones presidenciales colombianas a cuatro días, expertos en ciberseguridad documentan campañas masivas que combinan sitios institucionales clonados, mensajes falsos de subsidios vía WhatsApp y Telegram, y deepfakes de figuras públicas para robar datos personales y bancarios. El Ministerio TIC activó un plan especial de ciberseguridad con monitoreo de desinformación e IA, mientras Kaspersky registró ataques automatizados a escala masiva contra dispositivos móviles y cuentas en redes sociales. Los métodos más frecuentes incluyen encuestas electorales falsas, citaciones apócrifas a jurados de votación y páginas que imitan la Registraduría para capturar credenciales.",
@@ -5099,6 +5159,38 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "biometricupdate-google-liveness-anti-bot-recaptcha-jun22",
+        "competitor": "Google",
+        "title": "Google incorpora detección de liveness por gestos de mano a su verificación anti-bot reCAPTCHA",
+        "summary": "Google anunció el 22 de junio de 2026 una nueva modalidad de verificación reCAPTCHA dentro de Google Cloud Fraud Defense que pide al usuario realizar gestos de mano frente a la cámara, analizando el video para extraer 21 coordenadas de nudillos y determinar liveness humano. Google afirma que el procesamiento es en tiempo real, que las imágenes no se almacenan ni se vinculan a una identidad, y que se eliminan al finalizar la verificación. La compañía lo posiciona como una evolución del CAPTCHA que preserva la privacidad, aunque opera en una zona gris regulatoria por el escrutinio de UE y Reino Unido sobre el procesamiento biométrico.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/google-brings-liveness-detection-to-anti-bot-verification",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-22",
+        "language": "es",
+        "highRelevance": false,
+        "topic": "liveness",
+        "actionable": {
+          "type": "tendencia",
+          "text": "Los hyperscalers están empujando capacidades de liveness y antifraude biométrico hacia dentro de su stack cloud, difuminando la frontera entre la detección anti-bot y la verificación de identidad. Esto traslada parte de la decisión de compra de liveness al ecosistema de plataforma en vez de a proveedores especializados."
+        }
+      },
+      {
+        "id": "biometricupdate-incode-discord-age-assurance-trial-jun22",
+        "competitor": "Incode",
+        "title": "Discord prueba a Incode para age assurance: estimación facial de edad y verificación documental",
+        "summary": "Discord confirmó el 22 de junio de 2026 que está testeando a Incode como nuevo proveedor de facial age estimation (FAE) y verificación de edad basada en documento, con pruebas de métodos ID scan y selfie agendadas entre junio y julio de 2026. Discord afirma que Incode cumple su requisito de estimación de edad on-device, de modo que los datos biométricos nunca salen del teléfono del usuario. La nota señala una falta de transparencia: Discord no aclara qué proveedor de FAE encuentra el usuario en cada escenario, lo que diluye la rendición de cuentas frente a partners previos como k-ID, Privately y Persona.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/discord-age-assurance-vendor-trial-raises-questions-about-transparency",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-22",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "biometria",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Incode avanza en age assurance on-device para plataformas de consumo masivo, un caso de uso de identidad en expansión a partir de la presión regulatoria global sobre protección de menores. El mercado de verificación de edad se está fragmentando entre FAE on-device y verificación documental, con la transparencia de proveedores como eje de escrutinio."
+        }
+      },
       {
         "id": "accenture-dragos-runzero-netrise-ot-cyber-acquisition-jun18",
         "title": "Accenture acuerda comprar Dragos, runZero y NetRise por ~US$4.175B para seguridad OT de infraestructura crítica",
@@ -6212,7 +6304,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = "2026-06-22";
+const TODAY_ISO = "2026-06-23";
 
 const UI_STRINGS = {
     home_label: 'Home',
