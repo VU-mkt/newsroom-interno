@@ -6869,7 +6869,7 @@ function renderView(viewKey) {
    ========================================================================= */
 
 function buildTOC() {
-  const order = ['home','global','latam','regulation','competencia','vu','archivo'];
+  const order = ['home','latam','global','regulation','competencia','vu','archivo'];
   const counts = {
     home:        VIEW_CONFIG.home.items().length,
     global:      VIEW_CONFIG.global.items().length,
@@ -6985,7 +6985,7 @@ function initTicker() {
   });
 
   // Prioridad: highRelevance primero, luego por sección
-  const ORDER = ['global','latam','regulation','competencia','vu'];
+  const ORDER = ['latam','global','regulation','competencia','vu'];
   all.sort((a, b) => {
     if (b.highRelevance !== a.highRelevance) return (b.highRelevance ? 1 : 0) - (a.highRelevance ? 1 : 0);
     return ORDER.indexOf(a._sec) - ORDER.indexOf(b._sec);
