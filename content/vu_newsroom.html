@@ -1303,11 +1303,43 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-06-22",
-  "publishedAt": "2026-06-23T13:33:25.731Z",
+  "date": "2026-06-23",
+  "publishedAt": "2026-06-24T13:32:03.994Z",
   "regulationLastRun": "2026-06-22",
   "sections": {
     "global": [
+      {
+        "id": "interpol-apac-cyberthreat-phishing-ia-deepfake-jun22",
+        "title": "INTERPOL: phishing, ransomware y estafas con IA en alza en Asia-Pacífico, con USD 37.000M en pérdidas regionales",
+        "summary": "El Asia and South Pacific Cyberthreat Assessment 2025/2026 de INTERPOL identifica al phishing como el cibercrimen más extendido y costoso: un tercio de los países reportó más de 10.000 casos entre enero 2024 y marzo 2025, con 5,5 clics por cada 1.000 personas/mes (casi el doble del promedio global de 2,9). El crimen organizado en Myanmar, Camboya y Laos usó deepfakes en estafas de 'romance baiting', alimentando USD 37.000 millones en pérdidas regionales; troyanos bancarios e infostealers (RedLine, Lumma, LokiBot) son la segunda amenaza más prevalente.",
+        "sourceUrl": "https://thehackernews.com/2026/06/interpol-warns-phishing-ransomware-and.html",
+        "sourceName": "The Hacker News",
+        "date": "2026-06-22",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "banca",
+        "topic": "fraude",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El informe consolida la convergencia de deepfakes, ingeniería social industrializada e infostealers como vector dominante de fraude financiero a escala regional. La cifra de USD 37.000 millones y la combinación deepfake + robo de credenciales marcan el patrón de amenaza que migra hacia mercados emergentes de banca digital, incluido LATAM."
+        }
+      },
+      {
+        "id": "xsolis-healthcare-breach-14m-phishing-jun23",
+        "title": "Brecha en Xsolis expone datos de 1,4 millones de personas tras ataque de phishing dirigido",
+        "summary": "La empresa de tecnología sanitaria Xsolis (Tennessee, EE.UU.) reportó una brecha que afectó a 1.396.519 personas, exponiendo nombres, fechas de nacimiento, domicilios, números de Seguro Social (SSN), datos de seguro médico e información de tratamiento. El acceso no autorizado se originó en un ataque de phishing dirigido detectado en enero y divulgado públicamente el 23 de junio; ningún grupo de ransomware reivindicó el incidente.",
+        "sourceUrl": "https://www.securityweek.com/xsolis-data-breach-affects-1-4-million-individuals/",
+        "sourceName": "SecurityWeek",
+        "date": "2026-06-23",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "Una sola intrusión por phishing dirigido a un empleado expuso SSN y datos clínicos de 1,4 millones de personas, combinación de identidad altamente monetizable para fraude de nueva cuenta y suplantación. El sector salud sigue siendo uno de los verticales con mayor costo por registro filtrado y ventana de detección extendida."
+        }
+      },
       {
         "id": "jaredfromsubway-mev-bot-15m-cripto-jun22",
         "title": "Robo de USD 15 millones al bot MEV JaredFromSubway vía pools de cripto falsos",
@@ -6304,7 +6336,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = "2026-06-23";
+const TODAY_ISO = "2026-06-24";
 
 const UI_STRINGS = {
     home_label: 'Home',
