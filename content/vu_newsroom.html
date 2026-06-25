@@ -1303,11 +1303,80 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-06-23",
-  "publishedAt": "2026-06-24T13:32:03.994Z",
+  "date": "2026-06-24",
+  "publishedAt": "2026-06-25T13:40:00.000Z",
   "regulationLastRun": "2026-06-22",
   "sections": {
     "global": [
+      {
+        "id": "roc-acquires-ztc-biometric-forensics-jun24",
+        "title": "ROC adquiere ZTC y arma plataforma biométrica de investigación de extremo a extremo",
+        "summary": "ROC adquirió Zuccaro Technical Consulting (ZTC), desarrollador de forensia digital de Virginia, integrándola en su plataforma Vision AI y el producto ROC Evidence. El acuerdo (USD 500.000 en efectivo más ~USD 2,5 millones en acciones restringidas) combina forensia con analítica de video y reconocimiento facial para clientes de gobierno y seguridad pública, reforzando capacidades de investigación biométrica de identidad.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/roc-rolls-up-ztc-digital-forensics-into-end-to-end-biometric-investigative-platform",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-24",
+        "language": "es",
+        "highRelevance": false,
+        "section": "global",
+        "vertical": "gobierno",
+        "topic": "biometria"
+      },
+      {
+        "id": "malaysia-cybercrime-bill-deepfake-identity-bypass-jun24",
+        "title": "Malasia presenta proyecto de ley que criminaliza el deepfake para evadir onboarding biométrico",
+        "summary": "El Parlamento de Malasia introdujo el Cybercrime Bill 2026, que tipifica el uso indebido de identidad digital: posesión o venta no autorizada de credenciales digitales, despliegue de deepfakes para 'evasión de onboarding biométrico', mulas de identidad y operaciones de phishing. Es una de las primeras normas en nombrar explícitamente el deepfake como vector de bypass de KYC.",
+        "sourceUrl": "https://idtechwire.com/id-tech-digest-june-24-2026/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-06-24",
+        "language": "es",
+        "highRelevance": false,
+        "section": "global",
+        "vertical": "gobierno",
+        "topic": "deepfake"
+      },
+      {
+        "id": "emvco-verifiable-digital-payment-credentials-draft-jun24",
+        "title": "EMVCo propone esquema global para credenciales de pago digitales verificables",
+        "summary": "EMVCo publicó un borrador de marco —EMV Digital Payment Credential Specification – Schema Framework— abierto a comentarios hasta el 23 de julio de 2026, para estandarizar cómo se estructuran las credenciales digitales verificables (VDC) en pagos online con tarjeta. El marco cubre autenticación, vinculación de dispositivo, uso cross-dominio y dynamic linking, en colaboración con FIDO Alliance, OpenID Foundation y W3C, buscando autenticación preservadora de privacidad y antifragmentación.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/emvco-proposes-global-schema-for-verifiable-digital-payment-credentials",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-24",
+        "language": "es",
+        "highRelevance": false,
+        "section": "global",
+        "vertical": "fintech",
+        "topic": "biometria"
+      },
+      {
+        "id": "uber-apple-verify-with-wallet-mdl-jun24",
+        "title": "Uber amplía 'Verify with Wallet' de Apple para verificar conductores y pasajeros con mDL",
+        "summary": "Uber extendió la función 'Verify with Wallet' de Apple a la verificación de pasajeros y conductores, apoyándose en licencias de conducir móviles (mDL) e IDs digitales estatales con autenticación criptográfica a nivel de dispositivo para reducir el fraude de identidad en la plataforma. La adopción de credenciales en wallet del dispositivo marca una tendencia de verificación criptográfica embebida en plataformas de movilidad.",
+        "sourceUrl": "https://idtechwire.com/id-tech-digest-june-24-2026/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-06-24",
+        "language": "es",
+        "highRelevance": false,
+        "section": "global",
+        "vertical": "cross",
+        "topic": "biometria"
+      },
+      {
+        "id": "persona-h1-2026-fraud-slop-presentation-attacks-jun24",
+        "title": "Persona: el 86% del fraude de identidad sigue siendo ataque de presentación simple, no deepfake sofisticado",
+        "summary": "El reporte H1 2026 de Persona, sobre más de 27 millones de selfies fraudulentas, halló que el 86,2% de los intentos fueron ataques de presentación simples (máscaras, papel, video grabado) y solo el 23,5% involucró contenido GenAI. Los ataques de inyección representaron el 10,3% (2,8 millones de casos) y los atacantes inyectan video de personas reales 194% más seguido que contenido generado por IA. En mercados negros se venden paquetes completos de identidad —documento más video selfie— por unos USD 12.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/persona-sees-fraud-slop-pale-next-to-simple-presentation-attacks-in-2026-h1-report",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-24",
+        "language": "es",
+        "highRelevance": true,
+        "section": "global",
+        "vertical": "fintech",
+        "topic": "fraude",
+        "actionable": {
+          "type": "tendencia",
+          "text": "Contra el ruido del deepfake, el grueso del fraude de onboarding en H1 2026 sigue siendo ataque de presentación barato y masivo; la detección de inyección y el liveness pasivo pesan tanto como la detección de GenAI en la defensa por capas."
+        }
+      },
       {
         "id": "interpol-apac-cyberthreat-phishing-ia-deepfake-jun22",
         "title": "INTERPOL: phishing, ransomware y estafas con IA en alza en Asia-Pacífico, con USD 37.000M en pérdidas regionales",
@@ -5192,6 +5261,83 @@ const briefing = {
     ],
     "competencia": [
       {
+        "id": "regula-uber-poland-document-verification-jun24",
+        "title": "Regula amplía la verificación de conductores de Uber en Polonia con lectores móviles de documentos",
+        "summary": "Regula desplegó capacidades avanzadas de lectura móvil de documentos con OCR y SDKs de verificación de autenticidad en la operación polaca de Uber, habilitando la validación on-site de licencias de conducir, permisos de transporte y pasaportes. La solución detecta falsificaciones y asegura cumplimiento regulatorio en el onboarding de conductores. Profundiza la integración existente entre Regula y los procesos de verificación de identidad de Uber.",
+        "sourceUrl": "https://idtechwire.com/regula-expands-ubers-driver-verification-across-poland-with-mobile-document-readers/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-06-24",
+        "language": "es",
+        "highRelevance": false,
+        "section": "competencia",
+        "competitor": "Regula",
+        "topic": "biometria"
+      },
+      {
+        "id": "idme-servos-servicenow-state-benefits-fraud-jun24",
+        "title": "ID.me, Servos y ServiceNow integran verificación de identidad para administración de beneficios estatales",
+        "summary": "ID.me se alió con Servos y ServiceNow para embeber su billetera de identidad digital en los flujos de ServiceNow que procesan recertificaciones de SNAP, Medicaid y TANF en servicios sociales estatales de EE.UU. ID.me —que ya cuenta con 90M+ de adultos estadounidenses con cuenta— aporta verificación de identidad upfront para cortar solicitudes duplicadas, erróneas y fraudulentas antes de llegar al gestor de casos. El despliegue responde a requisitos federales (H.R. 1) que obligan a los estados a mantener tasas de error de SNAP por debajo del 6%.",
+        "sourceUrl": "https://idtechwire.com/id-me-servos-and-servicenow-target-state-benefits-administration/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-06-24",
+        "language": "es",
+        "highRelevance": false,
+        "section": "competencia",
+        "competitor": "ID.me",
+        "topic": "fraude",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El sector público estadounidense canaliza la verificación de identidad como mecanismo antifraude obligado por regulación (umbral de error de SNAP <6%), reforzando el modelo de identidad verificada embebida en flujos de gobierno digital."
+        }
+      },
+      {
+        "id": "global-eidentity-sds-318m-biometric-licensing-jun24",
+        "title": "Global e·Identity amplía a USD 318M su acuerdo exclusivo de licenciamiento biométrico con SDS",
+        "summary": "Global e·Identity expandió su acuerdo de licenciamiento de propiedad intelectual con Smart Data Solutions (SDS) hasta un valor de USD 318 millones, extendiendo los derechos exclusivos de distribución e integración del suite biométrico multimodal de Global e·Identity. La tecnología cubre reconocimiento avanzado de iris, huella y rostro, orientado a banca empresarial y gestión de fronteras. El acuerdo consolida un canal regional exclusivo para despliegues de verificación biométrica de alta seguridad.",
+        "sourceUrl": "https://idtechwire.com/global-e%c2%b7dentity-expands-exclusive-biometric-licensing-deal-with-sds-to-318-million/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-06-24",
+        "language": "es",
+        "highRelevance": false,
+        "section": "competencia",
+        "competitor": "Global e·Identity",
+        "topic": "biometria"
+      },
+      {
+        "id": "unico-cassio-vaquero-global-partnerships-us-jun24",
+        "title": "Unico ficha a Cassio Vaquero para liderar alianzas globales con foco en Estados Unidos",
+        "summary": "La firma brasileña de identidad digital Unico nombró a Cassio Vaquero como Director de Alianzas Estratégicas, con base en Menlo Park (California) y 25 años de experiencia en canales en Asia, LATAM y EE.UU., para acelerar su expansión en el mercado estadounidense. Unico procesa más de 1.000 millones de autenticaciones anuales y reporta un crecimiento de transacciones del 84% con ingresos internacionales en alza. El movimiento apalanca su plataforma de identificación en vivo y detección de comportamiento fraudulento con biometría propia y machine learning vía el Unico Partnership Program.",
+        "sourceUrl": "https://idtechwire.com/unico-names-cassio-vaquero-to-lead-global-partnerships-with-us-focus/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-06-24",
+        "language": "es",
+        "highRelevance": true,
+        "section": "competencia",
+        "competitor": "Unico",
+        "topic": "biometria",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Unico, líder de identidad digital en Brasil, formaliza su salida hacia EE.UU. con un ejecutivo dedicado a canales, escalando desde su base de 1.000M+ de autenticaciones anuales y 84% de crecimiento transaccional hacia mercados fuera de su núcleo LATAM."
+        }
+      },
+      {
+        "id": "one-identity-standalone-quest-spinoff-cork-hq-jun24",
+        "title": "One Identity se separa de Quest Software como compañía independiente con sede global en Cork",
+        "summary": "One Identity anunció su separación de Quest Software para operar como empresa independiente con HQ en Cork, Irlanda, y más del 80% de su organización de ingeniería en Europa. La compañía —que dice ser usada por 80 de las Fortune 100— enmarca su negocio combinado de IGA y PAM en un mercado de ~USD 10.000M (PAM ~USD 5.400M, con IGA creciendo 10,7% entre 2024-2025) y apunta a gobernar identidades humanas y no humanas en entornos con IA. La autonomía busca asignación de capital propia y mayor agilidad para escalar gobernanza de identidad y acceso privilegiado.",
+        "sourceUrl": "https://idtechwire.com/one-identity-to-become-a-standalone-company-with-global-hq-in-cork/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-06-24",
+        "language": "es",
+        "highRelevance": true,
+        "section": "competencia",
+        "competitor": "One Identity",
+        "topic": "regulacion",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "La separación de One Identity de Quest crea un competidor IGA/PAM puro con capital propio y foco declarado en identidades de agentes de IA, en un mercado IAM que se sigue consolidando tras la compra de CyberArk por Palo Alto y la cartera SailPoint/Ping bajo Thoma Bravo."
+        }
+      },
+      {
         "id": "biometricupdate-google-liveness-anti-bot-recaptcha-jun22",
         "competitor": "Google",
         "title": "Google incorpora detección de liveness por gestos de mano a su verificación anti-bot reCAPTCHA",
@@ -6336,7 +6482,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = "2026-06-24";
+const TODAY_ISO = "2026-06-25";
 
 const UI_STRINGS = {
     home_label: 'Home',
