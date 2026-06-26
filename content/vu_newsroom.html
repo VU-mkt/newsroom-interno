@@ -1303,11 +1303,28 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-06-24",
-  "publishedAt": "2026-06-25T13:40:00.000Z",
+  "date": "2026-06-25",
+  "publishedAt": "2026-06-26T13:31:37.564Z",
   "regulationLastRun": "2026-06-22",
   "sections": {
     "global": [
+      {
+        "id": "operation-endgame-infostealers-takedown-jun24",
+        "title": "Operation Endgame descabeza la infraestructura de los infostealers Amadey, StealC y SocGholish que alimentan el fraude financiero",
+        "summary": "Europol, Microsoft y fuerzas de seis países desmantelaron la infraestructura 'cibercrimen como servicio' detrás de los infostealers Amadey, StealC y el loader SocGholish, herramientas usadas para robar credenciales, wallets e identidades digitales que luego habilitan fraude financiero y ransomware. La acción derribó 326 servidores y 142 dominios, congeló más de EUR 41 millones (USD 47M) en cripto de origen criminal y recuperó cerca de 27 millones de credenciales robadas de más de 385.000 sistemas comprometidos. El robo masivo de credenciales es el insumo primario del account takeover y la suplantación de identidad que golpean a la banca digital.",
+        "sourceUrl": "https://www.infosecurity-magazine.com/news/operation-endgame-stealc-amadey/",
+        "sourceName": "Infosecurity Magazine",
+        "date": "2026-06-24",
+        "language": "es",
+        "highRelevance": true,
+        "section": "global",
+        "vertical": "banca",
+        "topic": "ciberseguridad",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El robo industrializado de credenciales vía infostealers sigue siendo la materia prima del account takeover y el fraude de identidad en banca digital; los desmantelamientos de infraestructura dan respiro temporal pero la oferta de credenciales robadas se reconstituye en semanas. El foco del mercado se desplaza de bloquear el robo de credenciales hacia validar que detrás de una credencial válida hay un humano legítimo."
+        }
+      },
       {
         "id": "roc-acquires-ztc-biometric-forensics-jun24",
         "title": "ROC adquiere ZTC y arma plataforma biométrica de investigación de extremo a extremo",
@@ -4796,6 +4813,24 @@ const briefing = {
       ],
       "peru": [
         {
+          "id": "peru-falsas-papeletas-sutran-phishing-jun24",
+          "title": "Perú: ola de phishing con falsas papeletas de Sutran roba datos bancarios suplantando al organismo de transporte",
+          "summary": "Delincuentes suplantan a la Superintendencia de Transporte Terrestre (Sutran) en Perú mediante correos y mensajes de WhatsApp con logo institucional, colores oficiales e imágenes de la Policía Nacional, simulando notificaciones de multas vehiculares con enlaces de pago, códigos QR y portales falsos. Los montos exigidos por supuestas papeletas llegan a 2.800 soles, capturando datos personales y bancarios de las víctimas en formularios fraudulentos. Sutran identificó 11 casos en 2026, derivó 4 expedientes a la Fiscalía y ya hay una sentencia condenatoria.",
+          "sourceUrl": "https://www.infobae.com/peru/2026/06/24/nuevas-estafas-con-falsas-papeletas-de-sutran-ola-de-fraudes-digitales-alerta-a-miles-de-conductores/",
+          "sourceName": "Infobae Perú",
+          "date": "2026-06-24",
+          "language": "es",
+          "highRelevance": true,
+          "section": "latam",
+          "country": "peru",
+          "vertical": "gobierno",
+          "topic": "fraude-digital",
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "La suplantación de organismos públicos (transporte, tributario, judicial) para phishing financiero es un patrón recurrente en LATAM que erosiona la confianza en canales oficiales del Estado. La presión recae sobre entidades públicas para verificar la autenticidad de sus notificaciones digitales y sobre la banca para frenar el cobro fraudulento aguas abajo."
+          }
+        },
+        {
           "id": "peru-sismate-hack-alerta-falsa-may21",
           "title": "Hackeo al Sismate: alerta falsa de terremoto 8,7 llega a millones de celulares en Perú — \"Deface Perú\" accedió al sistema de emergencias",
           "summary": "El 20 de mayo entre las 19 y 20 hs, el grupo hackivista \"Deface Perú\" accedió a la cuenta del proveedor Everbridge del Sismate —el sistema de mensajería de alerta temprana del Ministerio de Transportes y Comunicaciones del Perú— y difundió una falsa alerta de terremoto 8,7 con amenaza de tsunami en la costa central, seguida de mensajes políticos que mencionaban \"fraude electoral\" y al streamer Curwen, a días de la segunda vuelta presidencial del 7 de junio. El Sismate opera vía Cell Broadcast, que llega a millones de dispositivos sin requerir internet. El incidente expone la vulnerabilidad de infraestructura crítica de emergencias ante ataques a cuentas de proveedores y es parte de un historial de ataques de Deface Perú a plataformas gubernamentales desde 2024.",
@@ -5260,6 +5295,57 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "kpmg-banking-ai-biometrics-survey-jun25",
+        "title": "Encuesta KPMG: 72% de los bancos planean integrar biometría con IA en tres años",
+        "summary": "Una encuesta de KPMG difundida el 25 de junio mostró que el 32% de los líderes bancarios ya usan biometría habilitada por IA para asegurar pagos y accesos, y un 72% planea integrarla en los próximos tres años. El 92% está aumentando presupuesto de ciberseguridad y el 84% incrementa inversión específicamente para riesgos asociados a IA.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/ai-fraud-drives-banks-toward-biometric-identity-defenses",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-25",
+        "language": "en",
+        "highRelevance": true,
+        "section": "competencia",
+        "competitor": "KPMG",
+        "topic": "biometria",
+        "actionable": {
+          "type": "dato-clave",
+          "text": "El 72% de bancos planea adoptar biometría con IA en tres años y el 84% sube inversión por riesgos de IA: la ventana de adopción de plataformas de identidad y antifraude en banca está en máxima expansión."
+        }
+      },
+      {
+        "id": "biocatch-benelux-banks-fraud-upgrade-jun25",
+        "title": "BioCatch: 92% de los bancos del Benelux planean actualizar su tecnología de prevención de fraude",
+        "summary": "Una encuesta de BioCatch reveló que el 92% de los bancos del Benelux planean actualizar su tecnología de prevención de fraude, en el marco del avance del fraude asistido por IA y ataques de inyección biométrica. El dato se publicó junto a hallazgos de mercado sobre robo de credenciales (1.800 millones exfiltradas en 2025) y fraude de identidad sintética.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/ai-fraud-drives-banks-toward-biometric-identity-defenses",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-25",
+        "language": "en",
+        "highRelevance": false,
+        "section": "competencia",
+        "competitor": "BioCatch",
+        "topic": "fraude-digital",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "BioCatch refuerza su narrativa de fraude conductual en banca europea con datos de demanda de actualización tecnológica; señala apetito de reemplazo de stacks antifraude que VU puede capturar en mercados regulados."
+        }
+      },
+      {
+        "id": "entrust-biometric-auth-adaptive-risk-jun25",
+        "title": "Entrust lanza autenticación biométrica con evaluación de riesgo adaptativo para banca",
+        "summary": "Entrust presentó una solución de autenticación biométrica que combina verificación de identidad con evaluación de riesgo adaptativo, posicionada como defensa frente al fraude impulsado por IA en banca. El lanzamiento se enmarca en datos de mercado que proyectan pérdidas por fraude de identidad sintética superiores a USD 3.100 millones en 2026 en EE.UU. y un crecimiento anual cercano al 16%.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/ai-fraud-drives-banks-toward-biometric-identity-defenses",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-25",
+        "language": "en",
+        "highRelevance": true,
+        "section": "competencia",
+        "competitor": "Entrust",
+        "topic": "biometria",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Entrust profundiza su pivote hacia identidad-centric con biometría más riesgo adaptativo para banca, compitiendo directamente en el espacio de autenticación antifraude donde opera VU ONE en LATAM."
+        }
+      },
       {
         "id": "regula-uber-poland-document-verification-jun24",
         "title": "Regula amplía la verificación de conductores de Uber en Polonia con lectores móviles de documentos",
@@ -6570,7 +6656,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = "2026-06-25";
+const TODAY_ISO = "2026-06-26";
 
 const UI_STRINGS = {
     home_label: 'Home',
