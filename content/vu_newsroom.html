@@ -1303,11 +1303,75 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-06-25",
-  "publishedAt": "2026-06-26T13:31:37.564Z",
-  "regulationLastRun": "2026-06-22",
+  "date": "2026-06-28",
+  "publishedAt": "2026-06-29T13:30:00.000Z",
+  "regulationLastRun": "2026-06-29",
   "sections": {
     "global": [
+      {
+        "id": "nigeria-nimc-act-2026-robo-identidad-pki-jun28",
+        "title": "Nigeria promulga la NIMC Act 2026 con penas reforzadas contra el robo y suplantación de identidad",
+        "summary": "El presidente Tinubu firmó el 26/06 la NIMC Act 2026 (reportada el 28/06), que reemplaza el marco de 2007 y designa a la NIMC como autoridad raíz de la PKI nacional para intercambio de datos seguro entre entes públicos y privados. La ley introduce penas más severas por registros múltiples, robo de identidad, suplantación y otros delitos de identidad, y refuerza la protección de datos. Nigeria superó los 130 millones de registros de identidad nacional (NIN), con meta de 180 millones para fin de año.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/nigeria-steps-up-trusted-dpi-momentum-with-new-legislation",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-28",
+        "language": "en",
+        "highRelevance": false,
+        "section": "global",
+        "vertical": "gobierno",
+        "topic": "regulacion"
+      },
+      {
+        "id": "socure-cfor-ciso-arr-340m-fraude-ia-jun26",
+        "title": "Socure refuerza su cúpula de seguridad y supera USD 340M de ARR en plena ola de fraude con IA",
+        "summary": "Socure nombró el 26/06 al veterano de ciberseguridad Mark Carter como CISO, y reportó que su ingreso recurrente anual (ARR) superó los USD 340 millones a medida que crece la demanda de verificación de identidad. El movimiento se enmarca en una ola de reacomodos ejecutivos en firmas de identidad (Thales, 1Kosmos, Unico, Veriff, ROC, Trinsic, Token) como respuesta a un fraude impulsado por IA cada vez más sofisticado.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/socure-token-strengthen-security-leadership-amid-ai-fraud-surge",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-26",
+        "language": "en",
+        "highRelevance": false,
+        "section": "global",
+        "vertical": "fintech",
+        "topic": "fraude",
+        "actionable": {
+          "type": "dato-clave",
+          "text": "La demanda de verificación de identidad sostiene el crecimiento del sector (Socure superó USD 340M de ARR) y dispara una ola de fichajes de seguridad en proveedores de identidad ante el fraude con IA."
+        }
+      },
+      {
+        "id": "uk-banks-reusable-digital-id-select-id-jun26",
+        "title": "Seis grandes bancos del Reino Unido respaldan una red de identidad digital reutilizable para KYC/AML",
+        "summary": "Barclays, HSBC, Lloyds, Nationwide, NatWest y Santander respaldaron el 26/06 una red de identidad digital reutilizable (desarrollada por Select ID) que permite a los clientes verificar identidad y edad desde la app bancaria para compras online, transacciones inmobiliarias y apertura de cuentas. El usuario controla qué datos comparte y puede elegir su proveedor de KYC/AML. UK Finance sostiene que el sector financiero está idealmente posicionado para ofrecer verificación digital confiable.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/major-uk-banks-back-reusable-digital-id-network-for-financial-services",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-26",
+        "language": "en",
+        "highRelevance": true,
+        "section": "global",
+        "vertical": "banca",
+        "topic": "identidad",
+        "actionable": {
+          "type": "tendencia",
+          "text": "La banca avanza hacia identidad digital reutilizable centrada en el consentimiento del usuario, reutilizando verificaciones ya hechas para KYC/AML en terceros y reduciendo fricción en onboarding y apertura de cuentas."
+        }
+      },
+      {
+        "id": "jumio-trinsic-digital-id-60-paises-idv-jun26",
+        "title": "Jumio integra a Trinsic para aceptar IDs digitales en 60+ países y disputar el mercado IDV",
+        "summary": "Jumio anunció el 26/06 su integración con el gateway de identidad Trinsic para aceptar credenciales digitales en más de 60 países, combinando verificación biométrica y autenticación de credenciales. Juniper Research proyecta 175.000 millones de verificaciones de identidad digital globales hacia 2030, con la biometría como modalidad de mayor crecimiento (+117% al 2030) impulsada por el fraude asistido por IA. El gasto en verificación de identidad crecería 55% entre 2026 y 2030.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/jumio-integrates-trinsic-to-expand-reach-in-growing-idv-market",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-26",
+        "language": "en",
+        "highRelevance": true,
+        "section": "global",
+        "vertical": "fintech",
+        "topic": "identidad",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El mercado de verificación de identidad se consolida alrededor de plataformas que orquestan documento + biometría + credenciales digitales reutilizables, con la biometría creciendo 117% al 2030 por el fraude asistido por IA."
+        }
+      },
       {
         "id": "operation-endgame-infostealers-takedown-jun24",
         "title": "Operation Endgame descabeza la infraestructura de los infostealers Amadey, StealC y SocGholish que alimentan el fraude financiero",
@@ -5146,6 +5210,23 @@ const briefing = {
     },
     "regulation": [
       {
+        "id": "fatf-plenary-vasp-defi-greylist-jun19",
+        "title": "FATF aprueba séptima actualización de estándares sobre activos virtuales y VASPs y encarga informe sobre DeFi",
+        "summary": "El Plenario de la FATF (París, 17-19 jun 2026), último bajo la presidencia mexicana de Elisa de Anda Madrazo, aprobó la séptima actualización dirigida sobre la implementación de los estándares para activos virtuales (VA) y proveedores de servicios de activos virtuales (VASPs), y encargó un nuevo informe sobre los desafíos regulatorios de las plataformas DeFi por su exposición a lavado de activos y financiamiento del terrorismo. En listas, removió a Argelia y Namibia del monitoreo intensificado (lista gris) y mantuvo en Call for Action a Corea del Norte, Irán y Myanmar; Bolivia y Venezuela continúan bajo monitoreo intensificado. Los informes técnicos se publican en julio 2026.",
+        "sourceUrl": "https://www.fatf-gafi.org/en/publications/Fatfgeneral/outcomes-fatf-plenary-june-2026.html",
+        "sourceName": "FATF / GAFI",
+        "date": "2026-06-19",
+        "language": "es",
+        "highRelevance": true,
+        "section": "regulation",
+        "regulatoryBody": "FATF",
+        "topic": "regulacion",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "La séptima actualización VA/VASP de FATF y el nuevo mandato sobre DeFi profundizan las exigencias de Travel Rule, KYC reforzado y beneficial ownership para exchanges y wallets, justo cuando dos jurisdicciones LATAM con fintech activas —Bolivia y Venezuela— siguen bajo monitoreo intensificado."
+        }
+      },
+      {
         "id": "eu-prum-biometric-data-sharing-non-eu-consultation",
         "title": "La Comisión Europea abre consulta para compartir datos biométricos policiales con países fuera de la UE",
         "summary": "La Comisión Europea abrió el 12 de junio una consulta pública (cierra el 7 de agosto de 2026) sobre un marco recíproco para intercambio automatizado de perfiles de ADN, huellas, datos de reconocimiento facial y antecedentes policiales con terceros países 'de confianza' como Reino Unido, Balcanes Occidentales, Ucrania, Moldavia y Canadá. El marco se construye sobre el Reglamento Prüm II (ampliado en 2024) y la adopción está prevista para el Q4 2026; la Comisión podría modificar o revocar el estatus de socio por incumplimiento.",
@@ -6656,7 +6737,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = "2026-06-26";
+const TODAY_ISO = "2026-06-29";
 
 const UI_STRINGS = {
     home_label: 'Home',
