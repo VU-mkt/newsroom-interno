@@ -1303,11 +1303,45 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-06-28",
-  "publishedAt": "2026-06-29T13:30:00.000Z",
+  "date": "2026-06-29",
+  "publishedAt": "2026-06-30T13:30:00.000Z",
   "regulationLastRun": "2026-06-29",
   "sections": {
     "global": [
+      {
+        "id": "microsoft-119-edge-stegoad-robo-credenciales-jun29",
+        "title": "Microsoft purga 119 extensiones de Edge que robaban credenciales ocultando malware en imágenes",
+        "summary": "Microsoft removió 119 extensiones del Edge Add-ons store vinculadas a la campaña StegoAd, que escondía su payload mediante esteganografía en archivos de imagen y fuentes para robar credenciales y ejecutar fraude publicitario. Las extensiones —bloqueadores de ads, VPNs, traductores, descargadores de video— acumulaban hasta 2,6 millones de instalaciones y permanecieron activas desde al menos 2021; el malware robaba credenciales de Google y códigos de segundo factor al iniciar sesión, logins de WordPress y cookies de sesión en masa para secuestro de cuentas. Microsoft suspendió las 90+ cuentas de desarrollador asociadas.",
+        "sourceUrl": "https://thehackernews.com/2026/06/microsoft-removes-119-edge-extensions.html",
+        "sourceName": "The Hacker News",
+        "date": "2026-06-29",
+        "language": "en",
+        "highRelevance": true,
+        "section": "global",
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "dato-clave",
+          "text": "El robo de credenciales y la captura de códigos de segundo factor vía extensiones de navegador erosiona la confianza en el 2FA basado en SMS/OTP y en el factor 'algo que sé'. El vector de session-hijacking por cookies refuerza la tendencia del mercado hacia autenticación resistente a phishing y a evaluación de riesgo continua post-login."
+        }
+      },
+      {
+        "id": "synthetic-identity-injection-attacks-rethink-biometria-jun29",
+        "title": "Identidades sintéticas e inyección de video fuerzan a repensar la verificación biométrica",
+        "summary": "Un análisis de Biometric Update advierte que la biometría tradicional valida el rostro pero no puede determinar si la identidad detrás era genuina antes del enrolamiento, dejando expuesto el onboarding ante identidades sintéticas y ataques de inyección. Gartner proyecta que para 2028 una de cada cuatro postulaciones de identidad a nivel mundial podría ser falsa, y el mercado migra hacia detección de inyección (IAD), análisis de deepfakes y aseguramiento continuo durante la sesión en lugar de autenticación de punto único.",
+        "sourceUrl": "https://www.biometricupdate.com/202606/new-spying-threats-force-rethink-of-biometric-identity-checks",
+        "sourceName": "Biometric Update",
+        "date": "2026-06-29",
+        "language": "en",
+        "highRelevance": true,
+        "section": "global",
+        "vertical": "cross",
+        "topic": "biometria",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El foco del mercado de identidad se desplaza del match biométrico puro hacia probar la legitimidad del enrolamiento inicial: detección de inyección, liveness reforzado y aseguramiento continuo durante toda la sesión. La pregunta competitiva ya no es 'qué tan bueno es el reconocimiento facial' sino 'cómo se prueba que la identidad de origen era real'."
+        }
+      },
       {
         "id": "nigeria-nimc-act-2026-robo-identidad-pki-jun28",
         "title": "Nigeria promulga la NIMC Act 2026 con penas reforzadas contra el robo y suplantación de identidad",
@@ -6737,7 +6771,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = "2026-06-29";
+const TODAY_ISO = "2026-06-30";
 
 const UI_STRINGS = {
     home_label: 'Home',
