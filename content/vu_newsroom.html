@@ -1303,11 +1303,45 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-06-29",
-  "publishedAt": "2026-06-30T13:30:00.000Z",
+  "date": "2026-06-30",
+  "publishedAt": "2026-07-01T13:31:20.790Z",
   "regulationLastRun": "2026-06-29",
   "sections": {
     "global": [
+      {
+        "id": "aflac-japan-brecha-438m-datos-identidad-seguros-jun30",
+        "title": "Aflac Japón sufre una brecha que expone datos de identidad de 4,38 millones de clientes y agentes",
+        "summary": "Aflac Life Insurance Japan reveló el 30 de junio que un tercero accedió sin autorización a su portal de asegurados entre el 15 y el 25 de junio, comprometiendo nombres, direcciones, teléfonos, fechas de nacimiento, género, información de seguridad y datos de cuentas de seguros de 4,38 millones de personas. Cerca de 230.000 individuos también tuvieron expuestos datos de cuentas para transferencia de primas; la aseguradora afirma que no se accedió a información de tarjetas de crédito y que la operación en EE.UU. no se vio afectada.",
+        "sourceUrl": "https://www.securityweek.com/aflac-japan-data-breach-impacts-4-38-million/",
+        "sourceName": "SecurityWeek",
+        "date": "2026-06-30",
+        "language": "en",
+        "highRelevance": true,
+        "section": "global",
+        "vertical": "fintech",
+        "topic": "breach",
+        "actionable": {
+          "type": "tendencia",
+          "text": "Las aseguradoras se consolidan como blanco de alto valor: la exposición combinada de datos de identidad y de cuentas para débito de primas de más de 4 millones de personas alimenta directamente el fraude de suplantación y el account takeover, un patrón que presiona a las aseguradoras de LATAM a reforzar verificación de identidad y controles en sus portales de autogestión."
+        }
+      },
+      {
+        "id": "nissan-shinyhunters-oracle-peoplesoft-empleados-latam-jun29",
+        "title": "Brecha en Nissan expone datos de identidad y bancarios de empleados en México y Brasil vía zero-day de Oracle PeopleSoft",
+        "summary": "Nissan confirmó el 29 de junio que atacantes accedieron a información de empleados actuales y ex empleados en Estados Unidos, Canadá, México y Brasil, incluyendo números de identificación nacional, datos bancarios, información fiscal y de beneficiarios. El incidente se atribuye al grupo ShinyHunters, que explotó el zero-day CVE-2026-35273 en Oracle PeopleSoft y afirma haber comprometido cerca de 300 instancias en más de 100 organizaciones globales. Nissan no precisó aún el número de afectados; la investigación sigue en curso.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/nissan-discloses-employee-data-breach-linked-to-oracle-zero-day-attacks/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-06-29",
+        "language": "en",
+        "highRelevance": true,
+        "section": "global",
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "Una misma campaña de explotación de un zero-day en un ERP corporativo (Oracle PeopleSoft) derrama datos de identidad de empleados en cuatro países, incluidos México y Brasil, y ya suma más de 100 organizaciones afectadas —entre ellas el regulador de seguros de EE.UU. NAIC—, lo que abre la puerta a robo de identidad y fraude dirigido contra el personal de multinacionales con operación en LATAM."
+        }
+      },
       {
         "id": "microsoft-119-edge-stegoad-robo-credenciales-jun29",
         "title": "Microsoft purga 119 extensiones de Edge que robaban credenciales ocultando malware en imágenes",
@@ -6771,7 +6805,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = "2026-06-30";
+const TODAY_ISO = '2026-07-01';
 
 const UI_STRINGS = {
     home_label: 'Home',
