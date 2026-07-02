@@ -1303,11 +1303,27 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-06-30",
-  "publishedAt": "2026-07-01T13:31:20.790Z",
+  "date": "2026-07-01",
+  "publishedAt": "2026-07-02T13:32:29.964Z",
   "regulationLastRun": "2026-06-29",
   "sections": {
     "global": [
+      {
+        "id": "azure-cli-password-spray-81m-attempts",
+        "title": "Password spray masivo contra Azure CLI compromete 78 cuentas empresariales pese a MFA",
+        "summary": "Un ataque automatizado de password spray contra la interfaz de línea de comandos de Azure realizó más de 81 millones de intentos de login entre el 12 y 26 de junio y comprometió al menos 78 cuentas en 64 organizaciones. El actor abusó del flujo OAuth obsoleto ROPC para eludir políticas de Acceso Condicional, afectando incluso a empresas con MFA habilitado pero mal configurado. La toma de control de identidades corporativas habilita fraude, movimiento lateral y robo de datos.",
+        "sourceUrl": "https://thehackernews.com/2026/07/azure-cli-password-spray-hits-at-least.html",
+        "sourceName": "The Hacker News",
+        "date": "2026-07-01",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "tecnología",
+        "topic": "account-takeover",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El ataque muestra que MFA sin políticas de Acceso Condicional bien configuradas deja una puerta abierta vía flujos OAuth legacy como ROPC. La protección de identidad corporativa se está desplazando de 'tener MFA' a 'cerrar los vectores de autenticación heredados' que el atacante explota a escala."
+        }
+      },
       {
         "id": "aflac-japan-brecha-438m-datos-identidad-seguros-jun30",
         "title": "Aflac Japón sufre una brecha que expone datos de identidad de 4,38 millones de clientes y agentes",
@@ -4284,6 +4300,18 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "ar-fraude-digital-ofertas-cuotas-2026",
+          "title": "Ola de fraude digital en Argentina aprovecha el boom de ofertas y cuotas para robar datos bancarios",
+          "summary": "Medios argentinos alertan sobre una ola de fraude que suplanta a grandes retailers y plataformas de pago mediante correos con falsos descuentos o avisos de transacciones no autorizadas, apuntando a datos de tarjeta y cuentas bancarias. El país registró más de 5.700 millones de ataques informáticos en 2025, y los estafadores usan promociones con tiempo límite para presionar a la víctima a entregar información financiera sensible.",
+          "sourceUrl": "https://www.ellitoral.com.ar/sociedad/2026-7-1-16-28-0-como-evitar-fraudes-digitales-tras-el-boom-de-ofertas-y-cuotas-en-la-region",
+          "sourceName": "El Litoral",
+          "date": "2026-07-01",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "retail",
+          "topic": "phishing"
+        },
+        {
           "id": "infobae-atm-skimmer-clonacion-tarjeta-jun11",
           "title": "Chip en cajeros: así clonan tarjetas de débito con dispositivos indetectables a simple vista",
           "summary": "Infobae documenta la técnica de skimming avanzado con chips instalados en la ranura de cajeros automáticos, combinado con teclados superpuestos o cámaras ocultas para capturar el PIN. La especialista María Aperador demostró que los dispositivos son invisibles sin inspección táctil. La modalidad muestra prevalencia creciente en Argentina y la región.",
@@ -4647,6 +4675,18 @@ const briefing = {
         }
       ],
       "mexico": [
+        {
+          "id": "bbva-mx-alerta-fraude-urgencia-2026",
+          "title": "BBVA México alerta por fraude de ingeniería social que fuerza decisiones bajo presión",
+          "summary": "BBVA México difundió una alerta sobre una modalidad de fraude que genera urgencia artificial mediante llamadas, mensajes y avisos inesperados —cargos no reconocidos, bloqueos de cuenta, validaciones urgentes— para que la víctima actúe sin verificar. El banco advierte que una decisión tomada bajo presión puede abrir la puerta al fraude en minutos, ya que la víctima entrega voluntariamente datos, claves o autoriza operaciones creyendo que se protege.",
+          "sourceUrl": "https://www.cronista.com/mexico/actualidad-mx/bbva-alerta-por-nueva-modalidad-de-fraude-el-error-de-segundos-que-podria-dejarte-sin-dinero-en-tu-cuenta/",
+          "sourceName": "El Cronista México",
+          "date": "2026-07-01",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "banca",
+          "topic": "ingenieria-social"
+        },
         {
           "id": "mexico-pdi-cripto-tres-identidades-jun17",
           "title": "Gerentes falsos, celebridades y 'enamorados' virtuales: la PDI de CDMX detalla las tres identidades del fraude cripto con robo de identidad",
@@ -5444,6 +5484,38 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "incode-identiq-adquisicion-fraude-privado",
+        "title": "Incode adquiere Identiq para montar una red antifraude peer-to-peer que preserva la privacidad",
+        "summary": "Incode adquirió a la israelí Identiq como parte de un compromiso de USD 100 millones en infraestructura de identidad que preserva la privacidad, sumando tecnología criptográfica que permite a las instituciones compartir señales de fraude sin exponer datos sensibles de clientes ni crear repositorios centrales. Identiq había levantado más de USD 50 millones para su tecnología de validación peer-to-peer. Incode reporta que el fraude agéntico (asistido por IA) pasó del 3% de los intentos en 2024 al 40% en el primer trimestre de 2026.",
+        "sourceUrl": "https://identityweek.net/incode-acquires-identiq-in-100m-fraud-prevention-push/",
+        "sourceName": "Identity Week",
+        "date": "2026-06-29",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Incode",
+        "topic": "rezagada",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Incode encadena adquisiciones (tras AuthenticID) sumando validación criptográfica peer-to-peer de Identiq, posicionándose en el eje privacidad-más-antifraude colaborativo y citando el salto del fraude agéntico del 3% al 40% de los intentos como tesis de mercado."
+        }
+      },
+      {
+        "id": "experian-identity-connect-uk-idv",
+        "title": "Experian lanza Identity Connect, plataforma de verificación de identidad single-API para el mercado británico",
+        "summary": "Experian lanzó Identity Connect, una plataforma de verificación de identidad de API única que combina captura y validación documental, selfie con liveness, datos del buró de Experian, screening PEP y de mortalidad, y consultas a la base antifraude National Hunter. Apunta a bancos retail, fintechs y operadores de gaming en Reino Unido para prevenir robo de identidad y fraude sintético, alineada con el Good Practice Guide 45 y el Digital Verification Services Trust Framework. Experian cita un informe gubernamental de mayo de 2025 según el cual el 44% de los residentes británicos ya verificaron su identidad digitalmente.",
+        "sourceUrl": "https://idtechwire.com/experian-launches-identity-connect-for-uk-digital-verification/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-07-01",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Experian",
+        "topic": "identidad-digital",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Experian consolida verificación documental, liveness, buró crediticio y bases antifraude en una sola API orquestada para el mercado regulado británico, empaquetando IDV y prevención de fraude sintético en un único punto de integración alineado a los frameworks de identidad digital del Reino Unido."
+        }
+      },
       {
         "id": "kpmg-banking-ai-biometrics-survey-jun25",
         "title": "Encuesta KPMG: 72% de los bancos planean integrar biometría con IA en tres años",
@@ -6805,7 +6877,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-01';
+const TODAY_ISO = '2026-07-02';
 
 const UI_STRINGS = {
     home_label: 'Home',
