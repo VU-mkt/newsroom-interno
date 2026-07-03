@@ -1303,8 +1303,8 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-01",
-  "publishedAt": "2026-07-02T13:32:29.964Z",
+  "date": "2026-07-02",
+  "publishedAt": "2026-07-03T13:31:54.234Z",
   "regulationLastRun": "2026-06-29",
   "sections": {
     "global": [
@@ -4625,6 +4625,24 @@ const briefing = {
       ],
       "brasil": [
         {
+          "id": "unico-injection-attacks-45-8pct-fraude-latam-jul1",
+          "title": "Reporte de Unico: los ataques de inyección ya dominan el fraude de verificación de identidad remota",
+          "summary": "El proveedor de identidad brasileño Unico publicó su informe 'Identity Fraud Intelligence: Trends & Insights' (datos de junio 2025 a abril 2026, +3.000 millones de verificaciones procesadas). Los ataques de inyección digital simple representan el 45,8% del fraude clasificado, por encima de los ataques de presentación física (30,9%), y los casos mensuales de inyección crecieron cerca de 9x en el período. El costo de un ataque sofisticado cayó más de 100x frente a años previos, y una sola entidad evaluadora quedó vinculada a 949 documentos de identidad distintos.",
+          "sourceUrl": "https://idtechwire.com/unico-network-data-shows-injection-attacks-now-dominate-classified-fraud-report/",
+          "sourceName": "ID Tech Wire",
+          "date": "2026-07-01",
+          "language": "en",
+          "highRelevance": true,
+          "section": "latam",
+          "country": "brasil",
+          "vertical": "cross",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El vector de fraude en onboarding remoto migró de ataques de presentación física a inyección digital de video sintético directo en el pipeline de API, que ya concentra casi la mitad de los casos clasificados en la red LATAM de Unico. El colapso del costo por ataque sofisticado (100x más barato) baja la barrera de entrada para fraude a escala industrial."
+          }
+        },
+        {
           "id": "brazil-anpd-age-verification-consultation-jun01",
           "actionable": {
             "type": "señal-regulatoria",
@@ -4675,6 +4693,24 @@ const briefing = {
         }
       ],
       "mexico": [
+        {
+          "id": "mexico-ine-fraude-creditos-digitales-condusef-jul1",
+          "title": "México: crece el robo de identidad con credencial del INE para abrir créditos digitales",
+          "summary": "Autoridades de Ciudad de México (PDI y Unidad de Cibercrimen de la SSC) alertaron sobre un método en el que los estafadores fotografían o fotocopian la credencial del INE, editan la imagen con otro rostro y abren créditos digitales a nombre de la víctima en plataformas fintech que no exigen presencia física. CONDUSEF registró más de 47.000 quejas por productos financieros digitales no reconocidos en los primeros cinco meses de 2026, con un monto promedio de fraude de 4.200 pesos por víctima; la SSC acumuló cerca de 9.000 denuncias de delitos digitales en el mismo período.",
+          "sourceUrl": "https://www.infobae.com/mexico/2026/07/01/como-identificarla-y-proteger-tus-datos-personales-del-fraude-con-ine/",
+          "sourceName": "Infobae",
+          "date": "2026-07-01",
+          "language": "es",
+          "highRelevance": true,
+          "section": "latam",
+          "country": "mexico",
+          "vertical": "fintech",
+          "topic": "fraude",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "El punto débil está en el onboarding de crédito digital sin verificación de vida ni cotejo de rostro contra el documento: basta una foto de la credencial editada para originar un préstamo fraudulento. Las 47.000 quejas ante CONDUSEF en cinco meses marcan un volumen sostenido de fraude de nueva cuenta en el sistema financiero mexicano."
+          }
+        },
         {
           "id": "bbva-mx-alerta-fraude-urgencia-2026",
           "title": "BBVA México alerta por fraude de ingeniería social que fuerza decisiones bajo presión",
@@ -5484,6 +5520,23 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "authid-microsoft-entra-verified-id-partner",
+        "title": "authID se certifica como partner del ecosistema Microsoft Entra Verified ID para verificación biométrica facial",
+        "summary": "authID fue certificada como partner de verificación de identidad dentro del ecosistema Microsoft Entra Verified ID, permitiendo integrar su pipeline biométrico facial directamente en flujos de Conditional Access y credenciales de Entra sin desarrollo custom. La compañía afirma verificación en menos de un segundo, sin almacenar datos biométricos y con detección de vida (liveness); el go-to-market se canaliza vía MajorKey Technologies con su oferta IDProof+. authID enmarcó el movimiento contra el fraude de identidad, citando datos de la FTC de pérdidas por estafas laborales que pasaron de US$90M (2020) a más de US$501M (2024) y una proyección de Gartner de que 1 de cada 4 perfiles de candidatos podría ser fraudulento hacia 2028.",
+        "sourceUrl": "https://idtechwire.com/authid-joins-microsoft-entra-verified-id-partner-ecosystem/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-07-02",
+        "language": "es",
+        "highRelevance": true,
+        "section": "competencia",
+        "competitor": "Microsoft",
+        "topic": "biometria",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Microsoft continúa expandiendo el ecosistema de partners biométricos alrededor de Entra Verified ID (authID se suma a Idemia PS y MajorKey ya anunciados), consolidando su plataforma de identidad decentralizada como capa por defecto para verificación de personas en entornos Zero Trust empresariales. El patrón muestra a los hyperscalers orquestando verificación de identidad de terceros dentro de su stack en lugar de construirla in-house."
+        }
+      },
       {
         "id": "incode-identiq-adquisicion-fraude-privado",
         "title": "Incode adquiere Identiq para montar una red antifraude peer-to-peer que preserva la privacidad",
@@ -6877,7 +6930,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-02';
+const TODAY_ISO = '2026-07-03';
 
 const UI_STRINGS = {
     home_label: 'Home',
