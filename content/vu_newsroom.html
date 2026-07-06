@@ -1303,9 +1303,9 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-02",
-  "publishedAt": "2026-07-03T13:31:54.234Z",
-  "regulationLastRun": "2026-06-29",
+  "date": "2026-07-05",
+  "publishedAt": "2026-07-06T13:37:26.415Z",
+  "regulationLastRun": "2026-07-06",
   "sections": {
     "global": [
       {
@@ -5094,6 +5094,22 @@ const briefing = {
       ],
       "panama": [
         {
+          "id": "panama-filtracion-proveedor-estatal-tocumen",
+          "title": "Panamá investiga filtración de datos de cuatro entidades estatales vinculada a proveedor externo",
+          "summary": "La Autoridad de Innovación Gubernamental (AIG) de Panamá confirmó que documentos de Tocumen S.A., la Autoridad de Pasaportes, la Universidad Marítima Internacional y la Autoridad de Recursos Acuáticos circularon en BreachForums, provenientes de una brecha de terceros ocurrida en un proveedor del Estado que almacenaba en sus propios servidores información pública sobre compras. Tocumen calificó los reportes de \"falsos\" y afirmó que sus sistemas mantienen integridad operativa, mientras la AIG continúa la investigación.",
+          "sourceUrl": "https://www.prensa.com/economia/alertan-sobre-presunta-filtracion-de-documentos-de-entidades-publicas-debido-a-ciberataque/",
+          "sourceName": "La Prensa (Panamá)",
+          "date": "2026-07-05",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "gobierno",
+          "topic": "brecha de datos / proveedor externo",
+          "actionable": {
+            "type": "brecha",
+            "text": "Cuarta filtración de datos de entidades públicas panameñas reportada en 2026, con el patrón recurrente de brechas originadas en proveedores/terceros con contratos de compras estatales — la Autoridad de Innovación Gubernamental panameña reconoció un incremento de hasta 500% en incidentes desde 2025, situando a Panamá como foco regional de riesgo de identidad y datos gubernamentales expuestos en BreachForums."
+          }
+        },
+        {
           "id": "panama-ley-524-penas-fraude-may27",
           "title": "Panamá: Ley 524 aumenta penas por fraude digital e identidad; denuncias crecieron 578% desde 2019",
           "summary": "Panamá promulgó la Ley 524 que reforma el Código Penal: el delito base pasa a 3-6 años de prisión, con agravantes por fraude cibernético, usurpación de identidad y daño patrimonial entre US$50.000 y US$100.000; los casos graves alcanzan 7-12 años. El impulso legislativo responde a que los expedientes judicializados crecieron 578,3% entre 2019 y 2024, con 26.670 denuncias acumuladas y 5.241 solo en 2024.",
@@ -5354,6 +5370,77 @@ const briefing = {
     },
     "regulation": [
       {
+        "id": "peru-sbs-notificacion-incidentes-24h",
+        "title": "Perú: SBS obliga a notificar incidentes de ciberseguridad y fraude a clientes en 24 horas",
+        "summary": "La Resolución SBS N° 01741-2026, publicada en El Peruano a comienzos de julio de 2026, exige que las entidades financieras notifiquen a los clientes dentro de 24 horas sobre incidentes de ciberseguridad con impacto en ellos, y en un máximo de 10 días hábiles el detalle de lo ocurrido en casos con pérdidas de saldo o crédito. Prohíbe depender exclusivamente de asistentes virtuales para estos casos. La mayoría de las disposiciones entran en vigor 360 días después de la publicación.",
+        "sourceUrl": "https://larepublica.pe/economia/2026/07/02/sbs-dispone-nuevas-obligaciones-para-entidades-financieras-deberan-alertar-a-tiempo-sobre-incidentes-que-afecten-a-los-clientes-hnews-155388",
+        "sourceName": "La República Perú / El Peruano",
+        "date": "2026-07-02",
+        "language": "es",
+        "highRelevance": false,
+        "regulatoryBody": "Superintendencia de Banca, Seguros y AFP (SBS)"
+      },
+      {
+        "id": "mexico-cnbv-biometria-facial-vigencia",
+        "title": "México: biometría facial obligatoria en la banca entra en vigor",
+        "summary": "La resolución de la CNBV que modifica la Circular Única de Bancos, publicada en el DOF el 12 de junio, entró en vigor el 2 de julio de 2026 y hace obligatoria la biometría facial junto con la huella digital para depósitos/retiros superiores a $140,000 MXN, apertura de cuentas y créditos. Exige un mínimo de 90% de coincidencia biométrica y prohíbe la venta o transferencia de bases de datos biométricos entre instituciones. Los bancos tienen 90 días hábiles para adaptar sus sistemas.",
+        "sourceUrl": "https://legalario.com/blog/biometria-obligatoria-en-banca-que-operaciones-cambiaran-a-partir-de-julio-2026/",
+        "sourceName": "Legalario / DOF",
+        "date": "2026-07-02",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "Comisión Nacional Bancaria y de Valores (CNBV)",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "Umbral técnico de 90% de coincidencia biométrica fijado como requisito legal en la banca mexicana, con ventana de adecuación de 90 días hábiles para bancos y sofomes sin infraestructura biométrica propia."
+        }
+      },
+      {
+        "id": "chile-cmf-ncg538-vigencia-autenticacion-reforzada",
+        "title": "Chile: entra en vigor la Autenticación Reforzada del Cliente (NCG 538) contra fraude con IA",
+        "summary": "Desde el 1 de julio de 2026 es obligatoria en Chile la Autenticación Reforzada del Cliente bajo la Norma NCG 538 de la CMF, aprobada en julio de 2025. Exige al menos dos factores de autenticación independientes —incluida biometría— para transferencias y operaciones críticas, con foco explícito en contrarrestar fraude potenciado por IA generativa y deepfakes. Aplica a bancos, cooperativas de crédito y emisores de tarjetas.",
+        "sourceUrl": "https://facephi.com/observatory/norma-ncg-538-chile/",
+        "sourceName": "Facephi Observatory / CMF Chile",
+        "date": "2026-07-01",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "Comisión para el Mercado Financiero (CMF)",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "Primera norma bancaria LATAM que nombra explícitamente deepfakes e IA generativa como amenaza regulada, elevando el estándar de biometría de 'presente' a 'resistente a spoofing por IA'."
+        }
+      },
+      {
+        "id": "fatf-roadmap-2026-2028-fraude",
+        "title": "FATF lanza Roadmap 2026-2028 contra el fraude bajo presidencia del Reino Unido",
+        "summary": "El nuevo presidente de FATF, Giles Thomson, lanzó oficialmente el 1 de julio de 2026 el Roadmap 2026-2028 sobre Combate al Fraude, con pérdidas globales estimadas en 500.000 millones de dólares durante 2024-2025 y el fraude como delito precedente en el 90% de las evaluaciones mutuas recientes. El plan corre en tres fases hasta junio de 2028: recolección de datos sobre tipologías de fraude y 'scam compounds', recomendaciones de mejores prácticas, e implementación con un grupo consultivo del sector privado.",
+        "sourceUrl": "https://www.amlintelligence.com/2026/07/fraud-fatf-president-unveils-new-plan-to-tackle-500bn-fraud-epidemic/",
+        "sourceName": "AML Intelligence / FATF-GAFI",
+        "date": "2026-07-01",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "FATF / GAFI",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "Roadmap trienal de FATF pone cifra oficial ($500bn) y mandato formal detrás del fraude como prioridad global; sus recomendaciones de 2027 anticipan futuras circulares locales de bancos centrales y superintendencias en LATAM y España."
+        }
+      },
+      {
+        "id": "eu-digital-omnibus-ai-act-aplazamiento-biometria",
+        "title": "UE: Consejo aprueba el Digital Omnibus del AI Act y aplaza obligaciones de alto riesgo, incluida biometría",
+        "summary": "El 29 de junio de 2026 el Consejo de la UE dio su aprobación final al Digital Omnibus del AI Act, tras el aval del Parlamento Europeo del 16 de junio. El acuerdo aplaza el plazo de cumplimiento para sistemas de alto riesgo del Anexo III —incluida identificación biométrica— del 2 de agosto de 2026 al 2 de diciembre de 2027, mientras introduce de forma inmediata una nueva prohibición sobre aplicaciones 'nudifier' y material de abuso sexual infantil generado por IA.",
+        "sourceUrl": "https://www.hoganlovells.com/en/publications/eu-legislators-agree-to-delay-for-highrisk-ai-rules",
+        "sourceName": "Hogan Lovells",
+        "date": "2026-06-29",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "Consejo de la Unión Europea / Parlamento Europeo",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "Aplazamiento a diciembre de 2027 de las obligaciones de alto riesgo para sistemas biométricos bajo el AI Act, con prohibición inmediata y sin demora de aplicaciones 'nudifier' y CSAM generado por IA."
+        }
+      },
+      {
         "id": "fatf-plenary-vasp-defi-greylist-jun19",
         "title": "FATF aprueba séptima actualización de estándares sobre activos virtuales y VASPs y encarga informe sobre DeFi",
         "summary": "El Plenario de la FATF (París, 17-19 jun 2026), último bajo la presidencia mexicana de Elisa de Anda Madrazo, aprobó la séptima actualización dirigida sobre la implementación de los estándares para activos virtuales (VA) y proveedores de servicios de activos virtuales (VASPs), y encargó un nuevo informe sobre los desafíos regulatorios de las plataformas DeFi por su exposición a lavado de activos y financiamiento del terrorismo. En listas, removió a Argelia y Namibia del monitoreo intensificado (lista gris) y mantuvo en Call for Action a Corea del Norte, Irán y Myanmar; Bolivia y Venezuela continúan bajo monitoreo intensificado. Los informes técnicos se publican en julio 2026.",
@@ -5520,6 +5607,18 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "lexisnexis-promon-alianza-antifraude-apps-moviles",
+        "title": "LexisNexis Risk Solutions y Promon se asocian para combatir el fraude creciente en aplicaciones móviles",
+        "summary": "LexisNexis Risk Solutions y Promon anunciaron una alianza que combina ThreatMetrix (inteligencia de identidad digital, dispositivo y comportamiento) con Promon Shield y Promon Insight (protección y telemetría in-app), apuntando a servicios financieros, pagos, seguros, salud y banca digital. El 68% de instituciones financieras incrementó su gasto en detección de fraude, y más de un tercio de retailers y e-commerce reportó pérdidas de ingresos significativas por fraude en el último año.",
+        "sourceUrl": "https://www.pymnts.com/cybersecurity/fraud-prevention/2026/lexisnexis-and-promon-help-brands-fight-rising-mobile-app-fraud",
+        "sourceName": "PYMNTS",
+        "date": "2026-07-03",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "LexisNexis",
+        "topic": "fraude en apps móviles / CIAM"
+      },
       {
         "id": "authid-microsoft-entra-verified-id-partner",
         "title": "authID se certifica como partner del ecosistema Microsoft Entra Verified ID para verificación biométrica facial",
@@ -6930,7 +7029,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-03';
+const TODAY_ISO = '2026-07-06';
 
 const UI_STRINGS = {
     home_label: 'Home',
