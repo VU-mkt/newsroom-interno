@@ -1303,11 +1303,51 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-05",
-  "publishedAt": "2026-07-06T13:37:26.415Z",
+  "date": "2026-07-06",
+  "publishedAt": "2026-07-07T13:30:00.000Z",
   "regulationLastRun": "2026-07-06",
   "sections": {
     "global": [
+      {
+        "id": "global-pymnts-credit-unions-20260706",
+        "title": "Cooperativas de crédito en EE.UU. enfrentan accesos no autorizados generalizados a su red",
+        "summary": "Un reporte de PYMNTS Intelligence revela que el 77% de las cooperativas de crédito relevadas sufrió accesos no autorizados a su red en el último año, mientras que el 82% de los socios prioriza la seguridad al elegir método de pago. El estudio señala que los sistemas fragmentados siguen siendo el principal obstáculo para detectar ataques coordinados que se extienden desde la apertura de cuenta hasta la autenticación y el pago.",
+        "sourceUrl": "https://www.pymnts.com/credit-unions/2026/credit-unions-fight-fraud-by-connecting-member-data-faster/",
+        "sourceName": "PYMNTS",
+        "date": "2026-07-06",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "banca",
+        "topic": "fraude-digital"
+      },
+      {
+        "id": "global-gta6-fraude-20260706",
+        "title": "Campañas globales de fraude y phishing explotan la expectativa por el lanzamiento de GTA VI",
+        "summary": "Las firmas de ciberseguridad Gen Digital y NordVPN documentaron campañas de fraude a escala global que explotan la ansiedad por el lanzamiento de Grand Theft Auto VI, con tiendas falsas que ofrecen pre-reservas con descuento y códigos de acceso beta falsos para robar credenciales y datos financieros de jugadores. Los esquemas incluyen herramientas automatizadas que envían millones de mensajes privados en Discord y otras redes, además de apps móviles falsas y tarjetas de regalo falsificadas para PlayStation y Xbox.",
+        "sourceUrl": "https://www.infobae.com/tecno/2026/07/06/gta-6-en-la-mira-de-hackers-acceso-anticipado-pre-reserva-lanzamiento-y-mas-enganos/",
+        "sourceName": "Infobae",
+        "date": "2026-07-06",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "retail",
+        "topic": "fraude-digital"
+      },
+      {
+        "id": "global-fraude-biometria-banca-20260706",
+        "title": "Escalada global de fraude impulsa nueva ola de verificación biométrica continua en banca",
+        "summary": "Un reporte de Liminal y Unico advierte que el fraude de identidad impulsado por IA se acelera globalmente: una institución financiera registró 8.065 intentos de deepfake en ocho meses, vinculados a 347 millones de dólares en pérdidas verificadas. El fraude de identidad sintética ya representa el 11% de los casos globales de fraude (un aumento de ocho veces interanual), y LATAM concentra el 48,3% de los casos de identidad sintética a nivel mundial, mientras las pérdidas en EE.UU. alcanzaron 15.600 millones de dólares en 2024.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/global-fraud-escalation-drives-new-wave-of-biometric-and-continuous-verification-in-banking",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-06",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "banca",
+        "topic": "identidad-digital",
+        "actionable": {
+          "type": "dato-clave",
+          "text": "LATAM concentra el 48,3% de los casos globales de fraude de identidad sintética según Liminal y Unico, posicionando a la región como epicentro del problema que resuelve la verificación biométrica continua."
+        }
+      },
       {
         "id": "azure-cli-password-spray-81m-attempts",
         "title": "Password spray masivo contra Azure CLI compromete 78 cuentas empresariales pese a MFA",
@@ -4625,6 +4665,18 @@ const briefing = {
       ],
       "brasil": [
         {
+          "id": "br-golpes-telefonicos-rio-20260706",
+          "title": "Río de Janeiro registró más de 52 millones de intentos de estafa telefónica en 12 meses",
+          "summary": "Según datos de la operadora DMA, Río de Janeiro sufrió más de 52 millones de intentos de golpe telefónico en un año, con un pico de 181 intentos por minuto en mayo de 2026, ubicándose segundo a nivel nacional detrás de San Pablo (108,9 millones). El 35,3% de los casos correspondió a cobros indebidos suplantando organismos públicos y un 6,5% a estafas de \"prueba de vida\", ambos por encima del promedio nacional brasileño.",
+          "sourceUrl": "https://convergenciadigital.com.br/seguranca/rio-de-janeiro-registra-mais-de-52-milhoes-tentativas-golpes-telefonicos/",
+          "sourceName": "ConvergênciaDigital",
+          "date": "2026-07-06",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "telco",
+          "topic": "fraude-digital"
+        },
+        {
           "id": "unico-injection-attacks-45-8pct-fraude-latam-jul1",
           "title": "Reporte de Unico: los ataques de inyección ya dominan el fraude de verificación de identidad remota",
           "summary": "El proveedor de identidad brasileño Unico publicó su informe 'Identity Fraud Intelligence: Trends & Insights' (datos de junio 2025 a abril 2026, +3.000 millones de verificaciones procesadas). Los ataques de inyección digital simple representan el 45,8% del fraude clasificado, por encima de los ataques de presentación física (30,9%), y los casos mensuales de inyección crecieron cerca de 9x en el período. El costo de un ataque sofisticado cayó más de 100x frente a años previos, y una sola entidad evaluadora quedó vinculada a 949 documentos de identidad distintos.",
@@ -4693,6 +4745,22 @@ const briefing = {
         }
       ],
       "mexico": [
+        {
+          "id": "mx-cibercrimen-suscripciones-tarjetas-20260706",
+          "title": "El cibercrimen en México opera con modelo de suscripción: 10.000 tarjetas robadas por 1.000 dólares al mes",
+          "summary": "Organizaciones criminales venden acceso a datos robados bajo modelos de suscripción con garantías de calidad, similares a un servicio SaaS: un lote de 10.000 tarjetas de crédito robadas con 25% de garantía cuesta 1.000 dólares mensuales. México es el segundo país más atacado a nivel global, con 83,3% de las organizaciones reportando incidentes (vs. 70,9% del promedio mundial), y las pérdidas por fraude digital ya superan los 1.067 millones de dólares en el país.",
+          "sourceUrl": "https://expansion.mx/tecnologia/2026/07/06/tarjetas-credito-venta-planes-suscripcion-cibercrimen",
+          "sourceName": "Expansión",
+          "date": "2026-07-06",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude-digital",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El cibercrimen-as-a-service con suscripciones y garantías de reembolso profesionaliza el fraude con tarjetas, elevando el volumen y la previsibilidad de los ataques contra emisores y comercios mexicanos."
+          }
+        },
         {
           "id": "mexico-ine-fraude-creditos-digitales-condusef-jul1",
           "title": "México: crece el robo de identidad con credencial del INE para abrir créditos digitales",
@@ -4939,6 +5007,34 @@ const briefing = {
       ],
       "colombia": [
         {
+          "id": "co-simswapping-bogota-20260706",
+          "title": "Content creator expone caso de SIM swapping que vació cuenta bancaria en Bogotá en 20 minutos",
+          "summary": "El creador de contenido Juan Valencia documentó un caso de SIM swapping en Bogotá donde un comerciante vio su celular quedar \"solo con llamadas de emergencia\" y, al reconectarse por WiFi, encontró su cuenta vaciada en doce millones de pesos. El esquema parte de datos filtrados en internet, con los que los delincuentes se hacen pasar por la víctima ante la operadora para trasladar su línea a un chip controlado por ellos e interceptar los códigos SMS de recuperación bancaria.",
+          "sourceUrl": "https://www.infobae.com/colombia/2026/07/06/creador-de-contenido-revelo-nueva-modalidad-de-estafa-estan-robando-el-dinero-de-tu-cuenta-usando-tu-senal-del-celular/",
+          "sourceName": "Infobae Colombia",
+          "date": "2026-07-06",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "telco",
+          "topic": "fraude-digital"
+        },
+        {
+          "id": "co-fraude-agencias-viajes-falsas-20260706",
+          "title": "Fiscalía de Colombia desarticula banda de falsas agencias de viajes que defraudó a más de 1.000 víctimas",
+          "summary": "La Fiscalía General de Colombia destapó una organización que operaba agencias de viajes falsas en Medellín, La Ceja y Manizales, dirigida a adultos mayores y personas con limitaciones cognitivas. Bajo la excusa de \"beneficios especiales\", los estafadores obtenían documentos de identidad, tarjetas bancarias y celulares de las víctimas para abrir productos financieros a su nombre. La red sustrajo cerca de 14.000 millones de pesos colombianos en más de 1.000 casos antes de ser desarticulada con 15 allanamientos.",
+          "sourceUrl": "https://www.eltiempo.com/justicia/investigacion/fiscalia-destapa-banda-que-estafaba-con-falsas-agencias-de-viajes-mas-de-1-000-victimas-y-14-000-millones-en-perdidas-3569315",
+          "sourceName": "El Tiempo",
+          "date": "2026-07-06",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude-digital",
+          "actionable": {
+            "type": "brecha",
+            "text": "El caso muestra que el robo de identidad físico (documentos, tarjetas, celulares capturados en persona) sigue siendo puerta de entrada para fraude bancario organizado a gran escala en LATAM, sin necesidad de una brecha técnica previa."
+          }
+        },
+        {
           "id": "colombia-10t-ciberataques-cedulas-jun21",
           "title": "Colombia acumula 10 billones de intentos de ciberataque y el 42% de los datos filtrados son cédulas y teléfonos",
           "summary": "Un informe difundido el 21 de junio revela que Colombia sufrió más de 10 billones de intentos de ciberataque en el último año, concentrando el 8% de los incidentes exitosos de LATAM. El 42% de los datos filtrados corresponde a información de identidad (cédulas y teléfonos) y el 18% a datos financieros, con un costo promedio por brecha de 14.000 millones de pesos. Entre las entidades afectadas figuran el Ministerio de Salud, la Universidad de Antioquia y la BPO Emergia.",
@@ -5093,6 +5189,22 @@ const briefing = {
         }
       ],
       "panama": [
+        {
+          "id": "pa-filtracion-instituciones-publicas-20260705",
+          "title": "Nuevo ciberataque expone documentos de múltiples instituciones públicas de Panamá",
+          "summary": "Un actor malicioso puso en venta o divulgó una colección de documentos vinculados a varias entidades del Estado panameño (órdenes de compra, datos de proveedores, facturas, actas), reportado a la 1:41 p.m. del 5 de julio. La AIG (Autoridad para la Innovación Gubernamental) vinculó preliminarmente la filtración a una brecha de terceros ocurrida en un proveedor estatal en 2024, y descartó afectación a su infraestructura central. Es el quinto incidente de alto impacto contra infraestructura estatal panameña reportado en lo que va de 2026, tras ataques previos a la CSS, MINSA, MEF y Panamá Emprende.",
+          "sourceUrl": "https://www.prensa.com/sociedad/datos-expuestos-millones-en-riesgo-la-crisis-digital-que-enfrenta-el-gobierno-panameno/",
+          "sourceName": "La Prensa (Panamá)",
+          "date": "2026-07-05",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "gobierno",
+          "topic": "ciberseguridad",
+          "actionable": {
+            "type": "brecha",
+            "text": "Es el quinto incidente de alto impacto contra infraestructura estatal panameña en lo que va de 2026, señal de exposición sistémica vía proveedores terceros del gobierno más que de una falla puntual y aislada."
+          }
+        },
         {
           "id": "panama-filtracion-proveedor-estatal-tocumen",
           "title": "Panamá investiga filtración de datos de cuatro entidades estatales vinculada a proveedor externo",
@@ -5607,6 +5719,53 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "comp-2026-07-06-innovatrics-airbank-pairing",
+        "title": "Innovatrics despliega verificación facial en Air Bank (Chequia) para vinculación de app bajo PSD2",
+        "summary": "Innovatrics implementó su tecnología de verificación facial en el banco checo Air Bank para el proceso de vinculación (pairing) de la app móvil, combinando códigos SMS de un solo uso con verificación facial en el dispositivo. La solución cumple los requisitos de autenticación fuerte del cliente (SCA) de PSD2 y permite completar todo el proceso desde el teléfono del usuario.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/global-fraud-escalation-drives-new-wave-of-biometric-and-continuous-verification-in-banking",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-06",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "Innovatrics",
+        "vertical": "banca digital, Europa",
+        "topic": "biometria"
+      },
+      {
+        "id": "comp-2026-07-06-unico-liminal-fraude-red",
+        "title": "Unico coautora con Liminal un informe que expone una red de fraude de identidad con 949 documentos vinculados a un mismo actor",
+        "summary": "Unico participó junto a la firma de research Liminal en un informe sobre la escalada del fraude de identidad impulsado por IA, que identificó una entidad de fraude única vinculada a 949 documentos de identidad, con los actores principales apuntando a 30 empresas distintas. El informe advierte que los sistemas de verificación en red necesitan mecanismos de corrección robustos para evitar que señalamientos erróneos se propaguen entre instituciones, reforzando el argumento de Unico a favor de la detección colaborativa de fraude en Brasil y la región.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/global-fraud-escalation-drives-new-wave-of-biometric-and-continuous-verification-in-banking",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-06",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Unico",
+        "vertical": "banca, antifraude LATAM",
+        "topic": "antifraude",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "El dato de una red de 949 documentos vinculados a un único actor de fraude, atacando 30 empresas, refuerza el posicionamiento de Unico como referente de inteligencia de fraude coordinado en Brasil, mercado donde VU también compite con soluciones antifraude para banca."
+        }
+      },
+      {
+        "id": "comp-2026-07-06-incode-auth0-facereset",
+        "title": "Incode integra verificación biométrica y reseteo de contraseña por selfie en el marketplace de Auth0",
+        "summary": "Incode lanzó dos integraciones en el marketplace de Auth0 (Okta): Incode ID Verification, que exige documento de identidad y selfie en el primer login, e Incode Face Auth Reset, que reemplaza el reseteo de contraseña tradicional por un escaneo facial comparado 1:1 contra la identidad verificada al momento del alta. La solución ataca el reseteo de contraseña como uno de los puntos más débiles de la seguridad de cuentas, hoy dependiente de acceso a email o códigos que pueden ser comprometidos.",
+        "sourceUrl": "https://idtechwire.com/incode-brings-biometric-verification-and-face-based-resets-to-auth0/",
+        "sourceName": "ID Tech Wire",
+        "date": "2026-07-06",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Incode",
+        "vertical": "IAM/CIAM, banca digital",
+        "topic": "biometria",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Incode se instala como capa biométrica nativa dentro del ecosistema Auth0/Okta para onboarding y recuperación de cuenta, ganando distribución hacia la base empresarial de Auth0 sin que esos clientes integren un proveedor de IDV separado."
+        }
+      },
       {
         "id": "lexisnexis-promon-alianza-antifraude-apps-moviles",
         "title": "LexisNexis Risk Solutions y Promon se asocian para combatir el fraude creciente en aplicaciones móviles",
@@ -7029,7 +7188,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-06';
+const TODAY_ISO = '2026-07-07';
 
 const UI_STRINGS = {
     home_label: 'Home',
