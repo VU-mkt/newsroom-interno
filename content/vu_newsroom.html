@@ -1303,11 +1303,27 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-06",
-  "publishedAt": "2026-07-07T13:30:00.000Z",
+  "date": "2026-07-07",
+  "publishedAt": "2026-07-08T13:37:15.845Z",
   "regulationLastRun": "2026-07-06",
   "sections": {
     "global": [
+      {
+        "id": "global-union-county-ransomware-extorsion-20260707",
+        "title": "Condado de Ohio pagó USD 1 millón de rescate tras filtración de datos de identidad de 45.487 personas",
+        "summary": "Union County, Ohio, pagó USD 1 millón en bitcoin al grupo de extorsión Kairos tras un ataque de fuerza bruta en mayo de 2025 que expuso más de 2 terabytes de datos de 45.487 personas, incluyendo números de Seguro Social, pasaporte, licencia de conducir, cuentas financieras y huellas dactilares. El grupo había exigido inicialmente USD 3 millones, y no existe forma independiente de verificar que los datos robados hayan sido eliminados tras el pago.",
+        "sourceUrl": "https://www.securityweek.com/county-government-reportedly-paid-1-million-to-cyber-extortion-group/",
+        "sourceName": "SecurityWeek",
+        "date": "2026-07-07",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "gobierno",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "El pago de USD 1 millón en extorsión por parte de un condado de Ohio, tras la filtración de datos de identidad de más de 45.000 personas incluyendo huellas dactilares y números de Seguro Social, reabre el debate sobre pagar rescates sin garantía verificable de eliminación de los datos robados."
+        }
+      },
       {
         "id": "global-pymnts-credit-unions-20260706",
         "title": "Cooperativas de crédito en EE.UU. enfrentan accesos no autorizados generalizados a su red",
@@ -5720,6 +5736,21 @@ const briefing = {
     ],
     "competencia": [
       {
+        "id": "equifax-circulo-credito-mexico-20260707",
+        "title": "Equifax adquiere el buró de crédito mexicano Círculo de Crédito por hasta USD 825 millones",
+        "summary": "Equifax firmó un acuerdo definitivo para adquirir el 100% de Círculo de Crédito, buró de crédito mexicano, en una operación con valor de empresa de USD 750 millones y precio de compra de hasta USD 825 millones. Círculo de Crédito factura USD 134 millones anuales (crecimiento interanual de 31%) con EBITDA ajustado de USD 62 millones, y Equifax planea integrar su tecnología EFX.AI y sus capacidades de protección de identidad y prevención de fraude en la operación mexicana, marcando su ingreso al mercado tras ocho años de intentos. El cierre está sujeto a aprobaciones regulatorias y se espera para el cuarto trimestre de 2026.",
+        "sourceUrl": "https://mexicobusiness.news/finance/news/equifax-acquires-circulo-de-credito-expand-mexico",
+        "sourceName": "Mexico Business News",
+        "date": "2026-07-07",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Equifax",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Equifax consolida un bloque de datos de identidad y crédito de un buró líder en México vía la adquisición de Círculo de Crédito, integrando capacidades propias de identidad y prevención de fraude justo en un mercado LATAM estratégico donde compite VU."
+        }
+      },
+      {
         "id": "comp-2026-07-06-innovatrics-airbank-pairing",
         "title": "Innovatrics despliega verificación facial en Air Bank (Chequia) para vinculación de app bajo PSD2",
         "summary": "Innovatrics implementó su tecnología de verificación facial en el banco checo Air Bank para el proceso de vinculación (pairing) de la app móvil, combinando códigos SMS de un solo uso con verificación facial en el dispositivo. La solución cumple los requisitos de autenticación fuerte del cliente (SCA) de PSD2 y permite completar todo el proceso desde el teléfono del usuario.",
@@ -7188,7 +7219,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-07';
+const TODAY_ISO = '2026-07-08';
 
 const UI_STRINGS = {
     home_label: 'Home',
