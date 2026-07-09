@@ -1303,11 +1303,27 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-07",
-  "publishedAt": "2026-07-08T13:37:15.845Z",
+  "date": "2026-07-08",
+  "publishedAt": "2026-07-09T13:35:48.537Z",
   "regulationLastRun": "2026-07-06",
   "sections": {
     "global": [
+      {
+        "id": "global-assuranceamerica-breach-20260708",
+        "title": "Brecha de datos en AssuranceAmerica expone licencias de conducir de 6,9 millones de personas",
+        "summary": "La aseguradora estadounidense AssuranceAmerica confirmó una brecha de datos que expuso información de 6,9 millones de conductores, incluyendo números de licencia de conducir, pólizas de auto y datos de contacto. El acceso no autorizado ocurrió en marzo de 2026 y las notificaciones a los afectados comenzarán a enviarse el 10 de julio.",
+        "sourceUrl": "https://techcrunch.com/2026/07/08/another-massive-data-breach-exposed-millions-of-drivers-license-numbers/",
+        "sourceName": "TechCrunch",
+        "date": "2026-07-08",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "seguros",
+        "topic": "brecha-datos-identidad",
+        "actionable": {
+          "type": "brecha",
+          "text": "La escala de la brecha (6,9 millones de licencias de conducir expuestas) refuerza la tendencia de brechas de terceros que alimentan fraude de identidad sintética y apertura fraudulenta de cuentas en EE.UU., mercado de referencia para benchmarking de soluciones de verificación de identidad en seguros."
+        }
+      },
       {
         "id": "global-union-county-ransomware-extorsion-20260707",
         "title": "Condado de Ohio pagó USD 1 millón de rescate tras filtración de datos de identidad de 45.487 personas",
@@ -4356,6 +4372,22 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "ar-sms-corte-servicio-fraude-20260707",
+          "title": "Nueva modalidad de smishing en Argentina simula cortes de servicio (luz, gas, agua, internet)",
+          "summary": "Infobae alertó sobre una nueva modalidad de fraude en Argentina que utiliza mensajes de texto suplantando a empresas de gas, luz, agua o internet, amenazando con corte de servicio para inducir pagos inmediatos o robo de datos personales. La modalidad se suma a un cuadro donde WhatsApp ya concentra el 31% de los casos de estafa reportados en el país.",
+          "sourceUrl": "https://www.infobae.com/tecno/2026/07/07/mucho-cuidado-si-recibes-este-mensaje-de-texto-sobre-un-supuesto-corte-de-servicio-en-tu-casa-nueva-modalidad-de-fraude/",
+          "sourceName": "Infobae",
+          "date": "2026-07-07",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "telco/utilities",
+          "topic": "smishing-suplantacion-servicios",
+          "actionable": {
+            "type": "tendencia",
+            "text": "La escalada de smishing que suplanta empresas de servicios confirma que el vector dominante de fraude en Argentina sigue siendo la ingeniería social vía SMS/WhatsApp, no el malware — relevante para el posicionamiento de soluciones antifraude conversacional y de verificación de remitente."
+          }
+        },
+        {
           "id": "ar-fraude-digital-ofertas-cuotas-2026",
           "title": "Ola de fraude digital en Argentina aprovecha el boom de ofertas y cuotas para robar datos bancarios",
           "summary": "Medios argentinos alertan sobre una ola de fraude que suplanta a grandes retailers y plataformas de pago mediante correos con falsos descuentos o avisos de transacciones no autorizadas, apuntando a datos de tarjeta y cuentas bancarias. El país registró más de 5.700 millones de ataques informáticos en 2025, y los estafadores usan promociones con tiempo límite para presionar a la víctima a entregar información financiera sensible.",
@@ -5133,6 +5165,22 @@ const briefing = {
       ],
       "peru": [
         {
+          "id": "pe-pdf-qr-fraude-20260707",
+          "title": "ESET detecta en Perú un giro hacia PDFs falsificados y QRishing para eludir controles",
+          "summary": "ESET reportó en Perú un cambio de estrategia de los ciberdelincuentes, que ahora priorizan la ingeniería social sobre el malware automatizado: usan archivos PDF falsificados y códigos QR fraudulentos (QRishing) para inducir a la víctima a activar la descarga o entregar credenciales. Perú ya acumula más de 353.530 detecciones de ciberataques entre enero y mayo de 2026.",
+          "sourceUrl": "https://www.infobae.com/peru/2026/07/07/los-hackers-cambiaron-de-estrategia-en-peru-archivos-pdf-y-codigos-qr-fraudulentos-podrian-vaciar-tus-cuentas-en-segundos/",
+          "sourceName": "Infobae",
+          "date": "2026-07-07",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "banca/general",
+          "topic": "qrishing-ingenieria-social",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El giro hacia PDFs y códigos QR fraudulentos (QRishing) documentado por ESET en Perú muestra que los controles tradicionales de email/malware quedan cortos frente a vectores que delegan la ejecución al propio usuario — ventana de mercado para verificación y detección de fraude en tiempo real."
+          }
+        },
+        {
           "id": "peru-falsas-papeletas-sutran-phishing-jun24",
           "title": "Perú: ola de phishing con falsas papeletas de Sutran roba datos bancarios suplantando al organismo de transporte",
           "summary": "Delincuentes suplantan a la Superintendencia de Transporte Terrestre (Sutran) en Perú mediante correos y mensajes de WhatsApp con logo institucional, colores oficiales e imágenes de la Policía Nacional, simulando notificaciones de multas vehiculares con enlaces de pago, códigos QR y portales falsos. Los montos exigidos por supuestas papeletas llegan a 2.800 soles, capturando datos personales y bancarios de las víctimas en formularios fraudulentos. Sutran identificó 11 casos en 2026, derivó 4 expedientes a la Fiscalía y ya hay una sentencia condenatoria.",
@@ -5335,6 +5383,22 @@ const briefing = {
         }
       ],
       "espana": [
+        {
+          "id": "es-eset-amenazas-digitales-20260708",
+          "title": "España, tercer país del mundo en actividad de ciberamenazas según ESET",
+          "summary": "El último Informe de Amenazas de ESET ubica a España como el tercer país del mundo en actividad de ciberamenazas (7,43% del total global), solo por detrás de Japón y Polonia. El informe destaca un crecimiento del 108% del malware ClickFix y que España representa el 17% del quishing global (phishing vía códigos QR), además del avance del fraude NFC con apps bancarias falsas.",
+          "sourceUrl": "https://www.elespanol.com/invertia/disruptores/politica-digital/espana/20260708/espana-tercer-pais-mundo-amenazas-digitales-ataques-vez-dirigidos-manipular-personas/1003744312748_0.html",
+          "sourceName": "El Español (Invertia)",
+          "date": "2026-07-08",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "ciberseguridad/banca",
+          "topic": "threat-report-quishing-nfc",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El informe de ESET posiciona a España como tercer país en actividad de amenazas digitales, con crecimiento marcado en quishing y fraude NFC bancario — señal de demanda creciente de soluciones de verificación multifactor y detección de manipulación de usuarios en el mercado español."
+          }
+        },
         {
           "id": "espana-operacion-cruce-estrecho-biometria-jun16",
           "title": "España abre la Operación Paso del Estrecho con control biométrico para viajeros extracomunitarios y prevención de fraude documental",
@@ -5735,6 +5799,36 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "comp-2026-07-08-innovatrics-boomid-palm",
+        "title": "Innovatrics y Boom ID integran reconocimiento de palma sin contacto para autorización empresarial",
+        "summary": "El proveedor de biometría Innovatrics se asoció con la plataforma de autenticación Boom ID para integrar reconocimiento de palma sin contacto en flujos de autorización empresarial post-login. La solución conjunta permite a usuarios corporativos autenticar transacciones de alto privilegio o acceso a redes internas restringidas presentando su mano frente a una cámara estándar. Es la segunda alianza de Innovatrics divulgada esta semana (tras el pairing con Airbank).",
+        "sourceUrl": "https://idtechwire.com/id-tech-digest-july-8-2026/",
+        "sourceName": "ID Tech (ID Tech Digest)",
+        "date": "2026-07-08",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "Innovatrics",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "La alianza refuerza la tendencia de biometría multimodal (rostro, palma, voz) como capa emergente de autorización empresarial post-login, con proveedores de biometría sumando partners de hardware/software en lugar de ofrecer una plataforma unificada propia."
+        }
+      },
+      {
+        "id": "comp-2026-07-08-okta-vishing-passkey-pink",
+        "title": "Okta atribuye campaña de vishing 'Pink' que suplanta el enrolamiento de passkeys de Microsoft Entra",
+        "summary": "Okta atribuyó una campaña de vishing sofisticada al grupo de extorsión 'Pink' (rastreado como O-UNC-066), que suplanta el proceso de inscripción de passkeys de Microsoft Entra para robar credenciales de Microsoft 365. El kit de phishing opera un panel controlado por el atacante que guía a las víctimas en tiempo casi real mediante un mecanismo de sondeo 'heartbeat' de 1 segundo, afectando organizaciones de alimentos y bebidas, tecnología, salud, automotriz, construcción y aviación.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/entra-passkey-enrollment-vishing-targets-microsoft-365-users/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-07-08",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "Okta",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Okta refuerza su posicionamiento como autoridad en inteligencia de amenazas de identidad, publicando atribución detallada de una campaña de vishing que evade MFA basado en passkeys mediante ingeniería social en tiempo real."
+        }
+      },
       {
         "id": "equifax-circulo-credito-mexico-20260707",
         "title": "Equifax adquiere el buró de crédito mexicano Círculo de Crédito por hasta USD 825 millones",
@@ -7219,7 +7313,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-08';
+const TODAY_ISO = '2026-07-09';
 
 const UI_STRINGS = {
     home_label: 'Home',
