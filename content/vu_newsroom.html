@@ -1303,8 +1303,8 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-08",
-  "publishedAt": "2026-07-09T13:35:48.537Z",
+  "date": "2026-07-09",
+  "publishedAt": "2026-07-10T13:35:27.534Z",
   "regulationLastRun": "2026-07-06",
   "sections": {
     "global": [
@@ -5055,6 +5055,22 @@ const briefing = {
       ],
       "colombia": [
         {
+          "id": "co-truecaller-llamadas-spam-fraude-20260709",
+          "title": "Colombia registró casi 10.000 millones de llamadas spam en el primer semestre de 2026, datos bancarios el blanco principal",
+          "summary": "Según datos de Truecaller citados por su Country Manager en Colombia, se detectaron 9.576.734.824 llamadas spam en el país durante el primer semestre de 2026, un incremento del 21,16% frente al mismo período de 2025, además de más de 2.600 millones de nuevos intentos de estafa telefónica identificados. La información bancaria (claves, códigos de verificación) es el dato personal más buscado por los estafadores.",
+          "sourceUrl": "https://www.infobae.com/tecno/2026/07/09/en-colombia-se-reportaron-casi-10000-millones-de-llamadas-spam-este-2026-datos-bancarios-los-mas-reportados/",
+          "sourceName": "Infobae",
+          "date": "2026-07-09",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "telco/banca",
+          "topic": "fraude digital",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "El crecimiento de 21% interanual en llamadas spam, con datos bancarios como principal objetivo, confirma que el canal telefónico sigue siendo el vector más explotado en Colombia para el robo de credenciales financieras."
+          }
+        },
+        {
           "id": "co-simswapping-bogota-20260706",
           "title": "Content creator expone caso de SIM swapping que vació cuenta bancaria en Bogotá en 20 minutos",
           "summary": "El creador de contenido Juan Valencia documentó un caso de SIM swapping en Bogotá donde un comerciante vio su celular quedar \"solo con llamadas de emergencia\" y, al reconectarse por WiFi, encontró su cuenta vaciada en doce millones de pesos. El esquema parte de datos filtrados en internet, con los que los delincuentes se hacen pasar por la víctima ante la operadora para trasladar su línea a un chip controlado por ellos e interceptar los códigos SMS de recuperación bancaria.",
@@ -5799,6 +5815,22 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "comp-2026-07-08-accenture-breach-azuredevops",
+        "competitor": "Accenture",
+        "title": "Accenture confirma incidente de seguridad tras filtración de 35GB de código fuente en Azure DevOps",
+        "summary": "Un actor de amenazas identificado como '888' publicó en un foro de cibercrimen la venta de aproximadamente 35GB de datos presuntamente robados de Accenture, incluyendo código fuente, claves RSA y SSH, tokens de acceso personal de Azure (PATs) y claves de almacenamiento de Azure, junto con una captura como prueba de exfiltración desde un repositorio privado de Azure DevOps. Accenture confirmó a medios que está al tanto de este 'incidente aislado', que ya remedió la fuente del problema y que no hubo impacto en sus operaciones ni en la entrega de servicios a clientes.",
+        "sourceUrl": "https://www.helpnetsecurity.com/2026/07/08/accenture-data-breach-2026/",
+        "sourceName": "Help Net Security",
+        "date": "2026-07-08",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "breach",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Incidente de seguridad en una gran consultora/integradora que maneja credenciales cloud (Azure PATs, claves SSH/RSA) de clientes empresariales, exponiendo el riesgo de concentrar la gestión de identidad y secretos en integradores generalistas sin controles especializados de identidad."
+        }
+      },
       {
         "id": "comp-2026-07-08-innovatrics-boomid-palm",
         "title": "Innovatrics y Boom ID integran reconocimiento de palma sin contacto para autorización empresarial",
@@ -7313,7 +7345,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-09';
+const TODAY_ISO = '2026-07-10';
 
 const UI_STRINGS = {
     home_label: 'Home',
