@@ -1303,9 +1303,9 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-09",
-  "publishedAt": "2026-07-10T13:35:27.534Z",
-  "regulationLastRun": "2026-07-06",
+  "date": "2026-07-12",
+  "publishedAt": "2026-07-13T13:37:04.732Z",
+  "regulationLastRun": "2026-07-13",
   "sections": {
     "global": [
       {
@@ -4794,6 +4794,22 @@ const briefing = {
       ],
       "mexico": [
         {
+          "id": "mkt-2026-07-10-mx-condusef-fraude",
+          "title": "Condusef reporta que 4 de cada 10 reclamos bancarios en México son por presunto fraude",
+          "summary": "La Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros (Condusef) informó que en el primer semestre de 2026 se registraron 43.871 reclamos por presunto fraude, un incremento de 16.7% frente al mismo periodo de 2025. Del total, 27.721 correspondieron a fraude tradicional (+19.5%), 14.627 a fraude virtual (+14.2%) y 1.523 a robo de identidad (-3.3%).",
+          "sourceUrl": "https://www.jornada.com.mx/2026/07/10/economia/017n1eco",
+          "sourceName": "La Jornada",
+          "date": "2026-07-10",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "El reclamo por fraude virtual crece más rápido que el tradicional dentro del sistema financiero mexicano, mientras el robo de identidad es el único rubro en descenso interanual, lo que sugiere desplazamiento del fraude hacia canales digitales."
+          }
+        },
+        {
           "id": "mx-cibercrimen-suscripciones-tarjetas-20260706",
           "title": "El cibercrimen en México opera con modelo de suscripción: 10.000 tarjetas robadas por 1.000 dólares al mes",
           "summary": "Organizaciones criminales venden acceso a datos robados bajo modelos de suscripción con garantías de calidad, similares a un servicio SaaS: un lote de 10.000 tarjetas de crédito robadas con 25% de garantía cuesta 1.000 dólares mensuales. México es el segundo país más atacado a nivel global, con 83,3% de las organizaciones reportando incidentes (vs. 70,9% del promedio mundial), y las pérdidas por fraude digital ya superan los 1.067 millones de dólares en el país.",
@@ -5054,6 +5070,22 @@ const briefing = {
         }
       ],
       "colombia": [
+        {
+          "id": "mkt-2026-07-11-co-los-cyber",
+          "title": "Cae 'Los Cyber': red que estafó más de 1.685 millones de pesos suplantando bancos por WhatsApp",
+          "summary": "La Fiscalía y la Policía de Colombia capturaron a 16 integrantes de la organización 'Los Cyber', que estafó más de 1.685 millones de pesos colombianos suplantando asesores bancarios por WhatsApp. La red operó entre junio de 2025 y marzo de 2026 en diez departamentos, afectando principalmente a personas mayores mediante la técnica de compartir pantalla para obtener acceso remoto a las cuentas.",
+          "sourceUrl": "https://www.infobae.com/colombia/2026/07/11/caen-los-cyber-estafaron-mas-de-1685-millones-mediante-fraude-informatico-especialmente-a-traves-de-whatsapp/",
+          "sourceName": "Infobae Colombia",
+          "date": "2026-07-11",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "La captura confirma la vigencia del vishing/suplantación bancaria por WhatsApp como vector activo en Colombia, con adultos mayores como blanco principal y acceso remoto vía compartir pantalla como técnica dominante."
+          }
+        },
         {
           "id": "co-truecaller-llamadas-spam-fraude-20260709",
           "title": "Colombia registró casi 10.000 millones de llamadas spam en el primer semestre de 2026, datos bancarios el blanco principal",
@@ -5400,6 +5432,22 @@ const briefing = {
       ],
       "espana": [
         {
+          "id": "mkt-2026-07-11-es-telefonica-estafa",
+          "title": "12 detenidos en España por estafar 1,09 millones de euros suplantando clientes de Telefónica",
+          "summary": "Los Mossos d'Esquadra y la Policía Nacional detuvieron a 12 personas en cinco provincias españolas por una estafa de 1.097.564 euros basada en ingeniería social sobre datos de clientes reales de Telefónica. Con esa información abrieron líneas telefónicas fraudulentas y financiaron 788 dispositivos de alta gama nunca pagados, con la complicidad de repartidores que desviaban los paquetes hacia la banda.",
+          "sourceUrl": "https://www.moncloa.com/2026/07/11/estafa-telefonica-banda-detenida-mossos-3398130",
+          "sourceName": "Moncloa.com",
+          "date": "2026-07-11",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "telco",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El fraude usó identidades reales de clientes de Telefónica para abrir nuevas líneas y financiar equipos, con algunos titulares suplantados hasta tres veces — un patrón de onboarding fraudulento sostenido ocho meses antes de ser detectado."
+          }
+        },
+        {
           "id": "es-eset-amenazas-digitales-20260708",
           "title": "España, tercer país del mundo en actividad de ciberamenazas según ESET",
           "summary": "El último Informe de Amenazas de ESET ubica a España como el tercer país del mundo en actividad de ciberamenazas (7,43% del total global), solo por detrás de Japón y Polonia. El informe destaca un crecimiento del 108% del malware ClickFix y que España representa el 17% del quishing global (phishing vía códigos QR), además del avance del fraude NFC con apps bancarias falsas.",
@@ -5577,6 +5625,53 @@ const briefing = {
       ]
     },
     "regulation": [
+      {
+        "id": "reg-2026-07-09-mexico-uif-condusef-convenio-antifraude",
+        "title": "UIF y CONDUSEF firman convenio para detectar fraudes financieros y cuentas mula en México",
+        "summary": "La Unidad de Inteligencia Financiera (UIF) y la Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros (CONDUSEF) firmaron un convenio de colaboración para el intercambio de información orientado a detectar patrones de fraude, lavado de dinero y cuentas mula. La medida llega tras un incremento del 16.7% en reclamaciones por fraude ante CONDUSEF durante el primer semestre de 2026 (43,871 reportes), con la Secretaría de Hacienda aclarando que no se compartirán datos bancarios ni información personal de los usuarios.",
+        "sourceUrl": "https://www.infobae.com/mexico/2026/07/09/uif-y-condusef-revisaran-transferencias-de-usuarios-por-posible-lavado-de-dinero-firman-acuerdo/",
+        "sourceName": "Infobae México",
+        "date": "2026-07-09",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "Unidad de Inteligencia Financiera (UIF) / CONDUSEF — México",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "El convenio formaliza el cruce de información entre el regulador financiero y la autoridad AML mexicana para rastrear cuentas mula, señal de que las instituciones financieras mexicanas enfrentarán mayor escrutinio sobre sus controles de detección de fraude y KYC en el corto plazo."
+        }
+      },
+      {
+        "id": "reg-2026-07-06-us-texas-age-verification",
+        "title": "La Corte Suprema de EE.UU. habilita la aplicación de la ley de verificación de edad en app stores de Texas",
+        "summary": "La Corte Suprema de Estados Unidos despejó el camino para que Texas aplique su ley que exige a las tiendas de aplicaciones verificar la edad de los usuarios y obtener consentimiento parental antes de que los menores descarguen apps o realicen compras dentro de ellas. El fallo consolida una tendencia de al menos 20 estados de EE.UU. que ya exigen algún tipo de verificación de edad, con impacto directo en Apple, Google y cualquier plataforma que opere app stores a nivel global.",
+        "sourceUrl": "https://www.aljazeera.com/news/2026/7/6/us-supreme-court-clears-path-for-texas-to-enforce-app-age-verification-law",
+        "sourceName": "Al Jazeera",
+        "date": "2026-07-06",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "Corte Suprema de los Estados Unidos / Estado de Texas",
+        "topic": "rezagada",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "El fallo consolida la verificación de edad a nivel de app store como estándar de facto en EE.UU., una arquitectura de cumplimiento que probablemente se extienda a otras jurisdicciones y que exige infraestructura de verificación de identidad y edad a escala de plataforma, no solo por app individual."
+        }
+      },
+      {
+        "id": "reg-2026-07-07-esp-deepfakes-derecho-honor",
+        "title": "España aprueba en segunda vuelta la reforma que regula deepfakes de IA bajo la ley de protección del derecho al honor",
+        "summary": "El Consejo de Ministros español aprobó en segunda vuelta la reforma de la Ley Orgánica de protección civil del derecho al honor, que por primera vez regula el uso no autorizado de voz e imagen de una persona mediante IA con fines comerciales o publicitarios, incluyendo deepfakes y contenidos de 'true crime'. El texto inicia ahora su trámite parlamentario en el Congreso; una vez aprobado, entrará en vigor a los 20 días de su publicación en el BOE.",
+        "sourceUrl": "https://www.moncloa.com/2026/07/07/reforma-derecho-al-honor-deepfakes-congreso-3396091/",
+        "sourceName": "Moncloa.com — Consejo de Ministros de España",
+        "date": "2026-07-07",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "Consejo de Ministros de España / Ministerio de Justicia",
+        "topic": "rezagada",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "España avanza hacia un marco legal específico contra la suplantación de identidad mediante IA (voz e imagen), anticipando obligaciones de consentimiento y responsabilidad de plataformas que podrían replicarse en otras jurisdicciones de habla hispana."
+        }
+      },
       {
         "id": "peru-sbs-notificacion-incidentes-24h",
         "title": "Perú: SBS obliga a notificar incidentes de ciberseguridad y fraude a clientes en 24 horas",
@@ -5815,6 +5910,21 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "trulioo-pymnts-identity-inconsistencies-2026-07-10",
+        "title": "Trulioo y PYMNTS: 3 de cada 4 firmas financieras detectan inconsistencias en la verificación de identidad",
+        "summary": "Un estudio de PYMNTS Intelligence realizado en colaboración con Trulioo halla que el 74.6% de las firmas financieras reporta resultados inconsistentes en sus procesos de verificación de identidad, y que las fallas de KYC/KYB le cuestan a la industria cerca de US$34.000 millones al año (3% de los ingresos). El 76.1% de las firmas afirma que sus procesos de identidad frenan la expansión a nuevos mercados o geografías, mientras que el 92.3% de las que usan plataformas de identificación global reporta procesos de KYC/KYB mejorados.",
+        "sourceUrl": "https://www.pymnts.com/authentication/2026/three-quarters-of-financial-firms-see-identity-inconsistencies",
+        "sourceName": "PYMNTS.com",
+        "date": "2026-07-10",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Trulioo",
+        "actionable": {
+          "type": "dato-clave",
+          "text": "Un estudio patrocinado por Trulioo cuantifica el costo de la fricción de identidad (US$34.000M/año en fallas de KYC/KYB) y lo usa como palanca de posicionamiento comercial frente a bancos y fintechs que evalúan proveedores de verificación."
+        }
+      },
       {
         "id": "comp-2026-07-08-accenture-breach-azuredevops",
         "competitor": "Accenture",
@@ -7345,7 +7455,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-10';
+const TODAY_ISO = '2026-07-13';
 
 const UI_STRINGS = {
     home_label: 'Home',
