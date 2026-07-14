@@ -7751,7 +7751,7 @@ function flipBackHTML(it) {
         <span class="flip-back-source">${it.sourceName}</span>
         <a class="flip-btn-read" href="${it.sourceUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation();">${t().leerNota}</a>
       </div>
-      <button class="flip-toggle-btn" onclick="event.stopPropagation();this.closest('.flip-card').classList.toggle('flipped')">⚡</button>
+      <button class="flip-toggle-btn" onclick="event.stopPropagation();this.closest('.flip-card').classList.toggle('flipped')">🔄</button>
     </div>`;
 }
 
@@ -7762,7 +7762,7 @@ function wrapFlipCard(frontHTML, it, articleClass) {
         <div class="flip-front" onclick="window.open('${it.sourceUrl}','_blank','noopener')">
           ${frontHTML}
           <div class="flip-hint"></div>
-          <button class="flip-toggle-btn" onclick="event.stopPropagation();this.closest('.flip-card').classList.toggle('flipped')">⚡</button>
+          <button class="flip-toggle-btn" onclick="event.stopPropagation();this.closest('.flip-card').classList.toggle('flipped')">🔄</button>
         </div>
         ${flipBackHTML(it)}
       </div>
