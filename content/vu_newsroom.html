@@ -559,7 +559,6 @@
     height: 100%;
     border-radius: 12px;
   }
-  .flip-card:hover .flip-card-inner,
   .flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
   }
@@ -666,9 +665,9 @@
   }
   .flip-btn-read:hover { opacity: 0.85; transform: translateY(-1px); color: var(--vu-negro); }
 
-  /* Mobile flip toggle button (visible only on touch) */
+  /* Flip toggle button — click-only trigger on every device (v2.8) */
   .flip-toggle-btn {
-    display: none;
+    display: block;
     position: absolute; bottom: 10px; right: 10px;
     z-index: 10;
     background: var(--card-color, var(--vu-naranja));
@@ -677,11 +676,6 @@
     padding: 4px 8px; font-size: 13px; font-weight: 700;
     cursor: pointer; line-height: 1;
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  }
-  @media (hover: none) {
-    .flip-toggle-btn { display: block; }
-    .flip-card:hover .flip-card-inner { transform: none; }
-    .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
   }
 
   /* Actionable indicator dot on desktop — subtle hint that card is flippable */
@@ -698,7 +692,6 @@
     0%, 100% { opacity: 0.5; box-shadow: 0 0 0 2px rgba(241,94,55,0.15); }
     50% { opacity: 0.9; box-shadow: 0 0 0 5px rgba(241,94,55,0.08); }
   }
-  @media (hover: none) { .flip-hint { display: none; } }
 
   /* Card-type specific overrides for the flip-front face */
   .flip-card { display: flex; flex-direction: column; }
