@@ -348,12 +348,12 @@
   }
 
   /* Card section colors */
-  .card-global       { --card-color: var(--sec-global); }
-  .card-latam        { --card-color: var(--sec-latam); }
-  .card-regulation   { --card-color: var(--sec-regulation); }
-  .card-competencia  { --card-color: var(--sec-competencia); }
-  .card-vu           { --card-color: var(--sec-vu); }
-  .card-archivo      { --card-color: var(--sec-archivo); }
+  .card-global       { --card-color: var(--sec-global);      --card-color-rgb: 58, 134, 255; }
+  .card-latam        { --card-color: var(--sec-latam);       --card-color-rgb: 241, 94, 55; }
+  .card-regulation   { --card-color: var(--sec-regulation);  --card-color-rgb: 155, 89, 182; }
+  .card-competencia  { --card-color: var(--sec-competencia); --card-color-rgb: 196, 72, 38; }
+  .card-vu           { --card-color: var(--sec-vu);          --card-color-rgb: 6, 167, 125; }
+  .card-archivo      { --card-color: var(--sec-archivo);     --card-color-rgb: 136, 136, 136; }
 
   /* Featured (big) */
   .feat-card { padding: 0; min-height: 320px; }
@@ -665,33 +665,32 @@
   }
   .flip-btn-read:hover { opacity: 0.85; transform: translateY(-1px); color: var(--vu-negro); }
 
-  /* Flip toggle button — click-only trigger on every device (v2.8) */
+  /* Flip toggle button — click-only trigger on every device, native SVG icon (v2.9) */
   .flip-toggle-btn {
-    display: block;
-    position: absolute; bottom: 10px; right: 10px;
-    z-index: 10;
-    background: var(--card-color, var(--vu-naranja));
-    color: var(--vu-negro);
-    border: none; border-radius: 6px;
-    padding: 4px 8px; font-size: 13px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    position: absolute; z-index: 10;
+    width: 30px; height: 30px; padding: 0;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(var(--card-color-rgb, 241,94,55), 0.55);
+    border-radius: 8px;
+    color: var(--card-color, var(--vu-naranja));
     cursor: pointer; line-height: 1;
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: background 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+  }
+  .flip-toggle-btn:hover {
+    background: rgba(0, 0, 0, 0.65);
+    border-color: var(--card-color, var(--vu-naranja));
+    transform: scale(1.06);
+  }
+  .flip-toggle-btn svg {
+    width: 16px; height: 16px;
+    fill: none; stroke: currentColor;
+    stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round;
   }
 
-  /* Actionable indicator dot on desktop — subtle hint that card is flippable */
-  .flip-hint {
-    position: absolute; top: 10px; right: 10px; z-index: 5;
-    width: 8px; height: 8px; border-radius: 50%;
-    background: var(--card-color, var(--vu-naranja));
-    opacity: 0.7;
-    box-shadow: 0 0 0 2px rgba(var(--card-color-rgb, 241,94,55), 0.25);
-    animation: flipHintPulse 2.5s ease-in-out infinite;
-    pointer-events: none;
-  }
-  @keyframes flipHintPulse {
-    0%, 100% { opacity: 0.5; box-shadow: 0 0 0 2px rgba(241,94,55,0.15); }
-    50% { opacity: 0.9; box-shadow: 0 0 0 5px rgba(241,94,55,0.08); }
-  }
+  /* Default position: top-right (used by the back face on every card type) */
+  .flip-toggle-btn { top: 12px; right: 12px; }
 
   /* Card-type specific overrides for the flip-front face */
   .flip-card { display: flex; flex-direction: column; }
@@ -699,13 +698,24 @@
   .flip-front { flex: 1; }
 
   .feat-card.flip-card .flip-front { padding: 0; min-height: 320px; }
-  .side-card.flip-card .flip-front { padding: 16px 18px; min-height: 220px; }
+  /* Featured card: button sits over the top-right of the hero image, clear of the image */
+  .feat-card.flip-card .flip-front .flip-toggle-btn { top: 12px; right: 12px; }
+
+  .side-card.flip-card .flip-front {
+    padding: 16px 40px 16px 18px; /* right gutter reserved so text never runs under the button */
+    min-height: 220px;
+  }
+  /* Side card: vertical-center on the right edge, clear of the top pills and bottom meta row */
+  .side-card.flip-card .flip-front .flip-toggle-btn { top: 50%; right: 10px; transform: translateY(-50%); }
+
   .list-card.flip-card .flip-front {
-    padding: 14px 18px;
+    padding: 14px 52px 14px 18px; /* right gutter reserved past the date-badge column */
     display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center;
     flex-direction: row;
     min-height: 200px;
   }
+  /* List card: vertical-center on the right edge, past the date-badge column */
+  .list-card.flip-card .flip-front .flip-toggle-btn { top: 50%; right: 10px; transform: translateY(-50%); }
 
   /* =================== SEARCH =================== */
   .search-wrapper {
@@ -7735,6 +7745,12 @@ function metaHTML(it) {
 }
 
 /* ── Card Flip helpers ─────────────────────────────────────────── */
+function flipToggleBtnHTML() {
+  return `<button class="flip-toggle-btn" aria-label="${t().flipToggle || 'Girar tarjeta'}" onclick="event.stopPropagation();this.closest('.flip-card').classList.toggle('flipped')">
+    <svg viewBox="0 0 24 24"><path d="M20 11A8 8 0 1 0 18 16.9"/><polyline points="20 4 20 11 13 11"/></svg>
+  </button>`;
+}
+
 function flipBackHTML(it) {
   const atype = (t().actionableTypes[it.actionable.type]) || t().actionableFallback;
   return `
@@ -7751,7 +7767,7 @@ function flipBackHTML(it) {
         <span class="flip-back-source">${it.sourceName}</span>
         <a class="flip-btn-read" href="${it.sourceUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation();">${t().leerNota}</a>
       </div>
-      <button class="flip-toggle-btn" onclick="event.stopPropagation();this.closest('.flip-card').classList.toggle('flipped')">🔄</button>
+      ${flipToggleBtnHTML()}
     </div>`;
 }
 
@@ -7761,8 +7777,7 @@ function wrapFlipCard(frontHTML, it, articleClass) {
       <div class="flip-card-inner">
         <div class="flip-front" onclick="window.open('${it.sourceUrl}','_blank','noopener')">
           ${frontHTML}
-          <div class="flip-hint"></div>
-          <button class="flip-toggle-btn" onclick="event.stopPropagation();this.closest('.flip-card').classList.toggle('flipped')">🔄</button>
+          ${flipToggleBtnHTML()}
         </div>
         ${flipBackHTML(it)}
       </div>
