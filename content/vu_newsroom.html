@@ -1303,11 +1303,39 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-12",
-  "publishedAt": "2026-07-13T13:37:04.732Z",
+  "date": "2026-07-13",
+  "publishedAt": "2026-07-14T13:34:14.568Z",
   "regulationLastRun": "2026-07-13",
   "sections": {
     "global": [
+      {
+        "id": "global-lidl-breach-2026-07-13",
+        "title": "Lidl notifica brecha en su tienda online tras hackeo a un proveedor de servicios",
+        "summary": "Lidl notificó a clientes en Alemania, Bélgica y Países Bajos que atacantes sustrajeron datos personales almacenados por un proveedor externo de su tienda online. La compañía aclaró que contraseñas, datos bancarios y de pago, y las cuentas de usuario no se vieron comprometidos.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/lidl-discloses-online-shop-breach-after-service-provider-hack/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-07-13",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "retail",
+        "topic": "ciberseguridad"
+      },
+      {
+        "id": "global-russian-coms-takedown-2026-07-13",
+        "title": "Reino Unido desmantela 'Russian Coms', plataforma de spoofing de identificador de llamadas usada en 1,8 millones de llamadas fraudulentas",
+        "summary": "La National Crime Agency del Reino Unido imputó a cinco personas de Londres por operar 'Russian Coms', una plataforma que permitía a delincuentes falsificar el identificador de llamadas para hacerse pasar por bancos, telcos y fuerzas de seguridad. La plataforma, activa desde 2020, está vinculada a decenas de millones en pérdidas financieras y un estimado de 170.000 víctimas.",
+        "sourceUrl": "https://www.infosecurity-magazine.com/news/five-charged-in-russian-coms-fraud/",
+        "sourceName": "Infosecurity Magazine / BleepingComputer",
+        "date": "2026-07-13",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "telco",
+        "topic": "fraude-digital",
+        "actionable": {
+          "type": "tendencia",
+          "text": "Caso que confirma la industrialización del caller-ID spoofing como servicio (fraud-as-a-service) para suplantar bancos y organismos, con 170.000 víctimas acumuladas desde 2020 — el vector vishing/spoofing sigue escalando pese a takedowns."
+        }
+      },
       {
         "id": "global-assuranceamerica-breach-20260708",
         "title": "Brecha de datos en AssuranceAmerica expone licencias de conducir de 6,9 millones de personas",
@@ -4372,6 +4400,22 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "ar-strada-ley-ia-fraude-2026-07-13",
+          "title": "Diputada argentina presenta proyecto de ley contra estafas digitales y robo de identidad con IA",
+          "summary": "La diputada nacional Julia Strada presentó un proyecto de ley para tipificar delitos digitales y robo de identidad mediante IA, luego de que estafadores usaran su imagen para engañar a ahorristas en redes sociales. La iniciativa tiene tres ejes: nuevos tipos penales digitales, herramientas de investigación para fiscales y responsabilidad de las plataformas tecnológicas por publicidad fraudulenta.",
+          "sourceUrl": "https://elintransigente.com/2026/07/julia-strada-presento-un-proyecto-de-ley-para-combatir-las-estafas-digitales-y-el-robo-de-identidad-con-ia/",
+          "sourceName": "El Intransigente",
+          "date": "2026-07-13",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "gobierno",
+          "topic": "identidad-digital",
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "Proyecto de ley en el Congreso argentino que buscaría responsabilizar a plataformas por publicidad fraudulenta y equipar a fiscales con herramientas contra fraude/identidad con IA — el marco legal vigente hoy no contempla estos delitos."
+          }
+        },
+        {
           "id": "ar-sms-corte-servicio-fraude-20260707",
           "title": "Nueva modalidad de smishing en Argentina simula cortes de servicio (luz, gas, agua, internet)",
           "summary": "Infobae alertó sobre una nueva modalidad de fraude en Argentina que utiliza mensajes de texto suplantando a empresas de gas, luz, agua o internet, amenazando con corte de servicio para inducir pagos inmediatos o robo de datos personales. La modalidad se suma a un cuadro donde WhatsApp ya concentra el 31% de los casos de estafa reportados en el país.",
@@ -4712,6 +4756,22 @@ const briefing = {
         }
       ],
       "brasil": [
+        {
+          "id": "br-bcb-agibank-pix-leak-2026-07-13",
+          "title": "Banco Central de Brasil confirma filtración de datos de 5.290 claves Pix de clientes de Agibank",
+          "summary": "El Banco Central comunicó una filtración que expuso nombre, CPF parcial, institución financiera, agencia, número de cuenta y tipo de cuenta de 5.290 clientes de Agibank, ocurrida entre diciembre 2024 y enero 2025. Es el vigésimo primer incidente con datos de Pix desde el lanzamiento del sistema y el primero reportado en 2026; el regulador aclaró que contraseñas, saldos y movimientos no fueron comprometidos.",
+          "sourceUrl": "https://www.seudinheiro.com/2026/economia/bc-informa-ocorrencia-de-incidente-de-seguranca-com-dados-de-clientes-do-agibank-lefp/",
+          "sourceName": "Seu Dinheiro / Banco Central do Brasil",
+          "date": "2026-07-13",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "identidad-digital",
+          "actionable": {
+            "type": "brecha",
+            "text": "Brecha regulador-confirmada de datos de identidad/cuenta vinculados a claves Pix en una fintech brasileña — el 21° incidente de este tipo desde 2020, evidenciando fricción recurrente entre exposición de datos de identidad y el ecosistema de pagos instantáneos de Brasil."
+          }
+        },
         {
           "id": "br-golpes-telefonicos-rio-20260706",
           "title": "Río de Janeiro registró más de 52 millones de intentos de estafa telefónica en 12 meses",
@@ -5071,6 +5131,33 @@ const briefing = {
       ],
       "colombia": [
         {
+          "id": "co-norton-scam-forecast-2026-07-12",
+          "title": "Norton reporta alza de 213% en estafas de 'dinero inesperado' en Colombia durante vacaciones de mitad de año",
+          "summary": "Norton (Gen Digital) publicó su Pronóstico de Estafas de Verano 2026, con incrementos de 213% en estafas de dinero inesperado, 37,1% en soporte técnico falso y 27,4% en fraude financiero en Colombia durante el período vacacional. La compañía lanzó la iniciativa 'Scam Free Summer' para prevención de fraude estacional.",
+          "sourceUrl": "https://www.noticiassuper.com/2026/07/12/norton-las-estafas-de-dinero-inesperado-aumentaron-un-213-en-colombia-durante-las-vacaciones-de-mitad-de-ano/",
+          "sourceName": "Noticias Súper",
+          "date": "2026-07-12",
+          "language": "es",
+          "highRelevance": false,
+          "topic": "fraude-digital"
+        },
+        {
+          "id": "co-los-cyber-desarticulada-2026-07-13",
+          "title": "Policía colombiana desarticula banda 'Los Cyber', responsable de fraude bancario por suplantación",
+          "summary": "La Policía Nacional y la Fiscalía capturaron a 16 personas de la red 'Los Cyber', señalada de robar más de 1.685 millones de pesos a 94 víctimas en 10 departamentos mediante spoofing de bancos y control remoto de pantalla, enfocándose en adultos mayores de 50 años. Se incautaron 35 tarjetas bancarias, 22 celulares y equipos vinculados a 34 procesos penales.",
+          "sourceUrl": "https://www.eluniversal.com.co/sucesos/2026/07/13/asi-cayeron-los-cyber-la-red-que-habria-saqueado-cuentas-bancarias-mediante-enganos/",
+          "sourceName": "El Universal (Colombia)",
+          "date": "2026-07-13",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude-digital",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "Caso judicial documentado de fraude bancario por suplantación y control remoto de pantalla dirigido a adultos mayores, con cifras oficiales de víctimas y pérdidas — evidencia pública de que los controles de autenticación actuales no frenan el vector de ingeniería social vía apps de mensajería."
+          }
+        },
+        {
           "id": "mkt-2026-07-11-co-los-cyber",
           "title": "Cae 'Los Cyber': red que estafó más de 1.685 millones de pesos suplantando bancos por WhatsApp",
           "summary": "La Fiscalía y la Policía de Colombia capturaron a 16 integrantes de la organización 'Los Cyber', que estafó más de 1.685 millones de pesos colombianos suplantando asesores bancarios por WhatsApp. La red operó entre junio de 2025 y marzo de 2026 en diez departamentos, afectando principalmente a personas mayores mediante la técnica de compartir pantalla para obtener acceso remoto a las cuentas.",
@@ -5302,6 +5389,22 @@ const briefing = {
       ],
       "panama": [
         {
+          "id": "pa-fraude-140m-arresto-2026-07-13",
+          "title": "Cae en Panamá uno de los detenidos de la red de fraude informático de 140 millones de euros desmantelada en España",
+          "summary": "La Policía Nacional española, con apoyo de Europol e Interpol, desarticuló una red internacional que estafó 140 millones de euros mediante plataformas de inversión falsas, fraude del CEO, facturación falsa y ataques Man-in-the-Middle; de los 4 detenidos, uno fue arrestado en Panamá. La organización operaba más de 800 cuentas bancarias y 120 entidades comerciales con 67 'mulas' extranjeras.",
+          "sourceUrl": "https://es.euronews.com/my-europe/2026/07/13/la-policia-desarticula-una-red-de-fraude-informatico-que-estafo-140-millones-en-varios-pai",
+          "sourceName": "Euronews (edición España)",
+          "date": "2026-07-13",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude-digital",
+          "actionable": {
+            "type": "ventana",
+            "text": "Panamá figuró como nodo de detención en una red de mulas bancarias y fraude del CEO a escala europea, exponiendo la superficie de riesgo AML/KYC del sistema financiero panameño ante redes de lavado transnacionales."
+          }
+        },
+        {
           "id": "pa-filtracion-instituciones-publicas-20260705",
           "title": "Nuevo ciberataque expone documentos de múltiples instituciones públicas de Panamá",
           "summary": "Un actor malicioso puso en venta o divulgó una colección de documentos vinculados a varias entidades del Estado panameño (órdenes de compra, datos de proveedores, facturas, actas), reportado a la 1:41 p.m. del 5 de julio. La AIG (Autoridad para la Innovación Gubernamental) vinculó preliminarmente la filtración a una brecha de terceros ocurrida en un proveedor estatal en 2024, y descartó afectación a su infraestructura central. Es el quinto incidente de alto impacto contra infraestructura estatal panameña reportado en lo que va de 2026, tras ataques previos a la CSS, MINSA, MEF y Panamá Emprende.",
@@ -5431,6 +5534,22 @@ const briefing = {
         }
       ],
       "espana": [
+        {
+          "id": "es-fraude-140m-red-2026-07-13",
+          "title": "Policía española desarticula red de fraude informático que estafó 140 millones de euros en varios países",
+          "summary": "La Policía Nacional, con Europol e Interpol, desmanteló una organización criminal que operaba desde Barcelona, Girona y Tarragona mediante plataformas de inversión falsas, fraude del CEO, facturación falsa y ataques Man-in-the-Middle, con 4 detenidos (España, Portugal y Panamá). La red gestionaba más de 800 cuentas bancarias y 120 sociedades pantalla con 67 mulas extranjeras; se bloquearon 3 millones de euros en fondos fraudulentos.",
+          "sourceUrl": "https://es.euronews.com/my-europe/2026/07/13/la-policia-desarticula-una-red-de-fraude-informatico-que-estafo-140-millones-en-varios-pai",
+          "sourceName": "Euronews (edición España)",
+          "date": "2026-07-13",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude-digital",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "Bust judicial cuantificado (140M€, 800+ cuentas, 120 sociedades pantalla, 67 mulas) que ilustra la escala industrial del fraude del CEO y plataformas de inversión falsas operando cross-border España-Portugal-Panamá."
+          }
+        },
         {
           "id": "mkt-2026-07-11-es-telefonica-estafa",
           "title": "12 detenidos en España por estafar 1,09 millones de euros suplantando clientes de Telefónica",
@@ -5910,6 +6029,21 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "nec-ava-labs-verificacion-biometrica-onchain-2026-07-13",
+        "title": "NEC y Ava Labs firman MoU para verificación de identidad biométrica on-chain orientada a agentes de IA y pagos con stablecoins",
+        "summary": "NEC firmó un memorando de entendimiento con la blockchain Ava Labs (Avalanche) para desarrollar una capa de verificación de identidad on-chain que combina la tecnología biométrica facial 'FaceVC' de NEC con Credenciales Verificables. Ambas compañías publicaron un white paper conjunto proponiendo como primer caso de uso el turismo entrante a Japón: los visitantes obtendrían una credencial verificable biométrica antes de llegar y la usarían para pagos sin efectivo vía verificación facial y liquidación instantánea en stablecoins.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/nec-ava-labs-building-on-chain-verification-layer-for-ai-agents-stablecoins",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-13",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "NEC",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "NEC se suma a la carrera por construir la capa de identidad para agentes de IA y pagos con stablecoins, combinando biometría facial con credenciales verificables on-chain — un frente de competencia nuevo que todavía no tiene un actor dominante claro en LATAM."
+        }
+      },
       {
         "id": "trulioo-pymnts-identity-inconsistencies-2026-07-10",
         "title": "Trulioo y PYMNTS: 3 de cada 4 firmas financieras detectan inconsistencias en la verificación de identidad",
@@ -7455,7 +7589,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-13';
+const TODAY_ISO = '2026-07-14';
 
 const UI_STRINGS = {
     home_label: 'Home',
