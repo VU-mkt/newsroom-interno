@@ -1306,11 +1306,75 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-13",
-  "publishedAt": "2026-07-14T13:34:14.568Z",
+  "date": "2026-07-14",
+  "publishedAt": "2026-07-15T22:43:25.861Z",
   "regulationLastRun": "2026-07-13",
   "sections": {
     "global": [
+      {
+        "id": "global-us-caricom-biometric-data-sharing",
+        "title": "Estados Unidos y países del CARICOM firman acuerdo de intercambio de datos biométricos para registros migratorios y criminales",
+        "summary": "Estados Unidos y países del CARICOM firmaron un acuerdo que habilita el intercambio seguro y automatizado de huellas dactilares, perfiles de reconocimiento facial y registros criminales entre ambas partes.",
+        "sourceUrl": "https://idtechwire.com/id-tech-digest-july-13-2026/",
+        "sourceName": "ID Tech Digest",
+        "date": "2026-07-13",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "gobierno",
+        "topic": "biometria",
+        "actionable": {
+          "type": "tendencia",
+          "text": "Los acuerdos gubernamentales de intercambio biométrico transfronterizo se expanden más allá de fronteras UE/US tradicionales, ampliando la infraestructura de identidad biométrica interoperable a nivel gobierno."
+        }
+      },
+      {
+        "id": "global-iso-iec-27566-age-assurance-parte3",
+        "title": "Avanza a etapa de borrador internacional la Parte 3 del estándar ISO/IEC 27566 sobre análisis de sistemas de age assurance",
+        "summary": "La Parte 3 del estándar ISO/IEC 27566 —primer estándar internacional sobre sistemas de verificación de edad— avanzó a etapa de Draft International Standard (DIS), enfocada en metodologías para analizar y comparar sistemas de age assurance, con implicancia directa para reguladores y casas de testing.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/age-assurance-standard-builds-out-with-new-draft-on-analysis-of-age-check-systems",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-14",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "cross",
+        "topic": "regulacion",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "La maduración de un estándar ISO específico para comparar sistemas de age assurance da a reguladores y compradores un criterio técnico común, elevando la barra de exigencia para proveedores de verificación de edad."
+        }
+      },
+      {
+        "id": "global-openai-passkeys-obligatorios",
+        "title": "OpenAI exige passkeys criptográficos vinculados a hardware para acceder a sus modelos más avanzados",
+        "summary": "OpenAI implementó como obligatorio el uso de passkeys criptográficos vinculados a hardware para el acceso a sus modelos de mayor capacidad, buscando neutralizar compromisos de cuenta, secuestro de sesión y robo de credenciales.",
+        "sourceUrl": "https://idtechwire.com/id-tech-digest-july-13-2026/",
+        "sourceName": "ID Tech Digest",
+        "date": "2026-07-13",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "cross",
+        "topic": "ciberseguridad",
+        "actionable": {
+          "type": "tendencia",
+          "text": "Un actor de referencia en IA generativa migra de contraseñas a passkeys por hardware para mitigar toma de cuenta, reforzando la adopción de autenticación passwordless como estándar esperado en plataformas de alto riesgo."
+        }
+      },
+      {
+        "id": "global-eu-age-verification-social-media",
+        "title": "La Comisión Europea avanza hacia verificación de edad obligatoria y estandarizada en redes sociales para menores",
+        "summary": "La presidenta de la Comisión Europea, Ursula von der Leyen, señaló que la UE avanzará hacia una regulación más estricta y armonizada de acceso de menores a redes sociales, usando aplicaciones de verificación de edad de terceros que preserven la privacidad en lugar de la autodeclaración por checkbox.",
+        "sourceUrl": "https://idtechwire.com/id-tech-digest-july-13-2026/",
+        "sourceName": "ID Tech Digest",
+        "date": "2026-07-13",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "cross",
+        "topic": "regulacion",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "El giro hacia age-verification de terceros con minimización de datos consolida un estándar de mercado distinto al self-declare, ampliando la demanda de proveedores de age assurance con enfoque de privacidad."
+        }
+      },
       {
         "id": "global-lidl-breach-2026-07-13",
         "title": "Lidl notifica brecha en su tienda online tras hackeo a un proveedor de servicios",
@@ -4403,6 +4467,22 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "argentina-libra-congelamiento-billeteras-cripto",
+          "title": "La Justicia argentina congeló 25 billeteras cripto del caso $LIBRA y exigió a 6 exchanges identificar a sus titulares",
+          "summary": "El juez federal Marcelo Martínez de Giorgi ordenó congelar 25 billeteras cripto vinculadas al caso $LIBRA y requirió a seis exchanges internacionales revelar identidad y movimientos de sus titulares. Más de 40.000 personas habrían sufrido pérdidas por unos USD 100 millones tras el desplome del token que el presidente Javier Milei promocionó en X en febrero de 2025.",
+          "sourceUrl": "https://www.infobae.com/judiciales/2026/07/14/la-justicia-congelo-25-billeteras-cripto-del-caso-libra-y-ordeno-a-plataformas-identificar-a-sus-titulares/",
+          "sourceName": "Infobae",
+          "date": "2026-07-14",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "fintech",
+          "topic": "fraude",
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "La justicia empieza a exigirle a los exchanges KYC retroactivo sobre operaciones ya ejecutadas, marcando un precedente de responsabilidad post-hecho para plataformas cripto que operan en LATAM sin verificación de identidad robusta en el onboarding."
+          }
+        },
+        {
           "id": "ar-strada-ley-ia-fraude-2026-07-13",
           "title": "Diputada argentina presenta proyecto de ley contra estafas digitales y robo de identidad con IA",
           "summary": "La diputada nacional Julia Strada presentó un proyecto de ley para tipificar delitos digitales y robo de identidad mediante IA, luego de que estafadores usaran su imagen para engañar a ahorristas en redes sociales. La iniciativa tiene tres ejes: nuevos tipos penales digitales, herramientas de investigación para fiscales y responsabilidad de las plataformas tecnológicas por publicidad fraudulenta.",
@@ -4857,6 +4937,22 @@ const briefing = {
       ],
       "mexico": [
         {
+          "id": "mexico-fraude-transferencias-bbva-banamex",
+          "title": "BBVA México y Banamex, blanco recurrente de fraude por transferencias que vacía cuentas en minutos",
+          "summary": "Clientes de BBVA México y Banamex siguen siendo blanco de esquemas de depósitos falsos donde los delincuentes piden la 'devolución' del dinero, además de suplantación de identidad empresarial y phishing con datos bancarios de proveedores manipulados. El fraude por transferencia puede vaciar los ahorros de una víctima en minutos.",
+          "sourceUrl": "https://www.ambito.com/mexico/economia/cuidado-si-eres-cliente-bbva-mexico-o-banamex-el-nuevo-fraude-transferencias-que-te-quita-todo-el-dinero-tu-cuenta-n6298909",
+          "sourceName": "Ámbito Financiero",
+          "date": "2026-07-13",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El fraude bancario en México viene de un salto ya reportado de +324% interanual (BioCatch); esta alerta puntual confirma que la tendencia se sostiene banco por banco en la ventana actual."
+          }
+        },
+        {
           "id": "mkt-2026-07-10-mx-condusef-fraude",
           "title": "Condusef reporta que 4 de cada 10 reclamos bancarios en México son por presunto fraude",
           "summary": "La Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros (Condusef) informó que en el primer semestre de 2026 se registraron 43.871 reclamos por presunto fraude, un incremento de 16.7% frente al mismo periodo de 2025. Del total, 27.721 correspondieron a fraude tradicional (+19.5%), 14.627 a fraude virtual (+14.2%) y 1.523 a robo de identidad (-3.3%).",
@@ -5134,6 +5230,22 @@ const briefing = {
       ],
       "colombia": [
         {
+          "id": "colombia-fraude-smishing-bre-b",
+          "title": "Alerta en Bogotá por smishing que suplanta al sistema de pagos instantáneos Bre-B para vaciar cuentas bancarias",
+          "summary": "La Secretaría de Seguridad de Bogotá alertó sobre una modalidad de smishing que suplanta a bancos y al sistema de pagos instantáneos Bre-B, redirigiendo a páginas falsas para capturar credenciales, contraseñas y códigos de verificación. También se reportan estafas que suplantan autoridades de tránsito con amenazas de cobro jurídico.",
+          "sourceUrl": "https://www.infobae.com/colombia/2026/07/14/cuidado-con-estos-mensajes-falsos-de-bre-b-le-roban-sus-datos-y-le-desocupan-sus-cuentas-bancarias/",
+          "sourceName": "Infobae Colombia",
+          "date": "2026-07-14",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El lanzamiento de un nuevo riel de pagos instantáneos a nivel nacional (Bre-B) está siendo usado como gancho de fraude desde su primera semana masiva de adopción, un patrón ya visto con Pix en Brasil."
+          }
+        },
+        {
           "id": "co-norton-scam-forecast-2026-07-12",
           "title": "Norton reporta alza de 213% en estafas de 'dinero inesperado' en Colombia durante vacaciones de mitad de año",
           "summary": "Norton (Gen Digital) publicó su Pronóstico de Estafas de Verano 2026, con incrementos de 213% en estafas de dinero inesperado, 37,1% en soporte técnico falso y 27,4% en fraude financiero en Colombia durante el período vacacional. La compañía lanzó la iniciativa 'Scam Free Summer' para prevención de fraude estacional.",
@@ -5303,6 +5415,22 @@ const briefing = {
       ],
       "peru": [
         {
+          "id": "peru-actualizacion-jackson-mora-arquitectos-fraude",
+          "title": "Jackson Mora, señalado de 'Los Arquitectos del Fraude', trasladado a Ancón I mientras continúa la prisión preventiva",
+          "summary": "Jackson Mora, señalado como parte de la organización 'Los Arquitectos del Fraude' que desvió más de S/ 9,9 millones de fondos estatales de la Municipalidad de Pueblo Nuevo (Chincha) mediante fraude informático, fue trasladado a Ancón I mientras el INPE define su reclusión. De lo desviado, S/ 8 millones fueron recuperados vía bloqueo de cuentas; sigue sin ubicarse cerca de S/ 818.000.",
+          "sourceUrl": "https://www.infobae.com/peru/2026/07/13/jackson-mora-sera-llevado-a-ancon-i-mientras-el-inpe-define-en-que-penal-cumplira-su-prision-preventiva/",
+          "sourceName": "Infobae Perú",
+          "date": "2026-07-13",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "gobierno",
+          "topic": "fraude",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "El caso muestra fraude informático organizado contra fondos públicos municipales con solo ~80% de recupero de los fondos desviados, evidenciando límites de trazabilidad una vez que el dinero sale del circuito bancario formal."
+          }
+        },
+        {
           "id": "pe-pdf-qr-fraude-20260707",
           "title": "ESET detecta en Perú un giro hacia PDFs falsificados y QRishing para eludir controles",
           "summary": "ESET reportó en Perú un cambio de estrategia de los ciberdelincuentes, que ahora priorizan la ingeniería social sobre el malware automatizado: usan archivos PDF falsificados y códigos QR fraudulentos (QRishing) para inducir a la víctima a activar la descarga o entregar credenciales. Perú ya acumula más de 353.530 detecciones de ciberataques entre enero y mayo de 2026.",
@@ -5391,6 +5519,50 @@ const briefing = {
         }
       ],
       "panama": [
+        {
+          "id": "panama-opinion-controles-fallidos-julio2026",
+          "title": "Hoy por hoy: cuando fallan los controles, gana el crimen",
+          "summary": "Columna de opinión que analiza cómo una red de particulares, abogados, funcionarios y exfuncionarios operó impunemente durante años vendiendo créditos fiscales fraudulentos a empresas —incluido uno de los principales bancos del país— explotando vulnerabilidades en los sistemas informáticos y servidores del Estado.",
+          "sourceUrl": "https://www.prensa.com/opinion/hoy-por-hoy-cuando-fallan-los-controles-gana-el-crimen/",
+          "sourceName": "La Prensa Panamá",
+          "date": "2026-07-14",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "gobierno",
+          "topic": "fraude"
+        },
+        {
+          "id": "panama-fraude-dgi-chapman-bancos-julio2026",
+          "title": "Chapman sobre el fraude en la DGI: empresas de seguros y bancos han sido engañados con créditos fiscales",
+          "summary": "El ministro de Economía y Finanzas, Felipe Chapman, confirmó que bancos, aseguradoras y otras empresas fueron engañadas durante años mediante créditos fiscales fraudulentos generados por la red de 'Operación Pandora' dentro de la DGI. El perjuicio estimado al Estado asciende a USD 40 millones y ya hay 31 personas detenidas.",
+          "sourceUrl": "https://www.prensa.com/economia/chapman-sobre-el-fraude-en-la-dgi-empresas-de-seguros-y-bancos-han-sido-enganados-con-creditos-fiscales/",
+          "sourceName": "La Prensa Panamá",
+          "date": "2026-07-13",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "gobierno",
+          "topic": "fraude",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "El perjuicio estimado al Estado panameño asciende a USD 40 millones con 31 personas detenidas, y el gobierno ya anunció controles reforzados con IA y apoyo del FMI y el Banco Mundial — señal de que la inversión en integridad de sistemas gubernamentales de identidad y transacciones se acelera en la región."
+          }
+        },
+        {
+          "id": "panama-fraude-dgi-bac-julio2026",
+          "title": "BAC asegura que coopera con operación Pandora y mantiene abierta investigación interna",
+          "summary": "El banco BAC Panamá confirmó que adquirió créditos fiscales hoy bajo investigación en la trama de corrupción 'Operación Pandora', alegando haber actuado 'como adquirente de buena fe'. La red manipuló durante al menos cinco años el sistema tributario E-Tax de la DGI para generar créditos fiscales fraudulentos que luego se vendían a entidades financieras; hasta el momento hay 13 capturas en esta etapa del caso.",
+          "sourceUrl": "https://www.prensa.com/economia/bac-asegura-que-coopera-con-operacion-pandora-y-mantiene-abierta-investigacion-interna/",
+          "sourceName": "La Prensa Panamá",
+          "date": "2026-07-13",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "El caso expone cómo una red organizada explotó vulnerabilidades del sistema tributario estatal (E-Tax) durante años para generar créditos fiscales fraudulentos vendidos a bancos, un vector de fraude que combina identidad corporativa y sistemas gubernamentales sin verificación robusta."
+          }
+        },
         {
           "id": "pa-fraude-140m-arresto-2026-07-13",
           "title": "Cae en Panamá uno de los detenidos de la red de fraude informático de 140 millones de euros desmantelada en España",
@@ -5513,6 +5685,18 @@ const briefing = {
       ],
       "el_salvador": [
         {
+          "id": "elsalvador-fraude-clonacion-tarjetas-cajeros-julio2026",
+          "title": "Clonación de tarjetas y trampas en cajeros, las señales que pueden evitar que pierdas dinero",
+          "summary": "El artículo detalla las modalidades de fraude más comunes en cajeros automáticos salvadoreños, incluyendo clonación de tarjetas mediante dispositivos superpuestos en el lector y retención fraudulenta de efectivo, a menudo combinadas con cámaras ocultas para capturar el PIN. Cita el marco regulatorio del Banco Central de Reserva (Normas Técnicas NRP-61) sobre seguridad física de cajeros.",
+          "sourceUrl": "https://www.elsalvador.com/dinero-y-negocios/finanzas-personales/fraudes-cajeros-automaticos-dinero/1282990/2026/",
+          "sourceName": "elsalvador.com",
+          "date": "2026-07-13",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "banca",
+          "topic": "fraude"
+        },
+        {
           "id": "infobae-fraude-digital-centroamerica-appgate-may17",
           "title": "Fraude digital en Centroamérica creció hasta 206% anual — redes sociales reemplazaron el email como vector principal de ataque",
           "summary": "El informe Fraud Beat 2026 de AppGate registra que Guatemala (+206%), Costa Rica (+182%) y Nicaragua (+170%) lideran el crecimiento interanual de fraude digital en la región, con El Salvador en +28% y República Dominicana en +63%. Las redes sociales desplazaron al email como canal dominante de ataque; el sector financiero concentra el 35,5% de los incidentes y el fraude BEC creció 136% en transferencias en el Q4 2025.",
@@ -5537,6 +5721,22 @@ const briefing = {
         }
       ],
       "espana": [
+        {
+          "id": "espana-gataca-identidad-wallet-fraude-sintetico",
+          "title": "La startup española Gataca capta fondos para escalar su plataforma de identidad basada en wallet y mitigar fraude sintético",
+          "summary": "Gataca, startup española de identidad digital, aseguró financiamiento para escalar su plataforma de wallet de identidad, orientada a que las empresas reduzcan costos de adquisición de clientes y mitiguen el riesgo de fraude de identidad sintética.",
+          "sourceUrl": "https://idtechwire.com/id-tech-digest-july-13-2026/",
+          "sourceName": "ID Tech Digest",
+          "date": "2026-07-13",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "fintech",
+          "topic": "biometria",
+          "actionable": {
+            "type": "movimiento-competitivo",
+            "text": "Una startup europea de identidad wallet-based levanta capital posicionándose específicamente contra fraude de identidad sintética, señal de que el mercado de verificación de identidad en España sigue atrayendo inversión y nuevos entrantes."
+          }
+        },
         {
           "id": "es-fraude-140m-red-2026-07-13",
           "title": "Policía española desarticula red de fraude informático que estafó 140 millones de euros en varios países",
@@ -6032,6 +6232,23 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "microsoft-google-passkeys-workplace-auth-2026-07-14",
+        "title": "Microsoft y Google profundizan la migración a passkeys en la autenticación corporativa",
+        "summary": "Microsoft anunció que hará de las passkeys el método de autenticación por defecto en Entra ID (nube pública) a partir del 1 de septiembre de 2026, y retirará el servicio nativo de SMS/voz el 1 de febrero de 2027. En paralelo, Google Credential Provider for Windows (GCPW) empezó el 13 de julio a habilitar llaves de seguridad físicas compatibles con FIDO2 como segundo factor en el login de Windows.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/microsoft-and-google-push-passkeys-deeper-into-workplace-authentication",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-14",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Microsoft / Google",
+        "vertical": "cross",
+        "topic": "ciberseguridad",
+        "actionable": {
+          "type": "tendencia",
+          "text": "Los dos mayores proveedores de identidad corporativa del mundo están empujando simultáneamente la migración fuera de contraseñas y SMS/OTP hacia passkeys y llaves FIDO2, con un cronograma de retiro concreto (SMS/voz nativo de Entra ID muere el 1/feb/2027). Esto acelera la ventana en la que la autenticación basada en OTP/SMS se vuelve obsoleta como estándar de mercado."
+        }
+      },
       {
         "id": "nec-ava-labs-verificacion-biometrica-onchain-2026-07-13",
         "title": "NEC y Ava Labs firman MoU para verificación de identidad biométrica on-chain orientada a agentes de IA y pagos con stablecoins",
@@ -7592,7 +7809,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-14';
+const TODAY_ISO = '2026-07-15';
 
 const UI_STRINGS = {
     home_label: 'Home',
