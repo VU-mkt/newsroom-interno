@@ -1306,11 +1306,59 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-14",
-  "publishedAt": "2026-07-15T22:43:25.861Z",
+  "date": "2026-07-15",
+  "publishedAt": "2026-07-16T13:36:39.023Z",
   "regulationLastRun": "2026-07-13",
   "sections": {
     "global": [
+      {
+        "id": "global-2026-07-15-synthetic-identity-congress-hearing",
+        "title": "Audiencia en el Congreso de EE.UU. pone el fraude de identidad sintética en el centro del debate sobre verificación continua",
+        "summary": "El Subcomité de Operaciones Gubernamentales de la Cámara de Representantes de EE.UU. realizó una audiencia sobre fraude de identidad en programas federales, con testimonio de Socure y SentiLink, que documentaron un anillo de fraude con 24.148 identidades sintéticas generadas con IA en 30 días y 35.894 intentos de ataque contra organismos de gobierno y empresas. El nuevo filtro de identidad en tiempo real de FAFSA (implementado en abril de 2026) habría evitado cerca de 1.000 millones de dólares en pagos indebidos.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/ai-fraud-fuels-debate-over-continuous-identity-verification",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-15",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "gobierno",
+        "topic": "identidad-digital",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "Que el Congreso de EE.UU. discuta fraude de identidad sintética en beneficios federales, con proveedores de identidad testificando directamente ante el Subcomité, es una señal de que la verificación continua de identidad pasa de ser una función de producto a un tema de política pública de primer nivel."
+        }
+      },
+      {
+        "id": "global-2026-07-15-deepfake-fraud-37b",
+        "title": "Pérdidas globales por fraude con deepfakes llegan a USD 3.700 millones; la detección se mueve más allá de la biometría de una sola señal",
+        "summary": "Según datos de Surfshark citados por Biometric Update, las pérdidas globales acumuladas por fraude con deepfakes alcanzaron los 3.700 millones de dólares, con 2025 y 2026 concentrando el 89% de ese total histórico. Las redes sociales son el principal punto de origen del fraude, y proveedores como Modulate, Resemble AI y Polygraf AI avanzan hacia sistemas de detección multimodal (voz + video) en lugar de depender de una sola señal biométrica.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/deepfake-threat-pushes-detection-beyond-single-biometric-signals",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-15",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "banca",
+        "topic": "deepfake",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El salto a USD 3.700 millones en pérdidas acumuladas por deepfake, concentrado casi en su totalidad en 2025-2026, marca un cambio de fase: el mercado de verificación de identidad se mueve de biometría de una sola señal hacia detección multimodal como respuesta directa a esa escalada."
+        }
+      },
+      {
+        "id": "global-2026-07-15-bulletproof-hosting-doj",
+        "title": "EE.UU. acusa a tres rusos de operar infraestructura de 'bulletproof hosting' que facilitó ransomware contra bancos, hospitales y escuelas",
+        "summary": "El Departamento de Justicia de EE.UU. acusó a Aleksandr Volosovik, Kirill Zatolokin y Yulia Pankova de dirigir desde San Petersburgo una red de 'bulletproof hosting' (Media Land / ML.Cloud) que dio cobertura a ataques de ransomware, robo de datos y phishing contra bancos, hospitales, escuelas y entidades de gobierno en más de 20 estados de EE.UU., con más de 62 millones de dólares en daños. El FBI ofrece 10 millones de dólares por información sobre los acusados.",
+        "sourceUrl": "https://www.infobae.com/estados-unidos/2026/07/15/estados-unidos-acuso-a-tres-rusos-de-liderar-una-red-que-facilito-ciberataques-contra-hospitales-bancos-y-escuelas/",
+        "sourceName": "Infobae / BleepingComputer",
+        "date": "2026-07-15",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "ciberseguridad",
+        "actionable": {
+          "type": "brecha",
+          "text": "El caso confirma que la cadena de suministro del cibercrimen —hosting a prueba de balas, dominios fraudulentos, infraestructura de comando y control— sigue siendo un habilitador estructural del fraude financiero a gran escala contra bancos y organismos públicos, no solo un problema de endpoints."
+        }
+      },
       {
         "id": "global-us-caricom-biometric-data-sharing",
         "title": "Estados Unidos y países del CARICOM firman acuerdo de intercambio de datos biométricos para registros migratorios y criminales",
@@ -4467,6 +4515,18 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "ar-2026-07-14-pirlotv-robo-datos",
+          "title": "Sitios de streaming pirata como Pirlo TV se usan para robar datos financieros durante el Mundial 2026",
+          "summary": "Un artículo de Infobae describe cómo sitios de streaming ilegal de fútbol, buscados masivamente durante el Mundial 2026, exponen a los usuarios a pasarelas de pago falsas, ventanas de phishing que suplantan bancos, secuestro de sesión y malware disfrazado de actualizaciones de reproductor, con el objetivo de robar credenciales bancarias y datos de tarjetas.",
+          "sourceUrl": "https://www.infobae.com/tecno/2026/07/14/argentina-vs-inglaterra-pirlo-tv-una-de-las-consultas-mas-populares-que-roba-datos-financieros/",
+          "sourceName": "Infobae Tecno",
+          "date": "2026-07-14",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "retail",
+          "topic": "fraude"
+        },
+        {
           "id": "argentina-libra-congelamiento-billeteras-cripto",
           "title": "La Justicia argentina congeló 25 billeteras cripto del caso $LIBRA y exigió a 6 exchanges identificar a sus titulares",
           "summary": "El juez federal Marcelo Martínez de Giorgi ordenó congelar 25 billeteras cripto vinculadas al caso $LIBRA y requirió a seis exchanges internacionales revelar identidad y movimientos de sus titulares. Más de 40.000 personas habrían sufrido pérdidas por unos USD 100 millones tras el desplome del token que el presidente Javier Milei promocionó en X en febrero de 2025.",
@@ -5230,6 +5290,22 @@ const briefing = {
       ],
       "colombia": [
         {
+          "id": "co-2026-07-14-breb-smishing",
+          "title": "Alerta en Bogotá por smishing masivo que suplanta a Bre-B para vaciar cuentas bancarias",
+          "summary": "La Secretaría de Seguridad de Bogotá emitió una alerta el 14 de julio por una campaña de smishing que suplanta al sistema de pagos inmediatos Bre-B, dirigiendo a las víctimas a sitios falsos que capturan claves y códigos de verificación. Los delincuentes también usan el pretexto de multas de tránsito para presionar a las víctimas a entregar datos bancarios, con el objetivo de vaciar las cuentas antes de que la víctima note el fraude.",
+          "sourceUrl": "https://www.infobae.com/colombia/2026/07/14/cuidado-con-estos-mensajes-falsos-de-bre-b-le-roban-sus-datos-y-le-desocupan-sus-cuentas-bancarias/",
+          "sourceName": "Infobae Colombia",
+          "date": "2026-07-14",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "ventana",
+            "text": "Bre-B es el nuevo riel de pagos inmediatos de Colombia y ya es blanco de campañas de smishing a escala, señal de que la confianza de usuario en el sistema es todavía baja y la superficie de fraude crece más rápido que los controles del ecosistema."
+          }
+        },
+        {
           "id": "colombia-fraude-smishing-bre-b",
           "title": "Alerta en Bogotá por smishing que suplanta al sistema de pagos instantáneos Bre-B para vaciar cuentas bancarias",
           "summary": "La Secretaría de Seguridad de Bogotá alertó sobre una modalidad de smishing que suplanta a bancos y al sistema de pagos instantáneos Bre-B, redirigiendo a páginas falsas para capturar credenciales, contraseñas y códigos de verificación. También se reportan estafas que suplantan autoridades de tránsito con amenazas de cobro jurídico.",
@@ -5721,6 +5797,22 @@ const briefing = {
         }
       ],
       "espana": [
+        {
+          "id": "es-2026-07-13-red-140m-ceo-fraud",
+          "title": "Desarticulada en España, Portugal y Panamá una red que estafó 140 millones de euros con fraude del CEO y plataformas de inversión falsas",
+          "summary": "La Policía Nacional española, con Europol e Interpol, desarticuló una red transnacional que se apropió de 140 millones de euros mediante fraude del CEO, inversiones falsas y ataques Man-in-the-Middle a facturas. La organización usó 67 testaferros extranjeros y cientos de cuentas bancarias y empresariales para mover el dinero, con detenciones en Barcelona, Portugal y Panamá; el cabecilla operaba desde Porto y dirigía la infraestructura financiera desde Panamá.",
+          "sourceUrl": "https://www.infobae.com/america/agencias/2026/07/13/desarticulada-una-red-de-estafas-informaticas-con-67-testaferros-en-espana-que-se-apropio-de-140-millones/",
+          "sourceName": "Infobae (agencias)",
+          "date": "2026-07-13",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "rezagada",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "Los 140 millones de euros movidos con mulas, fraude del CEO y ataques Man-in-the-Middle confirman que el fraude organizado transnacional España-Portugal-Panamá ya opera con infraestructura financiera y logística propia, cruzando de forma directa hacia el corredor LATAM."
+          }
+        },
         {
           "id": "espana-gataca-identidad-wallet-fraude-sintetico",
           "title": "La startup española Gataca capta fondos para escalar su plataforma de identidad basada en wallet y mitigar fraude sintético",
@@ -6232,6 +6324,74 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "gbg-service-incident-third-party-data",
+        "competitor": "GBG",
+        "language": "es",
+        "title": "GBG reporta interrupción breve por falla de proveedor externo de datos",
+        "summary": "GBG confirmó en su página oficial de estado que, entre las 14:56 y las 15:14 GMT del 14 de julio de 2026, un problema de resolución DNS en un proveedor externo de datos provocó fallas y demoras en algunas transacciones de autenticación y verificación. La compañía aplicó una mitigación y restableció el servicio; no hay evidencia de impacto en datos de clientes. Es un incidente operativo menor, no una brecha de seguridad.",
+        "sourceUrl": "https://www.gbgstatus.com/",
+        "sourceName": "GBG Status (fuente oficial)",
+        "date": "2026-07-14",
+        "highRelevance": false,
+        "topic": "incidente-operativo"
+      },
+      {
+        "id": "nec-ava-labs-stablecoin-biometric-payments",
+        "competitor": "NEC",
+        "language": "es",
+        "title": "NEC y Ava Labs firman MOU para pagos con stablecoins verificados por biometría",
+        "summary": "NEC Corporation y Ava Labs firmaron el 14 de julio de 2026 un memorando de entendimiento para explorar una arquitectura multichain sobre Avalanche que habilite pagos minoristas automatizados con stablecoins verificados mediante biometría facial, pensada inicialmente para turistas internacionales. El diseño mantiene las plantillas biométricas y el historial de transacciones almacenados exclusivamente en la wallet privada del usuario, enviando a la blockchain solo pruebas criptográficas. Es un movimiento exploratorio (MOU, no producto comercial).",
+        "sourceUrl": "https://idtechwire.com/id-tech-digest-july-14-2026/",
+        "sourceName": "ID Tech Digest (idtechwire.com)",
+        "date": "2026-07-14",
+        "highRelevance": false,
+        "topic": "pagos-biometricos"
+      },
+      {
+        "id": "jumio-boyle-sports-onboarding",
+        "competitor": "Jumio",
+        "language": "es",
+        "title": "BOYLE Sports elige a Jumio para verificación de identidad y edad en apuestas",
+        "summary": "Jumio anunció el 14 de julio de 2026 que BOYLE Sports, la casa de apuestas independiente más grande de Irlanda, desplegará Jumio Identity Verification y Doc Proof para automatizar la verificación de documentos de identidad durante el registro de nuevos jugadores en Reino Unido e Irlanda. El acuerdo responde a exigencias regulatorias de la Gambling Regulatory Authority of Ireland y busca acelerar el onboarding sin sacrificar cumplimiento.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/boyle-sports-taps-jumio-for-age-identity-verification",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-14",
+        "highRelevance": false,
+        "topic": "cliente-gaming"
+      },
+      {
+        "id": "aws-security-hub-azure-ai-protection",
+        "competitor": "AWS",
+        "language": "es",
+        "title": "AWS extiende Security Hub a Microsoft Azure y suma protección de cargas de IA",
+        "summary": "AWS anunció el 14 de julio de 2026 que Security Hub ahora descubre y evalúa recursos de Microsoft Azure —incluyendo identidades de usuario, VMs, contenedores y Function Apps— bajo el mismo formato y flujos de respuesta que usa para AWS. En paralelo lanzó GuardDuty AI Protection (detección de invocaciones anómalas de modelos, cost harvesting e inyección de prompts sobre Bedrock/SageMaker) y un inventario de activos de IA a nivel organización. Es un movimiento de plataforma que empuja identidad, postura de seguridad y gobierno de IA hacia el hyperscaler, en terreno que hoy disputan los vendors especializados de IAM/CIAM.",
+        "sourceUrl": "https://aws.amazon.com/blogs/security/security-hub-adds-ai-workload-protection-and-multicloud-support-for-microsoft-azure/",
+        "sourceName": "AWS Security Blog (fuente oficial)",
+        "date": "2026-07-14",
+        "highRelevance": true,
+        "topic": "movimiento-competitivo",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "AWS absorbe identidad, postura de seguridad y gobierno de IA multicloud dentro de su plataforma, presionando a los vendors especializados de IAM/CIAM a diferenciarse por profundidad vertical y presencia regional en vez de cobertura horizontal de infraestructura."
+        }
+      },
+      {
+        "id": "entrust-agentic-ai-trust-accelerator",
+        "competitor": "Entrust",
+        "language": "es",
+        "title": "Entrust lanza el Agentic AI Trust Accelerator para identidad y autorización de agentes de IA",
+        "summary": "Entrust presentó el 15 de julio de 2026 un programa de co-desarrollo que busca dar a las empresas la infraestructura de identidad y confianza que necesitan sus agentes de IA autónomos para pasar de piloto a producción. La iniciativa se centra en cuatro ejes: identidad verificable de cada agente, autorización con humano-en-el-loop, confianza criptográfica (claves, certificados, secretos) y trazabilidad auditable para reguladores y equipos de riesgo. Entrust cita un estudio de IBM según el cual el 77% de los CIO/CISO cree que la adopción de IA ya corre por delante de su capacidad de gobierno.",
+        "sourceUrl": "https://idtechwire.com/entrust-opens-agentic-ai-trust-accelerator-for-identity-and-authorization-of-ai-agents/",
+        "sourceName": "ID Tech (idtechwire.com)",
+        "date": "2026-07-15",
+        "highRelevance": true,
+        "topic": "movimiento-competitivo",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Entrust se adelanta a definir el estándar de identidad y confianza para agentes de IA autónomos antes de que existan ofertas equivalentes maduras en LATAM, ampliando el terreno de conversación de 'identidad' hacia agentes en vez de solo usuarios humanos."
+        }
+      },
       {
         "id": "microsoft-google-passkeys-workplace-auth-2026-07-14",
         "title": "Microsoft y Google profundizan la migración a passkeys en la autenticación corporativa",
