@@ -1306,11 +1306,71 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-15",
-  "publishedAt": "2026-07-16T13:36:39.023Z",
+  "date": "2026-07-16",
+  "publishedAt": "2026-07-17T13:00:00.000Z",
   "regulationLastRun": "2026-07-13",
   "sections": {
     "global": [
+      {
+        "id": "global-mastercard-identomat-truedoc-synthetic-identity-fraud",
+        "title": "Mastercard, Identomat y TrueDoc impulsan verificación de identidad por capas contra el fraude de identidad sintética",
+        "summary": "Mastercard, Identomat y TrueDoc promueven verificación de identidad por capas —detección de vida (liveness), datos de open finance y análisis forense de documentos— para combatir el fraude de identidad sintética, que se perfila como la principal amenaza para instituciones financieras. Estados Unidos proyecta pérdidas de USD 40.000 millones por fraude de identidad para 2027, impulsadas por operaciones de fraude autónomas basadas en IA; el 50% de los intentos de fraude ya involucra documentos falsificados o alterados.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/mastercard-identomat-truedoc-pitch-layered-idv-to-detect-synthetic-identity-fraud",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-16",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "banca",
+        "topic": "fraude",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Mastercard sumándose a proveedores especializados de IDV (Identomat, TrueDoc) para validar verificación por capas confirma el modelo multi-señal (liveness + open finance + forense documental) como el estándar que el mercado espera de cualquier proveedor de identidad digital."
+        }
+      },
+      {
+        "id": "global-qantas-breach-tech-support-scam-vishing",
+        "title": "Estafa de soporte técnico por vishing causó la filtración masiva de datos de Qantas",
+        "summary": "La Comisionada de Privacidad australiana determinó que un ataque de ingeniería social telefónica (vishing) —un estafador haciéndose pasar por 'Qantas IT'— fue la causa de la filtración de datos personales de 5,7 millones de clientes de la aerolínea en 2025. El atacante instruyó a un agente del centro de contacto para conectar el CRM a una herramienta de extracción de datos; la reguladora concluyó que Qantas no pudo prever razonablemente ese ataque específico y no abrió investigación formal.",
+        "sourceUrl": "https://www.theregister.com/cyber-crime/2026/07/16/tech-support-scam-caused-massive-data-breach-at-australian-airline-qantas/5272267",
+        "sourceName": "The Register",
+        "date": "2026-07-16",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "retail",
+        "topic": "breach",
+        "actionable": {
+          "type": "dato-clave",
+          "text": "El fallo regulatorio que exculpa a Qantas pese a una brecha de 5,7 millones de clientes fija un precedente: la ingeniería social telefónica contra agentes de soporte sigue siendo el eslabón más débil, incluso en organizaciones con controles certificados como adecuados."
+        }
+      },
+      {
+        "id": "global-sophos-identity-attacks-top-ransomware-cause",
+        "title": "Ataques de identidad superan a las vulnerabilidades como principal causa de ransomware",
+        "summary": "El reporte State of Ransomware 2026 de Sophos, sobre 2.158 líderes de TI/ciberseguridad en 17 países afectados por ransomware, revela que el correo malicioso (26%) y el phishing (24%) desplazaron a las vulnerabilidades explotadas (18%, desde 32%) como principal causa raíz de los ataques. Las credenciales comprometidas fueron la tercera causa más común (23% de los casos, con MFA presente en el 97% de esos incidentes); el 67% de las víctimas señaló que el ataque de ransomware sufrido fue el ataque de identidad más significativo del último año.",
+        "sourceUrl": "https://www.darkreading.com/identity-access-management-security/identity-attacks-overtake-exploits-top-ransomware-cause",
+        "sourceName": "Dark Reading",
+        "date": "2026-07-15",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "dato-clave",
+          "text": "El giro del ransomware hacia vectores de identidad (email malicioso, phishing, credenciales) en vez de explotación de vulnerabilidades técnicas confirma que la superficie de ataque crítica en 2026 es la identidad del usuario, no el perímetro de red."
+        }
+      },
+      {
+        "id": "global-socure-remote-verifier-manual-fallback-riskos",
+        "title": "Socure lanza verificación manual de respaldo dentro de su plataforma RiskOS",
+        "summary": "Socure presentó Remote Verifier dentro de RiskOS, para casos de verificación de identidad que fallan en los procesos automatizados, con agentes en vivo que usan análisis documental e inteligencia de fraude. La compañía anticipa que menos del 1% de los usuarios necesitará revisión manual; incluye medidas de seguridad reforzadas para sector público, tras el contrato de USD 163 millones con Login.gov junto a Xcelerate Solutions.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/socure-launches-manual-fallback-for-digital-identity-verification",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-16",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "gobierno",
+        "topic": "identidad-digital"
+      },
       {
         "id": "global-2026-07-15-synthetic-identity-congress-hearing",
         "title": "Audiencia en el Congreso de EE.UU. pone el fraude de identidad sintética en el centro del debate sobre verificación continua",
@@ -4997,6 +5057,38 @@ const briefing = {
       ],
       "mexico": [
         {
+          "id": "mx-unico-fraude-identidad-cinco-estados",
+          "title": "Fraude de identidad en México se concentra en cinco estados, según Unico",
+          "summary": "La Red de Inteligencia de Unico reporta que CDMX, Veracruz, Edomex, Jalisco y Chihuahua concentran el 44% de las alertas de fraude de identidad en México durante 2026, impulsadas por ataques con IA que redujeron en 99% el costo de ejecutar ciberataques (según Víctor Ruiz, CEO de Silikn). El Global Fraud and Risk Outlook 2026 proyecta que las pérdidas globales por fraude financiero crecerán de USD 25.000 millones en 2025 a USD 55.300 millones para 2030.",
+          "sourceUrl": "https://www.elfinanciero.com.mx/empresas/2026/07/16/fraude-de-identidad-se-concentra-en-5-estados-por-dinamismo-economico/",
+          "sourceName": "El Financiero",
+          "date": "2026-07-16",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "La concentración geográfica del fraude de identidad en zonas de alto dinamismo económico (CDMX, Jalisco, Edomex) marca dónde bancos y fintechs mexicanas están más expuestos a suplantación asistida por IA, justo cuando el costo de montar un ataque cayó 99%."
+          }
+        },
+        {
+          "id": "mx-phishing-as-a-service-bancos-latam",
+          "title": "\"Phishing as a Service\" por USD 120 democratiza ataques a bancos latinoamericanos",
+          "summary": "Kits de Phishing as a Service (PhaaS) disponibles desde USD 120 en plataformas como Telegram incluyen plantillas de suplantación de marcas bancarias, páginas de login fraudulentas y herramientas de captura de credenciales, permitiendo campañas masivas sin conocimiento técnico. El fenómeno obliga a los bancos latinoamericanos a monitorear amenazas fuera de su perímetro tradicional, antes de que los clientes sean víctimas.",
+          "sourceUrl": "https://www.cronista.com/mexico/finanzas-economia/alerta-bancaria-el-nuevo-metodo-de-phishing-que-vacia-cuentas-sin-que-te-des-cuenta/",
+          "sourceName": "El Cronista",
+          "date": "2026-07-15",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "La comoditización de kits de phishing a USD 120/mes baja la barrera de entrada para atacar bancos LATAM, desplazando la superficie de riesgo hacia el cliente final más que hacia el perímetro corporativo."
+          }
+        },
+        {
           "id": "mexico-fraude-transferencias-bbva-banamex",
           "title": "BBVA México y Banamex, blanco recurrente de fraude por transferencias que vacía cuentas en minutos",
           "summary": "Clientes de BBVA México y Banamex siguen siendo blanco de esquemas de depósitos falsos donde los delincuentes piden la 'devolución' del dinero, además de suplantación de identidad empresarial y phishing con datos bancarios de proveedores manipulados. El fraude por transferencia puede vaciar los ahorros de una víctima en minutos.",
@@ -5710,7 +5802,24 @@ const briefing = {
         }
       ],
       "bolivia": [],
-      "paraguay": [],
+      "paraguay": [
+        {
+          "id": "py-mercosur-acuerdo-identidad-digital-transfronteriza",
+          "title": "Mercosur aprueba reconocimiento mutuo de identidad digital entre Paraguay, Argentina, Brasil y Uruguay",
+          "summary": "Tras casi dos años de negociación, el Mercosur aprobó un acuerdo de reconocimiento mutuo de identidad digital que permitirá a los ciudadanos de los cuatro países usar su identidad electrónica local para acceder a trámites en los países vecinos, sin compartir contraseñas ni bases de datos (\"lo único que se transmite es la confirmación de que la identidad fue verificada\"). Paraguay ya cuenta con más de 1,5 millones de ciudadanos con identidad electrónica activa; el acuerdo debe ser ratificado por los congresos nacionales antes de entrar en vigor.",
+          "sourceUrl": "https://www.abc.com.py/nacionales/2026/07/16/identidad-digital-del-mercosur-que-cambia-para-los-paraguayos-tras-el-acuerdo-regional/",
+          "sourceName": "ABC Color",
+          "date": "2026-07-16",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "gobierno",
+          "topic": "identidad-digital",
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "La interoperabilidad de identidad digital a nivel Mercosur (pendiente de ratificación) abre una ventana regulatoria regional para proveedores de infraestructura de identidad que certifiquen autenticación cruzada entre los cuatro países sin centralizar datos sensibles."
+          }
+        }
+      ],
       "venezuela": [
         {
           "id": "bdt-venezuela-fallas-nomina-may26",
@@ -5797,6 +5906,22 @@ const briefing = {
         }
       ],
       "espana": [
+        {
+          "id": "es-mossos-banda-fraude-financiero-1600-documentos",
+          "title": "Mossos d'Esquadra desarticulan banda de fraude financiero con 1.600 documentos de identidad robados",
+          "summary": "Los Mossos d'Esquadra detuvieron a cinco personas de una banda que en solo 12 días obtuvo un beneficio ilícito superior a 131.000 euros vaciando tarjetas contratadas fraudulentamente con datos robados de víctimas. Se recuperaron 1.600 documentos de identidad, pasaportes y permisos de conducir de personas de toda España.",
+          "sourceUrl": "https://www.infobae.com/espana/agencias/2026/07/15/intervienen-1600-documentos-de-identidad-a-una-banda-especializada-en-estafas-financieras/",
+          "sourceName": "Infobae España",
+          "date": "2026-07-15",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "brecha",
+            "text": "El volumen de documentos de identidad físicos en circulación (1.600 en una sola banda) muestra que el fraude sigue apoyándose en identidades reales sustraídas, no solo en síntesis digital, sosteniendo la demanda de verificación documental reforzada en la banca española."
+          }
+        },
         {
           "id": "es-2026-07-13-red-140m-ceo-fraud",
           "title": "Desarticulada en España, Portugal y Panamá una red que estafó 140 millones de euros con fraude del CEO y plataformas de inversión falsas",
@@ -6324,6 +6449,36 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "veridas-fourthline-merger-2026-07-16",
+        "competitor": "Veridas",
+        "language": "es",
+        "title": "Veridas y Fourthline se fusionan para crear una plataforma transatlántica de identidad digital",
+        "summary": "Las españolas Veridas y la neerlandesa Fourthline anunciaron el 16 de julio de 2026 su fusión para crear una plataforma unificada de verificación de identidad, KYC/AML, firma electrónica y biometría, con presencia en Europa, Estados Unidos y Latinoamérica. Respaldada por Finch Capital, Rabo Investments y BBVA (accionista), la operación proyecta 115 millones de verificaciones en 2026 y presencia en más de 50 países; el CEO de Fourthline, Paul Stoddart, señaló a Latinoamérica como uno de los mercados financieros más dinámicos para la expansión conjunta. Cierre esperado en el segundo semestre de 2026, sujeto a aprobaciones regulatorias.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/fourthline-veridas-merge-to-build-global-identity-and-compliance-platform",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-16",
+        "highRelevance": true,
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Consolidación entre proveedores europeos de IDV/KYC que amplía su alcance combinado a más de 50 países e incorpora expansión explícita hacia LATAM, mercado donde VU ya opera con integraciones gubernamentales en 8 países."
+        }
+      },
+      {
+        "id": "sans-hyperscalers-agentic-ai-identity-2026-07-15",
+        "competitor": "AWS / Google Cloud / Microsoft",
+        "language": "es",
+        "title": "SANS reúne a AWS, Google Cloud, Microsoft y Anthropic para abordar la identidad de agentes autónomos en la nube",
+        "summary": "El 15 de julio de 2026, SANS Institute anunció que AWS, Google Cloud, Microsoft y Anthropic participarán en la Cloud Security Exchange fusionada por primera vez con el CloudSecNext Summit (17-18 de agosto, San Francisco) para rediseñar controles de identidad y detección pensados originalmente para investigadores humanos, no para agentes de IA autónomos. Rob T. Lee, Chief AI Officer de SANS, advirtió que robar las credenciales de un agente de IA implica heredar todo lo que ese agente puede tocar.",
+        "sourceUrl": "https://www.manilatimes.net/2026/07/15/tmt-newswire/globenewswire/sans-brings-aws-google-cloud-microsoft-and-anthropic-together-to-address-autonomous-agents-in-cloud-security/2385149",
+        "sourceName": "Manila Times (GlobeNewswire)",
+        "date": "2026-07-15",
+        "highRelevance": false,
+        "actionable": {
+          "type": "tendencia",
+          "text": "Los tres hyperscalers admiten públicamente que la identidad y autorización de agentes de IA es un vacío de gobernanza no resuelto por sus stacks actuales, validando esa categoría como frontera competitiva emergente en identidad."
+        }
+      },
       {
         "id": "gbg-service-incident-third-party-data",
         "competitor": "GBG",
@@ -7969,7 +8124,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-15';
+const TODAY_ISO = '2026-07-17';
 
 const UI_STRINGS = {
     home_label: 'Home',
