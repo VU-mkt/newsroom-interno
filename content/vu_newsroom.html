@@ -1306,11 +1306,27 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-16",
-  "publishedAt": "2026-07-17T13:00:00.000Z",
-  "regulationLastRun": "2026-07-13",
+  "date": "2026-07-19",
+  "publishedAt": "2026-07-20T13:39:39.135Z",
+  "regulationLastRun": "2026-07-20",
   "sections": {
     "global": [
+      {
+        "id": "global-ey-data-breach-ssn-tax-info",
+        "title": "Ernst & Young notifica brecha de datos que expuso números de seguro social e información fiscal de clientes",
+        "summary": "EY confirmó que un tercero accedió sin autorización a su plataforma de tickets de soporte técnico entre el 28 de marzo y el 12 de abril de 2026, descargando documentos con nombres, domicilios, fechas de nacimiento, números de seguro social, licencias de conducir e información fiscal de clientes. La notificación a la fiscalía de Texas se completó el 17 de julio de 2026; EY ofrece 24 meses de monitoreo de identidad vía Experian.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/ernst-and-young-discloses-data-breach-after-support-system-hack/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-07-17",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "brecha",
+        "actionable": {
+          "type": "brecha",
+          "text": "La exposición de SSN, licencias y datos fiscales en una firma Big Four ilustra cómo los proveedores externos de soporte se convierten en el eslabón débil de la cadena de identidad corporativa, incluso en organizaciones con presupuestos de seguridad elevados."
+        }
+      },
       {
         "id": "global-mastercard-identomat-truedoc-synthetic-identity-fraud",
         "title": "Mastercard, Identomat y TrueDoc impulsan verificación de identidad por capas contra el fraude de identidad sintética",
@@ -4575,6 +4591,22 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "ar-parque-leloir-mafia-contenedores",
+          "title": "Estafa piramidal de Parque Leloir: surge vínculo con un hotel premium y la 'mafia de los contenedores'",
+          "summary": "El 19 de julio de 2026 se conoció que la investigación de la estafa piramidal de Parque Leloir —que ya supera el millón de dólares en perjuicio— reveló un vínculo con una organización de contrabando conocida como 'mafia de los contenedores' y con un hotel premium usado en la operatoria, ampliando el alcance del caso reportado inicialmente el 10 de julio de 2026.",
+          "sourceUrl": "https://www.infobae.com/sociedad/policiales/2026/07/19/estafa-piramidal-en-parque-leloir-el-extrano-vinculo-con-un-hotel-premium-y-la-mafia-de-los-contenedores/",
+          "sourceName": "Infobae",
+          "date": "2026-07-19",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "cross",
+          "topic": "dato-clave",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "La conexión entre un esquema piramidal financiero y una red de contrabando organizado muestra cómo el fraude de inversión se entrelaza con estructuras de lavado más amplias en Argentina."
+          }
+        },
+        {
           "id": "ar-2026-07-14-pirlotv-robo-datos",
           "title": "Sitios de streaming pirata como Pirlo TV se usan para robar datos financieros durante el Mundial 2026",
           "summary": "Un artículo de Infobae describe cómo sitios de streaming ilegal de fútbol, buscados masivamente durante el Mundial 2026, exponen a los usuarios a pasarelas de pago falsas, ventanas de phishing que suplantan bancos, secuestro de sesión y malware disfrazado de actualizaciones de reproductor, con el objetivo de robar credenciales bancarias y datos de tarjetas.",
@@ -5057,6 +5089,38 @@ const briefing = {
       ],
       "mexico": [
         {
+          "id": "mx-concanaco-estrategia-fraude-digital",
+          "title": "CONCANACO refuerza su estrategia nacional de prevención contra el fraude digital",
+          "summary": "La Confederación de Cámaras Nacionales de Comercio anunció el 19 de julio de 2026 el refuerzo de su estrategia de prevención de fraude digital para el comercio afiliado, en un contexto de aumento de ciberataques que coincide con el Mundial 2026 y el pico de comercio electrónico asociado.",
+          "sourceUrl": "https://www.cronica.com.mx/nacional/2026/07/19/concanaco-refuerza-su-estrategia-nacional-de-prevencion-contra-el-fraude-digital/",
+          "sourceName": "La Crónica de Hoy",
+          "date": "2026-07-19",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "retail",
+          "topic": "movimiento-competitivo",
+          "actionable": {
+            "type": "movimiento-competitivo",
+            "text": "La reacción gremial anticipa mayor demanda de soluciones de verificación y prevención de fraude por parte de comercios afiliados durante el pico de e-commerce del Mundial."
+          }
+        },
+        {
+          "id": "mx-congreso-fraudes-bancarios-condusef-30porciento",
+          "title": "Alerta en el Congreso de México por fraudes bancarios cibernéticos: quejas en banca digital crecen más de 30% en 2026",
+          "summary": "El 18 de julio de 2026 la agenda legislativa mexicana giró en torno al alza de reclamaciones por fraude bancario digital: entre enero y marzo de 2026 sumaron 1.515.000 casos (+31,5% interanual) por 5.201 millones de pesos, más del 65% de todo lo reclamado a la banca comercial. Se propuso crear mesas de trabajo permanentes entre CONDUSEF y áreas de investigación del Estado.",
+          "sourceUrl": "https://cadenapolitica.com/2026/07/18/fraudes-bancarios-ciberneticos-banca-digital-condusef-congreso-2026/",
+          "sourceName": "Cadena Política",
+          "date": "2026-07-18",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "señal-regulatoria",
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "El salto de 31,5% en reclamaciones y la respuesta legislativa muestran que el fraude bancario digital superó la capacidad de contención actual del regulador financiero mexicano, abriendo debate sobre nuevos estándares de verificación."
+          }
+        },
+        {
           "id": "mx-unico-fraude-identidad-cinco-estados",
           "title": "Fraude de identidad en México se concentra en cinco estados, según Unico",
           "summary": "La Red de Inteligencia de Unico reporta que CDMX, Veracruz, Edomex, Jalisco y Chihuahua concentran el 44% de las alertas de fraude de identidad en México durante 2026, impulsadas por ataques con IA que redujeron en 99% el costo de ejecutar ciberataques (según Víctor Ruiz, CEO de Silikn). El Global Fraud and Risk Outlook 2026 proyecta que las pérdidas globales por fraude financiero crecerán de USD 25.000 millones en 2025 a USD 55.300 millones para 2030.",
@@ -5382,6 +5446,38 @@ const briefing = {
       ],
       "colombia": [
         {
+          "id": "co-empresas-3000-ciberataques-semana",
+          "title": "Empresas en Colombia enfrentan cerca de 3.000 ciberataques por semana",
+          "summary": "Un reporte publicado el 18 de julio de 2026 señala que las compañías colombianas reciben en promedio casi 3.000 intentos de ciberataque semanales, posicionando al país entre los más atacados de la región, con foco creciente en pequeñas y medianas empresas de menor capacidad defensiva.",
+          "sourceUrl": "https://www.infobae.com/tecno/2026/07/18/empresas-en-colombia-enfrentan-cerca-de-3000-ciberataques-por-semana-asi-pueden-protegerse/",
+          "sourceName": "Infobae",
+          "date": "2026-07-18",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "cross",
+          "topic": "tendencia",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El volumen creciente de ataques semanales contra pymes colombianas describe un mercado donde la superficie de exposición supera la capacidad de respuesta interna de las empresas más pequeñas."
+          }
+        },
+        {
+          "id": "co-ecopetrol-ciberataque-extorsion-3300-cuentas",
+          "title": "Ciberataque a Ecopetrol: hackers extrajeron datos de 3.300 cuentas y amenazan con extorsión tras intento de ransomware bloqueado",
+          "summary": "Ecopetrol confirmó que un actor externo accedió sin autorización a entornos de almacenamiento en la nube de 15 empresas del Grupo Ecopetrol la noche del 17 de julio de 2026, descargando datos de cerca de 3.300 cuentas de usuario. La compañía bloqueó un intento de ejecución de ransomware y recibió exigencias de extorsión con amenaza de divulgar la información sustraída; ya denunció el hecho ante la Fiscalía y descarta impacto en producción u operaciones.",
+          "sourceUrl": "https://www.infobae.com/colombia/2026/07/18/ciberataque-a-ecopetrol-criminales-accedieron-y-extrajeron-informacion-de-3300-cuentas-de-la-empresa/",
+          "sourceName": "Infobae Colombia",
+          "date": "2026-07-18",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "cross",
+          "topic": "brecha",
+          "actionable": {
+            "type": "brecha",
+            "text": "La combinación de intento de ransomware bloqueado más extorsión por exfiltración confirma que incluso operadoras críticas con controles maduros siguen expuestas al robo de credenciales de cuentas de usuario como vector de entrada."
+          }
+        },
+        {
           "id": "co-2026-07-14-breb-smishing",
           "title": "Alerta en Bogotá por smishing masivo que suplanta a Bre-B para vaciar cuentas bancarias",
           "summary": "La Secretaría de Seguridad de Bogotá emitió una alerta el 14 de julio por una campaña de smishing que suplanta al sistema de pagos inmediatos Bre-B, dirigiendo a las víctimas a sitios falsos que capturan claves y códigos de verificación. Los delincuentes también usan el pretexto de multas de tránsito para presionar a las víctimas a entregar datos bancarios, con el objetivo de vaciar las cuentas antes de que la víctima note el fraude.",
@@ -5583,6 +5679,22 @@ const briefing = {
       ],
       "peru": [
         {
+          "id": "pe-estafa-ia-clonacion-voz-familiar",
+          "title": "Alertan en Perú sobre estafas con inteligencia artificial que clonan la voz de un familiar",
+          "summary": "Un artículo publicado el 17 de julio de 2026 advierte sobre el aumento de estafas en Perú que usan clonación de voz por IA para simular llamadas de un familiar solicitando dinero con urgencia, además de suplantación de figuras públicas en falsas promociones de inversión y spoofing de identificador de llamadas.",
+          "sourceUrl": "https://www.infobae.com/peru/2026/07/17/recibiste-una-llamada-de-un-familiar-pidiendo-dinero-podria-tratarse-de-una-estafa-con-inteligencia-artificial/",
+          "sourceName": "Infobae Perú",
+          "date": "2026-07-17",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "cross",
+          "topic": "deepfake",
+          "actionable": {
+            "type": "tendencia",
+            "text": "La normalización del vishing con voz clonada en el mercado peruano confirma que el deepfake de audio ya migró del fraude corporativo (CEO fraud) al fraude doméstico contra consumidores individuales."
+          }
+        },
+        {
           "id": "peru-actualizacion-jackson-mora-arquitectos-fraude",
           "title": "Jackson Mora, señalado de 'Los Arquitectos del Fraude', trasladado a Ancón I mientras continúa la prisión preventiva",
           "summary": "Jackson Mora, señalado como parte de la organización 'Los Arquitectos del Fraude' que desvió más de S/ 9,9 millones de fondos estatales de la Municipalidad de Pueblo Nuevo (Chincha) mediante fraude informático, fue trasladado a Ancón I mientras el INPE define su reclusión. De lo desviado, S/ 8 millones fueron recuperados vía bloqueo de cuentas; sigue sin ubicarse cerca de S/ 818.000.",
@@ -5657,8 +5769,41 @@ const briefing = {
         }
       ],
       "uruguay": [],
-      "ecuador": [],
+      "ecuador": [
+        {
+          "id": "ec-estafa-bono-presidencial-usd4000",
+          "title": "Autoridades de Ecuador advierten nueva estafa digital con falso 'bono de USD 4.000'",
+          "summary": "El 17 de julio de 2026 autoridades ecuatorianas alertaron sobre una campaña de phishing en Facebook y WhatsApp que ofrece un supuesto 'Bono Presidencial para Todos' de entre USD 1.000 y 4.000 para personas de 13 a 65 años, dirigiendo a páginas falsas con apariencia institucional que buscan robar datos personales y financieros.",
+          "sourceUrl": "https://www.eldiario.ec/ecuador/autoridades-advierten-nueva-estafa-digital-con-bonos-de-usd-4000-17072026/",
+          "sourceName": "El Diario (Ecuador)",
+          "date": "2026-07-17",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "gobierno",
+          "topic": "dato-clave",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "La suplantación de un programa social del gobierno ecuatoriano para captar datos personales y financieros repite un patrón regional que se activa cada vez que se anuncian beneficios estatales."
+          }
+        }
+      ],
       "costa_rica": [
+        {
+          "id": "cr-pymes-riesgo-ciberataques-falta-capacitacion",
+          "title": "Pymes costarricenses enfrentan creciente riesgo de ciberataques por falta de capacitación y recursos",
+          "summary": "Un informe publicado el 18 de julio de 2026 señala que las pequeñas y medianas empresas de Costa Rica se han convertido en blanco frecuente de ciberdelincuentes debido a limitaciones tecnológicas, financieras y de capacitación del personal, en un contexto de aumento sostenido de fraude informático en el país.",
+          "sourceUrl": "https://www.infobae.com/costa-rica/2026/07/18/pymes-costarricenses-enfrentan-creciente-riesgo-de-ciberataques-por-falta-de-capacitacion-y-recursos/",
+          "sourceName": "Infobae Costa Rica",
+          "date": "2026-07-18",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "cross",
+          "topic": "tendencia",
+          "actionable": {
+            "type": "tendencia",
+            "text": "La brecha de capacitación en pymes costarricenses describe un segmento de mercado con exposición creciente a fraude y sin presupuesto para soluciones de seguridad enterprise."
+          }
+        },
         {
           "id": "costa-rica-secuestro-virtual-600pct-2026-jun03",
           "actionable": {
@@ -5687,6 +5832,22 @@ const briefing = {
         }
       ],
       "panama": [
+        {
+          "id": "pa-dgi-fraude-tributario-camara-comercio-severidad",
+          "title": "Cámara de Comercio de Panamá pide severidad ante red que manipuló el sistema tributario estatal",
+          "summary": "El 19 de julio de 2026 la Cámara de Comercio de Panamá exigió sanciones severas tras confirmarse que una red manipuló la plataforma E-Tax para borrar y convertir en saldos negociables pagos de impuestos ya realizados, con impacto económico estimado entre USD 40 y 80 millones. El caso, denunciado inicialmente el 13 de julio de 2026, ya suma 16 personas imputadas.",
+          "sourceUrl": "https://www.infobae.com/panama/2026/07/19/camara-de-comercio-pide-severidad-ante-red-que-habria-manipulado-el-sistema-tributario-estatal-panameno/",
+          "sourceName": "Infobae Panamá",
+          "date": "2026-07-19",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "gobierno",
+          "topic": "dato-clave",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "La escala de USD 40-80 millones y la implicación de una entidad financiera local en la manipulación del sistema tributario ilustra el riesgo de fraude interno en plataformas de pago estatales cuando los controles de identidad de operador son débiles."
+          }
+        },
         {
           "id": "panama-opinion-controles-fallidos-julio2026",
           "title": "Hoy por hoy: cuando fallan los controles, gana el crimen",
@@ -5801,8 +5962,41 @@ const briefing = {
           }
         }
       ],
-      "bolivia": [],
+      "bolivia": [
+        {
+          "id": "bo-att-bloqueo-13516-celulares-estafas-digitales",
+          "title": "ATT de Bolivia bloquea 13.516 celulares y corta 10.846 líneas por denuncias de estafas digitales",
+          "summary": "La Autoridad de Telecomunicaciones y Transportes de Bolivia informó el 18 de julio de 2026 que entre enero y esa fecha bloqueó 13.516 IMEI y cortó 10.846 líneas usadas por estafadores, sobre 16.821 denuncias registradas en la plataforma 'Bloquea la Estafa'. La Paz, Santa Cruz y Cochabamba concentran la mayoría de los reportes; Telecel S.A. concentra el 67% de las líneas reportadas.",
+          "sourceUrl": "https://www.eldia.com.bo/2026-07-18/pais/att-bloquea-13516-celulares-y-corta-10846-lineas-por-denuncias-de-estafas-digitales.html",
+          "sourceName": "El Día (Bolivia)",
+          "date": "2026-07-18",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "telco",
+          "topic": "señal-regulatoria",
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "El bloqueo masivo de líneas y equipos confirma que la lucha contra el fraude ya es prioridad regulatoria en mercados LATAM de menor tamaño, no solo en los grandes."
+          }
+        }
+      ],
       "paraguay": [
+        {
+          "id": "py-ciberespionaje-china-declaracion-conjunta-eeuu",
+          "title": "Estados Unidos y Paraguay denuncian conjuntamente ciberespionaje chino contra redes del Estado paraguayo",
+          "summary": "El 19 de julio de 2026 se confirmaron múltiples intrusiones en redes informáticas del Estado paraguayo, atribuidas por los gobiernos de Paraguay y EE.UU. a actores vinculados a la República Popular China, con infiltración y extracción no autorizada de datos de sistemas estatales. El MITIC no detalló qué instituciones fueron afectadas ni si se comprometieron datos de ciudadanos; el gobierno chino niega participación.",
+          "sourceUrl": "https://mitic.gov.py/declaracion-conjunta-sobre-operaciones-ciberneticas-maliciosas-de-china-dirigidas-al-gobierno-de-paraguay/",
+          "sourceName": "MITIC Paraguay",
+          "date": "2026-07-19",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "gobierno",
+          "topic": "brecha",
+          "actionable": {
+            "type": "brecha",
+            "text": "El alcance sobre datos de identidad de ciudadanos no está confirmado por MITIC; es un caso más geopolítico que de mercado puro, pero confirma que la infraestructura estatal sigue siendo blanco de intrusión y exfiltración de datos."
+          }
+        },
         {
           "id": "py-mercosur-acuerdo-identidad-digital-transfronteriza",
           "title": "Mercosur aprueba reconocimiento mutuo de identidad digital entre Paraguay, Argentina, Brasil y Uruguay",
@@ -5870,6 +6064,22 @@ const briefing = {
       ],
       "el_salvador": [
         {
+          "id": "sv-argoz-condena-199-anos-estafa-masiva",
+          "title": "Tribunal salvadoreño condena a hasta 199 años de prisión a miembros del corporativo ARGOZ por estafa inmobiliaria masiva",
+          "summary": "El 18 de julio de 2026 el Tercer Tribunal Contra el Crimen Organizado de San Salvador condenó a integrantes del corporativo ARGOZ por un esquema de fraude inmobiliario que operó durante años y afectó a decenas de víctimas; Leticia Farfán de Gómez recibió 199 años de prisión por 23 casos de estafa agravada.",
+          "sourceUrl": "https://www.infobae.com/el-salvador/2026/07/18/tribunal-salvadoreno-condena-con-penas-de-hasta-199-anos-de-prision-a-miembros-del-corporativo-argoz-por-estafa-masiva/",
+          "sourceName": "Infobae El Salvador",
+          "date": "2026-07-18",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "cross",
+          "topic": "dato-clave",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "La sentencia ejemplarizante confirma que el sistema judicial salvadoreño está endureciendo penas por fraude organizado de largo plazo, lo que puede impulsar mayor demanda de debida diligencia documental en transacciones inmobiliarias."
+          }
+        },
+        {
           "id": "elsalvador-fraude-clonacion-tarjetas-cajeros-julio2026",
           "title": "Clonación de tarjetas y trampas en cajeros, las señales que pueden evitar que pierdas dinero",
           "summary": "El artículo detalla las modalidades de fraude más comunes en cajeros automáticos salvadoreños, incluyendo clonación de tarjetas mediante dispositivos superpuestos en el lector y retención fraudulenta de efectivo, a menudo combinadas con cámaras ocultas para capturar el PIN. Cita el marco regulatorio del Banco Central de Reserva (Normas Técnicas NRP-61) sobre seguridad física de cajeros.",
@@ -5906,6 +6116,22 @@ const briefing = {
         }
       ],
       "espana": [
+        {
+          "id": "es-fugitiva-britanica-estafa-300000-anciana",
+          "title": "Detienen en España a una fugitiva británica reclamada por estafar más de 300.000 euros a una mujer mayor",
+          "summary": "La Policía Nacional detuvo el 17 de julio de 2026 en Los Cristianos (Tenerife) a una ciudadana británica reclamada por el Reino Unido por defraudar más de 300.000 libras (unos 345.000 euros) a una mujer mayor entre 2019 y 2023, tras ganarse su confianza, aislarla de su familia y retirar efectivo de sus cuentas en beneficio propio.",
+          "sourceUrl": "https://www.infobae.com/espana/agencias/2026/07/17/detienen-a-una-fugitiva-britanica-reclamada-por-estafar-mas-de-300000-a-una-mujer/",
+          "sourceName": "Infobae España",
+          "date": "2026-07-17",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "cross",
+          "topic": "dato-clave",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "El caso ilustra el patrón de fraude de confianza contra adultos mayores con acceso directo a cuentas bancarias, un vector vigente pese al foco reciente en fraude digital automatizado."
+          }
+        },
         {
           "id": "es-mossos-banda-fraude-financiero-1600-documentos",
           "title": "Mossos d'Esquadra desarticulan banda de fraude financiero con 1.600 documentos de identidad robados",
@@ -6164,6 +6390,66 @@ const briefing = {
       ]
     },
     "regulation": [
+      {
+        "id": "pa-sbp-refuerza-aml-kyc-acuerdo-1-2026",
+        "title": "La Superintendencia de Bancos de Panamá refuerza la implementación del Acuerdo 1-2026 sobre prevención de uso indebido de servicios bancarios y fiduciarios",
+        "summary": "La Superintendencia de Bancos de Panamá (SBP) informó el 14 de julio de 2026 que profundiza la implementación de sus Acuerdos 1-2026 y 3-2026, que fortalecen el conocimiento del cliente y del beneficiario final, las metodologías de clasificación de riesgo, la debida diligencia diferenciada y los mecanismos de monitoreo contra el blanqueo de capitales. El Acuerdo 1-2026 incorpora la obligación de geolocalización inferencial como fuente primaria de evaluación de riesgo en la apertura de productos por canales digitales, con plazo de implementación hasta junio de 2027. El sector bancario panameño reportó en mayo de 2026 una cartera crediticia neta de USD 102.191,2 millones y un índice de liquidez del 60% (mínimo regulatorio: 30%).",
+        "sourceUrl": "https://www.infobae.com/panama/2026/07/15/superintendencia-de-bancos-de-panama-redobla-esfuerzos-sobre-la-prevencion-del-uso-indebido-de-los-servicios-bancarios-y-fiduciarios/",
+        "sourceName": "Infobae Panamá",
+        "date": "2026-07-14",
+        "language": "es",
+        "highRelevance": false,
+        "regulatoryBody": "Superintendencia de Bancos de Panamá (SBP)",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "La obligatoriedad de geolocalización inferencial y debida diligencia digital diferenciada en la banca panameña, con plazo hasta junio de 2027, marca un ritmo regulatorio de onboarding remoto que otros supervisores bancarios centroamericanos podrían replicar."
+        }
+      },
+      {
+        "id": "br-resolucao-cvm-245-diligencia-investidor-nao-residente",
+        "title": "Entra en vigor la Resolución CVM 245: Brasil endurece la debida diligencia AML para inversores no residentes en el mercado de capitales",
+        "summary": "La Comissão de Valores Mobiliários de Brasil (CVM) firmó el 1 de julio de 2026 la Resolución CVM 245, publicada en el Diario Oficial el 3 de julio y vigente desde el 15 de julio de 2026, que modifica la Resolución CVM 50/2021 sobre prevención de lavado de dinero, financiamiento del terrorismo y proliferación de armas. La norma obliga a corretoras y gestoras a aplicar diligencia reforzada a clientes clasificados como 'Investidor Não Residente' provenientes de países señalados por el GAFI, en el marco del seguimiento de Brasil a su última evaluación mutua ante el organismo.",
+        "sourceUrl": "https://conteudo.cvm.gov.br/legislacao/resolucoes/resol245.html",
+        "sourceName": "CVM (Comissão de Valores Mobiliários)",
+        "date": "2026-07-15",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "CVM (Comissão de Valores Mobiliários) - Brasil",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "El endurecimiento de la diligencia reforzada sobre inversores no residentes de países de riesgo GAFI eleva el estándar de onboarding y monitoreo AML que corretoras y gestoras brasileñas exigirán a sus proveedores de verificación de identidad."
+        }
+      },
+      {
+        "id": "es-audiencia-nacional-anula-guia-antihuella-aepd",
+        "title": "La Audiencia Nacional anula la guía \"antihuella\" de la AEPD y habilita de nuevo el fichaje biométrico sin consentimiento explícito",
+        "summary": "La Audiencia Nacional española anuló, en una sentencia conocida el 15 de julio de 2026, la guía de 2022 de la AEPD que restringía el uso de sistemas biométricos de control horario, al considerar que la agencia 'se extralimitó al imponer restricciones sin rango normativo'. El fallo permite a miles de empresas —especialmente en logística, distribución y hostelería— retomar el fichaje biométrico sin exigir consentimiento explícito de cada trabajador. La AEPD ya anunció que recurrirá en casación, por lo que la incertidumbre sobre el encaje con el RGPD se prolongará varios meses más.",
+        "sourceUrl": "https://www.merca2.es/2026/07/15/anulacion-guia-antihuella-fichaje-biometrico-2417985/",
+        "sourceName": "Merca2",
+        "date": "2026-07-15",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "Audiencia Nacional / AEPD",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "El fallo reabre la adopción de biometría de control horario en España tras años de retracción regulatoria, en un contexto donde el vacío legal sobre su encaje con el RGPD sigue abierto mientras la AEPD recurre en casación."
+        }
+      },
+      {
+        "id": "global-fatf-seventh-update-virtual-assets-vasps",
+        "title": "FATF/GAFI publica su séptima actualización sobre criptoactivos: 83% de jurisdicciones ya aplica la regla de viajero, pero persisten brechas de cumplimiento",
+        "summary": "El GAFI publicó el 16 de julio de 2026 su séptimo informe de actualización sobre la implementación de sus estándares para activos virtuales (VA) y proveedores de servicios de activos virtuales (VASP). El 83% de las jurisdicciones relevadas ya aprobó legislación de 'travel rule' (vs. 73% en 2025), y el porcentaje de países calificados 'mayormente cumplidores' subió de 29% a 34%. El organismo advierte un aumento del uso indebido de stablecoins por actores vinculados a Corea del Norte y financiadores del terrorismo, y llama a cerrar brechas de supervisión antes de que el crimen organizado las explote a mayor escala.",
+        "sourceUrl": "https://www.fatf-gafi.org/en/news/targeted-updated-va-vasps-2026.html",
+        "sourceName": "FATF-GAFI",
+        "date": "2026-07-16",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "FATF/GAFI",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "El endurecimiento de la supervisión de VASPs y el foco en stablecoins como vector de lavado anticipa mayor presión sobre proveedores de pagos y exchanges para reforzar KYC/AML en operaciones con criptoactivos en los próximos 12-18 meses."
+        }
+      },
       {
         "id": "reg-2026-07-09-mexico-uif-condusef-convenio-antifraude",
         "title": "UIF y CONDUSEF firman convenio para detectar fraudes financieros y cuentas mula en México",
@@ -8124,7 +8410,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-17';
+const TODAY_ISO = '2026-07-20';
 
 const UI_STRINGS = {
     home_label: 'Home',
