@@ -1306,11 +1306,59 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-19",
-  "publishedAt": "2026-07-20T13:39:39.135Z",
+  "date": "2026-07-20",
+  "publishedAt": "2026-07-21T19:22:57.168Z",
   "regulationLastRun": "2026-07-20",
   "sections": {
     "global": [
+      {
+        "id": "craneware-hospital-software-breach",
+        "title": "Proveedor de software para mas de 2.000 hospitales de EE.UU. sufre robo de datos de empleados y clientes",
+        "summary": "Craneware, proveedor de software financiero y de gestion de ingresos con sede en Edimburgo que sirve a mas de 2.000 hospitales estadounidenses, informo a inversores que detecto acceso no autorizado a un subconjunto de su entorno de datos y contrato investigadores forenses externos. Los atacantes sustrajeron datos de empleados y de clientes de la compania. El alcance exacto de instituciones de salud downstream afectadas aun no fue precisado publicamente.",
+        "sourceUrl": "https://therecord.media/software-provider-for-us-hospitals-customer-data-breach",
+        "sourceName": "The Record (Recorded Future News)",
+        "date": "2026-07-20",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "Un solo proveedor tecnologico en la cadena de suministro de salud puede propagar exposicion de identidad y datos financieros a miles de instituciones downstream, un patron de riesgo sistemico que se repite en el vertical salud en 2026."
+        }
+      },
+      {
+        "id": "estee-lauder-oracle-ebs-breach",
+        "title": "Estee Lauder revela brecha de datos via falla en Oracle E-Business Suite",
+        "summary": "Estee Lauder notifico a personal afectado que un tercero no autorizado accedio el 9 de agosto de 2025 a su instancia de Oracle E-Business Suite usada para operaciones de RR.HH., obteniendo informacion personal; la compania lo determino el 19 de junio de 2026 tras una investigacion. El incidente se enmarca en la campana masiva de explotacion de la vulnerabilidad CVE-2025-61882 en Oracle EBS vinculada al grupo Clop. La compania ofrece 24 meses de monitoreo de identidad via Kroll.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/est-e-lauder-discloses-data-breach-via-oracle-e-business-flaw/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-07-20",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "retail",
+        "topic": "breach",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El caso se suma a la ola de explotacion masiva de Oracle E-Business Suite que ya afecto a multiples companias globales en 2026, consolidando el monitoreo de identidad post-brecha como respuesta estandar de la industria ante ataques de cadena de suministro de software."
+        }
+      },
+      {
+        "id": "ey-oracle-tax-platform-breach",
+        "title": "Ernst & Young notifica brecha de datos fiscales de clientes tras ataque a plataforma de terceros",
+        "summary": "EY comenzo a notificar a clientes que sus datos personales y financieros fueron comprometidos en una brecha descubierta el 23 de abril de 2026, originada en un acceso no autorizado entre el 28 de marzo y el 12 de abril a una plataforma de terceros usada para trabajo de preparacion de impuestos. Los documentos expuestos incluyen nombres, direcciones, numeros de Seguro Social, numeros de cuenta y de tarjetas de credito/debito. EY ofrece dos anos de monitoreo de credito e identidad y no ha identificado al actor de amenaza.",
+        "sourceUrl": "https://www.securityweek.com/ernst-young-data-breach-affects-personal-financial-information/",
+        "sourceName": "SecurityWeek",
+        "date": "2026-07-20",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "La filtracion muestra como firmas de servicios profesionales que administran datos fiscales sensibles de clientes corporativos se vuelven blanco de alto valor para el robo de identidad, ampliando el perimetro de riesgo mas alla de bancos y retailers tradicionales."
+        }
+      },
       {
         "id": "global-ey-data-breach-ssn-tax-info",
         "title": "Ernst & Young notifica brecha de datos que expuso números de seguro social e información fiscal de clientes",
@@ -6736,6 +6784,50 @@ const briefing = {
     ],
     "competencia": [
       {
+        "id": "iidentifii-ceo-marco-wagener-2026-07-20",
+        "title": "iiDENTIFii nombra CEO a su cofundador; IDEX Biometrics designa nueva CFO",
+        "summary": "El proveedor sudafricano de verificacion de identidad iiDENTIFii formalizo a Marco Wagener, cofundador y ex CTO, como nuevo CEO, en momentos en que la compania busca expandirse de la verificacion de identidad hacia una infraestructura de identidad digital mas amplia. IDEX Biometrics nombro a Ingvill Tomt, incorporada en 2025 como VP de Finanzas, como nueva CFO, mientras la empresa entra en fase de escalamiento comercial de sus tarjetas biometricas de huella digital.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/iidentifii-idex-strengthen-leadership-teams-token-gleif-add-advisors",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-20",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "iiDENTIFii",
+        "topic": "liderazgo"
+      },
+      {
+        "id": "precise-fingerprint-cards-merger-completado-2026-07-20",
+        "title": "Precise Biometrics y Fingerprint Cards completan su fusion",
+        "summary": "La Oficina Sueca de Registro de Empresas formalizo la fusion entre Precise Biometrics y Fingerprint Cards, registrando la emision de mas de 68 millones de nuevas acciones como contraprestacion. Los accionistas de Fingerprint Cards recibiran sus acciones antes del 23 de julio. El CEO de Precise, Joakim Nydemark, califico la combinacion como una oferta integral que da a la nueva entidad una posicion de mercado mas fuerte, integrando hardware y software bajo un mismo jugador global de seguridad biometrica.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/precise-biometrics-fingerprint-cards-complete-merger",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-20",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Precise Biometrics / Fingerprint Cards",
+        "topic": "consolidacion",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Dos proveedores nordicos de biometria de hardware completan su fusion y se presentan como jugador global unificado de seguridad biometrica, sumando consolidacion al mercado adyacente de identidad y control de acceso."
+        }
+      },
+      {
+        "id": "hopae-cnh-biometria-brasil-2026-07-20",
+        "title": "Hopae integra verificacion biometrica en la Carteira Digital de Transito (CNH digital) de Brasil",
+        "summary": "Hopae integro modulos de verificacion biometrica automatizada directamente en el esquema de la Carteira Digital de Transito (CDT), la licencia de conducir digital nacional de Brasil operada por SENATRAN. El servicio combina decodificacion segura del codigo QR de la credencial con comparacion biometrica facial en vivo contra el registro oficial, bloqueando la descarga de perfiles validos en dispositivos comprometidos. Esta dirigido a servicios financieros regulados, plataformas de movilidad y gaming online.",
+        "sourceUrl": "https://idtechwire.com/hopae-adds-biometric-verification-for-brazils-digital-drivers-license/",
+        "sourceName": "ID Tech",
+        "date": "2026-07-20",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Hopae",
+        "topic": "biometria",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Un proveedor de verificacion de identidad fuera de la lista de 53 monitoreados suma integracion biometrica a nivel de registro gubernamental en Brasil, el mercado LATAM con mayor volumen de fraude de identidad sintetica de la region."
+        }
+      },
+      {
         "id": "veridas-fourthline-merger-2026-07-16",
         "competitor": "Veridas",
         "language": "es",
@@ -8410,7 +8502,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-20';
+const TODAY_ISO = '2026-07-21';
 
 const UI_STRINGS = {
     home_label: 'Home',
