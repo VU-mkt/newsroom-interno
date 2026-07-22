@@ -1306,11 +1306,43 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-20",
-  "publishedAt": "2026-07-21T19:22:57.168Z",
+  "date": "2026-07-21",
+  "publishedAt": "2026-07-22T19:18:56.169Z",
   "regulationLastRun": "2026-07-20",
   "sections": {
     "global": [
+      {
+        "id": "azure-cli-password-spray-update-2026-07-21",
+        "title": "[Actualización] Campaña de password spraying contra Azure CLI migra de proveedor tras superar 81 millones de intentos",
+        "summary": "Una campaña de password spraying contra inicios de sesión de Azure CLI acumuló más de 81 millones de intentos y comprometió al menos 78 cuentas de Microsoft 365 en 64 organizaciones, evadiendo MFA mediante el mecanismo ROPC. La actualización del 21/7 detalla que los atacantes migraron su infraestructura al proveedor FranTech tras la suspensión del anterior, y que desde el 15/7 se detectó una nueva oleada desde un tercer proveedor.",
+        "sourceUrl": "https://thehackernews.com/2026/07/azure-cli-password-spray-hits-at-least.html",
+        "sourceName": "The Hacker News",
+        "date": "2026-07-21",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "cross",
+        "topic": "account-takeover",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El account takeover a escala vía credential stuffing/password spraying sigue vulnerando políticas de acceso condicional mal configuradas y evadiendo MFA estático, reforzando la conversación de mercado sobre autenticación continua frente a MFA tradicional."
+        }
+      },
+      {
+        "id": "huggingface-ai-agent-breach-2026-07-20",
+        "title": "Hugging Face confirma brecha ejecutada por un agente de IA autónomo",
+        "summary": "Hugging Face, el mayor repositorio abierto de modelos de IA, confirmó que un agente de IA autónomo vulneró su infraestructura de producción explotando dos rutas de ejecución de código en su pipeline de procesamiento de datasets, escalando privilegios y robando credenciales de nube y clúster. La compañía no halló evidencia de manipulación en modelos o datasets públicos, pero revocó y rotó las credenciales comprometidas.",
+        "sourceUrl": "https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html",
+        "sourceName": "The Hacker News",
+        "date": "2026-07-20",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "El incidente es uno de los primeros casos documentados de un ataque ejecutado de forma autónoma por un agente de IA contra una plataforma de IA de gran escala, exponiendo credenciales y datasets internos: evidencia de que los pipelines de procesamiento de datos de IA son un vector creciente de robo de credenciales e identidad de máquina."
+        }
+      },
       {
         "id": "craneware-hospital-software-breach",
         "title": "Proveedor de software para mas de 2.000 hospitales de EE.UU. sufre robo de datos de empleados y clientes",
@@ -4639,6 +4671,22 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "ar-cordoba-multas-bancos-billeteras-2026-07-20",
+          "title": "Córdoba multa por $386 millones a bancos y billeteras virtuales por fallas antifraude",
+          "summary": "La Dirección de Defensa del Consumidor de la Provincia de Córdoba multó por $386.204.804,30 a Banco Galicia, Banco Macro, Banco Santander, Banco Supervielle, Tarjeta Naranja y Prisma Medios de Pago (Visa), entre otras entidades, por incumplir estándares de seguridad del BCRA para operaciones electrónicas y no contar con mecanismos efectivos para detectar operaciones sospechosas vinculadas a estafas virtuales que vaciaron cuentas de consumidores cordobeses. Las entidades deberán presentar planes de mitigación de riesgo y nuevas medidas antifraude.",
+          "sourceUrl": "https://www.iproup.com/finanzas/69999-multan-a-bancos-y-billeteras-virtuales-en-cordoba-por-este-motivo",
+          "sourceName": "iProUP",
+          "date": "2026-07-20",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "regulacion",
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "Es un antecedente de sanción provincial directa a entidades financieras de primera línea por fallas en la detección de operaciones fraudulentas, exigiéndoles presentar formalmente metodologías de detección de fraude y planes de mitigación de riesgo ante el regulador."
+          }
+        },
+        {
           "id": "ar-parque-leloir-mafia-contenedores",
           "title": "Estafa piramidal de Parque Leloir: surge vínculo con un hotel premium y la 'mafia de los contenedores'",
           "summary": "El 19 de julio de 2026 se conoció que la investigación de la estafa piramidal de Parque Leloir —que ya supera el millón de dólares en perjuicio— reveló un vínculo con una organización de contrabando conocida como 'mafia de los contenedores' y con un hotel premium usado en la operatoria, ampliando el alcance del caso reportado inicialmente el 10 de julio de 2026.",
@@ -5039,6 +5087,22 @@ const briefing = {
         }
       ],
       "brasil": [
+        {
+          "id": "br-pf-operacao-infiltrados-caixa-2026-07-21",
+          "title": "Policía Federal de Brasil desarticula red que desvió R$45 millones de clientes de Caixa Econômica Federal",
+          "summary": "La Policía Federal de Brasil lanzó la Operación Infiltrados y movilizó cerca de 120 agentes para cumplir 25 órdenes de allanamiento en Río de Janeiro y São Paulo, contra una organización que habría desviado R$45 millones (~US$9 millones) de clientes y beneficiarios de Caixa Econômica Federal. El esquema combinaba fraude electrónico con acceso no autorizado a datos confidenciales de cuentahabientes, con participación de funcionarios bancarios, abogados y operadores de loterías ilegales que filtraban información privilegiada y obstruían la investigación.",
+          "sourceUrl": "https://convergenciadigital.com.br/mercado/pf-investiga-fraudes-eletronicas-que-teriam-desviado-r-45-milhoes-na-caixa/",
+          "sourceName": "ConvergênciaDigital",
+          "date": "2026-07-21",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "brecha",
+            "text": "Es un patrón de fraude interno combinado con robo de identidad/datos de clientes en un banco público de gran escala, con complicidad de personal bancario y profesionales legales facilitando el acceso no autorizado — un vector distinto del fraude externo típico (phishing, ingeniería social)."
+          }
+        },
         {
           "id": "br-bcb-agibank-pix-leak-2026-07-13",
           "title": "Banco Central de Brasil confirma filtración de datos de 5.290 claves Pix de clientes de Agibank",
@@ -6784,6 +6848,22 @@ const briefing = {
     ],
     "competencia": [
       {
+        "id": "equifax-circulo-de-credito-mexico-2026-07-21",
+        "title": "Equifax firma acuerdo definitivo para adquirir Círculo de Crédito (México) por USD 750M",
+        "summary": "Equifax anunció junto a sus resultados del Q2 2026 (ingresos de USD 1.700M, +11% interanual) un acuerdo definitivo para adquirir Círculo de Crédito, el buró de crédito de mayor crecimiento en México, por un valor de empresa de USD 750M (USD 825M de precio de compra). Círculo de Crédito factura USD 134M (12 meses a jun-2026, +31% interanual), tiene más de 1.700 clientes entre banca, retail, fintech y telecom, y una base de 2.000 millones de tradelines sobre 80 millones de identidades validadas. Es la adquisición bolt-on N°17 de Equifax en 6 años (~USD 5.000M acumulados) y el cierre se espera para el Q4 2026, sujeto a aprobaciones regulatorias.",
+        "sourceUrl": "https://www.finextra.com/newsarticle/48056/equifax-agrees-750m-acquisition-of-mexican-credit-bureau",
+        "sourceName": "Finextra",
+        "date": "2026-07-21",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Equifax",
+        "topic": "M&A",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Un buró de crédito global compra escala de datos en México justo cuando bancos y fintechs mexicanos están evaluando stacks de identidad y prevención de fraude independientes del bureau tradicional; la operación cierra recién en Q4 2026, dejando una ventana de varios meses antes de cualquier integración real de producto."
+        }
+      },
+      {
         "id": "iidentifii-ceo-marco-wagener-2026-07-20",
         "title": "iiDENTIFii nombra CEO a su cofundador; IDEX Biometrics designa nueva CFO",
         "summary": "El proveedor sudafricano de verificacion de identidad iiDENTIFii formalizo a Marco Wagener, cofundador y ex CTO, como nuevo CEO, en momentos en que la compania busca expandirse de la verificacion de identidad hacia una infraestructura de identidad digital mas amplia. IDEX Biometrics nombro a Ingvill Tomt, incorporada en 2025 como VP de Finanzas, como nueva CFO, mientras la empresa entra en fase de escalamiento comercial de sus tarjetas biometricas de huella digital.",
@@ -8502,7 +8582,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-21';
+const TODAY_ISO = '2026-07-22';
 
 const UI_STRINGS = {
     home_label: 'Home',
