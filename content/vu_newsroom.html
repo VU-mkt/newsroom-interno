@@ -1306,11 +1306,71 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-21",
-  "publishedAt": "2026-07-22T19:18:56.169Z",
+  "date": "2026-07-22",
+  "publishedAt": "2026-07-23T14:00:00.000Z",
   "regulationLastRun": "2026-07-20",
   "sections": {
     "global": [
+      {
+        "id": "global-2026-07-22-04",
+        "title": "Chick-fil-A notifica brecha de datos tras ataques de credential stuffing",
+        "summary": "Chick-fil-A notificó a clientes en varios estados de EE.UU. una brecha de datos tras ataques de credential stuffing contra su app de lealtad \"Chick-fil-A One\" ocurridos entre el 17 y 19 de junio, que expusieron nombres, saldos y los últimos cuatro dígitos de tarjetas vinculadas.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/chick-fil-a-discloses-data-breach-after-credential-stuffing-attacks/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-07-22",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "retail",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "Chick-fil-A confirmó que ataques de credential stuffing comprometieron cuentas de su programa de lealtad, reforzando la tendencia de marcas de consumo masivo como blanco de reutilización de credenciales robadas."
+        }
+      },
+      {
+        "id": "global-2026-07-22-03",
+        "title": "Corea del Sur revela brecha de 10 meses en su Academia Diplomática vía zero-day",
+        "summary": "Corea del Sur reveló que atacantes explotaron una vulnerabilidad zero-day para vulnerar el sistema educativo de su Academia Diplomática Nacional durante casi diez meses, robando información personal de al menos 6.000 personas, incluidos 350 diplomáticos actualmente destinados en el exterior.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/south-korea-discloses-data-breach-impacting-diplomats-worldwide/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-07-22",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "gobierno",
+        "topic": "breach"
+      },
+      {
+        "id": "global-2026-07-22-02",
+        "title": "Brecha en Paidwork expone datos de 23 millones de usuarios",
+        "summary": "La plataforma de microtareas Paidwork confirmó una brecha que expuso datos de 23 millones de usuarios —nombres, domicilios, números bancarios, historial de transacciones y contraseñas hasheadas—, un combo de datos que habilita phishing dirigido, toma de cuentas y fraude de identidad.",
+        "sourceUrl": "https://www.malwarebytes.com/blog/data-breaches/2026/07/paidwork-breach-exposes-data-of-23-million-users-check-if-youre-affected",
+        "sourceName": "Malwarebytes",
+        "date": "2026-07-22",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "fintech",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "La brecha de Paidwork expuso datos financieros y personales de 23 millones de usuarios de una plataforma de microtareas, ampliando el pool de datos disponibles para fraude de identidad y toma de cuentas."
+        }
+      },
+      {
+        "id": "global-2026-07-21-01",
+        "title": "Desmantelan Kratos, plataforma de phishing-as-a-service con clientes en 35 países",
+        "summary": "Autoridades de Alemania y Estados Unidos desmantelaron Kratos, una plataforma de phishing-as-a-service con unos 1.800 clientes criminales y cerca de 15.000 campañas mensuales dirigidas a cuentas de Microsoft, arrestando a su desarrollador en Indonesia e incautando más de 200 servidores.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/police-dismantle-kratos-phishing-platform-arrest-developer/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-07-21",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "El desmantelamiento de Kratos, un servicio de phishing-as-a-service con 1.800 clientes y campañas en 35 países, expone la escala industrial que ha alcanzado el cibercrimen como servicio."
+        }
+      },
       {
         "id": "azure-cli-password-spray-update-2026-07-21",
         "title": "[Actualización] Campaña de password spraying contra Azure CLI migra de proveedor tras superar 81 millones de intentos",
@@ -4671,6 +4731,34 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "latam-ar-2026-07-22-02",
+          "title": "BCRA alerta sobre apps de acceso remoto que vacían cuentas bancarias",
+          "summary": "El Banco Central de la República Argentina (BCRA) emitió recomendaciones tras detectar esquemas de fraude que usan aplicaciones de acceso remoto disfrazadas de \"verificación de identidad\", mediante las cuales estafadores toman control de la pantalla del celular y operan cuentas bancarias sin consentimiento del titular.",
+          "sourceUrl": "https://www.infobae.com/economia/2026/07/22/alerta-por-estafas-virtuales-que-vacian-cuentas-bancarias-que-es-lo-que-nunca-se-debe-hacer-segun-el-bcra/",
+          "sourceName": "Infobae",
+          "date": "2026-07-22",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "El BCRA emitió una alerta formal sobre apps de acceso remoto usadas para vaciar cuentas, marcando un endurecimiento del discurso regulatorio hacia bancos y fintech sobre controles de autenticación en Argentina."
+          }
+        },
+        {
+          "id": "latam-ar-2026-07-21-01",
+          "title": "Nueva campaña de phishing en Argentina imita la verificación CAPTCHA",
+          "summary": "Especialistas alertaron sobre una campaña de phishing que imita el proceso de verificación CAPTCHA: en vez de un desafío visual, induce a la víctima a ejecutar comandos del sistema que instalan código malicioso oculto, habilitando robo de credenciales y control del dispositivo.",
+          "sourceUrl": "https://www.infobae.com/tecno/2026/07/21/falso-o-real-como-identificar-el-nuevo-fraude-del-captcha-y-que-hacer-si-caes-en-la-trampa/",
+          "sourceName": "Infobae",
+          "date": "2026-07-21",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "cross",
+          "topic": "fraude"
+        },
+        {
           "id": "ar-cordoba-multas-bancos-billeteras-2026-07-20",
           "title": "Córdoba multa por $386 millones a bancos y billeteras virtuales por fallas antifraude",
           "summary": "La Dirección de Defensa del Consumidor de la Provincia de Córdoba multó por $386.204.804,30 a Banco Galicia, Banco Macro, Banco Santander, Banco Supervielle, Tarjeta Naranja y Prisma Medios de Pago (Visa), entre otras entidades, por incumplir estándares de seguridad del BCRA para operaciones electrónicas y no contar con mecanismos efectivos para detectar operaciones sospechosas vinculadas a estafas virtuales que vaciaron cuentas de consumidores cordobeses. Las entidades deberán presentar planes de mitigación de riesgo y nuevas medidas antifraude.",
@@ -5201,6 +5289,22 @@ const briefing = {
       ],
       "mexico": [
         {
+          "id": "latam-mx-2026-07-21-01",
+          "title": "Fraude bancario crece 18% en México durante temporada vacacional",
+          "summary": "Las alertas por fraude bancario en México crecieron 18% en los primeros cinco meses de 2026, impulsadas por smishing que suplanta bancos, aerolíneas y plataformas de reservas durante la temporada vacacional, según Scotiabank México.",
+          "sourceUrl": "https://www.publimetro.com.mx/noticias/2026/07/22/fraude-bancario-crece-18-cuidado-con-estos-mensajes-durante-vacaciones/",
+          "sourceName": "Publimetro México",
+          "date": "2026-07-21",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El alza de 18% en fraude bancario coincide con la temporada vacacional, evidenciando estacionalidad del smishing dirigido a viajeros y consumidores de banca digital en México."
+          }
+        },
+        {
           "id": "mx-concanaco-estrategia-fraude-digital",
           "title": "CONCANACO refuerza su estrategia nacional de prevención contra el fraude digital",
           "summary": "La Confederación de Cámaras Nacionales de Comercio anunció el 19 de julio de 2026 el refuerzo de su estrategia de prevención de fraude digital para el comercio afiliado, en un contexto de aumento de ciberataques que coincide con el Mundial 2026 y el pico de comercio electrónico asociado.",
@@ -5558,6 +5662,23 @@ const briefing = {
       ],
       "colombia": [
         {
+          "id": "latam-co-2026-07-22-01",
+          "title": "Superintendencia Financiera condena a Banco Agrario a devolver $1.310 millones por fraude electrónico",
+          "summary": "La Superintendencia Financiera de Colombia condenó al Banco Agrario a devolver más de $1.310 millones de pesos al municipio de El Tambo tras un fraude electrónico de 2024 en el que el banco generó 30 alertas internas pero no bloqueó a tiempo las transferencias fraudulentas.",
+          "sourceUrl": "https://elcontraste.co/noticia/superintendencia-financiera-condena-banco-agrario-devolver-1310-millones-el-tambo/",
+          "sourceName": "El Contraste",
+          "date": "2026-07-22",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "regulatoryBody": "Superintendencia Financiera de Colombia",
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "El fallo obliga a un banco estatal a asumir la pérdida por no bloquear operaciones pese a 30 alertas internas, sentando precedente de responsabilidad bancaria por fraude electrónico en Colombia."
+          }
+        },
+        {
           "id": "co-empresas-3000-ciberataques-semana",
           "title": "Empresas en Colombia enfrentan cerca de 3.000 ciberataques por semana",
           "summary": "Un reporte publicado el 18 de julio de 2026 señala que las compañías colombianas reciben en promedio casi 3.000 intentos de ciberataque semanales, posicionando al país entre los más atacados de la región, con foco creciente en pequeñas y medianas empresas de menor capacidad defensiva.",
@@ -5791,6 +5912,22 @@ const briefing = {
       ],
       "peru": [
         {
+          "id": "latam-pe-2026-07-21-01",
+          "title": "Estafa por WhatsApp en Perú suplanta a telefónicas para vaciar cuentas bancarias",
+          "summary": "Delincuentes en Perú se hacen pasar por empresas de telefonía vía WhatsApp, ofreciendo una supuesta migración a 5G que en realidad instala malware capaz de mostrar pantallas falsas de apps bancarias para robar credenciales, coincidiendo con la temporada de gratificaciones.",
+          "sourceUrl": "https://www.infobae.com/peru/2026/07/21/estafa-por-whatsapp-en-peru-delincuentes-se-hacen-pasar-por-empresas-telefonicas-para-vaciar-tus-cuentas-bancarias/",
+          "sourceName": "Infobae Perú",
+          "date": "2026-07-21",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "La suplantación de operadores telefónicos vía WhatsApp para instalar apps maliciosas y vaciar cuentas se consolida como vector de fraude dominante en Perú durante la temporada de gratificaciones."
+          }
+        },
+        {
           "id": "pe-estafa-ia-clonacion-voz-familiar",
           "title": "Alertan en Perú sobre estafas con inteligencia artificial que clonan la voz de un familiar",
           "summary": "Un artículo publicado el 17 de julio de 2026 advierte sobre el aumento de estafas en Perú que usan clonación de voz por IA para simular llamadas de un familiar solicitando dinero con urgencia, además de suplantación de figuras públicas en falsas promociones de inversión y spoofing de identificador de llamadas.",
@@ -5945,6 +6082,22 @@ const briefing = {
       ],
       "panama": [
         {
+          "id": "latam-pa-2026-07-21-01",
+          "title": "Panamá registra 3.395 denuncias por estafas y fraudes en el primer semestre de 2026",
+          "summary": "El Ministerio Público de Panamá registró 3.395 denuncias por estafas y fraudes en el primer semestre de 2026, un incremento del 15% frente al año anterior, con la estafa simple concentrando el 93% de los casos mediante llamadas, mensajes y redes sociales.",
+          "sourceUrl": "https://www.infobae.com/panama/2026/07/21/panama-registra-mas-de-3300-denuncias-por-estafas-y-fraudes-en-el-primer-semestre-de-2026/",
+          "sourceName": "Infobae Panamá",
+          "date": "2026-07-21",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "cross",
+          "topic": "fraude",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "El Ministerio Público registró 3.395 denuncias por estafas en el primer semestre 2026, +15% interanual, con la estafa simple concentrando el 93% de los casos."
+          }
+        },
+        {
           "id": "pa-dgi-fraude-tributario-camara-comercio-severidad",
           "title": "Cámara de Comercio de Panamá pide severidad ante red que manipuló el sistema tributario estatal",
           "summary": "El 19 de julio de 2026 la Cámara de Comercio de Panamá exigió sanciones severas tras confirmarse que una red manipuló la plataforma E-Tax para borrar y convertir en saldos negociables pagos de impuestos ya realizados, con impacto económico estimado entre USD 40 y 80 millones. El caso, denunciado inicialmente el 13 de julio de 2026, ya suma 16 personas imputadas.",
@@ -6075,6 +6228,34 @@ const briefing = {
         }
       ],
       "bolivia": [
+        {
+          "id": "latam-bo-2026-07-21-02",
+          "title": "Detenido joven de 19 años por estafa agravada en transacción cripto fallida",
+          "summary": "Un joven de 19 años fue aprehendido en Bolivia por presunta estafa agravada vinculada a una transacción fallida de criptomonedas por 100.000 bolivianos (unos USD 10.000).",
+          "sourceUrl": "https://lapatria.bo/enfoque-nacional/gestion/aprehenden-joven-presunta-estafa-compra-criptomonedas/",
+          "sourceName": "La Patria (Bolivia)",
+          "date": "2026-07-21",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "cross",
+          "topic": "fraude"
+        },
+        {
+          "id": "latam-bo-2026-07-21-01",
+          "title": "ATT de Bolivia bloquea 13.516 celulares y corta 10.846 líneas por estafas digitales",
+          "summary": "La Autoridad de Telecomunicaciones y Transportes (ATT) de Bolivia bloqueó 13.516 celulares y cortó 10.846 líneas telefónicas por denuncias de estafas digitales en lo que va de 2026, en un contexto de 16.821 denuncias registradas en la plataforma \"Bloquea la Estafa\".",
+          "sourceUrl": "https://www.economy.com.bo/articulo/itecno/att-bloqueo-mas-13500-celulares-10800-lineas-estafas-digitales-que-va-ano/20260721144038023318.html",
+          "sourceName": "Economy.com.bo",
+          "date": "2026-07-21",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "cross",
+          "topic": "fraude",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "La ATT bloqueó más de 13.500 celulares y 10.800 líneas por estafas digitales en lo que va de 2026, reflejando la escala del fraude por suplantación de personal de telecomunicaciones."
+          }
+        },
         {
           "id": "bo-att-bloqueo-13516-celulares-estafas-digitales",
           "title": "ATT de Bolivia bloquea 13.516 celulares y corta 10.846 líneas por denuncias de estafas digitales",
@@ -6228,6 +6409,22 @@ const briefing = {
         }
       ],
       "espana": [
+        {
+          "id": "latam-es-2026-07-22-01",
+          "title": "Guardia Civil desarticula red de estafas bancarias con datos de 500.000 personas (Operación Fragmenta)",
+          "summary": "La Guardia Civil española desarticuló una red criminal que operaba con datos bancarios de aproximadamente 500.000 personas, con 13 detenidos y 5 investigados en Madrid, Palma de Mallorca, Valencia y Toledo, por estafa, blanqueo de capitales y pertenencia a organización criminal.",
+          "sourceUrl": "https://www.telemadrid.es/noticias/sociedad/Desarticulada-una-red-con-datos-bancarios-de-medio-millon-de-personas-para-cometer-estafas-0-2909409039--20260722095316.html",
+          "sourceName": "Telemadrid",
+          "date": "2026-07-22",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "breach",
+          "actionable": {
+            "type": "brecha",
+            "text": "La Guardia Civil desarticuló una red que operaba con datos bancarios de 500.000 personas, evidenciando el tamaño del mercado ilegal de datos financieros que alimenta el fraude en España."
+          }
+        },
         {
           "id": "es-fugitiva-britanica-estafa-300000-anciana",
           "title": "Detienen en España a una fugitiva británica reclamada por estafar más de 300.000 euros a una mujer mayor",
@@ -6847,6 +7044,78 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "comp-20260721-duo-macos-update",
+        "competitor": "Duo (Cisco)",
+        "title": "Cisco Duo libera Duo Authentication for macOS 3.0.0",
+        "summary": "Cisco Duo publicó la versión 3.0.0 de Duo Authentication for macOS, que agrega autenticación de dos factores online y offline al desbloqueo de sesión en macOS 14 y versiones posteriores.",
+        "sourceUrl": "https://duo.com/docs/macos-notes",
+        "sourceName": "Cisco Duo — Release Notes",
+        "date": "2026-07-21",
+        "language": "es",
+        "highRelevance": false,
+        "topic": "iam"
+      },
+      {
+        "id": "comp-20260721-jumio-q2-growth-latam",
+        "competitor": "Jumio",
+        "title": "Jumio reporta crecimiento en Q2 2026 y expande su huella de identidad en LATAM",
+        "summary": "Jumio reportó un Q2 2026 fuerte impulsado por la expansión más allá del onboarding biométrico: sumó clientes en servicios financieros y gaming, lanzó Jumio Watch (análisis continuo de riesgo), integró aceptación de identidades digitales de más de 60 países vía alianza con Trinsic, expandió su programa de credenciales biométricas reutilizables selfie.DONE en América Latina, e incorporó a Mark Lorion como nuevo CEO.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/jumio-expansion-beyond-biometric-onboarding-roots-yields-q2-growth",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-21",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "identidad-biometria",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Jumio combinó en un mismo anuncio expansión de clientes, cambio de CEO y crecimiento explícito de su programa de credenciales reutilizables selfie.DONE en América Latina, señal directa de que está invirtiendo comercialmente en la misma región donde VU tiene integraciones gubernamentales activas."
+        }
+      },
+      {
+        "id": "comp-20260722-idemia-federal-audit",
+        "competitor": "Idemia",
+        "title": "Legislador de EEUU pide auditoría integral de los contratos federales de Idemia",
+        "summary": "El representante Josh Gottheimer solicitó a la GSA y la OMB una auditoría de todos los contratos federales de Idemia, tras un error de software que sumó indebidamente a unos 6.600 no ciudadanos al padrón electoral de Nueva Jersey (menos de 400 llegaron a votar). El pedido abarca el rol de Idemia en sistemas de identidad de TSA, CBP, FBI y DoD, y busca revisar manejo de datos, subcontratistas y cumplimiento de ciberseguridad.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/us-lawmaker-seeks-audit-of-idemias-role-in-federal-identity-systems",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-22",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "identidad-gobierno",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Un legislador de EEUU pidió una auditoría integral de todos los contratos federales de Idemia luego de un error de software que sumó indebidamente a más de 6.600 no ciudadanos al padrón electoral de Nueva Jersey, exponiendo el riesgo de concentrar infraestructura de identidad nacional en un único proveedor."
+        }
+      },
+      {
+        "id": "comp-20260721-okta-il5-military",
+        "competitor": "Okta",
+        "title": "Okta for US Military obtiene autorización provisional Impact Level 5 del Department of War",
+        "summary": "Okta anunció que su oferta Okta for US Military recibió autorización provisional Impact Level 5 (IL5) del Department of War, habilitando soporte para cargas de Información No Clasificada Controlada (CUI) y sistemas de seguridad nacional. El estatus posiciona a Okta de cara al plazo de cumplimiento zero trust del 30 de septiembre de 2027.",
+        "sourceUrl": "https://www.bitget.com/amp/news/detail/12560605525705",
+        "sourceName": "Okta Newsroom (vía Bitget News)",
+        "date": "2026-07-21",
+        "language": "es",
+        "highRelevance": false,
+        "topic": "iam"
+      },
+      {
+        "id": "comp-20260722-okta-ai-agent-governance",
+        "competitor": "Okta",
+        "title": "Okta lanza controles de runtime y gobernanza continua para agentes de IA",
+        "summary": "Okta anunció innovaciones dentro de Okta for AI Agents para asegurar conexiones de agentes a herramientas empresariales y a otros agentes en tiempo de ejecución. Las tres piezas centrales son Agent Gateway y conexiones agente-a-agente, certificaciones de acceso a recursos para agentes de IA, y evaluación en tiempo real con validación continua de permisos a medida que cambia el alcance del agente.",
+        "sourceUrl": "https://www.marketscreener.com/news/okta-announces-new-innovations-to-secure-ai-agents-at-runtime-and-automate-ongoing-agent-governanc-ce7f51dedf88f42d",
+        "sourceName": "Okta Newsroom (vía MarketScreener)",
+        "date": "2026-07-22",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "identidad-agentes-ia",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Okta movió el terreno de disputa del IAM/CIAM clásico hacia la gobernanza de identidad de agentes de IA en tiempo de ejecución, un espacio donde todavía pocos players de IAM tradicional tienen oferta madura y donde se están fijando las categorías de evaluación de analistas para 2027."
+        }
+      },
       {
         "id": "equifax-circulo-de-credito-mexico-2026-07-21",
         "title": "Equifax firma acuerdo definitivo para adquirir Círculo de Crédito (México) por USD 750M",
@@ -8582,7 +8851,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-22';
+const TODAY_ISO = '2026-07-23';
 
 const UI_STRINGS = {
     home_label: 'Home',
