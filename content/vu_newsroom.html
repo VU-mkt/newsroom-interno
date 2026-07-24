@@ -1306,8 +1306,8 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-22",
-  "publishedAt": "2026-07-23T14:00:00.000Z",
+  "date": "2026-07-23",
+  "publishedAt": "2026-07-24T19:23:23.434Z",
   "regulationLastRun": "2026-07-20",
   "sections": {
     "global": [
@@ -4731,6 +4731,18 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "ar-bcra-alerta-remoto-bancario",
+          "title": "BCRA alerta por estafas con apps de acceso remoto que vacían cuentas bancarias",
+          "summary": "El Banco Central de la República Argentina (BCRA) emitió una alerta el 22 de julio advirtiendo sobre una modalidad de fraude en la que estafadores piden a la víctima instalar una aplicación de acceso remoto bajo el pretexto de \"verificar su identidad\" o \"resolver un problema con la cuenta\". Una vez instalada, los delincuentes acceden a la pantalla del dispositivo y operan la cuenta bancaria sin consentimiento del titular. El BCRA recomienda no instalar apps solicitadas por chat y denunciar ante la Ufeci.",
+          "sourceUrl": "https://www.infobae.com/economia/2026/07/22/alerta-por-estafas-virtuales-que-vacian-cuentas-bancarias-que-es-lo-que-nunca-se-debe-hacer-segun-el-bcra/",
+          "sourceName": "Infobae",
+          "date": "2026-07-22",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "banca",
+          "topic": "fraude"
+        },
+        {
           "id": "latam-ar-2026-07-22-02",
           "title": "BCRA alerta sobre apps de acceso remoto que vacían cuentas bancarias",
           "summary": "El Banco Central de la República Argentina (BCRA) emitió recomendaciones tras detectar esquemas de fraude que usan aplicaciones de acceso remoto disfrazadas de \"verificación de identidad\", mediante las cuales estafadores toman control de la pantalla del celular y operan cuentas bancarias sin consentimiento del titular.",
@@ -5289,6 +5301,22 @@ const briefing = {
       ],
       "mexico": [
         {
+          "id": "mx-cdmx-phishing-delito-especifico",
+          "title": "Ciudad de México convierte al phishing en delito específico con hasta 6 años de cárcel",
+          "summary": "La reforma que crea el artículo 231 Bis del Código Penal de la Ciudad de México se publicó en la Gaceta Oficial el 22 de julio y entró en vigor el 23 de julio de 2026, tipificando phishing, smishing, vishing y clonación de páginas bancarias como delito autónomo. Las penas van de 3 a 6 años de prisión (4.5 a 9 años si la víctima es menor, adulto mayor o persona con discapacidad) y multas de 23.462 a 70.386 pesos. México registró más de 14 millones de intentos de fraude digital en 2025; 13.5 millones de mexicanos fueron víctimas de phishing, con pérdida promedio de 8.750 pesos.",
+          "sourceUrl": "https://www.infobae.com/mexico/2026/07/23/phishing-ya-es-delito-en-la-cdmx-hasta-6-anos-de-carcel-y-70000-pesos-de-multa/",
+          "sourceName": "Infobae México",
+          "date": "2026-07-23",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "cross",
+          "topic": "regulacion",
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "La CDMX es la primera jurisdicción mexicana en tipificar el phishing como delito autónomo con penas específicas, un precedente que otras entidades y el Congreso federal podrían replicar en los próximos meses."
+          }
+        },
+        {
           "id": "latam-mx-2026-07-21-01",
           "title": "Fraude bancario crece 18% en México durante temporada vacacional",
           "summary": "Las alertas por fraude bancario en México crecieron 18% en los primeros cinco meses de 2026, impulsadas por smishing que suplanta bancos, aerolíneas y plataformas de reservas durante la temporada vacacional, según Scotiabank México.",
@@ -5661,6 +5689,22 @@ const briefing = {
         }
       ],
       "colombia": [
+        {
+          "id": "co-los-cyber-banda-desarticulada",
+          "title": "Capturan a 16 personas de la banda \"Los Cyber\", incluido un futbolista, por fraude bancario digital",
+          "summary": "Autoridades colombianas capturaron a 16 personas, entre ellas el futbolista Mateo Ramírez Flórez, hijo del fallecido ídolo de Millonarios John Mario Ramírez, vinculadas a la organización \"Los Cyber\", liderada por alias \"Ralf\". La banda suplantaba comunicaciones bancarias mediante smishing y llamadas por WhatsApp pidiendo a las víctimas compartir pantalla para acceder a claves y saldos en tiempo real, afectando a 94 víctimas —mayoritariamente adultos mayores— en 10 departamentos entre junio de 2025 y marzo de 2026, con pérdidas superiores a 1.685 millones de pesos.",
+          "sourceUrl": "https://www.infobae.com/colombia/2026/07/23/hijo-de-un-idolo-de-millonarios-fue-capturado-por-presuntos-vinculos-con-la-banda-de-fraudes-digitales-los-cyber/",
+          "sourceName": "Infobae Colombia",
+          "date": "2026-07-23",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El caso confirma la consolidación de bandas organizadas que combinan smishing, vishing y control remoto de pantalla para vaciar cuentas bancarias, con adultos mayores como blanco preferente en múltiples departamentos simultáneamente."
+          }
+        },
         {
           "id": "latam-co-2026-07-22-01",
           "title": "Superintendencia Financiera condena a Banco Agrario a devolver $1.310 millones por fraude electrónico",
@@ -6410,6 +6454,22 @@ const briefing = {
       ],
       "espana": [
         {
+          "id": "es-operacion-fragmenta-estafas-bancarias",
+          "title": "La Guardia Civil desarticula una red de estafas bancarias con datos de 500.000 españoles",
+          "summary": "La Guardia Civil española anunció el 22 de julio la \"Operación Fragmenta\", que terminó con 13 detenidos y 5 investigados en Madrid, Palma de Mallorca, Valencia y Toledo, integrantes de una organización de 18 personas que manejaba una base de datos bancarios y personales de 500.000 ciudadanos. El grupo combinaba smishing masivo con llamadas haciéndose pasar por empleados bancarios para obtener códigos OTP y ejecutar transferencias y préstamos no autorizados, identificando cerca de 2.000 víctimas potenciales; un caso de 2024 con pérdida de 30.000 euros originó la investigación.",
+          "sourceUrl": "https://www.infobae.com/tecno/2026/07/22/desmantelan-red-de-estafas-bancarias-en-espana-tenian-una-base-de-datos-de-500000-ciudadanos/",
+          "sourceName": "Infobae",
+          "date": "2026-07-22",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "brecha",
+            "text": "La base de datos de 500.000 personas usada por la red no tiene origen confirmado por la Guardia Civil, lo que deja abierta la pregunta de qué proveedor o entidad sufrió la filtración original que alimentó esta operación de fraude a gran escala."
+          }
+        },
+        {
           "id": "latam-es-2026-07-22-01",
           "title": "Guardia Civil desarticula red de estafas bancarias con datos de 500.000 personas (Operación Fragmenta)",
           "summary": "La Guardia Civil española desarticuló una red criminal que operaba con datos bancarios de aproximadamente 500.000 personas, con 13 detenidos y 5 investigados en Madrid, Palma de Mallorca, Valencia y Toledo, por estafa, blanqueo de capitales y pertenencia a organización criminal.",
@@ -7044,6 +7104,62 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "google-selfie-video-recovery-2026-07-23",
+        "title": "Google lanza recuperación de cuenta por video-selfie con detección de vida",
+        "summary": "Google introdujo un método de respaldo para recuperar el acceso a la cuenta mediante un video-selfie guiado que captura múltiples ángulos del rostro; al solicitar la recuperación, se compara un nuevo selfie contra el video almacenado usando coincidencia facial y medidas de vida en tiempo real, diseñadas para detectar fotos, medios pregrabados y suplantaciones sintéticas.",
+        "sourceUrl": "https://idtechwire.com/google-adds-selfie-video-backup-for-account-sign-in/",
+        "sourceName": "ID Tech",
+        "date": "2026-07-23",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "Google",
+        "topic": "competencia"
+      },
+      {
+        "id": "idemia-kenia-biometria-policial-2026-07-23",
+        "title": "Idemia despliega sistema biométrico multimodal para certificados policiales en Kenia",
+        "summary": "Idemia Southern and Eastern Africa proveyó a la Dirección de Investigaciones Criminales de Kenia un sistema de coincidencia de huellas dactilares y reconocimiento facial para la emisión de certificados de antecedentes policiales. El despliegue se enmarca en la digitalización de trámites de identidad gubernamentales en África Oriental.",
+        "sourceUrl": "https://idtechwire.com/kenya-launches-multi-biometric-system-for-police-clearances/",
+        "sourceName": "ID Tech",
+        "date": "2026-07-23",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "Idemia",
+        "topic": "competencia"
+      },
+      {
+        "id": "idemia-auditoria-federal-gottheimer-2026-07-22",
+        "title": "Congresista de EE.UU. pide auditoría federal de los contratos de identidad de Idemia tras falla en padrón de Nueva Jersey",
+        "summary": "El congresista Josh Gottheimer solicitó formalmente a la GSA y la OMB una auditoría integral de todos los contratos federales de Idemia, luego de que una falla de software de la compañía derivara en la inscripción errónea de unos 6.600 no ciudadanos en el padrón electoral de Nueva Jersey. El pedido cubre el trabajo de Idemia con TSA, CBP, FBI y el Departamento de Defensa, cuestionando el control de calidad de la empresa y la dependencia del gobierno de un único proveedor para sistemas de identidad sensibles.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/us-lawmaker-seeks-audit-of-idemias-role-in-federal-identity-systems",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-22",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Idemia",
+        "topic": "competencia",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Una falla de software de Idemia en un sistema gubernamental de identidad generó un pedido de auditoría federal en EE.UU. sobre todos sus contratos con TSA, CBP, FBI y Defensa, exponiendo un riesgo de concentración en un único proveedor de identidad estatal."
+        }
+      },
+      {
+        "id": "jumio-q2-crecimiento-latam-2026-07-22",
+        "title": "Jumio reporta crecimiento en Q2 2026 al expandirse más allá del onboarding biométrico",
+        "summary": "Jumio informó crecimiento en su segundo trimestre fiscal de 2026 impulsado por nuevos clientes en servicios financieros y gaming, una alianza con Trinsic para aceptar identidades digitales de más de 60 países, y el lanzamiento de Jumio Watch, un software de análisis de riesgo continuo. La compañía también expandió su credencial biométrica reutilizable selfie.DONE en América Latina y confirmó a Mark Lorian como nuevo CEO tras el interinato de Bala Kumar.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/jumio-expansion-beyond-biometric-onboarding-roots-yields-q2-growth",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-22",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Jumio",
+        "topic": "competencia",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Jumio se reposiciona de proveedor de onboarding biométrico a plataforma de riesgo continuo (Jumio Watch), con expansión activa de credenciales reutilizables (selfie.DONE) en LATAM y cambio de CEO en el mismo trimestre."
+        }
+      },
       {
         "id": "comp-20260721-duo-macos-update",
         "competitor": "Duo (Cisco)",
@@ -8851,7 +8967,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-23';
+const TODAY_ISO = '2026-07-24';
 
 const UI_STRINGS = {
     home_label: 'Home',
