@@ -1306,11 +1306,39 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-23",
-  "publishedAt": "2026-07-24T19:23:23.434Z",
-  "regulationLastRun": "2026-07-20",
+  "date": "2026-07-26",
+  "publishedAt": "2026-07-27T19:20:05.055Z",
+  "regulationLastRun": "2026-07-27",
   "sections": {
     "global": [
+      {
+        "id": "global-2026-07-25-01",
+        "title": "Campaña de sextorsión reutiliza datos de brechas de ShinyHunters de ocho empresas distintas",
+        "summary": "Actores de amenazas están usando direcciones de correo filtradas en brechas previas de Amtrak, Hallmark, Substack, Betterment, CarGurus, ADT, Panera Bread y McGraw Hill para enviar correos de sextorsión exigiendo 2.000 dólares en Bitcoin, haciéndose pasar falsamente por el grupo ShinyHunters. El grupo real negó participación; la campaña arrancó en abril y sigue activa combinando datos de múltiples brechas históricas para maximizar víctimas.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/shinyhunters-data-leaks-fuel-2-000-sextortion-email-scam/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-07-25",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "fraude",
+        "actionable": {
+          "type": "tendencia",
+          "text": "La reutilización cruzada de datos de brechas antiguas para nuevas campañas de extorsión masiva confirma que el valor de los datos de identidad filtrados persiste años después del incidente original, ampliando la ventana de riesgo mucho más allá de la brecha inicial."
+        }
+      },
+      {
+        "id": "global-2026-07-24-01",
+        "title": "OnTrac notifica brecha de datos que expone SSN, fechas de nacimiento e información médica de más de 40.000 clientes",
+        "summary": "La empresa de paquetería estadounidense OnTrac confirmó que atacantes accedieron a su red corporativa entre el 20 y el 22 de marzo, exfiltrando datos personales de más de 40.000 clientes, incluyendo números de seguro social, fechas de nacimiento, documentos de identidad e información médica. La compañía ofrece 12 meses de monitoreo de crédito y protección de identidad; no se reportó fraude confirmado ni grupo extorsivo reclamando el ataque.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/ontrac-notifies-customers-of-data-breach-after-network-hack/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-07-24",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "cross",
+        "topic": "breach"
+      },
       {
         "id": "global-2026-07-22-04",
         "title": "Chick-fil-A notifica brecha de datos tras ataques de credential stuffing",
@@ -6760,6 +6788,17 @@ const briefing = {
     },
     "regulation": [
       {
+        "id": "nist-800-63-4-implementation-guide",
+        "title": "ATARC publica guía de implementación de NIST SP 800-63-4 para gestión de riesgo de identidad digital",
+        "summary": "El ATARC Identity Management Working Group publicó el 20 de julio de 2026 una guía que traduce en pasos operativos los cambios significativos del estándar NIST SP 800-63-4 (2025), centrada en un proceso de Digital Identity Risk Management (DIRM) que reemplaza la selección estática de niveles de garantía. Extiende obligaciones de gobernanza a proveedores de identidad externos y credential service providers, con impacto indirecto en marcos de KYC y prevención de fraude usados en contextos financieros y gubernamentales.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/atarc-publishes-implementation-guide-for-nist-sp-800-63-4",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-20",
+        "language": "en",
+        "highRelevance": false,
+        "regulatoryBody": "NIST / ATARC"
+      },
+      {
         "id": "pa-sbp-refuerza-aml-kyc-acuerdo-1-2026",
         "title": "La Superintendencia de Bancos de Panamá refuerza la implementación del Acuerdo 1-2026 sobre prevención de uso indebido de servicios bancarios y fiduciarios",
         "summary": "La Superintendencia de Bancos de Panamá (SBP) informó el 14 de julio de 2026 que profundiza la implementación de sus Acuerdos 1-2026 y 3-2026, que fortalecen el conocimiento del cliente y del beneficiario final, las metodologías de clasificación de riesgo, la debida diligencia diferenciada y los mecanismos de monitoreo contra el blanqueo de capitales. El Acuerdo 1-2026 incorpora la obligación de geolocalización inferencial como fuente primaria de evaluación de riesgo en la apertura de productos por canales digitales, con plazo de implementación hasta junio de 2027. El sector bancario panameño reportó en mayo de 2026 una cartera crediticia neta de USD 102.191,2 millones y un índice de liquidez del 60% (mínimo regulatorio: 30%).",
@@ -7104,6 +7143,22 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "comp-2026-07-26-unico-iso42001",
+        "title": "Unico obtiene certificación ISO/IEC 42001 de gobernanza de IA para su plataforma IDCloud",
+        "competitor": "Unico",
+        "summary": "Unico (Brasil) certificó bajo ISO/IEC 42001 el sistema de gestión de IA de su plataforma IDCloud, que integra biometría facial y detección de vivacidad, sumándose a sus certificaciones previas ISO/IEC 27001 y 27701. La compañía reporta un alza interanual del 84% en volúmenes de verificación de identidad en Q1 2026, 1.500 millones de verificaciones procesadas en 2025 y USD 4.520 millones en pérdidas por fraude evitadas.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/unico-adds-iso-42001-ai-governance-certification-to-identity-platform",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-26",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "identidad-digital",
+        "actionable": {
+          "type": "tendencia",
+          "text": "La certificación ISO/IEC 42001 se está consolidando como nuevo criterio de compra en RFPs de identidad/antifraude en LATAM, con Unico, Suprema, Facewatch y Daon ya certificados en pocos meses."
+        }
+      },
       {
         "id": "google-selfie-video-recovery-2026-07-23",
         "title": "Google lanza recuperación de cuenta por video-selfie con detección de vida",
@@ -8783,6 +8838,20 @@ const briefing = {
     ],
     "vu": [
       {
+        "id": "vu-2026-07-24-ecuador-vuone",
+        "title": "VU lanza VU ONE en Ecuador para fortalecer la identidad digital y prevenir el fraude",
+        "summary": "VU Security presentó en Ecuador su plataforma VU ONE, que unifica verificación de identidad, autenticación y prevención del fraude en un solo entorno. El lanzamiento responde al alza de ciberdelitos en el país: más de 20.600 denuncias por delitos informáticos entre 2022 y 2025, y Ecuador entre los cinco países de LATAM más golpeados por ransomware. Enrique Villacís, arquitecto de Soluciones de VU Security, remarcó que identidad y prevención de fraude ya no pueden gestionarse como procesos independientes.",
+        "sourceUrl": "https://itahora.com/2026/07/24/vu-lanza-en-ecuador-vu-one-para-fortalecer-la-identidad-digital-y-prevenir-el-fraude/",
+        "sourceName": "IT Ahora",
+        "date": "2026-07-24",
+        "language": "es",
+        "highRelevance": true,
+        "actionable": {
+          "type": "dato-clave",
+          "text": "El lanzamiento confirma la estrategia de despliegue país por país de VU ONE en LATAM (tras Brasil, Colombia y Argentina), apalancando estadísticas oficiales de fraude locales como gancho de entrada regulatoria y comercial."
+        }
+      },
+      {
         "id": "pablo-lima-petersen-fraude-identidad-2026",
         "title": "Pablo Lima (VU): la IA corre la línea del fraude más rápido de lo que las empresas actualizan su defensa",
         "summary": "El VP de Ventas de VU compartió reflexiones del evento de Prevención del Fraude del Grupo Petersen (4ta edición). Diagnóstico unánime: la IA está acelerando el fraude más rápido que la capacidad de detección corporativa; la identidad digital se consolidó como el nuevo perímetro de seguridad; el paso urgente es de la reacción tardía a los modelos predictivos y la autenticación continua — no solo de personas sino también de agentes de IA. La diferencia ya no está en más tecnología sino en la tecnología adecuada al problema correcto.",
@@ -8967,7 +9036,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-24';
+const TODAY_ISO = '2026-07-27';
 
 const UI_STRINGS = {
     home_label: 'Home',
