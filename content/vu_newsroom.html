@@ -1306,11 +1306,59 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-26",
-  "publishedAt": "2026-07-27T19:20:05.055Z",
+  "date": "2026-07-27",
+  "publishedAt": "2026-07-28T19:20:33.168Z",
   "regulationLastRun": "2026-07-27",
   "sections": {
     "global": [
+      {
+        "id": "global-fbi-bancos-congelan-fraude-2025",
+        "title": "El FBI y bancos de EE.UU. congelaron USD 679 millones en transferencias fraudulentas en 2025",
+        "summary": "Según un reporte difundido el 27 de julio, el FBI y bancos estadounidenses lograron congelar 679 millones de dólares de aproximadamente 1.200 millones en casos calificados de fraude durante 2025, una tasa de éxito del 58%, gracias a alertas rápidas de víctimas y coordinación con entidades financieras para bloquear transferencias antes de que los estafadores accedan a los fondos.",
+        "sourceUrl": "https://dailyhodl.com/2026/07/27/fbi-and-us-banks-freeze-679-million-in-scam-transfers-in-2025-after-rapid-victim-alerts/",
+        "sourceName": "The Daily Hodl",
+        "date": "2026-07-27",
+        "language": "en",
+        "highRelevance": false,
+        "vertical": "banca",
+        "topic": "fraude",
+        "actionable": {
+          "type": "dato-clave",
+          "text": "La tasa de recuperación del 58% de fondos defraudados depende críticamente de la velocidad de reporte de la víctima y de la coordinación banco-autoridad, subrayando el valor comercial de sistemas de alerta y verificación en tiempo real."
+        }
+      },
+      {
+        "id": "global-malware-sectoprat-falso-claude",
+        "title": "Campaña de malvertising infecta a 29 organizaciones vía documento falso de Claude",
+        "summary": "Una campaña reportada el 26 de julio comprometió a empleados de 29 organizaciones mediante anuncios patrocinados en Bing que dirigían al dominio legítimo claude.ai y desde ahí a un artefacto falso que redirigía a un sitio de descarga falso con el troyano SectopRAT, tras más de 7.100 visitas a la página. El malware exfiltró información personal, datos de tarjetas bancarias, archivos y contraseñas de los sistemas infectados.",
+        "sourceUrl": "https://www.infobae.com/tecno/2026/07/26/29-organizaciones-infectadas-por-troyano-infiltrado-en-un-documento-falso-de-claude/",
+        "sourceName": "Infobae",
+        "date": "2026-07-26",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "fraude",
+        "actionable": {
+          "type": "brecha",
+          "text": "El malvertising que suplanta marcas de software legítimas y confiables (incluyendo herramientas de IA) para distribuir troyanos ladrones de credenciales y datos bancarios confirma que el phishing vía publicidad paga sigue siendo un vector efectivo de robo de identidad a escala corporativa."
+        }
+      },
+      {
+        "id": "global-ey-shinyhunters-breach",
+        "title": "ShinyHunters reivindica ataque a Ernst & Young y amenaza con filtrar datos fiscales de clientes",
+        "summary": "El 27 de julio, el grupo de extorsión ShinyHunters publicó en su sitio de filtraciones un reclamo de autoría sobre un ataque a Ernst & Young (EY), afirmando haber robado credenciales y documentos mediante un ataque a la cadena de suministro de una plataforma de soporte de TI de terceros. Los documentos comprometidos contendrían información personal y financiera usada en la preparación de declaraciones fiscales de clientes de EY. El grupo amenaza con publicar todo si la empresa no responde antes del 31 de julio.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/ernst-and-young-data-breach-claimed-by-shinyhunters-extortion-gang/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-07-27",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "fintech",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "El ataque a la cadena de suministro de una plataforma de soporte de TI de terceros expuso datos fiscales y financieros de clientes corporativos de una Big Four, reforzando que los proveedores de servicios profesionales con acceso a datos sensibles de identidad/finanzas siguen siendo objetivo prioritario de grupos de extorsión."
+        }
+      },
       {
         "id": "global-2026-07-25-01",
         "title": "Campaña de sextorsión reutiliza datos de brechas de ShinyHunters de ocho empresas distintas",
@@ -5216,6 +5264,22 @@ const briefing = {
       ],
       "brasil": [
         {
+          "id": "brasil-golpe-pix-receita-federal",
+          "title": "Nuevo golpe de Pix suplanta a la Receita Federal con falsas multas",
+          "summary": "El 26 de julio circuló en Brasil una campaña de phishing que suplanta a la Receita Federal (agencia tributaria) enviando correos que exigen el pago de supuestas multas vía Pix, con logos oficiales y amenazas para inducir el pago en páginas falsas. La Receita Federal aclaró que jamás cobra multas por Pix y que los cargos oficiales solo se realizan vía DARF en el Portal e-CAC con login Gov.br.",
+          "sourceUrl": "https://diariodopara.com.br/seu-bolso/receita-federal-cobra-multa-por-pix-saiba-como-funciona-o-novo-golpe-que-faz-vitimas-no-brasil/",
+          "sourceName": "Diário do Pará",
+          "date": "2026-07-26",
+          "language": "pt",
+          "highRelevance": false,
+          "vertical": "gobierno",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "La suplantación de organismos tributarios y el uso de Pix como canal de cobro fraudulento se mantiene como uno de los vectores de ingeniería social más recurrentes en Brasil, aprovechando la familiaridad del público con pagos instantáneos."
+          }
+        },
+        {
           "id": "br-pf-operacao-infiltrados-caixa-2026-07-21",
           "title": "Policía Federal de Brasil desarticula red que desvió R$45 millones de clientes de Caixa Econômica Federal",
           "summary": "La Policía Federal de Brasil lanzó la Operación Infiltrados y movilizó cerca de 120 agentes para cumplir 25 órdenes de allanamiento en Río de Janeiro y São Paulo, contra una organización que habría desviado R$45 millones (~US$9 millones) de clientes y beneficiarios de Caixa Econômica Federal. El esquema combinaba fraude electrónico con acceso no autorizado a datos confidenciales de cuentahabientes, con participación de funcionarios bancarios, abogados y operadores de loterías ilegales que filtraban información privilegiada y obstruían la investigación.",
@@ -5328,6 +5392,38 @@ const briefing = {
         }
       ],
       "mexico": [
+        {
+          "id": "mexico-banco-bienestar-tarjeta-bienestar-estafa",
+          "title": "Banco del Bienestar alerta sobre estafas dirigidas a usuarios de la Tarjeta Bienestar",
+          "summary": "El 26 de julio, el Banco del Bienestar alertó sobre una nueva modalidad de estafa dirigida a beneficiarios de la Tarjeta Bienestar (programa social/pensión), con intentos de robo de identidad y datos personales apuntando a este segmento de usuarios, muchos de ellos adultos mayores.",
+          "sourceUrl": "https://laverdadnoticias.com/dinero-inteligente/finanzas-personales/estafa-riesgo-tarjeta-bienestar",
+          "sourceName": "La Verdad Noticias",
+          "date": "2026-07-26",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "gobierno",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "Los programas sociales con tarjetas de pago estatales continúan siendo blanco de fraude dirigido a poblaciones vulnerables, un patrón que se repite en varios países LATAM con transferencias de beneficios."
+          }
+        },
+        {
+          "id": "mexico-banxico-condusef-alerta-fraude-bancario",
+          "title": "Banxico y Condusef emiten recomendaciones para evitar fraudes bancarios en temporada vacacional",
+          "summary": "El 26-27 de julio, Banxico y la Condusef alertaron sobre el aumento estacional de ciberfraudes durante la temporada vacacional, reportado por La Jornada, donde el smishing suplanta a bancos, aerolíneas y plataformas de viaje para robar datos confidenciales de los usuarios.",
+          "sourceUrl": "https://www.jornada.com.mx/2026/07/26/economia/015n1eco",
+          "sourceName": "La Jornada",
+          "date": "2026-07-26",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El pico estacional de fraude bancario en época vacacional en México confirma que los ciberdelincuentes ajustan sus señuelos (viajes, aerolíneas, envíos) al calendario de consumo, no solo a la coyuntura financiera."
+          }
+        },
         {
           "id": "mx-cdmx-phishing-delito-especifico",
           "title": "Ciudad de México convierte al phishing en delito específico con hasta 6 años de cárcel",
@@ -5718,6 +5814,38 @@ const briefing = {
       ],
       "colombia": [
         {
+          "id": "colombia-bucaramanga-fraude-cibernetico-denuncias",
+          "title": "Alerta por fraude cibernético en Bucaramanga: 866 denuncias en el balance 2025",
+          "summary": "Autoridades reportaron el 27 de julio 866 denuncias por delitos informáticos en Bucaramanga, dentro de un total nacional de 67.216 casos en Colombia durante 2025. Las categorías más frecuentes fueron hurto por medios digitales (37.084 casos), acceso no autorizado a sistemas (13.849) y violación de datos personales (8.446), con Bogotá concentrando el 30% de las denuncias.",
+          "sourceUrl": "https://www.vanguardia.com/area-metropolitana/2026/07/27/alerta-por-fraude-cibernetico-en-bucaramanga-866-denuncias-y-tres-claves-para-proteger-sus-cuentas/",
+          "sourceName": "Vanguardia",
+          "date": "2026-07-27",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "gobierno",
+          "topic": "fraude",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "El hurto por medios digitales y el acceso no autorizado a sistemas concentran la gran mayoría de denuncias de delitos informáticos en Colombia, señalando dónde se concentra la demanda potencial de soluciones de autenticación y detección de fraude."
+          }
+        },
+        {
+          "id": "colombia-ecopetrol-brecha-datos-ciberataque",
+          "title": "Ecopetrol activa protocolos tras la publicación ilegal de información robada en ciberataque",
+          "summary": "Ecopetrol confirmó el 27 de julio que actores externos publicaron en línea información sustraída ilegalmente durante un ciberataque de julio de 2026 que afectó a 15 empresas del Grupo Ecopetrol. La petrolera estatal colombiana colabora con la Fiscalía General y el MinTIC para retirar el contenido publicado y restringir el acceso, mientras el alcance, los efectos y los costos asociados permanecen bajo evaluación. Los sistemas transaccionales no mostraron compromiso.",
+          "sourceUrl": "https://www.eltiempo.com/economia/sectores/ecopetrol-activa-nuevos-protocolos-tras-publicacion-ilegal-de-informacion-robada-en-ciberataque-de-julio-de-3574370",
+          "sourceName": "El Tiempo",
+          "date": "2026-07-27",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "gobierno",
+          "topic": "breach",
+          "actionable": {
+            "type": "brecha",
+            "text": "Una empresa estatal estratégica de la región (Ecopetrol, 15 filiales afectadas) confirma exposición y publicación pública de datos robados, evidenciando que los grandes grupos energético-gubernamentales de LATAM siguen siendo blanco de ataques con exfiltración de información confidencial."
+          }
+        },
+        {
           "id": "co-los-cyber-banda-desarticulada",
           "title": "Capturan a 16 personas de la banda \"Los Cyber\", incluido un futbolista, por fraude bancario digital",
           "summary": "Autoridades colombianas capturaron a 16 personas, entre ellas el futbolista Mateo Ramírez Flórez, hijo del fallecido ídolo de Millonarios John Mario Ramírez, vinculadas a la organización \"Los Cyber\", liderada por alias \"Ralf\". La banda suplantaba comunicaciones bancarias mediante smishing y llamadas por WhatsApp pidiendo a las víctimas compartir pantalla para acceder a claves y saldos en tiempo real, afectando a 94 víctimas —mayoritariamente adultos mayores— en 10 departamentos entre junio de 2025 y marzo de 2026, con pérdidas superiores a 1.685 millones de pesos.",
@@ -5965,6 +6093,22 @@ const briefing = {
         }
       ],
       "chile": [
+        {
+          "id": "chile-pdi-alerta-estafas-bonos-estatales",
+          "title": "PDI alerta por estafas que ofrecen bonos estatales tras los temporales",
+          "summary": "La Brigada de Cibercrimen de la PDI alertó el 27 de julio sobre una campaña de estafas vía SMS, WhatsApp y correo que se hace pasar por organismos estatales para ofrecer bonos o beneficios a raíz del sistema frontal que afectó a distintas zonas de Chile, dirigiendo a las víctimas hacia enlaces de phishing para robar información personal.",
+          "sourceUrl": "https://www.24horas.cl/actualidad/nacional/alerta-por-estafas-que-ofrecen-bonos-estatales-tras-los-temporales",
+          "sourceName": "24Horas.cl",
+          "date": "2026-07-27",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "gobierno",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "Los ciberdelincuentes en Chile continúan explotando eventos climáticos y ayudas estatales como gancho de ingeniería social, un patrón recurrente tras cada emergencia declarada en el país."
+          }
+        },
         {
           "id": "bancoestado-mesa-antifraude-transaccional-chile-jun16",
           "title": "BancoEstado y la Fiscalía de Chile crean una mesa antifraude tras detectar 7.000 casos de autofraude transaccional",
@@ -6300,6 +6444,22 @@ const briefing = {
         }
       ],
       "bolivia": [
+        {
+          "id": "bolivia-cochabamba-estafa-piramidal-oro",
+          "title": "Cae sindicado de estafa piramidal que prometía duplicar dinero invertido en oro en Cochabamba",
+          "summary": "La Policía boliviana detuvo el 27 de julio en Cochabamba a un hombre acusado de estafar aproximadamente 750 mil bolivianos a entre 20 y 25 personas, bajo la promesa de duplicar el capital invertido en la compra de oro. El caso se suma al reporte de la ATT de 16.821 denuncias de estafas digitales registradas en la plataforma \"Bloquea la Estafa\" entre enero y julio de 2026.",
+          "sourceUrl": "https://www.opinion.com.bo/articulo/policial/cae-sindicado-estafa-que-ofrecia-duplicar-dinero-inversion-oro/20260727163338993933.html",
+          "sourceName": "Opinión (Bolivia)",
+          "date": "2026-07-27",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "cross",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "Los esquemas piramidales de inversión con promesa de duplicar capital (oro, criptomonedas) siguen siendo una modalidad de fraude financiero activa y con víctimas múltiples en Bolivia."
+          }
+        },
         {
           "id": "latam-bo-2026-07-21-02",
           "title": "Detenido joven de 19 años por estafa agravada en transacción cripto fallida",
@@ -7143,6 +7303,36 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "idv-market-continuous-trust-trend-2026-07-27",
+        "title": "El mercado de verificación de identidad avanza hacia modelos de 'confianza continua' impulsados por IA",
+        "summary": "Biometric Update publicó el 27 de julio un análisis de mercado que documenta la consolidación de la industria de IDV hacia plataformas de confianza continua, citando movimientos recientes de Trulioo (UBO Discovery Agent para KYB), Alloy (asistente agentic y pKYB), GBG (alianza con Intellias) y lanzamientos de IDnow, Nuggets (autenticación de agentes de IA) y OneSpan (passkeys). La tesis central del artículo: los proveedores dejan de vender checks puntuales de onboarding y pasan a ofrecer monitoreo de identidad a lo largo de todo el ciclo de vida del cliente.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/modern-identity-verification-market-navigates-shift-to-continuous-trust",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-27",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "GBG / Trulioo / Alloy / IDnow / Nuggets / OneSpan",
+        "actionable": {
+          "type": "tendencia",
+          "text": "Múltiples proveedores de IDV (GBG, Trulioo, Alloy, IDnow, Nuggets, OneSpan) convergen hacia plataformas de 'confianza continua' que combinan orquestación de verificación, prevención de fraude, autenticación biométrica y monitoreo durante todo el ciclo de vida del cliente, en lugar de checks puntuales en el onboarding."
+        }
+      },
+      {
+        "id": "gbg-intellias-ai-decisioning-2026-07-27",
+        "title": "GBG amplía su alianza tecnológica con Intellias para reforzar la capa de decisión con IA",
+        "summary": "GBG anunció una alianza tecnológica ampliada con Intellias, firma de ingeniería de producto especializada en IA, para incorporar IA en la capa de soporte de decisiones de su plataforma de identidad y fraude. El movimiento profundiza el giro que GBG viene ejecutando desde el lanzamiento de GBG Foresight (junio 2026), pasando de verificación de identidad pura a una plataforma de decisión de identidad asistida por IA.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/modern-identity-verification-market-navigates-shift-to-continuous-trust",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-27",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "GBG",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "GBG suma un socio externo de ingeniería (Intellias) para su capa de decisión con IA, en lugar de desarrollarla in-house, en el marco de su transición de proveedor de IDV a plataforma de decisión de identidad y fraude."
+        }
+      },
       {
         "id": "comp-2026-07-26-unico-iso42001",
         "title": "Unico obtiene certificación ISO/IEC 42001 de gobernanza de IA para su plataforma IDCloud",
@@ -9036,7 +9226,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-27';
+const TODAY_ISO = '2026-07-28';
 
 const UI_STRINGS = {
     home_label: 'Home',
