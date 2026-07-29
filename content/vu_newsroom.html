@@ -1306,11 +1306,111 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-27",
-  "publishedAt": "2026-07-28T19:20:33.168Z",
+  "date": "2026-07-28",
+  "publishedAt": "2026-07-29T19:24:12.974Z",
   "regulationLastRun": "2026-07-27",
   "sections": {
     "global": [
+      {
+        "id": "global-sourtrade-malvertising-cripto-2026-07-27",
+        "title": "Campaña de malvertising \"SourTrade\" suplanta plataformas cripto para instalar infostealers en el navegador",
+        "summary": "La campaña SourTrade suplanta a TradingView, Solana y Luno para distribuir un infostealer que se ensambla directamente en el navegador de la víctima, evadiendo detección basada en huellas de archivo. El objetivo son inversores y traders de criptomonedas, con riesgo de robo de credenciales y fondos; el artículo no detalla montos de pérdidas confirmadas.",
+        "sourceUrl": "https://www.infosecurity-magazine.com/news/malvertising-builds-malware-in/",
+        "sourceName": "Infosecurity Magazine",
+        "date": "2026-07-27",
+        "language": "en",
+        "highRelevance": false,
+        "vertical": "cripto",
+        "topic": "phishing"
+      },
+      {
+        "id": "global-pymnts-visa-fraude-costo-emisores-2026-07-28",
+        "title": "Reporte PYMNTS/Visa DPS: el fraude es uno de los principales costos operativos para el 42% de los emisores de tarjetas",
+        "summary": "Según \"The Issuer Risk Playbook\" (encuesta de PYMNTS Intelligence a 500 ejecutivos de emisores de tarjetas en EE.UU. junto a Visa DPS), el 42% de los emisores ubica al fraude y las disputas entre sus dos mayores costos operativos, y el porcentaje que señala sistemas antifraude insuficientes y falsos rechazos altos como problema subió de 14% a 21% interanual. Cerca del 60% de los emisores está desplegando o mejorando detección de fraude con IA.",
+        "sourceUrl": "https://www.pymnts.com/cybersecurity/fraud-prevention/2026/fraud-and-disputes-rank-as-a-top-cost-for-42-of-issuers/",
+        "sourceName": "PYMNTS",
+        "date": "2026-07-28",
+        "language": "en",
+        "highRelevance": false,
+        "vertical": "banca",
+        "topic": "fraude",
+        "actionable": {
+          "type": "dato-clave",
+          "text": "El 42% de los emisores de tarjetas en EE.UU. ubica al fraude entre sus dos mayores costos operativos y cerca del 60% ya despliega o mejora detección con IA, confirmando que la inversión en antifraude impulsado por IA es una prioridad presupuestaria creciente entre emisores."
+        }
+      },
+      {
+        "id": "global-coca-cola-fairlife-ransomware-2026-07-27",
+        "title": "Coca-Cola confirma robo de datos de su filial Fairlife tras ataque de ransomware",
+        "summary": "El grupo de ransomware Anubis atacó a Fairlife, la filial láctea de Coca-Cola, cifrando sistemas Nutanix y exfiltrando aproximadamente un terabyte de archivos. El plazo de extorsión venció el mismo día de la publicación y los datos robados se hicieron públicos; Coca-Cola no detalló si se expuso información personal de clientes o empleados.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/coca-cola-confirms-data-theft-in-fairlife-ransomware-attack/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-07-27",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "retail",
+        "topic": "ransomware",
+        "actionable": {
+          "type": "brecha",
+          "text": "El ataque de ransomware Anubis contra Fairlife (filial de Coca-Cola), con exfiltración de ~1TB y filtración pública tras vencer el plazo de extorsión, muestra que los grupos de ransomware siguen combinando cifrado y extorsión por filtración también en sectores de consumo masivo, no solo financieros."
+        }
+      },
+      {
+        "id": "global-apple-demanda-app-cripto-falsa-2026-07-27",
+        "title": "Apple demandada por app falsa de billetera cripto en la App Store que robó USD 1,8 millones",
+        "summary": "Tres usuarios demandaron a Apple ante un tribunal federal de California tras perder en conjunto USD 1,8 millones al descargar \"Sparrow Wallet\", una app falsa que suplantaba a la billetera real de Bitcoin (no disponible en iOS) y estaba disponible en la App Store. Apple respondió que en 2025 rechazó más de 371.000 envíos engañosos por violar sus políticas anti-suplantación.",
+        "sourceUrl": "https://techcrunch.com/2026/07/27/apple-sued-after-alleged-app-store-crypto-scam-cost-users-1-8m/",
+        "sourceName": "TechCrunch",
+        "date": "2026-07-27",
+        "language": "en",
+        "highRelevance": false,
+        "vertical": "cripto",
+        "topic": "fraude"
+      },
+      {
+        "id": "global-bank-of-baroda-incidente-2026-07-28",
+        "title": "Banco estatal indio Bank of Baroda confirma incidente cibernético tras filtración reivindicada por hacker",
+        "summary": "Bank of Baroda, uno de los mayores bancos estatales de India, confirmó que la cuenta de correo de un empleado fue comprometida, otorgando acceso no autorizado a datos internos. Un actor identificado como \"leak-king-F\" afirma haber obtenido información de clientes, registros de banca corporativa, correos internos y documentos de préstamos; el banco dice haber contenido el incidente sin afectar sistemas core.",
+        "sourceUrl": "https://therecord.media/india-bank-of-baroda-reports-cybersecurity-incident",
+        "sourceName": "The Record (Recorded Future News)",
+        "date": "2026-07-28",
+        "language": "en",
+        "highRelevance": false,
+        "vertical": "banca",
+        "topic": "breach"
+      },
+      {
+        "id": "global-origin-energy-breach-900k-2026-07-28",
+        "title": "Origin Energy (Australia) confirma que datos de 900.000 clientes fueron accedidos en una brecha",
+        "summary": "La energética australiana Origin Energy confirmó que un atacante accedió a datos de 900.000 clientes actuales y ex clientes (sobre 4,8 millones totales), incluyendo nombres, fechas de nacimiento, teléfonos, direcciones, información de cuenta y números parciales de tarjeta o cuenta bancaria. El atacante afirmó tener datos de 2 millones de clientes y amenazó con filtrarlos; la compañía reconoció que otros actores podrían aprovechar el incidente para estafas.",
+        "sourceUrl": "https://www.securityweek.com/origin-energy-data-breach-affects-900000-australians/",
+        "sourceName": "SecurityWeek",
+        "date": "2026-07-28",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "N/A",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "La exposición de datos personales y financieros de 900.000 clientes de una utility (no un banco ni fintech) ilustra cómo sectores fuera de banca/retail se vuelven blanco de brechas con riesgo directo de fraude de identidad para los usuarios afectados."
+        }
+      },
+      {
+        "id": "global-europol-albania-fraude-inversion-2026-07-27",
+        "title": "Europol y Eurojust desmantelan red de fraude de inversión con call centers en Albania",
+        "summary": "Autoridades austríacas y albanesas, con apoyo de Europol y Eurojust, desmantelaron una red que operaba call centers en Tirana captando víctimas en Italia, Alemania, Grecia, España, Canadá y Reino Unido mediante falsas plataformas de trading. Se detuvo a 10 personas, se incautaron EUR 891.735 en efectivo y se estima un perjuicio total de unos EUR 50 millones; la red también ejecutaba \"recovery scams\" contra sus propias víctimas anteriores.",
+        "sourceUrl": "https://home-affairs.ec.europa.eu/news/international-investigation-supported-europol-and-eurojust-dismantles-online-fraud-criminal-network-2026-07-27_en",
+        "sourceName": "Comisión Europea (Migration and Home Affairs)",
+        "date": "2026-07-27",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "fraude",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "La acción coordinada de Europol y Eurojust contra call centers de fraude de inversión en Albania confirma el crecimiento de operaciones organizadas de fraude financiero transfronterizo que afectan a múltiples mercados europeos simultáneamente, incluyendo España."
+        }
+      },
       {
         "id": "global-fbi-bancos-congelan-fraude-2025",
         "title": "El FBI y bancos de EE.UU. congelaron USD 679 millones en transferencias fraudulentas en 2025",
@@ -4807,6 +4907,34 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "ar-condena-fraude-tarjetas-santa-fe-2026-07-28",
+          "title": "Condenaron a un joven por estafas con tarjetas de crédito en Santa Fe y tendrá que resarcir a la empresa damnificada",
+          "summary": "Un joven de 26 años de Santa Fe fue condenado por realizar compras online fraudulentas usando datos de tarjetas de crédito ajenas, con aproximadamente 20 operaciones fraudulentas contra una cadena de perfumerías entre enero y julio de 2024. Recibió 3 años de prisión en suspenso y debe pagar 2 millones de pesos de resarcimiento más 1 millón de pesos de multa.",
+          "sourceUrl": "https://www.infobae.com/sociedad/policiales/2026/07/28/condenaron-a-un-joven-por-estafas-con-tarjetas-de-credito-en-santa-fe-y-tendra-que-resarcir-a-la-empresa-damnificada/",
+          "sourceName": "Infobae",
+          "date": "2026-07-28",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "retail",
+          "topic": "fraude"
+        },
+        {
+          "id": "ar-deepfake-escuelas-ia-2026-07-28",
+          "title": "\"Una carrera permanente\": los desafíos de combatir los deepfakes generados con IA",
+          "summary": "El artículo señala que el 98% de los videos deepfake en internet son de contenido pornográfico y el 99% de las víctimas son mujeres; en Argentina, una encuesta a 912 estudiantes (12-19 años) halló que el 43% recibió imágenes o videos editados con IA y un 13% conoce casos en su entorno escolar. Se citan casos concretos en el Colegio Carlos Pellegrini y el Nacional de Buenos Aires, evidenciando un vacío legal frente a la suplantación de identidad mediante IA generativa.",
+          "sourceUrl": "https://www.lanacion.com.ar/economia/IA/una-carrera-permanente-los-desafios-de-combatir-los-deepfakes-generados-con-ia-nid28072026/",
+          "sourceName": "LA NACION",
+          "date": "2026-07-28",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "N/A",
+          "topic": "deepfake",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El vacío legal frente a deepfakes no consensuados en entornos escolares argentinos, con el 43% de una muestra de 912 estudiantes reportando haber recibido contenido editado con IA, apunta a una demanda creciente de herramientas de detección de deepfake y verificación de edad en plataformas digitales de la región."
+          }
+        },
+        {
           "id": "ar-bcra-alerta-remoto-bancario",
           "title": "BCRA alerta por estafas con apps de acceso remoto que vacían cuentas bancarias",
           "summary": "El Banco Central de la República Argentina (BCRA) emitió una alerta el 22 de julio advirtiendo sobre una modalidad de fraude en la que estafadores piden a la víctima instalar una aplicación de acceso remoto bajo el pretexto de \"verificar su identidad\" o \"resolver un problema con la cuenta\". Una vez instalada, los delincuentes acceden a la pantalla del dispositivo y operan la cuenta bancaria sin consentimiento del titular. El BCRA recomienda no instalar apps solicitadas por chat y denunciar ante la Ufeci.",
@@ -5393,6 +5521,22 @@ const briefing = {
       ],
       "mexico": [
         {
+          "id": "mx-ia-ciberdelincuencia-columna-2026-07-27",
+          "title": "IA y ciberdelincuencia, peligro inminente",
+          "summary": "La columna cita que el cibercrimen generó pérdidas globales superiores a USD 20.900 millones en 2025, cifra que se espera crezca con la adopción de IA. El sector financiero fue el segundo más atacado en 2025 con 824 ataques documentados y el costo promedio de un ciberataque corporativo ya supera los USD 250.000; en América Latina, cerca del 65% de las empresas carece de las capacidades especializadas necesarias para cumplir sus objetivos de ciberseguridad.",
+          "sourceUrl": "https://www.elfinanciero.com.mx/opinion/jeanette-leyva/2026/07/27/ia-y-ciberdelincuencia-peligro-inminente/",
+          "sourceName": "El Financiero (columna de opinión)",
+          "date": "2026-07-27",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "cross",
+          "topic": "ciberseguridad",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "El dato de que cerca del 65% de las empresas en América Latina carece de las capacidades especializadas necesarias para cumplir sus objetivos de ciberseguridad, con el sector financiero como segundo más atacado a nivel global en 2025, define una brecha de capacidad relevante para el mercado direccionable de soluciones antifraude e identidad en la región."
+          }
+        },
+        {
           "id": "mexico-banco-bienestar-tarjeta-bienestar-estafa",
           "title": "Banco del Bienestar alerta sobre estafas dirigidas a usuarios de la Tarjeta Bienestar",
           "summary": "El 26 de julio, el Banco del Bienestar alertó sobre una nueva modalidad de estafa dirigida a beneficiarios de la Tarjeta Bienestar (programa social/pensión), con intentos de robo de identidad y datos personales apuntando a este segmento de usuarios, muchos de ellos adultos mayores.",
@@ -5813,6 +5957,38 @@ const briefing = {
         }
       ],
       "colombia": [
+        {
+          "id": "co-fraude-ecommerce-chargebacks-koin-2026-07-28",
+          "title": "Fraude en comercio electrónico le costaría a Colombia USD 48 millones por reversiones de pagos con tarjetas de crédito en 2026",
+          "summary": "Un estudio de Koin proyecta que las devoluciones de pago (chargebacks) le costarán a Colombia unos USD 48 millones en 2026, frente a USD 43 millones en 2025, en un contexto de fuerte crecimiento del e-commerce (22% este año, superando a Brasil y México). El estudio identifica dos problemas clave: los comercios solo recuperan el 12% de las transacciones revertidas, y los falsos positivos de los sistemas antifraude rechazan compras legítimas.",
+          "sourceUrl": "https://www.semana.com/economia/empresas/articulo/fraude-en-comercio-electronico-le-costaria-a-colombia-us48-millones-por-reversiones-de-pagos-con-tarjetas-de-credito-en-2026/202632/",
+          "sourceName": "Semana",
+          "date": "2026-07-28",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "retail",
+          "topic": "fraude",
+          "actionable": {
+            "type": "ventana",
+            "text": "El estudio de Koin proyecta USD 48 millones en pérdidas por chargebacks en Colombia en 2026, en un mercado de e-commerce que crece 22% y supera a Brasil y México en expansión, con solo 12% de recuperación de transacciones revertidas y falsos positivos antifraude rechazando compras legítimas."
+          }
+        },
+        {
+          "id": "co-ciberataques-empresas-fortiguard-2026-07-28",
+          "title": "Empresas en Colombia reciben más de 3.000 ciberataques por semana, generando pérdidas de hasta 6,3 millones de dólares",
+          "summary": "Según un informe de FortiGuard Labs, las empresas colombianas reciben más de 3.000 ciberataques semanales, y un solo ataque puede generar pérdidas de hasta USD 6,3 millones y hasta 36 horas de interrupción operativa. Colombia ocupa el tercer lugar en incidentes cibernéticos en América Latina, representando el 8% de los ataques regionales, impulsados por técnicas cada vez más sofisticadas basadas en IA.",
+          "sourceUrl": "https://www.semana.com/economia/empresas/articulo/empresas-en-colombia-reciben-mas-de-3000-ciberataques-por-semana-generando-perdidas-de-hasta-63-millones-de-dolares/202607/",
+          "sourceName": "Semana",
+          "date": "2026-07-28",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "cross",
+          "topic": "ciberseguridad",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "El informe de FortiGuard Labs posiciona a Colombia como el tercer país de LATAM en incidentes cibernéticos (8% del total regional), con pérdidas de hasta USD 6,3 millones por ataque impulsadas por técnicas basadas en IA."
+          }
+        },
         {
           "id": "colombia-bucaramanga-fraude-cibernetico-denuncias",
           "title": "Alerta por fraude cibernético en Bucaramanga: 866 denuncias en el balance 2025",
@@ -6297,6 +6473,22 @@ const briefing = {
         }
       ],
       "panama": [
+        {
+          "id": "pa-operacion-pandora-fraude-fiscal-2026-07-27",
+          "title": "El MEF destituye a 9 funcionarios y \"congela\" los créditos fiscales ligados a la operación Pandora",
+          "summary": "El Ministerio de Economía y Finanzas de Panamá destituyó a 9 funcionarios y congeló todos los trámites de créditos fiscales vinculados a la \"Operación Pandora\", una red que operó dentro del sistema digital e-Tax de la Dirección General de Ingresos (DGI) y que habría generado créditos fiscales fraudulentos por al menos USD 40 millones, afectando a bancos y aseguradoras que los adquirieron de buena fe. Hay 31 detenidos, incluyendo funcionarios, abogados y presuntos testaferros; se ordenó una auditoría integral a la Contraloría General.",
+          "sourceUrl": "https://www.prensa.com/judiciales/el-mef-destituye-a-9-funcionarios-y-congela-los-creditos-fiscales-ligados-a-la-operacion-pandora/",
+          "sourceName": "La Prensa Panamá",
+          "date": "2026-07-27",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "gobierno",
+          "topic": "fraude",
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "La \"Operación Pandora\" expone fraude sistémico por USD 40 millones dentro del sistema tributario digital e-Tax de Panamá, con destituciones de funcionarios y una auditoría integral en curso; el sector bancario y asegurador local quedó expuesto como comprador de buena fe de créditos fiscales fraudulentos."
+          }
+        },
         {
           "id": "latam-pa-2026-07-21-01",
           "title": "Panamá registra 3.395 denuncias por estafas y fraudes en el primer semestre de 2026",
@@ -7303,6 +7495,21 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "daon-ai-agent-authorization-patent-2026-07-28",
+        "title": "Daon obtiene su tercera patente en EE.UU. para gobernanza de agentes de IA en tiempo real",
+        "summary": "Daon aseguró la Patente de EE.UU. N.º 12.688.261 (emitida el 21/07/2026), su tercera patente centrada en autorización de agentes de IA. La tecnología habilita gobernanza en tiempo real a nivel de acción mediante credenciales digitales de corta duración que especifican qué puede hacer un agente autónomo, dónde y por cuánto tiempo, sobre una arquitectura de confianza de tres capas. Apunta a bancos y proveedores de salud que necesitan aprobar transacciones sensibles ejecutadas por agentes de IA antes de escalar su despliegue.",
+        "sourceUrl": "https://ffnews.com/news/daon-secures-third-patent-to-solve-ai-agent-authorization-challenges-in-regulated-industries",
+        "sourceName": "FF News (Fintech Finance)",
+        "date": "2026-07-28",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Daon",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Daon consolida una arquitectura de tres capas patentada para gobernanza de agentes de IA en banca y salud reguladas — la autorización de agentes autónomos emerge como nueva categoría dentro de la identidad digital, con Auth0, Sumsub y Entrust también invirtiendo en el espacio."
+        }
+      },
       {
         "id": "idv-market-continuous-trust-trend-2026-07-27",
         "title": "El mercado de verificación de identidad avanza hacia modelos de 'confianza continua' impulsados por IA",
@@ -9226,7 +9433,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-28';
+const TODAY_ISO = '2026-07-29';
 
 const UI_STRINGS = {
     home_label: 'Home',
