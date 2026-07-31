@@ -1306,11 +1306,43 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-28",
-  "publishedAt": "2026-07-29T19:24:12.974Z",
+  "date": "2026-07-30",
+  "publishedAt": "2026-07-31T13:30:00.000Z",
   "regulationLastRun": "2026-07-27",
   "sections": {
     "global": [
+      {
+        "id": "global-brinks-home-shinyhunters-breach-2026-07-30",
+        "title": "ShinyHunters vulnera a Brinks Home vía vishing en Microsoft Entra y roba datos de más de un millón de clientes",
+        "summary": "El grupo de extorsión ShinyHunters reivindicó un ataque a Brinks Home (proveedor de seguridad residencial con más de 1 millón de clientes en EE.UU., Canadá y Puerto Rico) ejecutado mediante vishing sobre Microsoft Entra para convencer a un empleado de completar la autenticación y ceder acceso. Se robaron más de 1,1 millones de registros de contacto de clientes desde Salesforce, más de 4.000 filas de PII de empleados y más de 3,8 millones de logs de chats de soporte. El ataque ocurrió el 13 de julio y fue divulgado el 30 de julio.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/shinyhunters-claims-brinks-home-breach-threatens-to-leak-stolen-data/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-07-30",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "retail",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "Vector de ataque por vishing dirigido al help desk para eludir MFA en Microsoft Entra, resultando en robo de PII de clientes y empleados a escala millonaria."
+        }
+      },
+      {
+        "id": "global-biometricupdate-certificacion-fraude-ia-2026-07-29",
+        "title": "La certificación estática de detección de fraude no logra seguir el ritmo de la IA, advierte la industria biométrica",
+        "summary": "Un análisis de Biometric Update sostiene que los ciclos de certificación de sistemas de verificación de identidad quedan obsoletos en meses: un sistema aprobado en enero puede volverse vulnerable en junio por nuevos ataques de documentos generados por IA, inyección biométrica y mejoras en deepfakes. Propone reemplazar la certificación puntual por ciclos continuos de evaluación, datasets que incorporen técnicas de ataque emergentes y colaboración de inteligencia de amenazas entre laboratorios independientes.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/if-ai-changes-identity-fraud-every-month-how-does-the-industry-know-what-actually-works",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-29",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "biometria",
+        "actionable": {
+          "type": "tendencia",
+          "text": "Presión creciente en la industria de verificación de identidad para pasar de certificaciones puntuales a modelos de evaluación continua frente a ataques de IA que evolucionan en ciclos de semanas."
+        }
+      },
       {
         "id": "global-sourtrade-malvertising-cripto-2026-07-27",
         "title": "Campaña de malvertising \"SourTrade\" suplanta plataformas cripto para instalar infostealers en el navegador",
@@ -4907,6 +4939,22 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "argentina-deepfake-fraude-inversion-famosos-2026-07-29",
+          "title": "Estafas con deepfakes de figuras públicas argentinas se multiplican para captar inversiones falsas",
+          "summary": "Circulan en redes y grupos de mensajería en Argentina videos y audios generados con IA que imitan a figuras públicas y periodistas en formatos que copian noticieros y entrevistas reales, prometiendo retornos rápidos de inversión. Un especialista en ciberseguridad citó el caso de una persona que invirtió USD 30.000 tras ver una entrevista falsa de Marcos Galperín. Las plataformas sociales demoran en dar de baja el contenido pese a reportes reiterados, y muchos estafadores devuelven el dinero a las víctimas para evitar antecedentes penales.",
+          "sourceUrl": "https://www.infobae.com/sociedad/2026/07/29/el-nuevo-fraude-que-usa-inteligencia-artificial-para-imitar-voces-y-rostros-de-famosos-y-vaciar-cuentas-en-argentina/",
+          "sourceName": "Infobae",
+          "date": "2026-07-29",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "fintech",
+          "topic": "deepfake",
+          "actionable": {
+            "type": "ventana",
+            "text": "Suplantación de figuras públicas de alto perfil (caso Galperín) con deepfake audio/video para fraude de inversión, con lentitud de las plataformas sociales en el retiro de contenido como fricción estructural."
+          }
+        },
+        {
           "id": "ar-condena-fraude-tarjetas-santa-fe-2026-07-28",
           "title": "Condenaron a un joven por estafas con tarjetas de crédito en Santa Fe y tendrá que resarcir a la empresa damnificada",
           "summary": "Un joven de 26 años de Santa Fe fue condenado por realizar compras online fraudulentas usando datos de tarjetas de crédito ajenas, con aproximadamente 20 operaciones fraudulentas contra una cadena de perfumerías entre enero y julio de 2024. Recibió 3 años de prisión en suspenso y debe pagar 2 millones de pesos de resarcimiento más 1 millón de pesos de multa.",
@@ -5521,6 +5569,22 @@ const briefing = {
       ],
       "mexico": [
         {
+          "id": "mexico-coalicion-industria-fraude-digital-2026-07-30",
+          "title": "Banca, telcos y tecnológicas de México acuerdan unificar agendas de ciberseguridad y antifraude",
+          "summary": "Más de 35 representantes de banca (Banorte, BanCoppel, Banco Azteca, HSBC, Nubank, Inbursa, Mastercard, Scotiabank, Banamex, American Express), telecomunicaciones, gobierno y academia acordaron converger sus agendas de ciberseguridad y prevención de fraude. México pierde 139 mil millones de pesos al año en fraude y cada persona recibe en promedio 86 intentos anuales (uno cada 4 días); el 79% llega por mensajería directa. Se lanzan tres iniciativas: un estudio de anatomía sistémica del fraude, una campaña de concientización permanente y un marco legislativo vía el Instituto de Investigaciones Jurídicas de la UNAM.",
+          "sourceUrl": "https://www.infobae.com/america/agencias/2026/07/30/blindar-a-los-usuarios-mexicanos-frente-al-fraude-digital-la-industria-acuerda-unir-las-agendas-de-ciberseguridad-y-antifraude/",
+          "sourceName": "Infobae",
+          "date": "2026-07-30",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "cross",
+          "topic": "fraude",
+          "actionable": {
+            "type": "movimiento-competitivo",
+            "text": "Coalición público-privada mexicana con 35+ actores (banca, telco, gobierno, academia) que busca estandarizar la respuesta a fraude e IA generativa a nivel sistémico, no solo por institución."
+          }
+        },
+        {
           "id": "mx-ia-ciberdelincuencia-columna-2026-07-27",
           "title": "IA y ciberdelincuencia, peligro inminente",
           "summary": "La columna cita que el cibercrimen generó pérdidas globales superiores a USD 20.900 millones en 2025, cifra que se espera crezca con la adopción de IA. El sector financiero fue el segundo más atacado en 2025 con 824 ataques documentados y el costo promedio de un ciberataque corporativo ya supera los USD 250.000; en América Latina, cerca del 65% de las empresas carece de las capacidades especializadas necesarias para cumplir sus objetivos de ciberseguridad.",
@@ -5957,6 +6021,22 @@ const briefing = {
         }
       ],
       "colombia": [
+        {
+          "id": "colombia-ecopetrol-publicacion-datos-robados-actualizacion-2026-07-29",
+          "title": "[Actualización] Ecopetrol confirma publicación ilegal de datos robados de 15 empresas del grupo tras el ciberataque de julio",
+          "summary": "Tras el ciberataque revelado el 17-18 de julio (3.300 cuentas comprometidas en sistemas de almacenamiento en la nube de 15 empresas del Grupo Ecopetrol, atribuido al grupo de ransomware The Gentlemen, con datos de nómina, bancarios, historias médicas, biometría de empleados y credenciales VPN en juego), Ecopetrol confirmó el 29 de julio que actores externos publicaron la información copiada ilegalmente. La empresa trabaja con la Fiscalía General y el MinTIC en acciones de retiro, y advierte que podría enfrentar acciones regulatorias, litigios o afectación reputacional.",
+          "sourceUrl": "https://www.pulzo.com/tecnologia/ciberataque-en-ecopetrol-colombia-informacion-filtrada-de-15-empresas-y-riesgo-operacional-PP5257934A",
+          "sourceName": "Pulzo",
+          "date": "2026-07-29",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "gobierno",
+          "topic": "breach",
+          "actionable": {
+            "type": "brecha",
+            "text": "Filtración confirmada que expone datos biométricos, bancarios y credenciales VPN de empleados de una petrolera estatal, con litigio y sanciones regulatorias en el horizonte inmediato."
+          }
+        },
         {
           "id": "co-fraude-ecommerce-chargebacks-koin-2026-07-28",
           "title": "Fraude en comercio electrónico le costaría a Colombia USD 48 millones por reversiones de pagos con tarjetas de crédito en 2026",
@@ -6412,6 +6492,18 @@ const briefing = {
       "uruguay": [],
       "ecuador": [
         {
+          "id": "ecuador-sri-alerta-whatsapp-suplantacion-2026-07-30",
+          "title": "El SRI de Ecuador alerta por mensajes fraudulentos de WhatsApp que suplantan a la entidad",
+          "summary": "El Servicio de Rentas Internas (SRI) emitió el 30 de julio una alerta ante la circulación de mensajes por WhatsApp y SMS que suplantan a la institución para robar información tributaria, personal y financiera, con notificaciones falsas de multas o problemas fiscales urgentes. El organismo recordó que no solicita información sensible ni gestiona pagos por canales no oficiales.",
+          "sourceUrl": "https://www.vistazo.com/servicios/2026-07-31sri-alerta-sobre-estafas-whatsapp-asi-operan-mensajes-fraudulentos-buscan-robar-informacion-FC11139914",
+          "sourceName": "Vistazo",
+          "date": "2026-07-30",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "gobierno",
+          "topic": "fraude"
+        },
+        {
           "id": "ec-estafa-bono-presidencial-usd4000",
           "title": "Autoridades de Ecuador advierten nueva estafa digital con falso 'bono de USD 4.000'",
           "summary": "El 17 de julio de 2026 autoridades ecuatorianas alertaron sobre una campaña de phishing en Facebook y WhatsApp que ofrece un supuesto 'Bono Presidencial para Todos' de entre USD 1.000 y 4.000 para personas de 13 a 65 años, dirigiendo a páginas falsas con apariencia institucional que buscan robar datos personales y financieros.",
@@ -6636,6 +6728,22 @@ const briefing = {
         }
       ],
       "bolivia": [
+        {
+          "id": "bolivia-att-denuncias-fraude-digital-1s2026-2026-07-29",
+          "title": "Bolivia acumula 16.821 denuncias de fraude digital en lo que va de 2026, con Tigo concentrando el 67% de líneas denunciadas",
+          "summary": "La Autoridad de Regulación y Fiscalización de Telecomunicaciones (ATT) recibió 16.821 denuncias de fraude entre el 1 de enero y el 17 de julio de 2026 a través de la plataforma 'Bloquea la Estafa'; 9.374 (55,7%) fueron validadas. Como respuesta se bloquearon 13.516 IMEI y se cortaron 10.846 líneas. La modalidad predominante es la suplantación de personal de telecomunicaciones para robar datos personales; La Paz, Santa Cruz y Cochabamba concentran la mayoría de los casos.",
+          "sourceUrl": "https://mobiletime.la/noticias/29/07/2026/bolivia-estafas-digitales/",
+          "sourceName": "MobileTime LATAM",
+          "date": "2026-07-29",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "telco",
+          "topic": "fraude",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "Volumen sostenido de fraude por suplantación de personal telco en Bolivia, con acción regulatoria activa (bloqueo de IMEI/líneas) pero sin mención de capas de verificación de identidad en el alta de líneas."
+          }
+        },
         {
           "id": "bolivia-cochabamba-estafa-piramidal-oro",
           "title": "Cae sindicado de estafa piramidal que prometía duplicar dinero invertido en oro en Cochabamba",
@@ -7495,6 +7603,34 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "innovatrics-nist-elft-latent-fingerprint-2026-07-29",
+        "title": "Innovatrics lidera cuatro métricas de precisión en la última evaluación NIST ELFT de huellas latentes",
+        "summary": "Innovatrics quedó primero en cuatro de las métricas de precisión evaluadas por NIST en su benchmark ELFT (Evaluation of Latent Friction Ridge Technology), entre 12 proveedores comparados, con un Rank-1 hit rate de 99.3% y un Rank-100 hit rate de 98.9% a FPIR=10% sobre el dataset operativo del DoD (más de 5.200 huellas latentes contra 1.6 millones de perfiles de referencia).",
+        "sourceUrl": "https://www.biometricupdate.com/202607/innovatrics-forensic-fingerprint-biometrics-top-4-categories-in-nist-evaluation",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-29",
+        "language": "es",
+        "highRelevance": false,
+        "topic": "biometria",
+        "competitor": "Innovatrics"
+      },
+      {
+        "id": "au10tix-reality-defender-deepfake-selfie-2026-07-30",
+        "title": "AU10TIX integra la detección de deepfakes de Reality Defender en su plataforma de verificación de identidad",
+        "summary": "AU10TIX anunció una integración con Reality Defender para detectar selfies generados o manipulados con IA durante el onboarding remoto, combinando la señal de autenticidad con sus indicadores existentes de documento, biometría y fraude. La compañía reportó que el fraude generado por IA superó por primera vez a la falsificación física en los datos de su red.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/au10tix-reality-defender-partner-to-detect-ai-generated-selfies",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-30",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "deepfake",
+        "competitor": "AU10TIX",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "El mercado de IDV está moviendo la defensa antifraude hacia señales de autenticidad de IA como capa adicional sobre biometría y documento, en un momento en que el fraude generado por IA ya supera a la falsificación física según datos propios de AU10TIX."
+        }
+      },
       {
         "id": "daon-ai-agent-authorization-patent-2026-07-28",
         "title": "Daon obtiene su tercera patente en EE.UU. para gobernanza de agentes de IA en tiempo real",
@@ -9433,7 +9569,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-29';
+const TODAY_ISO = '2026-07-31';
 
 const UI_STRINGS = {
     home_label: 'Home',
