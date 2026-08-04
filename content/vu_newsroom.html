@@ -1306,11 +1306,59 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-07-30",
-  "publishedAt": "2026-07-31T13:30:00.000Z",
-  "regulationLastRun": "2026-07-27",
+  "date": "2026-08-02",
+  "publishedAt": "2026-08-04T01:57:43.966Z",
+  "regulationLastRun": "2026-08-03",
   "sections": {
     "global": [
+      {
+        "id": "india-corte-suprema-deepfake-arresto-digital",
+        "title": "Corte Suprema de India exige ley específica contra deepfakes y estafas de 'arresto digital'",
+        "summary": "La Corte Suprema de India instó al gobierno a tipificar el 'arresto digital' como delito autónomo con penas más severas y a crear una ley dedicada a los fraudes con deepfakes, tras pérdidas superiores a USD 5.500 millones de ciudadanos indios en seis años. El tribunal también pidió al Banco de Reserva de India un procedimiento estándar para congelar preventivamente cuentas sospechosas de operar como 'cuentas mula' en fraudes ciberasistidos.",
+        "sourceUrl": "https://www.techtimes.com/articles/321946/20260729/india-supreme-court-demands-criminal-law-digital-arrest-deepfake-fraud.htm",
+        "sourceName": "Tech Times",
+        "date": "2026-07-29",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "gobierno",
+        "topic": "rezagada",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "Un tribunal supremo pidiendo explícitamente una ley dedicada a deepfakes y mecanismos de congelamiento de cuentas mula es la señal regulatoria más fuerte del período sobre hacia dónde se mueve la exigencia legal de verificación de identidad."
+        }
+      },
+      {
+        "id": "shinhunters-ey-datos-tributarios-clientes",
+        "title": "ShinyHunters reclama el robo de datos tributarios de clientes de EY",
+        "summary": "El grupo de extorsión ShinyHunters afirmó haber robado datos tributarios de clientes de EY (Ernst & Young), amenazando con su divulgación pública si no se paga un rescate. El incidente se suma a una ola de brechas de gran escala reportadas en la última semana de julio de 2026 contra firmas globales de servicios profesionales.",
+        "sourceUrl": "https://gbhackers.com/weekly-cybersecurity-newsletter-july-27-august-1-2026/",
+        "sourceName": "GBHackers Weekly Newsletter",
+        "date": "2026-07-28",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "rezagada",
+        "actionable": {
+          "type": "brecha",
+          "text": "El robo de datos tributarios de clientes de una Big Four confirma que firmas de servicios profesionales con grandes bases de datos financieros de clientes siguen siendo blanco prioritario para extorsión de datos de identidad fiscal."
+        }
+      },
+      {
+        "id": "hyundai-turquia-crpx0-datos-biometricos-candidatos",
+        "title": "El grupo de ransomware CRPx0 filtra datos biométricos de candidatos de Hyundai Turquía",
+        "summary": "El grupo de doble extorsión CRPx0 publicó en su portal de la dark web un lote de 1,5 GB de datos sustraídos a la operación turca de Hyundai, incluyendo criterios de evaluación, documentación de puntajes, materiales de selección para posiciones clave, correspondencia interna de reclutamiento y, de forma más sensible, grabaciones de proctoring biométrico y datos de evaluación psicométrica. CRPx0 ya había listado a otras empresas turcas en la misma ola de ataques.",
+        "sourceUrl": "https://gbhackers.com/crpx0-ransomware-claims-hyundai-turkey-breach/",
+        "sourceName": "GBHackers",
+        "date": "2026-08-01",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "La filtración de grabaciones de proctoring biométrico y evaluaciones psicométricas de candidatos abre un vector de fraude de identidad dirigido específicamente contra procesos de selección y verificación de personal, más allá del breach corporativo estándar."
+        }
+      },
       {
         "id": "global-brinks-home-shinyhunters-breach-2026-07-30",
         "title": "ShinyHunters vulnera a Brinks Home vía vishing en Microsoft Entra y roba datos de más de un millón de clientes",
@@ -4939,6 +4987,38 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "deepfake-voz-rostro-famosos-inversion-ar",
+          "title": "Estafadores clonan voz y rostro de figuras públicas argentinas para vender inversiones falsas",
+          "summary": "Bandas de fraude en Argentina insertan videos y audios generados con IA que imitan voces y rostros de figuras públicas dentro de fragmentos de programas de TV y redes sociales, para dar legitimidad a ofertas de inversión falsas. Especialistas citan un caso donde una víctima transfirió USD 30.000 tras ver uno de estos videos; la mayoría de los afectados no recupera el dinero.",
+          "sourceUrl": "https://www.infobae.com/sociedad/2026/07/29/el-nuevo-fraude-que-usa-inteligencia-artificial-para-imitar-voces-y-rostros-de-famosos-y-vaciar-cuentas-en-argentina/",
+          "sourceName": "Infobae",
+          "date": "2026-07-29",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "fintech",
+          "topic": "rezagada",
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "El uso de deepfakes de figuras públicas para dar legitimidad a fraudes de inversión expone un vector que la verificación biométrica y liveness detection ataca directamente, con casos concretos y cuantificables para argumentar ante el sector fintech/inversión."
+          }
+        },
+        {
+          "id": "ciberfraude-caba-denuncias-2026",
+          "title": "Fiscalía de Buenos Aires recibe más de 200 denuncias mensuales de ciberfraude en 2026",
+          "summary": "La Fiscalía de la Ciudad de Buenos Aires acumuló cerca de 1.300 denuncias de ciberfraude en el primer semestre de 2026, un promedio superior a 200 casos por mes. Las modalidades más repetidas son la toma de cuentas de WhatsApp para pedir dinero a contactos, el vaciamiento de billeteras virtuales mediante credenciales robadas y llamadas de phishing que suplantan a bancos.",
+          "sourceUrl": "https://www.pagina12.com.ar/2026/08/02/alarma-en-caba-por-el-incremento-de-ciberfraudes-en-lo-que-va-del-2026-ingresaron-mas-de-200-denuncias-por-mes/",
+          "sourceName": "Página/12",
+          "date": "2026-08-02",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El volumen sostenido de denuncias mensuales confirma a Argentina como mercado de demanda estructural para soluciones antifraude en banca digital y billeteras virtuales, no como pico coyuntural."
+          }
+        },
+        {
           "id": "argentina-deepfake-fraude-inversion-famosos-2026-07-29",
           "title": "Estafas con deepfakes de figuras públicas argentinas se multiplican para captar inversiones falsas",
           "summary": "Circulan en redes y grupos de mensajería en Argentina videos y audios generados con IA que imitan a figuras públicas y periodistas en formatos que copian noticieros y entrevistas reales, prometiendo retornos rápidos de inversión. Un especialista en ciberseguridad citó el caso de una persona que invirtió USD 30.000 tras ver una entrevista falsa de Marcos Galperín. Las plataformas sociales demoran en dar de baja el contenido pese a reportes reiterados, y muchos estafadores devuelven el dinero a las víctimas para evitar antecedentes penales.",
@@ -5440,6 +5520,22 @@ const briefing = {
       ],
       "brasil": [
         {
+          "id": "deepfake-roberto-carlos-fraude-financeiro-br",
+          "title": "Esquema de deepfakes con la imagen de Roberto Carlos mueve R$ 1,8 mil millones en fraude financiero en Brasil",
+          "summary": "Un video falso del cantante Roberto Carlos promocionando tratamientos milagrosos expuso un esquema de fraude 'como servicio': un paquete completo con rostro sintético, voz clonada y documentación de respaldo cuesta apenas USD 5 en mercados criminales, frente a los USD 20.000 por minuto de video sintético hace dos años. Según el reporte Weaponized AI de Group-IB, entre julio de 2025 y abril de 2026 el fraude contra bancos e infraestructura financiera brasileña sumó más de R$ 1,8 mil millones, con 42,5% de los fraudes financieros de 2025 usando IA y un salto de 830% en deepfakes entre 2024 y 2025.",
+          "sourceUrl": "https://exame.com/inteligencia-artificial/por-tras-de-um-deepfake-de-roberto-carlos-um-esquema-que-move-r-18-bilhao-em-golpes/",
+          "sourceName": "Exame",
+          "date": "2026-08-02",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "deepfake",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "El colapso de costo de producción de deepfakes (de USD 20.000 a USD 5 por paquete) es el dato que mejor ilustra por qué la detección biométrica dejó de ser opcional para bancos brasileños en escala masiva."
+          }
+        },
+        {
           "id": "brasil-golpe-pix-receita-federal",
           "title": "Nuevo golpe de Pix suplanta a la Receita Federal con falsas multas",
           "summary": "El 26 de julio circuló en Brasil una campaña de phishing que suplanta a la Receita Federal (agencia tributaria) enviando correos que exigen el pago de supuestas multas vía Pix, con logos oficiales y amenazas para inducir el pago en páginas falsas. La Receita Federal aclaró que jamás cobra multas por Pix y que los cargos oficiales solo se realizan vía DARF en el Portal e-CAC con login Gov.br.",
@@ -5568,6 +5664,22 @@ const briefing = {
         }
       ],
       "mexico": [
+        {
+          "id": "task-scam-whatsapp-mexico",
+          "title": "El 'task scam' se expande por WhatsApp en México suplantando marcas reconocidas",
+          "summary": "Un esquema de fraude laboral conocido como 'task scam' circula masivamente por WhatsApp y Telegram en México, con falsos reclutadores que suplantan a empresas como Mercado Libre y agencias de marketing, prometiendo pagos diarios por tareas simples desde el celular. El mecanismo exige depósitos previos de dinero que nunca se recuperan, y ya se lo identifica como una de las formas de fraude digital de mayor crecimiento reciente en el país.",
+          "sourceUrl": "https://www.infobae.com/mexico/2026/08/02/como-opera-el-task-scam-la-nueva-estafa-por-whatsapp-que-utiliza-el-nombre-de-empresas-reconocidas/",
+          "sourceName": "Infobae México",
+          "date": "2026-08-02",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "retail",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El task scam explota la ausencia de verificación de identidad en el reclutamiento informal por mensajería, un punto ciego que las marcas suplantadas (retail, e-commerce, marketing) empiezan a necesitar cerrar públicamente."
+          }
+        },
         {
           "id": "mexico-coalicion-industria-fraude-digital-2026-07-30",
           "title": "Banca, telcos y tecnológicas de México acuerdan unificar agendas de ciberseguridad y antifraude",
@@ -6022,6 +6134,22 @@ const briefing = {
       ],
       "colombia": [
         {
+          "id": "ecopetrol-filtracion-datos-biometricos-nomina",
+          "title": "Ciberataque a Ecopetrol deriva en publicación ilegal de datos de 15 empresas del grupo",
+          "summary": "Ecopetrol activó protocolos de 'take down' junto a la Fiscalía y el MinTIC tras la publicación ilegal de información robada en el ciberataque de julio de 2026, que afectó a 15 empresas del Grupo Ecopetrol y permitió acceso no autorizado a cerca de 3.300 cuentas de usuario. El grupo de ransomware 'The Gentlemen' publicó un catálogo de 11 categorías de datos robados, incluyendo nómina, biometría, información de pozos y credenciales.",
+          "sourceUrl": "https://www.eltiempo.com/economia/sectores/ecopetrol-activa-nuevos-protocolos-tras-publicacion-ilegal-de-informacion-robada-en-ciberataque-de-julio-de-3574370",
+          "sourceName": "El Tiempo",
+          "date": "2026-07-28",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "gobierno",
+          "topic": "rezagada",
+          "actionable": {
+            "type": "brecha",
+            "text": "La exposición confirmada de datos biométricos y de nómina de una petrolera estatal de la escala de Ecopetrol es el tipo de incidente que activa evaluaciones de proveedores de identidad digital en el sector energético y gobierno de Colombia."
+          }
+        },
+        {
           "id": "colombia-ecopetrol-publicacion-datos-robados-actualizacion-2026-07-29",
           "title": "[Actualización] Ecopetrol confirma publicación ilegal de datos robados de 15 empresas del grupo tras el ciberataque de julio",
           "summary": "Tras el ciberataque revelado el 17-18 de julio (3.300 cuentas comprometidas en sistemas de almacenamiento en la nube de 15 empresas del Grupo Ecopetrol, atribuido al grupo de ransomware The Gentlemen, con datos de nómina, bancarios, historias médicas, biometría de empleados y credenciales VPN en juego), Ecopetrol confirmó el 29 de julio que actores externos publicaron la información copiada ilegalmente. La empresa trabaja con la Fiscalía General y el MinTIC en acciones de retiro, y advierte que podría enfrentar acciones regulatorias, litigios o afectación reputacional.",
@@ -6349,6 +6477,22 @@ const briefing = {
         }
       ],
       "chile": [
+        {
+          "id": "vishing-bancario-chile-abif-sernac",
+          "title": "Bancos chilenos y SERNAC alertan por vishing con clonación de voz por IA",
+          "summary": "La Asociación de Bancos e Instituciones Financieras (ABIF) y el SERNAC alertaron sobre el vishing (voice phishing), donde delincuentes se hacen pasar por ejecutivos bancarios, personal técnico o Carabineros para obtener contraseñas y claves de transferencia. La modalidad combina presión psicológica, datos personales filtrados y, en casos crecientes, clonación de voz con IA; ningún banco chileno solicita jamás contraseñas o códigos por teléfono.",
+          "sourceUrl": "https://www.elmostrador.cl/datos-utiles/2026/08/02/si-te-dicen-esto-es-vishing-la-estafa-por-la-que-los-bancos-en-chile/",
+          "sourceName": "El Mostrador",
+          "date": "2026-08-02",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "biometria",
+          "actionable": {
+            "type": "tendencia",
+            "text": "La alerta conjunta de ABIF y SERNAC reconociendo explícitamente la clonación de voz por IA como vector activo valida en Chile la necesidad de autenticación robusta más allá de la validación telefónica tradicional."
+          }
+        },
         {
           "id": "chile-pdi-alerta-estafas-bonos-estatales",
           "title": "PDI alerta por estafas que ofrecen bonos estatales tras los temporales",
@@ -6889,6 +7033,22 @@ const briefing = {
       ],
       "el_salvador": [
         {
+          "id": "eset-el-salvador-ransomware-sector-financiero",
+          "title": "Sistema de IA de ESET evita pérdidas de USD 12,5 millones en El Salvador",
+          "summary": "ESET reportó haber bloqueado, mediante su sistema LiveGrid basado en IA, ciberataques que habrían causado pérdidas superiores a USD 12,5 millones en El Salvador durante el último año. El ransomware creció más de 30% en el país, con el sector financiero como principal objetivo seguido de entidades gubernamentales y centros educativos; uno de cada 35 correos maliciosos correspondió a esquemas de phishing.",
+          "sourceUrl": "https://www.infobae.com/el-salvador/2026/07/30/ciberataques-en-el-salvador-sistema-de-ia-evita-perdidas-de-us-125-millones/",
+          "sourceName": "Infobae El Salvador",
+          "date": "2026-07-30",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "rezagada",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "Un crecimiento de ransomware de +30% con la banca salvadoreña como blanco principal es una señal de mercado directa en un país habitualmente subrepresentado en la cobertura regional."
+          }
+        },
+        {
           "id": "sv-argoz-condena-199-anos-estafa-masiva",
           "title": "Tribunal salvadoreño condena a hasta 199 años de prisión a miembros del corporativo ARGOZ por estafa inmobiliaria masiva",
           "summary": "El 18 de julio de 2026 el Tercer Tribunal Contra el Crimen Organizado de San Salvador condenó a integrantes del corporativo ARGOZ por un esquema de fraude inmobiliario que operó durante años y afectó a decenas de víctimas; Leticia Farfán de Gómez recibió 199 años de prisión por 23 casos de estafa agravada.",
@@ -7248,6 +7408,86 @@ const briefing = {
     },
     "regulation": [
       {
+        "id": "reg-20260731-es-sepblac-anr2026",
+        "title": "SEPBLAC publica el Análisis Nacional de Riesgos 2026 de blanqueo de capitales y financiación del terrorismo",
+        "summary": "El SEPBLAC publicó la versión pública del Análisis Nacional de Riesgos 2026, el documento de referencia que evalúa los riesgos de blanqueo de capitales y financiación del terrorismo en España y orienta el enfoque basado en riesgo de los sujetos obligados. El informe fue aprobado por COPBLAC con participación de autoridades públicas y sector privado.",
+        "sourceUrl": "https://www.sepblac.es/es/2026/07/31/anr-2026-es/",
+        "sourceName": "SEPBLAC",
+        "date": "2026-07-31",
+        "language": "es",
+        "highRelevance": false,
+        "regulatoryBody": "SEPBLAC (España)",
+        "topic": "AML/KYC",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El nuevo Análisis Nacional de Riesgos marca las prioridades de supervisión AML/CFT de España para el próximo ciclo, con foco renovado en sujetos obligados no bancarios."
+        }
+      },
+      {
+        "id": "reg-20260802-eu-aiact-art50",
+        "title": "Entran en vigor las obligaciones de transparencia del AI Act de la UE (Art. 50): deepfakes deben etiquetarse",
+        "summary": "Desde el 2 de agosto de 2026 son exigibles las obligaciones de transparencia del Artículo 50 del AI Act de la Unión Europea: los sistemas que interactúan con personas deben identificarse como IA, los deepfakes y contenido generado o alterado por IA deben marcarse como tal, y los sistemas de reconocimiento de emociones o categorización biométrica deben informar a las personas expuestas. Las multas por incumplimiento pueden alcanzar 15 millones de euros o el 3% de la facturación global anual.",
+        "sourceUrl": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
+        "sourceName": "Comisión Europea — Digital Strategy",
+        "date": "2026-08-02",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "Comisión Europea (AI Office)",
+        "topic": "IA",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "La UE pasa de la fase de redacción a la de enforcement real del AI Act: desde agosto de 2026 cualquier deepfake o contenido sintético debe etiquetarse, con multas de hasta 15 millones de euros o 3% de facturación global."
+        }
+      },
+      {
+        "id": "reg-20260728-uy-senaclaft-res61",
+        "title": "SENACLAFT Uruguay eleva el techo sancionatorio AML/CFT para el sector no financiero a 20 millones de UI",
+        "summary": "SENACLAFT aprobó un nuevo régimen sancionatorio para sujetos obligados no financieros en materia de prevención de lavado de activos y financiamiento del terrorismo, clasificando las infracciones en leves, graves y severas con multas de entre 1.000 y 20.000.000 de Unidades Indexadas. La resolución refuerza las exigencias de debida diligencia intensificada, identificación de beneficiarios finales y reporte de operaciones sospechosas.",
+        "sourceUrl": "https://uy.vlex.com/vid/diario-oficial-republica-uruguay-1130529598",
+        "sourceName": "vLex Uruguay — réplica de Diario Oficial, Resolución SENACLAFT N.º 61/2026",
+        "date": "2026-07-28",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "SENACLAFT (Uruguay)",
+        "topic": "AML/KYC",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "Uruguay eleva el techo sancionatorio AML/CFT a 20 millones de Unidades Indexadas para el sector no financiero, señal de un enforcement más agresivo hacia sectores tradicionalmente menos supervisados que la banca."
+        }
+      },
+      {
+        "id": "reg-20260729-br-bcb-in766-pix",
+        "title": "Banco Central do Brasil amplía a 80 días la ventana de disputa por fraude en el Pix (MED)",
+        "summary": "El Banco Central do Brasil publicó la versión 8.5 del Manual Operacional del DICT, que amplía de 30 a 80 días el plazo para responder devoluciones del Pix por sospecha de fraude a través del Mecanismo Especial de Devolução (MED) y suma controles para operaciones desde dispositivos no registrados. La norma revoca la Instrução Normativa BCB N.º 752/2026 y entra en vigencia de forma escalonada el 10 de agosto y el 1 de septiembre de 2026.",
+        "sourceUrl": "https://www.legisweb.com.br/legislacao/?id=498649",
+        "sourceName": "LegisWeb — réplica de Instrução Normativa BCB N.º 766",
+        "date": "2026-07-29",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "Banco Central do Brasil (BCB)",
+        "topic": "Trust & Safety",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "El Banco Central endurece los controles antifraude del Pix justo cuando el fraude vía ingeniería social y dispositivos no registrados sigue en aumento en Brasil, ampliando la ventana de disputa del MED de 30 a 80 días."
+        }
+      },
+      {
+        "id": "reg-20260730-ar-cnv-rg1158",
+        "title": "CNV Argentina digitaliza el canal con Oficiales de Cumplimiento en investigaciones PLA/FT",
+        "summary": "La Comisión Nacional de Valores incorporó la Sección VI del Título XI de sus Normas, habilitando que los requerimientos de información en investigaciones de PLA/FT/FP se notifiquen por correo electrónico a los Oficiales de Cumplimiento. Los sujetos obligados ante la UIF deben constituir un domicilio electrónico especial en la plataforma TAD (GDE). La resolución entra en vigencia el 10 de agosto de 2026.",
+        "sourceUrl": "https://www.boletinoficial.gob.ar/detalleAviso/primera/345191/20260730",
+        "sourceName": "Boletín Oficial de la República Argentina — CNV Resolución General 1158/2026",
+        "date": "2026-07-30",
+        "language": "es",
+        "highRelevance": false,
+        "regulatoryBody": "CNV (Comisión Nacional de Valores, Argentina)",
+        "topic": "AML/KYC",
+        "actionable": {
+          "type": "dato-clave",
+          "text": "La CNV digitaliza el canal de comunicación con Oficiales de Cumplimiento en investigaciones PLA/FT, parte de una tendencia regional de digitalización de los procesos de supervisión AML."
+        }
+      },
+      {
         "id": "nist-800-63-4-implementation-guide",
         "title": "ATARC publica guía de implementación de NIST SP 800-63-4 para gestión de riesgo de identidad digital",
         "summary": "El ATARC Identity Management Working Group publicó el 20 de julio de 2026 una guía que traduce en pasos operativos los cambios significativos del estándar NIST SP 800-63-4 (2025), centrada en un proceso de Digital Identity Risk Management (DIRM) que reemplaza la selección estática de niveles de garantía. Extiende obligaciones de gobernanza a proveedores de identidad externos y credential service providers, con impacto indirecto en marcos de KYC y prevención de fraude usados en contextos financieros y gubernamentales.",
@@ -7603,6 +7843,22 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "veridas-fourthline-orquestacion-identidad-2026-07-31",
+        "title": "Veridas y Fourthline detallan la estrategia de integración de su plataforma de identidad post-fusión",
+        "summary": "En una entrevista en podcast publicada el 31/07, el CEO de Veridas, Eduardo Azanza, explicó que la fusión con Fourthline (anunciada el 16/07) combina segmentos de cliente complementarios: Veridas atiende bancos tradicionales y telcos con biometría y antifraude, mientras Fourthline se enfoca en neobancos y fintechs con KYC y cumplimiento. Azanza afirmó que la entidad combinada busca 'orquestar' journeys de verificación adaptados a distintos marcos regulatorios en más de 50 países, proyectando 115 millones de verificaciones de identidad en 2026.",
+        "sourceUrl": "https://www.biometricupdate.com/202607/why-veridas-and-fourthline-are-building-a-new-kind-of-identity-platform",
+        "sourceName": "Biometric Update",
+        "date": "2026-07-31",
+        "language": "es",
+        "highRelevance": false,
+        "topic": "Identidad/Biometría",
+        "competitor": "Veridas",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "La consolidación Veridas-Fourthline crea un competidor con cobertura combinada en España, LATAM y EE.UU. bajo un modelo de identidad orquestada multi-regulatoria, lo que eleva el estándar de comparación en licitaciones de banca tradicional y neobancos de la región."
+        }
+      },
       {
         "id": "innovatrics-nist-elft-latent-fingerprint-2026-07-29",
         "title": "Innovatrics lidera cuatro métricas de precisión en la última evaluación NIST ELFT de huellas latentes",
@@ -9569,7 +9825,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-07-31';
+const TODAY_ISO = '2026-08-03';
 
 const UI_STRINGS = {
     home_label: 'Home',
