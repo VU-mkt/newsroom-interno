@@ -1306,11 +1306,107 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-08-02",
-  "publishedAt": "2026-08-04T01:57:43.966Z",
+  "date": "2026-08-06",
+  "publishedAt": "2026-08-07T19:19:09.701Z",
   "regulationLastRun": "2026-08-03",
   "sections": {
     "global": [
+      {
+        "id": "global-wallstreet-vishing-hedgefunds-2026-08-05",
+        "title": "Ataques de vishing con IA golpean a grandes gestoras de fondos de Wall Street",
+        "summary": "Ciberdelincuentes lanzaron una ola de ataques de vishing (suplantación de voz) contra gestoras como Point72, Two Sigma y Citadel. Two Sigma, con más de US$75.000 millones bajo gestión, confirmó haber frustrado el intento sin fuga de datos, mientras Point72 notificó el incidente a inversores sin evidencia de información de clientes comprometida. Expertos atribuyen el alza a herramientas de IA que permiten escalar campañas de decenas a miles de objetivos con el mismo esfuerzo.",
+        "sourceUrl": "https://www.bloomberglinea.com/mercados/hackers-lanzan-una-ola-de-ataques-contra-grandes-gestoras-de-fondos-de-wall-street/",
+        "sourceName": "Bloomberg Línea",
+        "date": "2026-08-05",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "banca",
+        "topic": "fraude-digital",
+        "actionable": {
+          "type": "tendencia",
+          "text": "La escalabilidad que la IA generativa aporta al vishing —de decenas a miles de objetivos por campaña, según los expertos citados— está desplazando este vector desde la banca minorista hacia gestoras de activos institucionales de gran tamaño."
+        }
+      },
+      {
+        "id": "global-snowflake-moucka-guilty-plea-2026-08-06",
+        "title": "Culpable en el caso Snowflake: extorsión y robo de identidad afectaron a más de 165 empresas",
+        "summary": "Connor Riley Moucka, de 26 años, se declaró culpable en Estados Unidos de fraude informático, fraude electrónico y robo de identidad agravado por extorsionar a más de 165 organizaciones que usaban la plataforma Snowflake, incluyendo AT&T y Ticketmaster. El esquema, ejecutado entre febrero y octubre de 2024 explotando cuentas sin autenticación multifactor, expuso más de 100 millones de registros de clientes y generó pagos de rescate por más de US$2,5 millones.",
+        "sourceUrl": "https://krebsonsecurity.com/2026/08/canadian-man-pleads-guilty-in-snowflake-extortions/",
+        "sourceName": "Krebs on Security",
+        "date": "2026-08-06",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "ciberseguridad",
+        "actionable": {
+          "type": "brecha",
+          "text": "El desenlace judicial confirma que la ausencia de autenticación multifactor en plataformas cloud fue el vector de entrada de una de las extorsiones más grandes documentadas, con cargos formales de robo de identidad agravado como correlato directo del incidente."
+        }
+      },
+      {
+        "id": "global-pnld-breach-uk-policia-2026-08-03",
+        "title": "Brecha en base legal policial del Reino Unido expone datos de contacto de policías y funcionarios",
+        "summary": "La Police National Legal Database (PNLD) del Reino Unido, que cubre 108.429 registros en 43 fuerzas del Home Office, sufrió una exposición de datos que comprometió nombres, organización y emails laborales de policías y personal de justicia penal, presuntamente por portales Microsoft Power Pages mal configurados. No hay evidencia de robo de contraseñas, pero el gobierno británico advirtió que los datos expuestos podrían hacer más convincentes ataques de phishing dirigidos a agentes identificados.",
+        "sourceUrl": "https://thehackernews.com/2026/08/pnld-breach-exposes-uk-police-and.html",
+        "sourceName": "The Hacker News",
+        "date": "2026-08-03",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "gobierno",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "El propio gobierno británico vinculó explícitamente la exposición de nombres y emails laborales con mayor riesgo de phishing dirigido, calificando el dato de contacto expuesto como vector de identidad explotable, no solo un incidente de disponibilidad."
+        }
+      },
+      {
+        "id": "global-regula-ai-identity-readiness-banca-2026-08-04",
+        "title": "El sector financiero lidera en preparación frente a fraude de identidad con IA, pese a sufrir más ataques",
+        "summary": "El 'AI Identity Readiness Scorecard' de Regula muestra que el sector financiero enfrenta los niveles más altos de fraude de identidad asistido por IA entre todos los sectores analizados, pero también lidera en las cuatro dimensiones evaluadas: autenticación de documentos, matching biométrico, liveness y device intelligence. Según el reporte, la banca no está adelantada por enfrentar menos amenazas de IA, sino por enfrentarlas con mayor frecuencia.",
+        "sourceUrl": "https://www.biometricupdate.com/202608/financial-sector-leads-in-ai-identity-readiness-despite-higher-fraud-regula",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-04",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "banca",
+        "topic": "identidad_digital",
+        "actionable": {
+          "type": "dato-clave",
+          "text": "El benchmark cuantitativo de Regula posiciona a la banca como el vertical con mayor exposición a fraude de identidad asistido por IA y, a la vez, el más maduro en defensas — un dato de referencia útil para conversaciones sectoriales."
+        }
+      },
+      {
+        "id": "global-ia-crimen-organizado-prokyc-darkreading-2026-08-05",
+        "title": "Kits de IA tipo 'ProKYC' permiten a crimen organizado global burlar verificación KYC",
+        "summary": "Dark Reading, en cobertura del AI Summit de Black Hat USA 2026, describe cómo bandas de estafadores usan 'ProKYC', un kit turnkey que derrota la verificación KYC de documento+selfie generando pasaportes falsos y videos de liveness deepfake a partir de una sola foto y datos robados. El crimen organizado combina clonación de voz, overlays de video en tiempo real y gestión de identidades sintéticas mediante LLMs a escala industrial.",
+        "sourceUrl": "https://www.darkreading.com/threat-intelligence/ai-global-crime-syndicates-fraud-nirvana",
+        "sourceName": "Dark Reading",
+        "date": "2026-08-05",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "banca",
+        "topic": "deepfake",
+        "actionable": {
+          "type": "tendencia",
+          "text": "La existencia de kits turnkey vendidos como producto ('ProKYC') indica que el bypass de liveness/KYC con IA generativa dejó de requerir capacidad técnica avanzada y se volvió accesible a cualquier banda organizada."
+        }
+      },
+      {
+        "id": "global-fraunhofer-deepfake-detector-videollamadas-2026-08-05",
+        "title": "Fraunhofer presenta detector de deepfake en tiempo real para videollamadas",
+        "summary": "El instituto Fraunhofer SIT (Alemania) presentó un prototipo que combina análisis de audio y video para detectar manipulación en videollamadas en vivo, procesando localmente sin enviar el video a servidores externos. El artículo cita que Singapur registró más de 1.200 casos de estafa por videollamada deepfake en enero 2026, frente a 43 un año antes.",
+        "sourceUrl": "https://www.biometricupdate.com/202608/fraunhofer-develops-real-time-deepfake-detector-for-video-calls",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-05",
+        "language": "en",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "deepfake",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El salto de 43 a más de 1.200 casos de fraude por videollamada deepfake en un año en Singapur confirma que este vector ya escaló de anécdota a fenómeno cuantificable."
+        }
+      },
       {
         "id": "india-corte-suprema-deepfake-arresto-digital",
         "title": "Corte Suprema de India exige ley específica contra deepfakes y estafas de 'arresto digital'",
@@ -4987,6 +5083,22 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "ar-bcra-estafa-inversion-deepfake-2026-08-05",
+          "title": "BCRA alerta por estafa de inversión que usa su imagen institucional",
+          "summary": "El Banco Central de la República Argentina alertó sobre una nueva modalidad de estafa virtual que usa videos manipulados e imagen de sus autoridades para promover inversiones falsas, contactando a víctimas por email, WhatsApp o SMS. El esquema pide pagos anticipados en dólares o la instalación de apps que otorgan acceso remoto al dispositivo. El BCRA aclaró que nunca solicita pagos ni datos personales por esos canales.",
+          "sourceUrl": "https://www.infobae.com/economia/2026/08/05/alerta-por-una-nueva-estafa-virtual-como-es-el-engano-que-usa-la-imagen-del-banco-central-para-robar-ahorros/",
+          "sourceName": "Infobae",
+          "date": "2026-08-05",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "deepfake",
+          "actionable": {
+            "type": "tendencia",
+            "text": "La suplantación de identidad de reguladores/bancos centrales con video manipulado para dar credibilidad a estafas de inversión es un vector en ascenso en la región, más allá de este caso puntual."
+          }
+        },
+        {
           "id": "deepfake-voz-rostro-famosos-inversion-ar",
           "title": "Estafadores clonan voz y rostro de figuras públicas argentinas para vender inversiones falsas",
           "summary": "Bandas de fraude en Argentina insertan videos y audios generados con IA que imitan voces y rostros de figuras públicas dentro de fragmentos de programas de TV y redes sociales, para dar legitimidad a ofertas de inversión falsas. Especialistas citan un caso donde una víctima transfirió USD 30.000 tras ver uno de estos videos; la mayoría de los afectados no recupera el dinero.",
@@ -6134,6 +6246,38 @@ const briefing = {
       ],
       "colombia": [
         {
+          "id": "co-bre-b-smishing-2026-08-05",
+          "title": "Alerta por fraude digital que suplanta a Bre-B en Bogotá",
+          "summary": "La Secretaría Distrital de Seguridad de Bogotá alertó sobre una campaña de smishing que suplanta a Bre-B, el sistema de pagos inmediatos del Banco de la República, mediante SMS con enlaces falsos que buscan robar credenciales bancarias. El fraude aprovecha que Bre-B, de reciente lanzamiento, no tiene aplicación propia y opera solo a través de las apps de los bancos afiliados.",
+          "sourceUrl": "https://www.infobae.com/colombia/2026/08/05/alerta-por-fraude-digital-en-bogota-asi-suplantan-la-plataforma-de-bre-b-a-traves-de-mensajes-de-texto/",
+          "sourceName": "Infobae Colombia",
+          "date": "2026-08-05",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude-digital",
+          "actionable": {
+            "type": "ventana",
+            "text": "Bre-B es un sistema de pagos inmediatos recién lanzado en Colombia y sin aplicación propia, lo que abre una ventana de exposición mientras usuarios y comercios aún no internalizan los canales oficiales de verificación."
+          }
+        },
+        {
+          "id": "co-fraude-bancario-asistente-virtual-ia-2026-08-03",
+          "title": "Fraude bancario en Bogotá con 'asistente virtual' potenciado por IA",
+          "summary": "La Alcaldía de Bogotá alertó sobre un fraude bancario en dos etapas: una llamada falsa que avisa de transacciones no autorizadas, seguida de contacto con un 'asistente virtual' de IA que suplanta al banco para pedir contraseñas, códigos SMS y claves dinámicas. El esquema termina vaciando las cuentas de la víctima.",
+          "sourceUrl": "https://www.semana.com/tecnologia/articulo/responder-este-mensaje-de-un-asistente-virtual-podria-costarle-millones-de-pesos-y-hacerle-perder-sus-cuentas-bancarias/202642/",
+          "sourceName": "Semana",
+          "date": "2026-08-03",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El uso de asistentes conversacionales de IA para suplantar canales oficiales de atención bancaria marca una escalada táctica frente al phishing tradicional por SMS o email."
+          }
+        },
+        {
           "id": "ecopetrol-filtracion-datos-biometricos-nomina",
           "title": "Ciberataque a Ecopetrol deriva en publicación ilegal de datos de 15 empresas del grupo",
           "summary": "Ecopetrol activó protocolos de 'take down' junto a la Fiscalía y el MinTIC tras la publicación ilegal de información robada en el ciberataque de julio de 2026, que afectó a 15 empresas del Grupo Ecopetrol y permitió acceso no autorizado a cerca de 3.300 cuentas de usuario. El grupo de ransomware 'The Gentlemen' publicó un catálogo de 11 categorías de datos robados, incluyendo nómina, biometría, información de pozos y credenciales.",
@@ -6478,6 +6622,38 @@ const briefing = {
       ],
       "chile": [
         {
+          "id": "cl-smishing-sms-pdi-2026-08-06",
+          "title": "La PDI reporta un alza del 30% en estafas por SMS (smishing) en Chile",
+          "summary": "La Policía de Investigaciones de Chile (PDI) reportó un aumento del 30% en denuncias de smishing, mensajes de texto que suplantan bancos, empresas de encomiendas y organismos públicos para robar datos personales y bancarios. Especialistas señalan que estas estafas explotan la urgencia y la confianza de las víctimas, no su falta de conocimiento técnico.",
+          "sourceUrl": "https://www.biobiochile.cl/noticias/servicios/consejos-bbcl-contigo/2026/08/06/si-te-llega-uno-de-estos-mensajes-no-abras-el-enlace-la-masiva-estafa-por-sms-que-engana-a-chilenos.shtml",
+          "sourceName": "BioBioChile",
+          "date": "2026-08-06",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "banca",
+          "topic": "fraude-digital",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "El alza del 30% reportada por la PDI confirma al smishing como vector de crecimiento sostenido en Chile, coincidiendo con la entrada en vigor desde el 1 de agosto de la Norma CMF N°538 de autenticación reforzada para bancos, emisores de tarjetas y fintechs."
+          }
+        },
+        {
+          "id": "cl-amparo-noguera-demanda-banco-chile-2026-08-05",
+          "title": "Actriz Amparo Noguera demanda a Banco de Chile tras estafa de $400 millones",
+          "summary": "La actriz chilena Amparo Noguera demandó a Banco de Chile por $528 millones de pesos, alegando fallas de seguridad del banco tras ser víctima de una estafa que le costó cerca de $400 millones. Su defensa sostiene que durante una semana fue sometida a engaño, coacción y manipulación que anularon su voluntad, por lo que ninguna transacción fue autorizada de forma libre.",
+          "sourceUrl": "https://www.emol.com/noticias/Nacional/2026/08/05/1207709/amparo-noguera-demanda-banco-estafa.html",
+          "sourceName": "Emol (El Mercurio)",
+          "date": "2026-08-05",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "ventana",
+            "text": "El caso, de alto perfil público, reabre el debate judicial sobre responsabilidad de los bancos frente a fraudes con ingeniería social prolongada, un tema con precedentes crecientes en la región."
+          }
+        },
+        {
           "id": "vishing-bancario-chile-abif-sernac",
           "title": "Bancos chilenos y SERNAC alertan por vishing con clonación de voz por IA",
           "summary": "La Asociación de Bancos e Instituciones Financieras (ABIF) y el SERNAC alertaron sobre el vishing (voice phishing), donde delincuentes se hacen pasar por ejecutivos bancarios, personal técnico o Carabineros para obtener contraseñas y claves de transferencia. La modalidad combina presión psicológica, datos personales filtrados y, en casos crecientes, clonación de voz con IA; ningún banco chileno solicita jamás contraseñas o códigos por teléfono.",
@@ -6527,6 +6703,22 @@ const briefing = {
         }
       ],
       "peru": [
+        {
+          "id": "pe-interpol-first-light-fraude-telefonico-2026-08-05",
+          "title": "Fraude telefónico internacional golpea a Perú, con contexto de la Operación First Light de Interpol",
+          "summary": "El Comercio detalla las técnicas de fraude telefónico (robocalls, VoIP, spoofing, Wangiri) que afectan a usuarios peruanos, en el marco de la Operación First Light 2026 de Interpol, que reportó más de 5.800 arrestos en 97 países y US$293 millones en activos bloqueados. Un especialista de Kaspersky señala que el fraude en la región es efectivo por estar localizado en el idioma local.",
+          "sourceUrl": "https://elcomercio.pe/tecnologia/ciberseguridad/recibiste-una-llamada-internacional-desconocida-puede-ser-un-intento-de-fraude-y-estas-son-las-tecnicas-mas-usadas-noticia/",
+          "sourceName": "El Comercio",
+          "date": "2026-08-05",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "telco",
+          "topic": "fraude",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "La escala global reportada por Interpol (5.800 arrestos, US$293M bloqueados) confirma que el fraude telefónico/spoofing sigue siendo un vector masivo y activo, no un fenómeno residual."
+          }
+        },
         {
           "id": "latam-pe-2026-07-21-01",
           "title": "Estafa por WhatsApp en Perú suplanta a telefónicas para vaciar cuentas bancarias",
@@ -6636,6 +6828,17 @@ const briefing = {
       "uruguay": [],
       "ecuador": [
         {
+          "id": "ec-clonacion-identidad-whatsapp-guayaquil-2026-08-03",
+          "title": "Clonación de identidad en WhatsApp para estafar contactos en Guayaquil",
+          "summary": "Un hombre denunció ante la Fiscalía en Guayaquil que delincuentes clonaron su número y foto de perfil de WhatsApp para pedir dinero a sus contactos, quienes casi transfirieron fondos antes de detectar el engaño. Un segundo caso similar afectó a otra persona con pedido de dinero bajo pretexto de reparación vehicular.",
+          "sourceUrl": "https://www.eluniverso.com/noticias/seguridad/hacen-creer-que-yo-soy-el-estafador-pero-es-falso-hombre-denuncio-que-clonaron-su-identidad-y-estafaron-a-sus-contactos-con-pedidos-de-dinero-en-guayaquil-nota/",
+          "sourceName": "El Universo",
+          "date": "2026-08-03",
+          "language": "es",
+          "highRelevance": false,
+          "topic": "fraude"
+        },
+        {
           "id": "ecuador-sri-alerta-whatsapp-suplantacion-2026-07-30",
           "title": "El SRI de Ecuador alerta por mensajes fraudulentos de WhatsApp que suplantan a la entidad",
           "summary": "El Servicio de Rentas Internas (SRI) emitió el 30 de julio una alerta ante la circulación de mensajes por WhatsApp y SMS que suplantan a la institución para robar información tributaria, personal y financiera, con notificaciones falsas de multas o problemas fiscales urgentes. El organismo recordó que no solicita información sensible ni gestiona pagos por canales no oficiales.",
@@ -6709,6 +6912,22 @@ const briefing = {
         }
       ],
       "panama": [
+        {
+          "id": "pa-operacion-pandora-fraude-fiscal-dgi-2026-08-04",
+          "title": "Fiscalía pide prisión preventiva en la Operación Pandora: 17 imputados por falsificación de firmas bancarias",
+          "summary": "La Fiscalía panameña avanza contra 17 imputados por manipular el sistema e-Tax 2.0 de la DGI para transferir y comercializar créditos fiscales fraudulentos, con un daño patrimonial estimado al Estado de unos US$40 millones. El caso incluye una denuncia de BAC International Bank por falsificación de contratos con firmas atribuidas indebidamente a un representante bancario — un desarrollo judicial nuevo sobre la trama ya conocida.",
+          "sourceUrl": "https://www.prensa.com/judiciales/el-fiscal-pide-prision-preventiva-para-un-analista-de-la-dgi-y-una-gestora-de-la-operacion-pandora/",
+          "sourceName": "La Prensa (Panamá)",
+          "date": "2026-08-04",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "gobierno",
+          "topic": "fraude",
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "El caso expone cómo la falsificación documental y de firmas puede penetrar sistemas tributarios y bancarios formales, con impacto regulatorio directo sobre validación de identidad en trámites estatales."
+          }
+        },
         {
           "id": "pa-operacion-pandora-fraude-fiscal-2026-07-27",
           "title": "El MEF destituye a 9 funcionarios y \"congela\" los créditos fiscales ligados a la operación Pandora",
@@ -6950,6 +7169,50 @@ const briefing = {
         }
       ],
       "paraguay": [
+        {
+          "id": "py-web-spoofing-vaciamiento-cuenta-2026-08-04",
+          "title": "Clonación de web bancaria vacía cuenta de usuario en Paraguay",
+          "summary": "Un usuario perdió ₲25 millones tras acceder desde un resultado de búsqueda de Google a una web bancaria clonada (web spoofing); al ingresar número de cuenta, clave, token y PIN, los fondos fueron transferidos en minutos. Presentó denuncia ante el banco, la Fiscalía de Delitos Informáticos y el Banco Central del Paraguay.",
+          "sourceUrl": "https://www.abc.com.py/policiales/2026/08/04/ciberestafas-y-vaciamientos-de-cuentas-victima-cuenta-como-le-robaron-g-25-millones/",
+          "sourceName": "ABC Color",
+          "date": "2026-08-04",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "banca",
+          "topic": "fraude"
+        },
+        {
+          "id": "py-operativo-yida-transfronteriza-2026-08-03",
+          "title": "Desarticulan red transfronteriza de ciberestafa con lavado en criptomonedas en Paraguay",
+          "summary": "Policía y Fiscalía paraguaya desarticularon una red transnacional con vínculo en Asia que ofrecía falso trabajo remoto de 'calificación de productos', bloqueando a las víctimas hasta que pagaran un 20% adicional. El caso registra 211 denuncias (unas 2.000 víctimas estimadas) y unos US$3 millones lavados vía criptomonedas a través de 11 cuentas bancarias identificadas.",
+          "sourceUrl": "https://www.abc.com.py/policiales/2026/08/03/operativo-yida-transfronteriza-allanan-viviendas-en-misiones-por-una-red-de-estafa-informatica/",
+          "sourceName": "ABC Color",
+          "date": "2026-08-03",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "cross",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El esquema de falso empleo remoto con lavado cripto y escala de miles de víctimas confirma que este vector combina ingeniería social masiva con infraestructura financiera transfronteriza difícil de rastrear."
+          }
+        },
+        {
+          "id": "py-troyano-rancor-diputada-2026-08-04",
+          "title": "Troyano bancario 'Rancor' vacía cuenta de una diputada paraguaya",
+          "summary": "El jefe de Cibercrimen de la Policía Nacional de Paraguay confirmó que la diputada Rocío Vallejo fue víctima del troyano bancario 'Rancor', que comprometió su home banking y le vació más de ₲35 millones. La policía recomienda actualizar sistemas operativos e instalar antivirus para prevenir este tipo de malware.",
+          "sourceUrl": "https://www.abc.com.py/policiales/2026/08/04/cibercrimen-como-se-vulneran-las-cuentas-bancarias-y-que-puedo-hacer-para-prevenirlo/",
+          "sourceName": "ABC Color",
+          "date": "2026-08-04",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "ciberseguridad",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "Que el malware bancario haya comprometido a una funcionaria pública, y no a un usuario anónimo, eleva la visibilidad mediática y política del caso dentro del país."
+          }
+        },
         {
           "id": "py-ciberespionaje-china-declaracion-conjunta-eeuu",
           "title": "Estados Unidos y Paraguay denuncian conjuntamente ciberespionaje chino contra redes del Estado paraguayo",
@@ -7843,6 +8106,63 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "visa-biocatch-fraud-acquisition-2026-08-06",
+        "competitor": "BioCatch",
+        "title": "Visa acuerda adquirir BioCatch por USD 2.400 millones",
+        "summary": "Visa acordó adquirir BioCatch, especialista en biometría de comportamiento, por USD 2.400 millones en efectivo — la mayor operación en la historia del segmento de inteligencia conductual. BioCatch protege 1.800 millones de dispositivos y 760 millones de usuarios en más de 350 bancos de 21 países. Análisis de mercado del 6/08 señalan que el cierre no ocurriría antes de fines de 2027, dejando a Mastercard (que ya opera Recorded Future desde 2024) con ventaja de corto plazo.",
+        "sourceUrl": "https://www.insidermonkey.com/blog/visa-v-vs-mastercard-ma-2-4b-biocatch-acquisition-escalates-the-payments-security-war-1807088/",
+        "sourceName": "Insider Monkey",
+        "date": "2026-08-06",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "antifraude",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Adquisición mayor que reposiciona a BioCatch dentro de la infraestructura de fraude de Visa, elevando el estándar de referencia para biometría de comportamiento en la industria de pagos."
+        }
+      },
+      {
+        "id": "thales-luna-8-hsm-quantum",
+        "title": "Thales presenta Luna 8, su primer HSM propio diseñado contra amenazas cuánticas",
+        "summary": "Thales lanzó Luna 8, su primer módulo de seguridad de hardware (HSM) de diseño propio, pensado para proteger claves criptográficas frente a amenazas cuánticas, con arquitectura actualizable para incorporar futuros algoritmos manteniendo compatibilidad retroactiva. El producto está en evaluación independiente para las certificaciones FIPS 140-3 Nivel 3 y Common Criteria de la UE.",
+        "sourceUrl": "https://www.securityweek.com/black-hat-usa-2026-summary-of-vendor-announcements-part-3/",
+        "sourceName": "SecurityWeek",
+        "date": "2026-08-05",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "Thales"
+      },
+      {
+        "id": "incode-govfacematch-dmv",
+        "title": "Incode lanza GovFaceMatch: primera verificación biométrica en tiempo real contra registros estatales de licencias de conducir",
+        "summary": "Incode presentó GovFaceMatch, primer producto de su suite GovMatch, que compara en tiempo real la selfie del usuario contra el registro biométrico oficial del DMV emisor de la licencia, sin salir del perímetro de seguridad del organismo. El proceso toma en promedio 10 segundos, elevó la conversión un 20% en los casos de uso probados y ataca el abandono de hasta 40% de usuarios legítimos durante la verificación documental.",
+        "sourceUrl": "https://www.biometricupdate.com/202608/incode-launches-govfacematch-for-dmv-based-identity-verification",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-05",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Incode",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Incode mueve la verificación de identidad hacia integración directa con fuentes gubernamentales de registro (DMV) en EE.UU. — el mismo patrón de 'fuente primaria oficial' que ya es núcleo de las integraciones gubernamentales de VU en 8 países de LATAM."
+        }
+      },
+      {
+        "id": "sailpoint-identity-security-black-hat-2026",
+        "title": "SailPoint lanza una plataforma unificada de identidad para humanos, máquinas y agentes de IA en Black Hat 2026",
+        "summary": "En Black Hat USA 2026, SailPoint presentó SailPoint Identity Security, que combina Agentic Fabric (identidades no humanas, agentes de IA y servidores MCP) con Human Fabric (gobierno de identidad de la fuerza laboral) en un mismo loop de descubrimiento, gobierno y protección continuos. La compañía citó que el 97% de los agentes de IA tiene acceso a datos sensibles y solo el 21% de las organizaciones confía en su capacidad de gestionar ese riesgo.",
+        "sourceUrl": "https://www.securityweek.com/black-hat-usa-2026-summary-of-vendor-announcements-part-2/",
+        "sourceName": "SecurityWeek",
+        "date": "2026-08-04",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "SailPoint",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "SailPoint (propiedad de Thoma Bravo, igual que Ping/ForgeRock) consolida la gobernanza de identidades no humanas y agénticas como el próximo campo de batalla del IAM, justo cuando el mercado empieza a exigir visibilidad sobre agentes de IA con acceso a datos sensibles."
+        }
+      },
       {
         "id": "veridas-fourthline-orquestacion-identidad-2026-07-31",
         "title": "Veridas y Fourthline detallan la estrategia de integración de su plataforma de identidad post-fusión",
@@ -9825,7 +10145,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-08-03';
+const TODAY_ISO = '2026-08-07';
 
 const UI_STRINGS = {
     home_label: 'Home',
