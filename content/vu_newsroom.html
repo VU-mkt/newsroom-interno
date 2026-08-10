@@ -1306,11 +1306,27 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-08-06",
-  "publishedAt": "2026-08-07T19:19:09.701Z",
-  "regulationLastRun": "2026-08-03",
+  "date": "2026-08-09",
+  "publishedAt": "2026-08-10T19:21:53.390Z",
+  "regulationLastRun": "2026-08-10",
   "sections": {
     "global": [
+      {
+        "id": "global-suplantacion-booking-uber-viajes-2026-08-08",
+        "title": "Suplantación de Booking y Uber deja miles de víctimas en campaña global de fraude de viajes",
+        "summary": "Kaspersky detectó más de 262.000 intentos de ataque contra marcas de transporte, viajes y alojamiento entre el segundo trimestre de 2025 y el primero de 2026, con sitios y apps falsas que imitan a Booking y Uber para robar datos bancarios y personales de viajeros. Las víctimas descubren el fraude cuando la reserva pagada nunca se concreta y el dinero ya fue transferido a los atacantes.",
+        "sourceUrl": "https://www.infobae.com/tecno/2026/08/08/sin-dinero-y-sin-hotel-con-la-estafa-que-suplanta-a-booking-y-uber-asi-roban/",
+        "sourceName": "Infobae",
+        "date": "2026-08-08",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "retail",
+        "topic": "suplantacion-marca-viajes",
+        "actionable": {
+          "type": "dato-clave",
+          "text": "262.000 intentos de ataque en un año contra marcas de viaje (Booking, Uber, aerolíneas) confirman que la suplantación de marca es hoy un vector de fraude de escala industrial, no un caso aislado, con impacto directo en la confianza del consumidor digital."
+        }
+      },
       {
         "id": "global-wallstreet-vishing-hedgefunds-2026-08-05",
         "title": "Ataques de vishing con IA golpean a grandes gestoras de fondos de Wall Street",
@@ -7170,6 +7186,22 @@ const briefing = {
       ],
       "paraguay": [
         {
+          "id": "py-whatsapp-hackeo-guia-policia-2026-08-08",
+          "title": "Policía Nacional de Paraguay alerta por ola de robo de cuentas de WhatsApp y estafas digitales",
+          "summary": "La Policía Nacional de Paraguay publicó una guía pública ante el aumento diario de denuncias por acceso no autorizado a cuentas de WhatsApp, suplantación de identidad y operaciones financieras fraudulentas. El organismo identificó el secuestro de cuentas de mensajería como vector principal para vaciar billeteras digitales y extorsionar a los contactos de la víctima.",
+          "sourceUrl": "https://www.abc.com.py/policiales/2026/08/08/como-evitar-estafas-y-el-hackeo-de-whatsapp-una-guia-de-la-policia-nacional/",
+          "sourceName": "ABC Color",
+          "date": "2026-08-08",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "cross",
+          "topic": "account-takeover",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El secuestro de cuentas de mensajería (WhatsApp) se consolida como vector de entrada preferido para fraude financiero y suplantación en Paraguay, ante la ausencia de autenticación robusta en canales de mensajería usados para banca informal y comercio."
+          }
+        },
+        {
           "id": "py-web-spoofing-vaciamiento-cuenta-2026-08-04",
           "title": "Clonación de web bancaria vacía cuenta de usuario en Paraguay",
           "summary": "Un usuario perdió ₲25 millones tras acceder desde un resultado de búsqueda de Google a una web bancaria clonada (web spoofing); al ingresar número de cuenta, clave, token y PIN, los fondos fueron transferidos en minutos. Presentó denuncia ante el banco, la Fiscalía de Delitos Informáticos y el Banco Central del Paraguay.",
@@ -9947,6 +9979,22 @@ const briefing = {
     ],
     "vu": [
       {
+        "id": "vu-stranieri-biometria-tradicional-insuficiente-2026-08-07",
+        "title": "VU (Sebastián Stranieri): \"la biometría tradicional nunca fue suficiente\" frente al fraude con IA",
+        "summary": "El CEO de VU, Sebastián Stranieri, fue citado advirtiendo que validar un parecido facial no prueba que la persona esté viva, presente y actuando en tiempo real. VU propone tres medidas: detección de vida certificada, defensa contra ataques de inyección digital y análisis de riesgo continuo más allá del onboarding, en el marco de su plataforma VU ONE (CIAM + Identidad Digital + Prevención de Fraude).",
+        "sourceUrl": "https://mundoenlinea.cl/2026/08/07/por-que-la-biometria-tradicional-ya-no-es-suficiente/",
+        "sourceName": "Mundo en Línea",
+        "date": "2026-08-07",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "identidad-digital",
+        "actionable": {
+          "type": "dato-clave",
+          "text": "El mismo comunicado de VU sobre insuficiencia de la biometría básica circuló en al menos 3 medios en un lapso de 8 días, reforzando el mensaje de continuidad de identidad más allá del onboarding frente a competidores que aún comunican matching facial simple como suficiente."
+        }
+      },
+      {
         "id": "vu-2026-07-24-ecuador-vuone",
         "title": "VU lanza VU ONE en Ecuador para fortalecer la identidad digital y prevenir el fraude",
         "summary": "VU Security presentó en Ecuador su plataforma VU ONE, que unifica verificación de identidad, autenticación y prevención del fraude en un solo entorno. El lanzamiento responde al alza de ciberdelitos en el país: más de 20.600 denuncias por delitos informáticos entre 2022 y 2025, y Ecuador entre los cinco países de LATAM más golpeados por ransomware. Enrique Villacís, arquitecto de Soluciones de VU Security, remarcó que identidad y prevención de fraude ya no pueden gestionarse como procesos independientes.",
@@ -10145,7 +10193,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-08-07';
+const TODAY_ISO = '2026-08-10';
 
 const UI_STRINGS = {
     home_label: 'Home',
