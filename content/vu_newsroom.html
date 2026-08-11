@@ -1306,11 +1306,43 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-08-09",
-  "publishedAt": "2026-08-10T19:21:53.390Z",
+  "date": "2026-08-10",
+  "publishedAt": "2026-08-11T19:18:28.917Z",
   "regulationLastRun": "2026-08-10",
   "sections": {
     "global": [
+      {
+        "id": "global-unc6671-vishing-rebrand-2026-08-07",
+        "title": "[ACTUALIZACIÓN] UNC6671 se rebautiza y expande vishing con robo de credenciales SaaS a firmas financieras y legales",
+        "summary": "El grupo de extorsión UNC6671 -antes BlackFile, descontinuado el 11 de mayo de 2026- se rebautizó bajo las marcas Redact, Pink, Helix y Falcon, y desde julio de 2026 amplió sus objetivos a organizaciones financieras y legales de alto valor. Llama a empleados a sus celulares personales suplantando soporte de IT para robar credenciales y tokens MFA de Microsoft 365 y Okta, y ya rastreó más de USD 10,6 millones en pagos en Bitcoin entre enero y mayo de 2026. Profundiza el caso de vishing a hedge funds reportado a inicios de agosto.",
+        "sourceUrl": "https://thehackernews.com/2026/08/unc6671-vishing-attacks-target-personal.html",
+        "sourceName": "The Hacker News",
+        "date": "2026-08-07",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "banca / servicios financieros / legal",
+        "topic": "rezagada",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "El vishing con suplantación de IT hacia dispositivos personales bypasea los controles MFA corporativos tradicionales, ampliando la superficie de ataque hacia identidad y verificación fuera del perímetro empresarial."
+        }
+      },
+      {
+        "id": "global-belgica-eid-connective-flaws-2026-08-10",
+        "title": "Fallas críticas en software eID belga (Connective) expusieron a 2 millones de usuarios a fraude de identidad y firmas falsificadas",
+        "summary": "Un investigador de seguridad reveló fallas críticas en Connective, la extensión de identidad digital usada por más de 2 millones de personas en Bélgica y adoptada por 8 de los 10 bancos más grandes del país y más de 60 agencias gubernamentales. Las vulnerabilidades permitían a sitios web maliciosos leer PINs de eID y datos de tarjeta, falsificar firmas electrónicas legalmente vinculantes y ejecutar código remoto sin interacción del usuario. Nitro Software Belgium (desarrolladora de Connective) parchó el fallo 146 días después del reporte inicial.",
+        "sourceUrl": "https://www.securityweek.com/critical-flaws-discovered-in-belgian-eid-software-used-by-2-million-people/",
+        "sourceName": "SecurityWeek",
+        "date": "2026-08-10",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "gobierno / banca",
+        "topic": "identidad-digital",
+        "actionable": {
+          "type": "brecha",
+          "text": "Sistemas de identidad digital nacional integrados a banca y gobierno concentran riesgo sistémico: una sola falla en el software de firma/autenticación puede habilitar fraude de identidad y transacciones fraudulentas a través de todo un sistema financiero."
+        }
+      },
       {
         "id": "global-suplantacion-booking-uber-viajes-2026-08-08",
         "title": "Suplantación de Booking y Uber deja miles de víctimas en campaña global de fraude de viajes",
@@ -5648,6 +5680,22 @@ const briefing = {
       ],
       "brasil": [
         {
+          "id": "brasil-bc-pix-internacional-antifraude-2026-08-10",
+          "title": "Banco Central de Brasil avanza con Pix Internacional y endurece reglas antifraude",
+          "summary": "El Banco Central de Brasil anunció la expansión del Pix hacia transferencias internacionales en tiempo real, con primeras experiencias en Argentina, Estados Unidos y Portugal, tras un año en que el sistema movió R$ 35,36 mil millones (+33,6% interanual). En paralelo, el regulador trabaja para estandarizar de forma obligatoria las \"alertas de golpe\" (fraude) en las transferencias y amplió de 30 a 80 días el plazo para contestar devoluciones indebidas bajo el Mecanismo Especial de Devolução (MED).",
+          "sourceUrl": "https://ncnews.com.br/2026/08/10/pix-internacional-avanca-bc-endurece-regras-contra-golpes/",
+          "sourceName": "NC News",
+          "date": "2026-08-10",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "regulacion-antifraude",
+          "actionable": {
+            "type": "señal-regulatoria",
+            "text": "La estandarización obligatoria de alertas de fraude en Pix y la extensión de plazos de contestación de golpes abre una ventana regulatoria para soluciones de verificación de identidad y detección de fraude en tiempo real conectadas al ecosistema Pix."
+          }
+        },
+        {
           "id": "deepfake-roberto-carlos-fraude-financeiro-br",
           "title": "Esquema de deepfakes con la imagen de Roberto Carlos mueve R$ 1,8 mil millones en fraude financiero en Brasil",
           "summary": "Un video falso del cantante Roberto Carlos promocionando tratamientos milagrosos expuso un esquema de fraude 'como servicio': un paquete completo con rostro sintético, voz clonada y documentación de respaldo cuesta apenas USD 5 en mercados criminales, frente a los USD 20.000 por minuto de video sintético hace dos años. Según el reporte Weaponized AI de Group-IB, entre julio de 2025 y abril de 2026 el fraude contra bancos e infraestructura financiera brasileña sumó más de R$ 1,8 mil millones, con 42,5% de los fraudes financieros de 2025 usando IA y un salto de 830% en deepfakes entre 2024 y 2025.",
@@ -5792,6 +5840,22 @@ const briefing = {
         }
       ],
       "mexico": [
+        {
+          "id": "mexico-c5-alerta-clickfix-2026-08-10",
+          "title": "El C5 de Ciudad de México alerta sobre 'ClickFix', técnica de fraude que roba datos personales vía comandos falsos",
+          "summary": "El Centro de Comando C5 de la Ciudad de México, con apoyo de la Secretaría de Seguridad Ciudadana, alertó sobre ClickFix: sitios web con falsas alertas de seguridad que inducen a los usuarios a copiar y pegar comandos en PowerShell o en la ventana Ejecutar de Windows. Ejecutar esos comandos instala malware que otorga acceso a datos personales sin que la víctima lo note. Las autoridades habilitaron la línea Antiextorsión 55 5533 5533 y el 089 para denuncias.",
+          "sourceUrl": "https://www.infobae.com/mexico/2026/08/10/autoridades-alertan-sobre-el-clickfix-la-tecnica-de-fraude-con-sitios-web-que-permite-robar-datos-personales/",
+          "sourceName": "Infobae México",
+          "date": "2026-08-10",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "gobierno / ciberseguridad",
+          "topic": "tecnica-fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "ClickFix se sumó como vector de robo de credenciales de uso masivo en México, ampliando el catálogo de técnicas de ingeniería social que alimentan el fraude de cuentas y la suplantación de identidad en la región."
+          }
+        },
         {
           "id": "task-scam-whatsapp-mexico",
           "title": "El 'task scam' se expande por WhatsApp en México suplantando marcas reconocidas",
@@ -7396,6 +7460,22 @@ const briefing = {
         }
       ],
       "espana": [
+        {
+          "id": "espana-kaspersky-odisea-phishing-2026-08-07",
+          "title": "[REZAGADA] Kaspersky detecta campaña de phishing internacional que usa el estreno de 'La Odisea' para robar datos bancarios",
+          "summary": "Kaspersky identificó una campaña de fraude online internacional que aprovecha el estreno de la película de Christopher Nolan para desplegar páginas falsas que imitan plataformas de streaming, capturando nombre, correo, contraseña y datos de tarjeta bancaria bajo la promesa de una prueba gratuita. El fraude online es ya la modalidad delictiva de mayor crecimiento en España, con más de 120.000 incidentes gestionados por INCIBE y un alza del 15% en 2025; las fuerzas de seguridad desarticularon más de 80 redes de phishing ese año.",
+          "sourceUrl": "https://www.moncloa.com/2026/08/07/kaspersky-alerta-fraude-online-odisea-3411964/",
+          "sourceName": "Moncloa.com",
+          "date": "2026-08-07",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "retail / streaming / banca",
+          "topic": "rezagada",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El uso de estrenos de entretenimiento masivo como anzuelo de phishing bancario confirma que los patrones de fraude siguen el calendario cultural, ampliando la ventana de exposición para instituciones financieras y plataformas de streaming en España."
+          }
+        },
         {
           "id": "es-operacion-fragmenta-estafas-bancarias",
           "title": "La Guardia Civil desarticula una red de estafas bancarias con datos de 500.000 españoles",
@@ -10193,7 +10273,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-08-10';
+const TODAY_ISO = '2026-08-11';
 
 const UI_STRINGS = {
     home_label: 'Home',
