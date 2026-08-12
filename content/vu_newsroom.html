@@ -1306,8 +1306,8 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-08-10",
-  "publishedAt": "2026-08-11T19:18:28.917Z",
+  "date": "2026-08-11",
+  "publishedAt": "2026-08-12T19:22:57.541Z",
   "regulationLastRun": "2026-08-10",
   "sections": {
     "global": [
@@ -5131,6 +5131,22 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "ar-afa-fraude-lavado-300m-rezagada",
+          "title": "DOJ de EE.UU. investiga presunto lavado de más de US$300 millones de la AFA a través del sistema bancario estadounidense",
+          "summary": "El Departamento de Justicia de EE.UU. investiga si hubo lavado de activos mediante fraude a través del sistema bancario norteamericano para desviar fondos de la AFA hacia terceros, usando contratos irregulares y facturación apócrifa. La empresa TourProdEnter, constituida en EE.UU. en 2021 por Javier Faroni y Erica Gillette, administró al menos US$300 millones de contratos de sponsoreo, amistosos y premios deportivos de la AFA; una mansión vinculada al caso en Pilar está valuada en US$20 millones.",
+          "sourceUrl": "https://www.lanacion.com.ar/politica/la-afa-apunta-al-plan-calesita-en-la-justicia-y-mira-de-reojo-las-novedades-que-puedan-llegar-desde-nid09082026/",
+          "sourceName": "La Nación",
+          "date": "2026-08-09",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca / deportes",
+          "topic": "rezagada",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "La investigación de EE.UU. sobre el manejo de fondos de la AFA ilustra cómo esquemas de facturación apócrifa y testaferros pueden mover más de US$300 millones a través del sistema bancario internacional antes de activar alertas."
+          }
+        },
+        {
           "id": "ar-bcra-estafa-inversion-deepfake-2026-08-05",
           "title": "BCRA alerta por estafa de inversión que usa su imagen institucional",
           "summary": "El Banco Central de la República Argentina alertó sobre una nueva modalidad de estafa virtual que usa videos manipulados e imagen de sus autoridades para promover inversiones falsas, contactando a víctimas por email, WhatsApp o SMS. El esquema pide pagos anticipados en dólares o la instalación de apps que otorgan acceso remoto al dispositivo. El BCRA aclaró que nunca solicita pagos ni datos personales por esos canales.",
@@ -5840,6 +5856,22 @@ const briefing = {
         }
       ],
       "mexico": [
+        {
+          "id": "mx-deepfake-funcionarios-fraude-inversion-ago2026",
+          "title": "México usa IA para rastrear red de fraude con deepfakes de Sheinbaum, García Harfuch y la gobernadora de Banxico; congela US$2 millones",
+          "summary": "La Secretaría de Seguridad y Protección Ciudadana (SSPC), junto a la Unidad de Inteligencia Financiera y 54 Unidades Cibernéticas Policiales, identificó una red que usó videos e imágenes manipulados con IA de la presidenta Claudia Sheinbaum, el secretario Omar García Harfuch y la gobernadora de Banxico, Victoria Rodríguez Ceja, para promocionar inversiones falsas a través de portales que simulaban ser medios de noticias. La investigación vinculó a 12 personas y una empresa, y las autoridades congelaron más de US$2 millones que se enviaban a otros países.",
+          "sourceUrl": "https://www.infobae.com/mexico/2026/08/10/mexico-usa-ia-para-rastrear-fraude-y-congela-2-mdd-que-eran-enviados-a-otros-paises/",
+          "sourceName": "Infobae México",
+          "date": "2026-08-10",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca / gobierno",
+          "topic": "deepfake",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El caso confirma que el fraude de inversión con deepfakes de figuras públicas y financieras ya es una modalidad activa y detectada en México, con montos que alcanzan millones de dólares movidos a través de fronteras."
+          }
+        },
         {
           "id": "mexico-c5-alerta-clickfix-2026-08-10",
           "title": "El C5 de Ciudad de México alerta sobre 'ClickFix', técnica de fraude que roba datos personales vía comandos falsos",
@@ -6702,6 +6734,22 @@ const briefing = {
       ],
       "chile": [
         {
+          "id": "cl-ciberataque-telecom-lilac-typhoon-ago2026",
+          "title": "EE.UU. alerta sobre ciberataques a telecomunicaciones chilenas (Entel, Movistar, Telmex) vinculados a hackers chinos",
+          "summary": "Estados Unidos, a través de declaraciones del entonces embajador Brandon Judd, alertó sobre actividad maliciosa contra Entel, Movistar y Telmex en Chile, atribuida al grupo 'Lilac Typhoon', vinculado por Microsoft al gobierno chino. Los atacantes habrían usado el troyano ShadowPad para espionaje, acceso remoto no autorizado y captura de pantallas; se detectó actividad en Movistar desde septiembre de 2024. La Fiscalía Metropolitana Centro Norte abrió una causa por sabotaje informático.",
+          "sourceUrl": "https://www.biobiochile.cl/noticias/nacional/chile/2026/08/10/eeuu-alerto-ciberataques-a-empresas-chilenas-de-telecomunicaciones-ligados-a-hackers-chinos.shtml",
+          "sourceName": "BioBioChile",
+          "date": "2026-08-10",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "telco",
+          "topic": "ciberseguridad",
+          "actionable": {
+            "type": "brecha",
+            "text": "El ataque a la infraestructura de telecomunicaciones más grande de Chile expone un vector de riesgo para SIM swapping y toma de cuenta que trasciende a la banca y los servicios digitales que dependen de esas redes para autenticación."
+          }
+        },
+        {
           "id": "cl-smishing-sms-pdi-2026-08-06",
           "title": "La PDI reporta un alza del 30% en estafas por SMS (smishing) en Chile",
           "summary": "La Policía de Investigaciones de Chile (PDI) reportó un aumento del 30% en denuncias de smishing, mensajes de texto que suplantan bancos, empresas de encomiendas y organismos públicos para robar datos personales y bancarios. Especialistas señalan que estas estafas explotan la urgencia y la confianza de las víctimas, no su falta de conocimiento técnico.",
@@ -6948,6 +6996,22 @@ const briefing = {
         }
       ],
       "costa_rica": [
+        {
+          "id": "cr-caso-madre-patria-fraude-registral-ago2026",
+          "title": "Tribunal libera a 17 imputados del caso 'Madre Patria', red de fraude registral y legitimación de capitales en Costa Rica",
+          "summary": "El Tribunal Penal de Goicoechea rechazó la solicitud de la Fiscalía de extender la prisión preventiva de 17 sospechosos en el caso 'Madre Patria', una red dedicada a fraude registral, estafa mayor y legitimación de capitales que robaba propiedades de alto valor adulterando firmas y falsificando escrituras ante el Registro Nacional. La causa incluye más de 35 vehículos de lujo decomisados, 13 propiedades inmovilizadas (incluido un condominio en Guanacaste valorado en US$34 millones) y 47 allanamientos simultáneos realizados en junio de 2024.",
+          "sourceUrl": "https://crhoy.com/nacionales/exjuez-abogados-y-otros-imputados-del-caso-madre-patria-quedan-en-libertad/",
+          "sourceName": "CRHoy",
+          "date": "2026-08-11",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "gobierno / inmobiliario",
+          "topic": "fraude",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "El caso Madre Patria evidencia cómo la falsificación de firmas y escrituras puede sostenerse durante años dentro de un sistema registral, con activos por decenas de millones de dólares comprometidos antes de su detección."
+          }
+        },
         {
           "id": "cr-pymes-riesgo-ciberataques-falta-capacitacion",
           "title": "Pymes costarricenses enfrentan creciente riesgo de ciberataques por falta de capacitación y recursos",
@@ -7249,6 +7313,18 @@ const briefing = {
         }
       ],
       "paraguay": [
+        {
+          "id": "py-mafia-pagares-paralisis-legislativa-ago2026",
+          "title": "Víctimas de la 'mafia de los pagarés' en Paraguay denuncian parálisis institucional ante falta de avances legislativos",
+          "summary": "Víctimas de la llamada 'mafia de los pagarés' -un esquema de estafa procesal, usura y manipulación de documentos de crédito que habría afectado a decenas de miles de personas en dos décadas- enviaron una carta abierta al presidente de la Cámara de Diputados, Raúl Latorre, reclamando por la falta de avances en el Proyecto de Ley de Traslado de Expedientes y el Proyecto de Ley de Indemnización y Reparación Integral. Denuncian 'silencio administrativo' legislativo.",
+          "sourceUrl": "https://www.abc.com.py/nacionales/2026/08/11/mafia-de-los-pagares-victimas-cuestionan-a-diputados-por-falta-de-interes-en-investigar-el-caso/",
+          "sourceName": "ABC Color",
+          "date": "2026-08-11",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "gobierno / financiero",
+          "topic": "fraude"
+        },
         {
           "id": "py-whatsapp-hackeo-guia-policia-2026-08-08",
           "title": "Policía Nacional de Paraguay alerta por ola de robo de cuentas de WhatsApp y estafas digitales",
@@ -10273,7 +10349,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-08-11';
+const TODAY_ISO = '2026-08-12';
 
 const UI_STRINGS = {
     home_label: 'Home',
