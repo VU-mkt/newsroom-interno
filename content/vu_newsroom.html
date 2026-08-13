@@ -1306,11 +1306,99 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-08-11",
-  "publishedAt": "2026-08-12T19:22:57.541Z",
+  "date": "2026-08-12",
+  "publishedAt": "2026-08-13T19:24:28.967Z",
   "regulationLastRun": "2026-08-10",
   "sections": {
     "global": [
+      {
+        "id": "global-resemble-ai-detect-world",
+        "title": "Resemble AI lanza DETECT-World para cerrar la brecha de detección de deepfakes de nueva generación",
+        "summary": "Resemble AI presentó DETECT-World, su modelo de tercera generación para detectar deepfakes creados por generadores no vistos en entrenamiento, con 99,47% de precisión en audio, 98,2% en video y 95,8% en imagen. La compañía reporta 95% de detección en ataques de intercambio facial en tiempo real estilo \"Haotian\" —software chino usado por estafadores—, frente a competidores que fallaban casi 100% de las veces en esos mismos ataques.",
+        "sourceUrl": "https://www.biometricupdate.com/202608/resemble-ai-expands-multimodal-deepfake-detection-approach-for-new-accuracy-highs",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-12",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "cross",
+        "topic": "deepfake",
+        "actionable": {
+          "type": "tendencia",
+          "text": "Las herramientas de intercambio facial en tiempo real (estilo \"Haotian\") usadas activamente por estafadores están superando a la mayoría de los detectores de deepfake actuales — la carrera armamentista entre generación y detección de deepfakes se está moviendo del contenido pre-grabado al fraude en vivo (videollamadas, verificación biométrica remota)."
+        }
+      },
+      {
+        "id": "global-fincen-student-aid-fraud",
+        "title": "FinCEN amplía la persecución de fraude de ayuda estudiantil federal con identidades sintéticas de IA",
+        "summary": "FinCEN, junto al FBI y la Oficina del Inspector General de Educación de EE.UU., emitió una alerta contra esquemas de \"estudiantes fantasma\" con identidades sintéticas generadas por IA y \"estudiantes de paja\" que desvían fondos de un programa de ayuda estudiantil federal de más de USD 120.000 millones anuales para 13 millones de estudiantes. Un caso en Carolina del Norte involucró ~80 \"estudiantes de paja\" para obtener más de USD 5 millones en ayudas.",
+        "sourceUrl": "https://www.biometricupdate.com/202608/fincen-expands-student-aid-fraud-crackdown-beyond-identity-verification",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-12",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "gobierno",
+        "topic": "fraude",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El fraude con identidades sintéticas generadas por IA escala de la banca minorista a programas federales de gran volumen (ayuda estudiantil, USD 120.000M+/año) — la verificación de identidad en onboarding masivo y recurrente sigue siendo el punto de entrada explotado, incluso en programas gubernamentales con controles establecidos."
+        }
+      },
+      {
+        "id": "global-anmed-gentlemen-ransomware",
+        "title": "Ransomware \"The Gentlemen\" secuestra la página de Facebook de un sistema hospitalario y reclama fuga de 6TB de datos",
+        "summary": "El grupo de ransomware \"The Gentlemen\" afirmó haber exfiltrado 6TB de datos del sistema hospitalario AnMed (Georgia/Carolina del Sur), incluyendo registros de agresión sexual, salud mental y acoso, sin evidencia pública aún de la fuga. El grupo secuestró la página de Facebook de AnMed para exhibir demandas de rescate; dos semanas después del ataque inicial, 10 instalaciones seguían cerradas para turnos.",
+        "sourceUrl": "https://therecord.media/ransomware-group-hijacks-hospital-facebook-amid-cyberattack-response",
+        "sourceName": "The Record (Recorded Future News)",
+        "date": "2026-08-11",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "salud",
+        "topic": "breach"
+      },
+      {
+        "id": "global-fbi-social-engineering-alert",
+        "title": "El FBI alerta sobre ingeniería social para secuestrar cuentas y robar contenido íntimo",
+        "summary": "El FBI advirtió que actores maliciosos combinan credential stuffing con contraseñas filtradas en brechas previas, suplantación de soporte técnico de redes sociales y sitios de phishing clonados para tomar control de cuentas y robar contenido íntimo, exponiendo a las víctimas a sextorsión. Cita un caso de un hombre que hackeó ~600 cuentas de Snapchat y otro de acceso no autorizado a registros médicos de ~150.000 personas en más de 100 universidades.",
+        "sourceUrl": "https://therecord.media/social-engineering-hackers-explicit-photos-fbi-alert",
+        "sourceName": "The Record (Recorded Future News)",
+        "date": "2026-08-12",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "N/A",
+        "topic": "fraude"
+      },
+      {
+        "id": "global-city-forum-data-theft",
+        "title": "Campaña \"City-Forum\" roba datos de clientes vía portales Salesforce y ServiceNow mal configurados",
+        "summary": "Una campaña activa desde marzo de 2025, atribuida por la firma Reco a una IP asociada al dominio city-forum.com, explota reglas de permisos excesivos en portales Salesforce Experience Cloud y ServiceNow para enumerar datos sin autenticación. Una organización afectada registró más de 560.000 eventos de enumeración desde la IP atacante; entre los objetivos hay bancos, telcos y firmas de seguridad de datos.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/city-forum-data-theft-attacks-target-salesforce-servicenow-portals/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-08-12",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "Una campaña de más de un año de duración sigue explotando configuraciones de permisos de portales SaaS empresariales (Salesforce, ServiceNow) en bancos y telcos globalmente sin necesitar autenticación — la gestión de accesos e identidad en plataformas de terceros sigue siendo un punto ciego persistente para el sector financiero."
+        }
+      },
+      {
+        "id": "global-wesco-exfilsquad-breach",
+        "title": "El grupo de extorsión ExfilSquad reclama el robo de 2,6 millones de registros a Wesco",
+        "summary": "Wesco, distribuidora industrial Fortune 500 con ~21.000 empleados en 50 países y ~USD 24.000 millones en ventas, confirmó que investiga un incidente de ciberseguridad después de que el grupo de extorsión ExfilSquad afirmara haber robado ~2,6 millones de registros de su entorno CRM en la nube, incluyendo PII de clientes y empleados, identificadores crediticios/comerciales y metadatos de autenticación.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/wesco-confirms-security-incident-after-exfilsquad-claims-data-theft/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-08-11",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "Una empresa Fortune 500 expone 2,6 millones de registros con datos de autenticación e identificadores crediticios desde su propio entorno CRM en la nube — el vector de ataque vuelve a ser un sistema SaaS de negocio, no la infraestructura core, evidenciando el gap entre la protección perimetral tradicional y los datos de identidad que viven en herramientas de terceros."
+        }
+      },
       {
         "id": "global-unc6671-vishing-rebrand-2026-08-07",
         "title": "[ACTUALIZACIÓN] UNC6671 se rebautiza y expande vishing con robo de credenciales SaaS a firmas financieras y legales",
@@ -5131,6 +5219,18 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "ar-fraude-comercial-lanzelotta-tiktok",
+          "title": "Estafa comercial de $17,5 millones a una pyme papelera en La Matanza",
+          "summary": "Un supuesto comprador de Mendoza encargó 3.200 bolsones de papel higiénico a una pyme de La Matanza y envió comprobantes de transferencia falsos alegando demoras bancarias; el proveedor despachó la mercadería completa sin confirmar el pago, con una pérdida de $17.500.000 ARS. La Fiscalía N°8 de Delitos Complejos de San Martín investiga una red que revende la mercadería robada a través de TikTok.",
+          "sourceUrl": "https://www.infobae.com/teleshow/2026/08/11/brian-lanzelotta-hablo-tras-ser-estafado-por-17-millones-de-pesos-el-papel-higienico-se-esta-vendiendo-por-tiktok/",
+          "sourceName": "Infobae",
+          "date": "2026-08-11",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "retail",
+          "topic": "fraude"
+        },
+        {
           "id": "ar-afa-fraude-lavado-300m-rezagada",
           "title": "DOJ de EE.UU. investiga presunto lavado de más de US$300 millones de la AFA a través del sistema bancario estadounidense",
           "summary": "El Departamento de Justicia de EE.UU. investiga si hubo lavado de activos mediante fraude a través del sistema bancario norteamericano para desviar fondos de la AFA hacia terceros, usando contratos irregulares y facturación apócrifa. La empresa TourProdEnter, constituida en EE.UU. en 2021 por Javier Faroni y Erica Gillette, administró al menos US$300 millones de contratos de sponsoreo, amistosos y premios deportivos de la AFA; una mansión vinculada al caso en Pilar está valuada en US$20 millones.",
@@ -5695,6 +5795,18 @@ const briefing = {
         }
       ],
       "brasil": [
+        {
+          "id": "br-senasp-curso-fraude-bancario",
+          "title": "Brasil lanza capacitación gratuita contra fraudes bancarios digitales",
+          "summary": "La Escola Nacional de Segurança Pública (Senasp) lanzó un curso gratuito de 40 horas y siete módulos —incluyendo \"fraude como servicio\" y fraude en pagos con tarjeta— para profesionales de seguridad pública, en el marco del Acuerdo de Cooperación Técnica entre el Ministerio de Justicia y la Febraban que creó la Alianza Nacional de Combate a Fraudes Bancarios Digitales.",
+          "sourceUrl": "https://www.gov.br/mj/pt-br/assuntos/noticias-1/escola-nacional-de-seguranca-publica-lanca-curso-de-enfrentamento-aos-crimes-financeiros-ciberneticos",
+          "sourceName": "gov.br (Ministério da Justiça e Segurança Pública)",
+          "date": "2026-08-12",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "gobierno",
+          "topic": "fraude"
+        },
         {
           "id": "brasil-bc-pix-internacional-antifraude-2026-08-10",
           "title": "Banco Central de Brasil avanza con Pix Internacional y endurece reglas antifraude",
@@ -6358,6 +6470,18 @@ const briefing = {
       ],
       "colombia": [
         {
+          "id": "co-bancolombia-alerta-estafas-terremoto",
+          "title": "Bancolombia alerta sobre estafas digitales aprovechando donaciones por el terremoto",
+          "summary": "Tras el sismo de magnitud 7,4 que afectó Cali, Pereira y Manizales el 10 de agosto, Bancolombia advirtió que ciberdelincuentes pueden crear falsas campañas de ayuda solidaria. El banco recomendó verificar la legitimidad de las organizaciones receptoras, confirmar cuentas y montos antes de transferir, y nunca compartir claves o códigos de seguridad por ningún canal.",
+          "sourceUrl": "https://www.semana.com/tecnologia/articulo/bancolombia-hace-llamado-a-extremar-precauciones-para-evitar-estafas-digitales-durante-las-donaciones-por-terremoto/202645/",
+          "sourceName": "Semana",
+          "date": "2026-08-12",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "banca",
+          "topic": "fraude"
+        },
+        {
           "id": "co-bre-b-smishing-2026-08-05",
           "title": "Alerta por fraude digital que suplanta a Bre-B en Bogotá",
           "summary": "La Secretaría Distrital de Seguridad de Bogotá alertó sobre una campaña de smishing que suplanta a Bre-B, el sistema de pagos inmediatos del Banco de la República, mediante SMS con enlaces falsos que buscan robar credenciales bancarias. El fraude aprovecha que Bre-B, de reciente lanzamiento, no tiene aplicación propia y opera solo a través de las apps de los bancos afiliados.",
@@ -6734,6 +6858,22 @@ const briefing = {
       ],
       "chile": [
         {
+          "id": "cl-sernac-western-union-compensacion",
+          "title": "SERNAC logra compensación de más de $1.100 millones para clientes de Western Union",
+          "summary": "El Sernac cerró un Procedimiento Voluntario Colectivo con Western Union por $1.129.128.999 CLP a favor de 7.804 consumidores afectados por 8.539 operaciones fallidas: remesas nunca devueltas o con comisión retenida indebidamente, devoluciones sin reembolso de comisión, y demoras excesivas en la recuperación de fondos. La implementación comienza el 17 de agosto de 2026.",
+          "sourceUrl": "https://www.biobiochile.cl/noticias/servicios/toma-nota/2026/08/12/son-mas-de-mil-millones-en-total-quienes-recibiran-compensacion-de-western-union-anunciada-por-sernac.shtml",
+          "sourceName": "BioBioChile",
+          "date": "2026-08-12",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "Casi 8.000 consumidores chilenos afectados por fallas de remesas internacionales sin devolución adecuada — un regulador de consumo (no financiero) está forzando compensaciones a escala en un servicio de pagos transfronterizos, señal de presión regulatoria creciente sobre la trazabilidad y reembolso de transferencias."
+          }
+        },
+        {
           "id": "cl-ciberataque-telecom-lilac-typhoon-ago2026",
           "title": "EE.UU. alerta sobre ciberataques a telecomunicaciones chilenas (Entel, Movistar, Telmex) vinculados a hackers chinos",
           "summary": "Estados Unidos, a través de declaraciones del entonces embajador Brandon Judd, alertó sobre actividad maliciosa contra Entel, Movistar y Telmex en Chile, atribuida al grupo 'Lilac Typhoon', vinculado por Microsoft al gobierno chino. Los atacantes habrían usado el troyano ShadowPad para espionaje, acceso remoto no autorizado y captura de pantallas; se detectó actividad en Movistar desde septiembre de 2024. La Fiscalía Metropolitana Centro Norte abrió una causa por sabotaje informático.",
@@ -6831,6 +6971,30 @@ const briefing = {
         }
       ],
       "peru": [
+        {
+          "id": "pe-kaspersky-smartphone-seguridad",
+          "title": "El uso del smartphone supera a la PC pero la seguridad digital no avanza al mismo ritmo",
+          "summary": "Un estudio de Kaspersky señala que 58% de los usuarios (67% entre 18-28 años) usa el smartphone como dispositivo principal de internet, almacenando credenciales financieras (33%) y documentos personales (41%). En el primer trimestre de 2026, Kaspersky bloqueó 2,67 millones de ataques de malware y detectó 306.000 paquetes maliciosos, con phishing y robo de cuentas como principales riesgos.",
+          "sourceUrl": "https://elcomercio.pe/tecnologia/ciberseguridad/las-busquedas-en-internet-por-celular-ya-desplazaron-a-las-de-pc-pero-la-seguridad-digital-no-avanza-al-mismo-ritmo-noticia/",
+          "sourceName": "El Comercio (Perú)",
+          "date": "2026-08-12",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "cross",
+          "topic": "ciberseguridad"
+        },
+        {
+          "id": "pe-fraude-telefonico-tecnicas",
+          "title": "Detallan las técnicas de fraude telefónico más usadas en Perú: robocall, spoofing y Wangiri",
+          "summary": "Un especialista de Kaspersky describió las técnicas de fraude por llamada (robocall, VoIP, spoofing, Wangiri) y citó la Operación Interpol First Light 2026 en 97 países, con más de 5.000 detenidos y USD 293 millones bloqueados en fondos delictivos. Indecopi señaló no tener quejas formales por Wangiri en Perú, pero investiga casos de spam comercial bajo la Ley N.° 32323.",
+          "sourceUrl": "https://elcomercio.pe/tecnologia/ciberseguridad/recibiste-una-llamada-internacional-desconocida-puede-ser-un-intento-de-fraude-y-estas-son-las-tecnicas-mas-usadas-noticia/",
+          "sourceName": "El Comercio (Perú)",
+          "date": "2026-08-11",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "telco",
+          "topic": "fraude"
+        },
         {
           "id": "pe-interpol-first-light-fraude-telefonico-2026-08-05",
           "title": "Fraude telefónico internacional golpea a Perú, con contexto de la Operación First Light de Interpol",
@@ -6953,7 +7117,20 @@ const briefing = {
           }
         }
       ],
-      "uruguay": [],
+      "uruguay": [
+        {
+          "id": "uy-suplantacion-whatsapp-abogados",
+          "title": "Suplantan la identidad de abogados penalistas por WhatsApp para pedir dinero",
+          "summary": "Tres abogados penalistas uruguayos (Jorge Barrera, Ignacio Durán, Juan Fagúndez) denunciaron ante Delitos Informáticos que delincuentes usan sus fotos de perfil de WhatsApp para hacerse pasar por ellos, contactando conocidos con la excusa de un accidente de tránsito familiar y pidiendo dinero para \"gestiones legales\". Al menos una víctima, engañada con la identidad de Durán, concretó una transferencia.",
+          "sourceUrl": "https://www.elobservador.com.uy/nacional/abogados-penalistas-denuncian-intentos-estafa-traves-whatsapp-utilizando-sus-identidades-pedir-dinero-n6053943",
+          "sourceName": "El Observador",
+          "date": "2026-08-12",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "N/A",
+          "topic": "fraude"
+        }
+      ],
       "ecuador": [
         {
           "id": "ec-clonacion-identidad-whatsapp-guayaquil-2026-08-03",
@@ -6996,6 +7173,22 @@ const briefing = {
         }
       ],
       "costa_rica": [
+        {
+          "id": "cr-caso-aldesa-audiencia",
+          "title": "Avanza la audiencia preliminar del Caso Aldesa, fraude a inversionistas por USD 200 millones",
+          "summary": "La Nación reportó que continúa el proceso judicial del Caso Aldesa, una casa de bolsa costarricense señalada de fraude a inversionistas. Más de 600 inversionistas presentaron denuncias por incumplimientos de pago tras una inversión conjunta de USD 200 millones en proyectos inmobiliarios; el Ministerio Público acusa a 23 personas en un expediente de más de 9.000 páginas.",
+          "sourceUrl": "https://www.nacion.com/sucesos/audiencia-preliminar-del-caso-aldesa-empezaria/DJ7SWYIPMRHONDPNVYQ5ADNF74/story/",
+          "sourceName": "La Nación (Costa Rica)",
+          "date": "2026-08-12",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "tendencia",
+            "text": "Un fraude de inversión de USD 200 millones con más de 600 víctimas sigue judicializándose en Costa Rica más de un año después de destapado — casos de este tamaño en intermediarios financieros no bancarios exponen brechas persistentes en la verificación de identidad y trazabilidad de inversores en el mercado de capitales centroamericano."
+          }
+        },
         {
           "id": "cr-caso-madre-patria-fraude-registral-ago2026",
           "title": "Tribunal libera a 17 imputados del caso 'Madre Patria', red de fraude registral y legitimación de capitales en Costa Rica",
@@ -7314,6 +7507,18 @@ const briefing = {
       ],
       "paraguay": [
         {
+          "id": "py-ciberestafa-codigos-seguridad",
+          "title": "Alertan sobre estafa en dos fases con promos falsas y códigos de seguridad",
+          "summary": "La Policía Nacional de Paraguay alertó sobre una modalidad de fraude en dos pasos: primero ofrecen promociones falsas (\"saldo ilimitado\", \"no pagar por tres meses\") y luego piden confirmar un código de seguridad enviado por SMS o email, que en realidad es el token de autenticación que permite a los delincuentes tomar control de cuentas de WhatsApp, banca o billeteras digitales.",
+          "sourceUrl": "https://www.lanacion.com.py/pais/2026/08/11/ciberestafas-delincuentes-usan-promos-de-gancho-y-se-valen-de-codigos-de-seguridad-para-acceder-a-cuentas/",
+          "sourceName": "La Nación (Paraguay)",
+          "date": "2026-08-11",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "telco",
+          "topic": "fraude"
+        },
+        {
           "id": "py-mafia-pagares-paralisis-legislativa-ago2026",
           "title": "Víctimas de la 'mafia de los pagarés' en Paraguay denuncian parálisis institucional ante falta de avances legislativos",
           "summary": "Víctimas de la llamada 'mafia de los pagarés' -un esquema de estafa procesal, usura y manipulación de documentos de crédito que habría afectado a decenas de miles de personas en dos décadas- enviaron una carta abierta al presidente de la Cámara de Diputados, Raúl Latorre, reclamando por la falta de avances en el Proyecto de Ley de Traslado de Expedientes y el Proyecto de Ley de Indemnización y Reparación Integral. Denuncian 'silencio administrativo' legislativo.",
@@ -7536,6 +7741,18 @@ const briefing = {
         }
       ],
       "espana": [
+        {
+          "id": "es-recuperacion-fraude-pagos-nebot",
+          "title": "Cuánto se puede recuperar tras una estafa según el método de pago usado",
+          "summary": "El CEO de PaynoPain, Jordi Nebot, explicó que la recuperación de fondos tras un fraude depende del canal: con tarjeta de crédito/débito el proceso de disputa tiene un máximo de 45 días y alta probabilidad de recuperación, mientras que en transferencias, Bizum o PayPal persona-a-persona la recuperación exige acción judicial contra el estafador. Destacó Apple Pay/Google Pay (tokenización) como los métodos más resistentes al fraude.",
+          "sourceUrl": "https://www.xataka.com/seguridad/jordi-nebot-experto-soluciones-pago-muy-mal-se-tiene-que-dar-hayas-sido-victima-estafa-no-recuperes-dinero",
+          "sourceName": "Xataka",
+          "date": "2026-08-11",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "fintech",
+          "topic": "fraude"
+        },
         {
           "id": "espana-kaspersky-odisea-phishing-2026-08-07",
           "title": "[REZAGADA] Kaspersky detecta campaña de phishing internacional que usa el estreno de 'La Odisea' para robar datos bancarios",
@@ -8294,6 +8511,54 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "lexisnexis-login-gov-contract-expansion",
+        "title": "LexisNexis Risk Solutions amplía su rol en la modernización de Login.gov por US$218M",
+        "summary": "La GSA (General Services Administration) de EE.UU. adjudicó a LexisNexis Risk Solutions las tres áreas funcionales de la modernización de Login.gov: las Áreas 1 y 2 (autenticación y validación de documentos, verificación biométrica de identidad) valoradas en aproximadamente US$55M, y el Área 3 (resolución de identidad, validación de atributos, inteligencia de comportamiento y detección de fraude) en aproximadamente US$163M. En conjunto, LexisNexis queda como proveedor central de verificación de identidad y antifraude para la plataforma de acceso digital del gobierno federal estadounidense.",
+        "sourceUrl": "https://www.prnewswire.com/news-releases/lexisnexis-risk-solutions-selected-to-support-the-next-generation-of-logingov-identity-verification-302848525.html",
+        "sourceName": "PR Newswire / LexisNexis Risk Solutions",
+        "date": "2026-08-12",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "LexisNexis Risk Solutions",
+        "topic": "fraude",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "LexisNexis consolida un contrato gubernamental de identidad y antifraude de tres capas (~US$218M) en infraestructura crítica federal de EE.UU., reforzando su credencial como proveedor integral de identidad + fraude para gobierno en un momento en que ese mismo perfil —integración gubernamental de extremo a extremo— es el diferencial que VU explota en LATAM."
+        }
+      },
+      {
+        "id": "okta-identity-scoping-ai-agent-tool-costs",
+        "title": "Okta reduce hasta 90% el costo de tokens de agentes de IA mediante scoping de identidad en catálogos MCP",
+        "summary": "Okta publicó un análisis técnico sobre el 'tool tax': el costo en tokens que pagan los agentes de IA al razonar sobre cada herramienta disponible en su prompt, la usen o no. Su solución filtra el catálogo de herramientas de servidores MCP en el punto de conexión, exponiendo solo lo que el usuario o agente específico está autorizado a usar, con una reducción interna estimada de más de 90% en herramientas visibles y costo de tokens, a diferencia de enfoques de gateway que miden el gasto después de ocurrido.",
+        "sourceUrl": "https://www.okta.com/newsroom/articles/fewer-tools-fewer-tokens-how-okta-cuts-agent-tool-selection-costs-before-they-happen/",
+        "sourceName": "Okta Newsroom",
+        "date": "2026-08-12",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Okta",
+        "topic": "identidad-digital",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Okta posiciona la gobernanza de identidad —no el gateway de costos— como el punto de control económico y de seguridad para agentes de IA, un frente donde el mercado de IAM/CIAM está definiendo el próximo estándar de referencia antes de que madure la categoría de 'identidad para agentes'."
+        }
+      },
+      {
+        "id": "cisco-duo-federal-fedramp-high-class-d-ga",
+        "title": "Cisco Duo lanza Federal Edition con certificación FedRAMP High Class D (IL4)",
+        "summary": "Cisco Duo anunció la disponibilidad general de Duo Federal Edition con autorización FedRAMP High Class D (IL4), una solución de autenticación cloud dirigida a agencias federales, contratistas de defensa y organismos que deben cumplir CMMC. El producto soporta FIDO2 y PIV/CAC, device trust y acceso adaptativo bajo principios zero trust.",
+        "sourceUrl": "https://duo.com/blog/duo-federal-edition-fedramp-high-class-d-ga",
+        "sourceName": "Cisco Duo Blog",
+        "date": "2026-08-11",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "Cisco Duo",
+        "topic": "autenticacion",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Cisco profundiza su credencial de confianza en el mercado gubernamental estadounidense (FedRAMP High/IL4), un segmento donde la certificación regulatoria y la autenticación resistente a phishing son el criterio de compra dominante."
+        }
+      },
       {
         "id": "visa-biocatch-fraud-acquisition-2026-08-06",
         "competitor": "BioCatch",
@@ -10349,7 +10614,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-08-12';
+const TODAY_ISO = '2026-08-13';
 
 const UI_STRINGS = {
     home_label: 'Home',
