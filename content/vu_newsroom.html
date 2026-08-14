@@ -1306,11 +1306,26 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-08-12",
-  "publishedAt": "2026-08-13T19:24:28.967Z",
+  "date": "2026-08-13",
+  "publishedAt": "2026-08-14T19:20:27Z",
   "regulationLastRun": "2026-08-10",
   "sections": {
     "global": [
+      {
+        "id": "global-fraude-ia-defensas-identidad-iad-2026-08",
+        "title": "La industria de identidad digital gira hacia detección de ataques por inyección ante el avance del fraude con IA",
+        "summary": "Según Interpol, la inteligencia artificial estuvo involucrada en el 55% de los ciberdelitos reportados en África durante 2025, marcando el giro hacia fraude con identidades sintéticas a escala. Especialistas del sector (citando a Feedzai, Jumio, Intellicheck y Aware, entre otros) señalan que los bots ya superan a humanos en efectividad de ingeniería social, y que las organizaciones necesitan sumar detección de ataques por inyección (IAD) y verificación continua en lugar de depender solo de biometría y liveness detection.",
+        "sourceUrl": "https://www.biometricupdate.com/202608/ai-fraud-pushes-identity-defenses-toward-iad-and-continuous-verification",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-13",
+        "language": "es",
+        "highRelevance": true,
+        "topic": "identidad-digital",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El mercado de verificación de identidad está migrando el estándar de defensa de 'liveness + biometría' hacia detección de ataques por inyección (IAD) y verificación continua durante todo el ciclo de vida del cliente, no solo en el onboarding — un desplazamiento de expectativa que ya están adoptando actores del ecosistema como Jumio, Feedzai e Intellicheck."
+        }
+      },
       {
         "id": "global-resemble-ai-detect-world",
         "title": "Resemble AI lanza DETECT-World para cerrar la brecha de detección de deepfakes de nueva generación",
@@ -5219,6 +5234,18 @@ const briefing = {
     "latam": {
       "argentina": [
         {
+          "id": "ar-anses-alerta-suplantacion-identidad-2026-08",
+          "title": "ANSES alerta por suplantación de identidad de organismos públicos para captar datos de beneficiarios",
+          "summary": "ANSES (Argentina) emitió una alerta el 12/08 sobre delincuentes que se hacen pasar por personal del organismo, contactando a beneficiarios bajo pretexto de trámites de jubilación o pensión para derivarlos a formularios y páginas falsas que imitan la plataforma oficial. El organismo remarcó que nunca solicita datos por teléfono, email, redes o SMS, y que todos sus trámites son gratuitos.",
+          "sourceUrl": "https://www.ambito.com/informacion-general/anses-alerta-estafas-no-pide-datos-personales-y-estos-son-los-canales-oficiales-comunicacion-n6309921",
+          "sourceName": "Ámbito Financiero",
+          "date": "2026-08-12",
+          "language": "es",
+          "highRelevance": false,
+          "vertical": "gobierno",
+          "topic": "fraude-digital"
+        },
+        {
           "id": "ar-fraude-comercial-lanzelotta-tiktok",
           "title": "Estafa comercial de $17,5 millones a una pyme papelera en La Matanza",
           "summary": "Un supuesto comprador de Mendoza encargó 3.200 bolsones de papel higiénico a una pyme de La Matanza y envió comprobantes de transferencia falsos alegando demoras bancarias; el proveedor despachó la mercadería completa sin confirmar el pago, con una pérdida de $17.500.000 ARS. La Fiscalía N°8 de Delitos Complejos de San Martín investiga una red que revende la mercadería robada a través de TikTok.",
@@ -5968,6 +5995,22 @@ const briefing = {
         }
       ],
       "mexico": [
+        {
+          "id": "mx-nuevo-leon-filtracion-licencias-conducir-2026-08",
+          "title": "Presunta filtración expone ~3.9M de registros de licencias y padrón vehicular en Nuevo León, México",
+          "summary": "El Instituto de Control Vehicular de Nuevo León (ICVNL) confirmó el 12/08 que investiga la venta en redes de dos bases de datos atribuidas a un actor identificado como 'Eternal': ~2.4 millones de registros de licencias de conducir y ~1.5 millones de refrendos vehiculares (2009-2024), con nombres, CURP, RFC, domicilios, teléfonos y fotografías. El organismo aún no confirma la vulneración de sus sistemas ni recibió denuncia formal ante la Fiscalía.",
+          "sourceUrl": "https://www.elfinanciero.com.mx/estados/2026/08/12/se-filtraron-datos-de-millones-investigan-posible-hackeo-en-dependencia-de-nuevo-leon/",
+          "sourceName": "El Financiero",
+          "date": "2026-08-12",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "gobierno",
+          "topic": "ciberseguridad",
+          "actionable": {
+            "type": "brecha",
+            "text": "La escala (CURP, RFC, foto y domicilio en un mismo registro) convierte esta filtración en insumo directo para fraude de identidad sintética y apertura de cuentas fraudulentas en la región; organismos estatales mexicanos con bases similares (licencias, padrones, registros civiles) quedan expuestos al mismo patrón de riesgo."
+          }
+        },
         {
           "id": "mx-deepfake-funcionarios-fraude-inversion-ago2026",
           "title": "México usa IA para rastrear red de fraude con deepfakes de Sheinbaum, García Harfuch y la gobernadora de Banxico; congela US$2 millones",
@@ -7507,6 +7550,17 @@ const briefing = {
       ],
       "paraguay": [
         {
+          "id": "py-desarticulan-estafa-piramidal-loma-pyta-2026-08",
+          "title": "Desarticulan esquema piramidal en Asunción que prometía retornos de 10-20% en días",
+          "summary": "La Fiscalía paraguaya (fiscal Itálico Rienzi) junto al Departamento de Delitos Económicos de la Policía Nacional desarticuló el 13/08 un esquema piramidal operado por una pareja en Loma Pytã, Asunción, que ofrecía retornos de 10% a 20% en 2 a 8 días y presionaba a reinvertir e incorporar nuevos captados. El perjuicio comprobado supera los G. 160 millones, con estimaciones de que el monto global asciende a miles de millones de guaraníes.",
+          "sourceUrl": "https://www.abc.com.py/policiales/2026/08/13/desbaratan-esquema-de-estafa-piramidal-en-loma-pyta-asi-funcionaba-la-trampa/",
+          "sourceName": "ABC Color",
+          "date": "2026-08-13",
+          "language": "es",
+          "highRelevance": false,
+          "topic": "fraude-digital"
+        },
+        {
           "id": "py-ciberestafa-codigos-seguridad",
           "title": "Alertan sobre estafa en dos fases con promos falsas y códigos de seguridad",
           "summary": "La Policía Nacional de Paraguay alertó sobre una modalidad de fraude en dos pasos: primero ofrecen promociones falsas (\"saldo ilimitado\", \"no pagar por tres meses\") y luego piden confirmar un código de seguridad enviado por SMS o email, que en realidad es el token de autenticación que permite a los delincuentes tomar control de cuentas de WhatsApp, banca o billeteras digitales.",
@@ -7741,6 +7795,22 @@ const briefing = {
         }
       ],
       "espana": [
+        {
+          "id": "es-arresto-fraude-deepfake-certificados-digitales-2026-08",
+          "title": "La Policía Nacional española detiene a un hombre que usaba deepfake en vivo para superar verificación de identidad por video",
+          "summary": "La Policía Nacional detuvo en Murcia a un sospechoso que combinaba manipulación facial por IA en tiempo real, documentos falsificados e iluminación estratégica para simular hologramas de seguridad ante proveedores de certificados electrónicos, en 38 intentos dirigidos a suplantar a más de 30 personas. El esquema se descubrió cuando la máscara digital falló por menos de un segundo en una videollamada de verificación en vivo, exponiendo el rostro real; la investigación rastreó más de 320 líneas telefónicas vinculadas a 24 dispositivos, la mayoría registrados con identidades robadas.",
+          "sourceUrl": "https://www.helpnetsecurity.com/2026/08/12/deepfake-video-identity-verification-fraud-arrest-spain/",
+          "sourceName": "Help Net Security",
+          "date": "2026-08-12",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "identidad digital",
+          "topic": "deepfake",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El caso confirma que el bypass de verificación de identidad por video con deepfake en vivo ya es operable con equipamiento casero (iluminación, VPN, dispositivos comprados con identidades robadas), no solo con herramientas de laboratorio, elevando la presión sobre proveedores de certificación digital y onboarding remoto en España y la región."
+          }
+        },
         {
           "id": "es-recuperacion-fraude-pagos-nebot",
           "title": "Cuánto se puede recuperar tras una estafa según el método de pago usado",
@@ -8511,6 +8581,95 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "transunion-account-renting-gig-screening",
+        "title": "TransUnion: uno de cada tres gig workers jóvenes alquiló o compartió su cuenta, exponiendo los límites del screening actual",
+        "summary": "Una investigación de TransUnion encontró que casi un tercio de los gig workers millennials y Gen Z encuestados alquiló o compartió su cuenta con otra persona, un fenómeno que abarca apps de delivery, movilidad, citas y cuidado de personas. El artículo argumenta que los controles de identidad actuales verifican solo en el onboarding y no confirman que la misma persona sigue trabajando después, proponiendo credenciales digitales reutilizables al estilo TSA PreCheck.",
+        "sourceUrl": "https://www.biometricupdate.com/202608/account-renting-exposes-the-limits-of-current-gig-worker-screening",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-13",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "TransUnion"
+      },
+      {
+        "id": "biocatch-social-engineering-fraud-report",
+        "title": "BioCatch: las estafas de ingeniería social más que duplicaron su impacto en consumidores de EE.UU.",
+        "summary": "BioCatch, con datos de 292 instituciones y más de 280 millones de usuarios, reportó que las estafas de suplantación a consumidores de EE.UU. más que se duplicaron entre 2025 y 2026, con US$46M en pérdidas intentadas por estafas de inversión, phishing +50% y sesiones de acceso remoto +45%. El informe también documenta ataques de ingeniería social telefónica contra firmas de Wall Street como Point72, Two Sigma y Citadel.",
+        "sourceUrl": "https://www.biometricupdate.com/202608/social-engineering-reshapes-financial-fraud-as-attacks-scale",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-12",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "BioCatch"
+      },
+      {
+        "id": "jumio-age-verification-survey",
+        "title": "Encuesta de Jumio: la mayoría de los consumidores prefiere verificación de edad vía identidades digitales reutilizables",
+        "summary": "Una encuesta de Jumio a 8.000 adultos en EE.UU., Reino Unido, México y Singapur halló que el 75% acepta verificar su edad para proteger a menores, el 67% prefiere compartir solo prueba de elegibilidad (no datos completos) y casi dos tercios quieren verificaciones reutilizables en vez de repetir el proceso en cada plataforma. El mercado de age assurance proyecta superar los US$7.300M en ingresos globales para 2027.",
+        "sourceUrl": "https://www.biometricupdate.com/202608/most-consumers-want-age-verification-through-reusable-digital-ids-jumio-survey",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-13",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "Jumio"
+      },
+      {
+        "id": "prove-privacy-preserving-biometric-binding",
+        "title": "Prove prepara para fines de 2026 un esquema de 'biometric binding' que preserva la privacidad, pensado para el riesgo de agentes de IA",
+        "summary": "Prove anunció el desarrollo de una tecnología de 'biometric binding' que preserva la privacidad, combinando autenticación biométrica con su capa de inteligencia de dispositivo y señales conductuales, con patentes en trámite sobre técnicas criptográficas de cómputo multipartito. La compañía procesa 30.000 millones de transacciones anuales con visibilidad de más del 90% de los usuarios adultos de teléfonos móviles activos a nivel global, y posiciona la solución explícitamente contra el riesgo de 'IA agéntica' (citando el incidente de agentes de OpenAI en Hugging Face).",
+        "sourceUrl": "https://www.biometricupdate.com/202608/prove-plans-launch-of-privacy-preserving-biometric-binding-with-new-ip",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-12",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Prove",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Prove suma a Frances Zelazny (ex BioCatch/Anonybit) para liderar esta línea y enmarca el lanzamiento directamente en la amenaza de agentes de IA autónomos suplantando identidad — un ángulo que empieza a volverse mensaje estándar en el segmento de verificación de identidad."
+        }
+      },
+      {
+        "id": "ice-lexisnexis-palantir-data-access",
+        "title": "ICE amplía a LexisNexis y Palantir el acceso a datos de identidad para investigaciones migratorias",
+        "summary": "ICE abrió un contrato puente de US$6,7M para que LexisNexis (proveedor único, con contratos previos por ~US$24,5M) siga dando acceso a su motor LexID y al Accurint Virtual Crime Center —82.000 millones de registros de más de 10.000 fuentes— integrado vía API con Palantir, que ya recibió órdenes de modernización por US$132,12M entre mayo y junio de 2026. El acceso ampliado cubre hasta 11.200 usuarios autorizados de ICE con capacidades de reconocimiento facial y análisis conductual.",
+        "sourceUrl": "https://www.biometricupdate.com/202608/ice-seeks-expanded-lexisnexis-investigative-data-access-with-palantir-integration",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-12",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "LexisNexis"
+      },
+      {
+        "id": "lexisnexis-logingov-218m",
+        "title": "LexisNexis se adjudica US$218M en contratos de verificación de identidad de Login.gov (EE.UU.)",
+        "summary": "LexisNexis Risk Solutions ganó contratos por ~US$218M de la GSA cubriendo las tres áreas funcionales del programa de verificación remota de identidad de próxima generación de Login.gov: autenticación de documentos y biometría (US$55M) e identidad/inteligencia conductual/detección de fraude (US$163M). El mes previo, Xcelerate Solutions con Socure como subcontratista ya había ganado otro contrato de Login.gov por US$163M.",
+        "sourceUrl": "https://www.biometricupdate.com/202608/lexisnexis-wins-218m-in-login-gov-identity-proofing-awards",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-12",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "LexisNexis",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "El gobierno de EE.UU. está distribuyendo la modernización de verificación de identidad entre múltiples proveedores en simultáneo (LexisNexis, Socure/Xcelerate) en lugar de un ganador único, señal de que compradores públicos grandes buscan diversificar riesgo de proveedor en identidad digital."
+        }
+      },
+      {
+        "id": "deloitte-litellm-credential-breach",
+        "title": "Deloitte entre las 2.100+ organizaciones expuestas por la brecha de credenciales en la cadena de suministro de LiteLLM",
+        "summary": "Dos versiones comprometidas de LiteLLM (1.82.7 y 1.82.8) estuvieron disponibles en PyPI durante ~40 minutos y robaron credenciales de nube, SSH, Kubernetes y claves de API. CloudSEK identificó exposición potencial en más de 2.500 organizaciones, incluida Deloitte junto a NVIDIA, Cisco, Volkswagen, FedEx, Siemens y X Corp, con ~434.000 archivos capturados y 91,7 GB exfiltrados de una cuenta AWS de la Comisión Europea.",
+        "sourceUrl": "https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html",
+        "sourceName": "The Hacker News",
+        "date": "2026-08-12",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Deloitte",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "El incidente muestra cómo la exposición de credenciales en cadena de suministro de IA/DevOps golpea incluso a integradoras globales con prácticas de seguridad maduras, reforzando la conversación de mercado sobre gestión de identidad no-humana y monitoreo continuo de credenciales."
+        }
+      },
       {
         "id": "lexisnexis-login-gov-contract-expansion",
         "title": "LexisNexis Risk Solutions amplía su rol en la modernización de Login.gov por US$218M",
@@ -10614,7 +10773,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-08-13';
+const TODAY_ISO = '2026-08-14';
 
 const UI_STRINGS = {
     home_label: 'Home',
