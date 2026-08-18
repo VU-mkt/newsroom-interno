@@ -1306,11 +1306,39 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-08-13",
-  "publishedAt": "2026-08-14T19:20:27Z",
-  "regulationLastRun": "2026-08-10",
+  "date": "2026-08-17",
+  "publishedAt": "2026-08-18T19:50:36Z",
+  "regulationLastRun": "2026-08-18",
   "sections": {
     "global": [
+      {
+        "id": "global-heights-finance-breach-2026-08-17",
+        "title": "Brecha en Heights Finance expone SSN y datos bancarios de casi 735.000 clientes en EE.UU.",
+        "summary": "Heights Finance, compañía de consolidación de deuda de Carolina del Sur, confirmó que 734.828 clientes en cinco estados fueron afectados por una brecha en una plataforma cloud de terceros detectada en mayo de 2026 y recién divulgada el 17 de agosto. Se expusieron números de Seguro Social, IDs fiscales, licencias de conducir y datos de cuentas bancarias, aunque la empresa dice no haber hallado evidencia de que los datos circulen en la dark web.",
+        "sourceUrl": "https://therecord.media/financial-info-leak-debt-consolidator",
+        "sourceName": "The Record (Recorded Future News)",
+        "date": "2026-08-17",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "fintech",
+        "topic": "breach",
+        "actionable": {
+          "type": "dato-clave",
+          "text": "La brecha combina SSN y datos bancarios de casi tres cuartos de millón de personas, un patrón de exposición que alimenta directamente fraude de identidad sintética y toma de cuentas en el sector de préstamos al consumidor."
+        }
+      },
+      {
+        "id": "global-ringcentral-shinyhunters-hibp-2026-08-14",
+        "title": "Have I Been Pwned confirma la filtración de 1,6 millones de cuentas de RingCentral tras extorsión de ShinyHunters",
+        "summary": "Have I Been Pwned verificó la autenticidad de los datos de 1,6 millones de cuentas de RingCentral filtrados por el grupo de extorsión ShinyHunters, que había vulnerado la plataforma mediante vishing en julio. La información expuesta (nombres, emails y teléfonos) ya está siendo reutilizada para nuevos ataques de ingeniería social contra los propios afectados.",
+        "sourceUrl": "https://www.theregister.com/cyber-crime/2026/08/14/16m-ringcentral-accounts-data-dumped-after-shinyhunters-extortion-attack/5288003",
+        "sourceName": "The Register",
+        "date": "2026-08-14",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "cross",
+        "topic": "breach"
+      },
       {
         "id": "global-fraude-ia-defensas-identidad-iad-2026-08",
         "title": "La industria de identidad digital gira hacia detección de ataques por inyección ante el avance del fraude con IA",
@@ -5996,6 +6024,22 @@ const briefing = {
       ],
       "mexico": [
         {
+          "id": "mx-infobae-fraude-biometrico-fotos-rostro-cdmx-2026-08-17",
+          "title": "Vinculan a proceso a cinco personas por vaciar cuentas bancarias usando fotos de rostros en la CDMX",
+          "summary": "La Fiscalía de la Ciudad de México vinculó a proceso a cinco personas por un esquema operado entre 2023 y 2026 en el que se hacían pasar por empleados de una institución financiera para obtener fotografías de los rostros de las víctimas y usarlas para registrar apps bancarias en dispositivos ajenos. El esquema generó 67 quejas por cargos no reconocidos y afectaciones por casi 18 millones de pesos en CDMX y Tlalnepantla.",
+          "sourceUrl": "https://www.infobae.com/mexico/2026/08/17/vinculan-a-proceso-a-cinco-personas-por-vaciar-cuentas-con-fotos-de-rostros-en-la-cdmx-dejaron-afectaciones-de-casi-18-mdp/",
+          "sourceName": "Infobae México",
+          "date": "2026-08-17",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "brecha",
+            "text": "El esquema muestra cómo una simple fotografía del rostro, obtenida por ingeniería social, todavía basta para registrar una app bancaria en un dispositivo ajeno en algunos onboardings — evidencia de que la verificación facial estática sin prueba de vida ni vínculo al dispositivo sigue siendo explotable."
+          }
+        },
+        {
           "id": "mx-nuevo-leon-filtracion-licencias-conducir-2026-08",
           "title": "Presunta filtración expone ~3.9M de registros de licencias y padrón vehicular en Nuevo León, México",
           "summary": "El Instituto de Control Vehicular de Nuevo León (ICVNL) confirmó el 12/08 que investiga la venta en redes de dos bases de datos atribuidas a un actor identificado como 'Eternal': ~2.4 millones de registros de licencias de conducir y ~1.5 millones de refrendos vehiculares (2009-2024), con nombres, CURP, RFC, domicilios, teléfonos y fotografías. El organismo aún no confirma la vulneración de sus sistemas ni recibió denuncia formal ante la Fiscalía.",
@@ -7015,6 +7059,22 @@ const briefing = {
       ],
       "peru": [
         {
+          "id": "pe-infobae-deepfake-estafas-romanticas-2026-08-14",
+          "title": "Estafas románticas con identidades completas generadas por IA se multiplican en Perú",
+          "summary": "Estafadores románticos en Perú ya no usan fotos robadas sino identidades digitales completas generadas con IA —rostro, voz y video— sostenidas durante semanas antes de pedir dinero o datos. La Policía (DIVCIB) registró 21.000 denuncias por delitos informáticos hasta mayo de 2026 y el Centro Nacional de Seguridad Digital emitió una alerta formal por el aumento de estos casos.",
+          "sourceUrl": "https://www.infobae.com/peru/2026/08/14/deepfakes-y-estafas-romanticas-asi-usan-la-ia-los-ciberdelincuentes-para-manipular-a-sus-victimas-en-peru/",
+          "sourceName": "Infobae Perú",
+          "date": "2026-08-14",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "cross",
+          "topic": "deepfake",
+          "actionable": {
+            "type": "tendencia",
+            "text": "El salto de foto robada a identidad sintética completa (rostro, voz y video) sostenida en el tiempo eleva el umbral de sofisticación que necesita cualquier control de verificación conversacional o de onboarding remoto en la región."
+          }
+        },
+        {
           "id": "pe-kaspersky-smartphone-seguridad",
           "title": "El uso del smartphone supera a la PC pero la seguridad digital no avanza al mismo ritmo",
           "summary": "Un estudio de Kaspersky señala que 58% de los usuarios (67% entre 18-28 años) usa el smartphone como dispositivo principal de internet, almacenando credenciales financieras (33%) y documentos personales (41%). En el primer trimestre de 2026, Kaspersky bloqueó 2,67 millones de ataques de malware y detectó 306.000 paquetes maliciosos, con phishing y robo de cuentas como principales riesgos.",
@@ -7292,6 +7352,22 @@ const briefing = {
         }
       ],
       "panama": [
+        {
+          "id": "pa-infobae-captura-blanqueo-celular-robado-2026-08-17",
+          "title": "Panamá desarticula red que usó un celular robado para vaciar cuentas bancarias por US$276.000",
+          "summary": "La Procuraduría General de la Nación de Panamá, junto a la Fiscalía Metropolitana, capturó a 14 personas vinculadas a delitos financieros y blanqueo de capitales en la 'Operación Zenit'. El esquema se originó con el robo de un celular en Las Tablas en febrero de 2026: los responsables vulneraron la seguridad del dispositivo para acceder a la banca en línea de la víctima y ejecutar transferencias no autorizadas por US$276.000.",
+          "sourceUrl": "https://www.infobae.com/panama/2026/08/17/en-panama-capturan-a-14-vinculados-presuntamente-a-delitos-financieros-y-blanqueo-de-capitales-por-276-mil/",
+          "sourceName": "Infobae Panamá",
+          "date": "2026-08-17",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "banca",
+          "topic": "fraude",
+          "actionable": {
+            "type": "brecha",
+            "text": "El vector de ataque —control físico de un dispositivo móvil desprotegido usado luego para acceder a banca online— expone cuánto todavía dependen los controles antifraude bancarios de la posesión del dispositivo en vez de biometría o comportamiento del usuario."
+          }
+        },
         {
           "id": "pa-operacion-pandora-fraude-fiscal-dgi-2026-08-04",
           "title": "Fiscalía pide prisión preventiva en la Operación Pandora: 17 imputados por falsificación de firmas bancarias",
@@ -8146,6 +8222,22 @@ const briefing = {
     },
     "regulation": [
       {
+        "id": "reg-2026-08-12-mx-scjn-uif",
+        "title": "SCJN avala que la UIF puede bloquear cuentas sin audiencia previa en investigaciones de lavado de dinero",
+        "summary": "El Pleno de la Suprema Corte de Justicia de la Nación (SCJN) resolvió el 12 de agosto de 2026, por 8 votos a 1, que el bloqueo cautelar de cuentas ordenado por la Unidad de Inteligencia Financiera (UIF) en investigaciones nacionales de lavado de activos es una medida administrativa preventiva —no una sanción penal definitiva— y por tanto no puede suspenderse cautelarmente por jueces federales sin audiencia previa al titular. La resolución revierte criterios previos que permitían litigar la suspensión del bloqueo, reforzando la facultad de congelamiento preventivo de la UIF en todo el sistema financiero mexicano.",
+        "sourceUrl": "https://www.infobae.com/mexico/2026/08/13/suprema-corte-reitera-que-la-uif-puede-bloquear-cuentas-en-investigaciones-nacionales/",
+        "sourceName": "Infobae México",
+        "date": "2026-08-12",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "Suprema Corte de Justicia de la Nación (SCJN) / Unidad de Inteligencia Financiera (UIF)",
+        "topic": "AML/KYC",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "El fallo consolida el criterio judicial a favor de las facultades preventivas de la UIF en México, reduciendo el margen de litigio disponible para bancos y cuentahabientes frente a bloqueos por sospecha de lavado de activos."
+        }
+      },
+      {
         "id": "reg-20260731-es-sepblac-anr2026",
         "title": "SEPBLAC publica el Análisis Nacional de Riesgos 2026 de blanqueo de capitales y financiación del terrorismo",
         "summary": "El SEPBLAC publicó la versión pública del Análisis Nacional de Riesgos 2026, el documento de referencia que evalúa los riesgos de blanqueo de capitales y financiación del terrorismo en España y orienta el enfoque basado en riesgo de los sujetos obligados. El informe fue aprobado por COPBLAC con participación de autoridades públicas y sector privado.",
@@ -8581,6 +8673,32 @@ const briefing = {
       }
     ],
     "competencia": [
+      {
+        "id": "lexisnexis-logingov-gao-fraud-bypass-2026-08",
+        "title": "GAO advierte que cuentas fraudulentas eludieron la verificación de identidad de Login.gov",
+        "summary": "Un reporte de la GAO (Government Accountability Office de EE.UU.), publicado el 17 de agosto de 2026, encontró que cuentas fraudulentas lograron pasar los controles de identity proofing de Login.gov, la plataforma de identidad digital de GSA que usa a LexisNexis Risk Solutions para autenticación de documentos. El reporte advierte que la sofisticación de estos intentos 'aumentará exponencialmente' sin capas adicionales de verificación y señala problemas técnicos sin resolver en nueve agencias federales.",
+        "sourceUrl": "https://www.biometricupdate.com/202608/fraudulent-accounts-bypassed-login-gov-identity-checks-gao-warns",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-17",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "LexisNexis (Risk Solutions)",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "El principal proveedor de validación documental de la infraestructura de identidad digital del gobierno de EE.UU. queda expuesto por un organismo de control federal ante fallas concretas de detección de fraude, justo cuando ese contrato venía de ampliarse."
+        }
+      },
+      {
+        "id": "au10tix-cryptographic-provenance-thought-leadership",
+        "title": "AU10TIX plantea la procedencia criptográfica como nueva frontera de la identidad digital",
+        "summary": "AU10TIX publicó una columna de opinión firmada por su VP de Corporate Affairs, argumentando que el análisis píxel por píxel de imágenes ya no alcanza para detectar fraude generado por IA, y que la próxima frontera de la verificación de identidad es la procedencia criptográfica de documentos y capturas biométricas. La pieza posiciona a AU10TIX como referente de pensamiento en la carrera contra deepfakes y documentos sintéticos.",
+        "sourceUrl": "https://www.biometricupdate.com/202608/the-death-of-the-pixel-why-cryptographic-provenance-is-the-next-identity-frontier",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-17",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "AU10TIX"
+      },
       {
         "id": "transunion-account-renting-gig-screening",
         "title": "TransUnion: uno de cada tres gig workers jóvenes alquiló o compartió su cuenta, exponiendo los límites del screening actual",
@@ -10773,7 +10891,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-08-14';
+const TODAY_ISO = '2026-08-18';
 
 const UI_STRINGS = {
     home_label: 'Home',
