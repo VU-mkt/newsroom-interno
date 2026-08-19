@@ -1306,11 +1306,27 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-08-17",
-  "publishedAt": "2026-08-18T19:50:36Z",
+  "date": "2026-08-18",
+  "publishedAt": "2026-08-19T19:21:45.466Z",
   "regulationLastRun": "2026-08-18",
   "sections": {
     "global": [
+      {
+        "id": "france-dgfip-breach-678k",
+        "title": "Filtración en la agencia tributaria francesa (DGFiP) expone datos fiscales de 678.000 contribuyentes",
+        "summary": "El Ministerio de Economía y Finanzas de Francia confirmó que un atacante accedió a sistemas de la Dirección General de Finanzas Públicas (DGFiP) usando credenciales de un empleado y de un contratista externo, robando datos de 678.000 personas y empresas. La filtración incluye ingreso fiscal de referencia, cociente familiar, tasa de retención y datos catastrales; la agencia aclaró que no se expusieron contraseñas de cuentas online. El atacante \"ZeroBytes\" puso la base de datos a la venta en un foro clandestino el 12 de agosto.",
+        "sourceUrl": "https://www.bleepingcomputer.com/news/security/french-tax-authority-data-breach-affects-678-000-individuals/",
+        "sourceName": "BleepingComputer",
+        "date": "2026-08-17",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "gobierno",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "Brechas en agencias tributarias exponen datos financieros altamente sensibles (ingresos, patrimonio, domicilio fiscal) que alimentan directamente esquemas de suplantación de identidad y fraude fiscal; el vector de acceso combinó credenciales de empleado y de un contratista externo, un patrón recurrente en brechas de organismos públicos."
+        }
+      },
       {
         "id": "global-heights-finance-breach-2026-08-17",
         "title": "Brecha en Heights Finance expone SSN y datos bancarios de casi 735.000 clientes en EE.UU.",
@@ -6945,6 +6961,22 @@ const briefing = {
       ],
       "chile": [
         {
+          "id": "chile-ransomware-filial-francesa-quilicura",
+          "title": "Investigación revela el alcance del ataque de BlackNevas a la filial chilena de una multinacional francesa",
+          "summary": "Un reportaje de BioBioChile, publicado el 18 de agosto, detalló el ataque de ransomware del grupo BlackNevas contra una multinacional francesa con filial en Quilicura, Chile, ocurrido en marzo de 2026. Los atacantes sustrajeron más de 1 terabyte de información, incluyendo bases de datos de clientes, reportes financieros y correspondencia confidencial, y la empresa perdió de forma permanente cerca del 5% de sus datos totales. Un estudio de Forvis Mazars citado en la nota señala que solo el 42% de los ejecutivos chilenos afirma tener protección de datos completa.",
+          "sourceUrl": "https://www.biobiochile.cl/especial/bbcl-investiga/noticias/articulos/2026/08/18/tu-vulnerabilidad-es-nuestra-riqueza-el-ataque-de-hackers-que-golpeo-a-empresa-en-chile.shtml",
+          "sourceName": "BioBioChile",
+          "date": "2026-08-18",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "cross",
+          "topic": "breach",
+          "actionable": {
+            "type": "brecha",
+            "text": "La exposición de bases de datos de clientes en un ataque de ransomware confirma que las empresas chilenas siguen siendo blanco de grupos de extorsión con doble filtración (cifrado + robo de datos), con apenas 42% de ejecutivos reportando protección de datos completa según la fuente citada."
+          }
+        },
+        {
           "id": "cl-sernac-western-union-compensacion",
           "title": "SERNAC logra compensación de más de $1.100 millones para clientes de Western Union",
           "summary": "El Sernac cerró un Procedimiento Voluntario Colectivo con Western Union por $1.129.128.999 CLP a favor de 7.804 consumidores afectados por 8.539 operaciones fallidas: remesas nunca devueltas o con comisión retenida indebidamente, devoluciones sin reembolso de comisión, y demoras excesivas en la recuperación de fondos. La implementación comienza el 17 de agosto de 2026.",
@@ -10891,7 +10923,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-08-18';
+const TODAY_ISO = '2026-08-19';
 
 const UI_STRINGS = {
     home_label: 'Home',
