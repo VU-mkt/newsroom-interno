@@ -1306,11 +1306,67 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-08-18",
-  "publishedAt": "2026-08-19T19:21:45.466Z",
+  "date": "2026-08-20",
+  "publishedAt": "2026-08-21T22:32:43.167Z",
   "regulationLastRun": "2026-08-18",
   "sections": {
     "global": [
+      {
+        "id": "global-iran-hackers-doj-20260819",
+        "title": "EE.UU. amplía a 17 los cargos contra red de hackers vinculada a Irán",
+        "summary": "Estados Unidos amplió la acusación contra una red de hackers vinculada a Irán, sumando ocho nuevos imputados a los nueve procesados en 2018, para un total de 17 sospechosos. Los ataques, concentrados entre 2013 y 2017, afectaron 144 universidades estadounidenses, 178 extranjeras, al menos 42 empresas, cinco agencias gubernamentales, 11 firmas internacionales y dos ONG. Los atacantes intentaron vulnerar más de 100.000 cuentas de docentes y sustrajeron aproximadamente 31,5 terabytes de datos científicos y propiedad intelectual.",
+        "sourceUrl": "https://www.infobae.com/america/mundo/2026/08/19/estados-unidos-amplio-los-cargos-contra-una-red-de-hackers-vinculada-a-iran-por-un-plan-de-pirateria-informatica-masiva/",
+        "sourceName": "Infobae",
+        "date": "2026-08-19",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "cross",
+        "topic": "ciberseguridad"
+      },
+      {
+        "id": "global-quest-hotel-breach-20260819",
+        "title": "Cadena hotelera australiana Quest filtra datos de huéspedes por brecha en proveedor externo",
+        "summary": "La cadena de aparthoteles australiana Quest, con más de 120 propiedades, sufrió una brecha el 17 de agosto de 2026 a través de una vulnerabilidad en un proveedor externo de servicios no identificado. Se expusieron nombres completos, correos electrónicos, datos de contacto y, en un número reducido de registros, fechas de nacimiento correspondientes a datos previos a junio de 2025.",
+        "sourceUrl": "https://www.theregister.com/cyber-crime/2026/08/19/australian-hotel-chain-leaks-guests-pii-after-breach-at-third-party-database-operator/5289341",
+        "sourceName": "The Register",
+        "date": "2026-08-19",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "cross",
+        "topic": "breach"
+      },
+      {
+        "id": "global-french-tax-breach-20260820",
+        "title": "La agencia tributaria francesa (DGFiP) confirma brecha que expuso datos de 600.000 personas",
+        "summary": "La DGFiP confirmó un ciberataque que afectó a unas 600.000 personas y empresas, con robo de identificadores fiscales, datos de contacto, composición del hogar y tasas de retención. Para aproximadamente 250 personas también se comprometieron mensajes privados intercambiados con la autoridad. El organismo advirtió que los datos robados podrían usarse para intentos de suplantación de identidad, fraude tipo CEO y estafas simulando asesores bancarios.",
+        "sourceUrl": "https://www.theregister.com/security/2026/08/20/french_tax_authority_says_break-in_exposed_data_of_600k_including_some_private_messages/5290249",
+        "sourceName": "The Register",
+        "date": "2026-08-20",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "gobierno",
+        "topic": "breach",
+        "actionable": {
+          "type": "brecha",
+          "text": "La brecha en la agencia tributaria francesa expone datos fiscales y financieros de 600.000 personas, habilitando suplantación de identidad y fraude tipo CEO por meses — patrón clásico de brecha en el sector público que suele derivar en oleadas de fraude de identidad posteriores al incidente."
+        }
+      },
+      {
+        "id": "global-ms-authenticator-oauth-20260819",
+        "title": "Ciberdelincuentes explotan el OAuth Device Authorization Grant de Microsoft Authenticator para robar cuentas corporativas",
+        "summary": "Según un informe de Kaspersky citado por Infobae, atacantes usan phishing simulando bufetes legales para inducir a empleados a autorizar, sin saberlo, una sesión fraudulenta vía el mecanismo OAuth 2.0 Device Authorization Grant de Microsoft Authenticator. La técnica invierte el flujo de autenticación legítimo: la víctima copia un código que en realidad habilita el acceso del atacante. Una vez comprometida la cuenta, los criminales acceden a correo, OneDrive y Teams, y pueden suplantar la identidad del empleado.",
+        "sourceUrl": "https://www.infobae.com/tecno/2026/08/19/ciberdelincuentes-se-aprovechan-de-funcion-oficial-de-microsoft-authenticator-para-robar-cuentas/",
+        "sourceName": "Infobae",
+        "date": "2026-08-19",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "ciberseguridad",
+        "actionable": {
+          "type": "tendencia",
+          "text": "La explotación del flujo OAuth Device Authorization Grant evade la MFA tradicional sin robar contraseñas, desplazando el riesgo desde el robo de credenciales hacia la manipulación del propio proceso de autorización — una categoría de ataque que erosiona la confianza en MFA basada solo en códigos/push."
+        }
+      },
       {
         "id": "france-dgfip-breach-678k",
         "title": "Filtración en la agencia tributaria francesa (DGFiP) expone datos fiscales de 678.000 contribuyentes",
@@ -6040,6 +6096,22 @@ const briefing = {
       ],
       "mexico": [
         {
+          "id": "mx-casino-fraud-ai-20260819",
+          "title": "Fraude impulsado por IA erosiona hasta 10% de los ingresos de casinos y apuestas online en México",
+          "summary": "La industria de casinos y apuestas online en México pierde entre 5% y 10% de sus ingresos brutos por fraude digital, según ejecutivos de Unico México y AIEJA citados por El Financiero. Las modalidades identificadas incluyen abuso de bonos mediante apertura de múltiples cuentas, cuentas mula operadas a nombre de terceros, fraude amistoso, robo de identidad y referencias falsas. El sector legal aporta cerca de 10.000 millones de pesos en impuestos, mientras se estima que 60% de las apuestas en el país se realizan en plataformas ilegales.",
+          "sourceUrl": "https://www.elfinanciero.com.mx/empresas/2026/08/19/apuesta-equivocada-pierden-casinos-hasta-10-de-ingresos-por-fraude-impulsado-por-ia/",
+          "sourceName": "El Financiero",
+          "date": "2026-08-19",
+          "language": "es",
+          "highRelevance": true,
+          "vertical": "gaming",
+          "topic": "fraude",
+          "actionable": {
+            "type": "dato-clave",
+            "text": "El fraude impulsado por IA erosiona entre 5% y 10% de los ingresos brutos de la industria de apuestas online en México, con identidades sintéticas y cuentas mula como vectores principales — el vertical gaming/apuestas está bajo presión de pérdida directa de ingresos por fraude, con marco regulatorio local aún dividido entre operadores legales e ilegales."
+          }
+        },
+        {
           "id": "mx-infobae-fraude-biometrico-fotos-rostro-cdmx-2026-08-17",
           "title": "Vinculan a proceso a cinco personas por vaciar cuentas bancarias usando fotos de rostros en la CDMX",
           "summary": "La Fiscalía de la Ciudad de México vinculó a proceso a cinco personas por un esquema operado entre 2023 y 2026 en el que se hacían pasar por empleados de una institución financiera para obtener fotografías de los rostros de las víctimas y usarlas para registrar apps bancarias en dispositivos ajenos. El esquema generó 67 quejas por cargos no reconocidos y afectaciones por casi 18 millones de pesos en CDMX y Tlalnepantla.",
@@ -8706,6 +8778,54 @@ const briefing = {
     ],
     "competencia": [
       {
+        "id": "comp-2026-08-20-ping-identity-lawsuit",
+        "title": "Nexiden demanda a Ping Identity por infracción de patentes de MFA móvil",
+        "summary": "La firma texana Nexiden demandó a Ping Identity alegando que su app PingID infringe dos patentes de autenticación móvil con criptografía de clave pública (US 9,521,548 y US 10,592,872). Nexiden había contactado a Ping en 2023 y 2024 buscando una licencia sin éxito, y ahora reclama una orden judicial que frene el uso de la tecnología además de daños.",
+        "sourceUrl": "https://www.biometricupdate.com/202608/nexiden-sues-ping-identity-alleging-mfa-patent-violations",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-20",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "Ping Identity",
+        "topic": "iam",
+        "actionable": {
+          "type": "brecha",
+          "text": "Un pedido de inyunción sobre PingID (autenticación móvil MFA de Ping Identity) introduce incertidumbre legal sobre la continuidad del producto para clientes que dependen de él."
+        }
+      },
+      {
+        "id": "comp-2026-08-19-facetec-patent-50",
+        "title": "FaceTec llega a 50 patentes con nodo de autenticación sin acceso administrativo",
+        "summary": "FaceTec alcanzó 50 patentes emitidas con el otorgamiento de la patente US 12,699,756, que cubre un servidor de autenticación biométrica que bloquea de forma permanente e irrevocable el acceso externo a los datos, incluido el de administradores del propio sistema. La patente fue solicitada en octubre de 2022 y emitida el 4 de agosto de 2026, con el CEO Kevin Alan Tussy como inventor.",
+        "sourceUrl": "https://www.biometricupdate.com/202608/facetec-granted-patent-for-biometric-authentication-system-without-admin-access",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-19",
+        "language": "es",
+        "highRelevance": false,
+        "competitor": "FaceTec",
+        "topic": "biometria",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "FaceTec profundiza su portafolio de propiedad intelectual con una arquitectura de 'cero acceso administrativo' a datos biométricos, reforzando un argumento de privacidad frente a clientes de sectores sensibles."
+        }
+      },
+      {
+        "id": "comp-2026-08-19-google-play-age-signals",
+        "title": "Google despliega globalmente la Play Age Signals API, arrancando por Brasil",
+        "summary": "Google puso a disposición de todos los desarrolladores de Google Play su Play Age Signals API, que entrega un rango de edad declarado por padres o tutores (vía Family Link) sin requerir documento de identidad, selfie ni fecha de nacimiento exacta. El despliegue ya está activo en Brasil, con Australia y Canadá sumándose este mes y rollout global durante el resto de 2026.",
+        "sourceUrl": "https://www.biometricupdate.com/202608/google-rolls-out-play-age-signals-api-as-age-assurance-ecosystem-evolves",
+        "sourceName": "Biometric Update",
+        "date": "2026-08-19",
+        "language": "es",
+        "highRelevance": true,
+        "competitor": "Google",
+        "topic": "biometria",
+        "actionable": {
+          "type": "movimiento-competitivo",
+          "text": "Google normaliza en Brasil un modelo de age assurance basado en rango de edad autodeclarado por un tutor, sin biometría ni documento, como alternativa liviana a la verificación de edad tradicional."
+        }
+      },
+      {
         "id": "lexisnexis-logingov-gao-fraud-bypass-2026-08",
         "title": "GAO advierte que cuentas fraudulentas eludieron la verificación de identidad de Login.gov",
         "summary": "Un reporte de la GAO (Government Accountability Office de EE.UU.), publicado el 17 de agosto de 2026, encontró que cuentas fraudulentas lograron pasar los controles de identity proofing de Login.gov, la plataforma de identidad digital de GSA que usa a LexisNexis Risk Solutions para autenticación de documentos. El reporte advierte que la sofisticación de estos intentos 'aumentará exponencialmente' sin capas adicionales de verificación y señala problemas técnicos sin resolver en nueve agencias federales.",
@@ -10923,7 +11043,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-08-19';
+const TODAY_ISO = '2026-08-21';
 
 const UI_STRINGS = {
     home_label: 'Home',
