@@ -1306,11 +1306,43 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-08-20",
-  "publishedAt": "2026-08-21T22:32:43.167Z",
-  "regulationLastRun": "2026-08-18",
+  "date": "2026-08-23",
+  "publishedAt": "2026-08-24T23:31:43.000Z",
+  "regulationLastRun": "2026-08-24",
   "sections": {
     "global": [
+      {
+        "id": "global-sophos-ai-brand-impersonation-malware-2026-08-21",
+        "title": "Sophos detecta campaña de malware que suplanta a Claude, ChatGPT, Copilot y Perplexity para robar credenciales",
+        "summary": "Sophos X-Ops identificó 38 incidentes maliciosos entre julio 2025 y junio 2026 que suplantan marcas de IA generativa —26 de ellos imitando a Claude— mediante sitios de instalación falsos que distribuyen infostealers, backdoors, troyanos de acceso remoto y extensiones de navegador maliciosas. Una extensión falsa de Perplexity, con calificación de 4.7 estrellas y más de 10.000 instalaciones, secuestraba búsquedas y enviaba datos de navegación en tiempo real a infraestructura del atacante.",
+        "sourceUrl": "https://www.helpnetsecurity.com/2026/08/21/ai-brand-impersonation-malware-malware-research/",
+        "sourceName": "Help Net Security (investigación Sophos X-Ops)",
+        "date": "2026-08-21",
+        "language": "es",
+        "highRelevance": false,
+        "vertical": "tecnologia",
+        "topic": "ciberseguridad",
+        "actionable": {
+          "type": "tendencia",
+          "text": "El uso de marcas de IA generativa como señuelo para robar credenciales y datos de navegación muestra que la confianza depositada en asistentes de IA se está convirtiendo en superficie de ataque para robo de identidad digital, con más de 10.000 instalaciones de una sola extensión falsa antes de ser detectada."
+        }
+      },
+      {
+        "id": "global-apollo-data-breach-2026-08-21",
+        "title": "Apollo Global Management confirma brecha de datos en ola de ataques a gigantes financieros",
+        "summary": "Apollo Global Management, firma de private equity con USD 938.000 millones en activos bajo gestión, confirmó una brecha de datos ocurrida entre el 6 y el 10 de julio de 2026 mediante ingeniería social contra su entorno cloud. Los atacantes, que usan los alias Falcon, Helix, Pink y Redact, robaron nombres, fechas de nacimiento, domicilios, datos de contacto y números de Seguro Social. El incidente se enmarca en una campaña de extorsión más amplia que ya afectó también a Blackstone, Bridgewater y Bain Capital, con rescates reportados de hasta USD 750.000.",
+        "sourceUrl": "https://techcrunch.com/2026/08/21/private-equity-firm-apollo-confirms-data-breach-amid-hacking-wave-targeting-financial-giants/",
+        "sourceName": "TechCrunch",
+        "date": "2026-08-21",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "finanzas",
+        "topic": "ciberseguridad",
+        "actionable": {
+          "type": "brecha",
+          "text": "Brecha de datos de identidad (nombres, fechas de nacimiento, domicilios, números de Seguro Social) en una firma de private equity de primer nivel, dentro de una campaña de extorsión que ya alcanzó a Blackstone, Bridgewater y Bain Capital; el vector de entrada fue ingeniería social contra soporte IT, no una falla técnica, lo que pone el foco de mercado en la verificación de identidad en accesos privilegiados del sector financiero."
+        }
+      },
       {
         "id": "global-iran-hackers-doj-20260819",
         "title": "EE.UU. amplía a 17 los cargos contra red de hackers vinculada a Irán",
@@ -8326,6 +8358,62 @@ const briefing = {
     },
     "regulation": [
       {
+        "id": "reg-20260821-global-fatf-r16-consulta-pagos",
+        "title": "FATF/GAFI cierra consulta pública sobre transparencia de pagos transfronterizos (Recomendación 16)",
+        "summary": "El Financial Action Task Force (FATF/GAFI) cerró el 21/08/2026 el período de consulta pública sobre la guía de implementación de la Recomendación 16 revisada, orientada a aumentar la transparencia de la información que acompaña a los pagos transfronterizos y a introducir herramientas de protección contra fraude y error. La guía apoya la implementación de los requisitos de 'travel rule' con plazo de cumplimiento fijado para 2030.",
+        "sourceUrl": "https://www.fatf-gafi.org/en/publications/Fatfrecommendations/R16-Public-Consultation-June-2026.html",
+        "sourceName": "FATF/GAFI",
+        "date": "2026-08-21",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "FATF/GAFI",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "La guía de implementación de la Recomendación 16 fija estándares más estrictos de trazabilidad de identidad del ordenante y beneficiario en pagos transfronterizos, con plazo de adecuación hacia 2030, y anticipa requisitos que los reguladores nacionales de LATAM suelen adoptar con el tiempo."
+        }
+      },
+      {
+        "id": "reg-20260816-es-ley-proteccion-menores-tramite",
+        "title": "España: la Ley de protección de menores en entornos digitales sigue en trámite parlamentario",
+        "summary": "El Gobierno español, a través de la ministra de Juventud e Infancia Sira Rego, confirmó que prevé aprobar 'tras el verano' la ley que restringiría el acceso de menores de 16 años a plataformas digitales y exigiría sistemas efectivos de verificación de edad. A mediados de agosto de 2026 el proyecto continuaba en trámite parlamentario, sin fecha de votación confirmada.",
+        "sourceUrl": "https://theobjective.com/espana/politica/2026-08-16/rego-aprobar-verano-veto-redes-sociales-menores-16-anos/",
+        "sourceName": "The Objective",
+        "date": "2026-08-16",
+        "language": "es",
+        "highRelevance": false,
+        "regulatoryBody": "Ministerio de Juventud e Infancia / Congreso de los Diputados (España)"
+      },
+      {
+        "id": "reg-20260814-fr-consejoconstitucional-menores-redes",
+        "title": "Francia: el Consejo Constitucional anula la prohibición de redes sociales a menores de 15 años",
+        "summary": "El Consejo Constitucional francés anuló el 14/08/2026 el artículo que prohibía el acceso de menores de 15 años a redes sociales, por considerarlo una restricción desproporcionada a la libertad de expresión y por falta de garantías suficientes de privacidad en los mecanismos de verificación de edad previstos. El presidente Macron encomendó al primer ministro Lecornu una nueva redacción jurídicamente robusta, con el objetivo de sacar adelante la reforma antes de la primavera boreal de 2027.",
+        "sourceUrl": "https://www.infobae.com/america/mundo/2026/08/14/francia-freno-la-prohibicion-de-redes-sociales-a-menores-de-15-anos-por-vulnerar-la-libertad-de-expresion/",
+        "sourceName": "Infobae",
+        "date": "2026-08-14",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "Conseil Constitutionnel (Consejo Constitucional de Francia)",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "El fallo marca un precedente sobre los límites de la verificación de edad obligatoria en la UE en materia de privacidad y proporcionalidad, con implicancia directa en cómo se diseñan los próximos marcos de age assurance en Europa y potencialmente en LATAM."
+        }
+      },
+      {
+        "id": "reg-20260824-co-sic-hrw-tiktok-menores",
+        "title": "Colombia: informe de Human Rights Watch reaviva el escrutinio de la SIC sobre TikTok y Meta por datos de menores",
+        "summary": "Human Rights Watch publicó el 24/08/2026 un informe que documenta el uso de TikTok y Facebook por grupos armados para reclutar menores en Colombia, señalando que TikTok concentra datos de 12.447.549 usuarios colombianos, de los cuales 1.933.835 son niños y adolescentes. El hallazgo se suma a la investigación abierta de la Superintendencia de Industria y Comercio (SIC), que ya había ordenado a TikTok ajustar su tratamiento de datos de menores al estándar colombiano de protección de datos, con sanciones posibles de hasta 2.000 salarios mínimos.",
+        "sourceUrl": "https://www.eltiempo.com/mundo/latinoamerica/las-respuestas-de-tiktok-y-meta-ante-los-hallazgos-de-hrw-sobre-el-reclutamiento-de-menores-por-grupos-armados-en-colombia-a-traves-de-redes-sociales-3580585",
+        "sourceName": "El Tiempo (con datos de Human Rights Watch y SIC)",
+        "date": "2026-08-24",
+        "language": "es",
+        "highRelevance": true,
+        "regulatoryBody": "Superintendencia de Industria y Comercio (SIC) / Human Rights Watch",
+        "actionable": {
+          "type": "señal-regulatoria",
+          "text": "Escalamiento del escrutinio regulatorio sobre plataformas con menores en su base de usuarios en Colombia, con exposición a sanciones bajo el estándar de protección de datos y presión creciente sobre verificación de edad y trust & safety en LATAM."
+        }
+      },
+      {
         "id": "reg-2026-08-12-mx-scjn-uif",
         "title": "SCJN avala que la UIF puede bloquear cuentas sin audiencia previa en investigaciones de lavado de dinero",
         "summary": "El Pleno de la Suprema Corte de Justicia de la Nación (SCJN) resolvió el 12 de agosto de 2026, por 8 votos a 1, que el bloqueo cautelar de cuentas ordenado por la Unidad de Inteligencia Financiera (UIF) en investigaciones nacionales de lavado de activos es una medida administrativa preventiva —no una sanción penal definitiva— y por tanto no puede suspenderse cautelarmente por jueces federales sin audiencia previa al titular. La resolución revierte criterios previos que permitían litigar la suspensión del bloqueo, reforzando la facultad de congelamiento preventivo de la UIF en todo el sistema financiero mexicano.",
@@ -11043,7 +11131,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-08-21';
+const TODAY_ISO = '2026-08-24';
 
 const UI_STRINGS = {
     home_label: 'Home',
