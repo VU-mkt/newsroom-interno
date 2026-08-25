@@ -1306,11 +1306,27 @@ function renderD3LatamMap(byCountry, container) {
 /* Seed de migración one-time desde Newsroom v1 (2026-05-08).
    Desde el primer run de la routine, este objeto se actualiza diariamente. */
 const briefing = {
-  "date": "2026-08-23",
-  "publishedAt": "2026-08-24T23:31:43.000Z",
+  "date": "2026-08-24",
+  "publishedAt": "2026-08-25T20:18:41.721Z",
   "regulationLastRun": "2026-08-24",
   "sections": {
     "global": [
+      {
+        "id": "global-keycloak-cve-2026-18963-account-takeover-20260824",
+        "title": "Vulnerabilidad crítica en Keycloak permite tomar control de cualquier cuenta sin autenticación",
+        "summary": "Red Hat y el proyecto Keycloak publicaron parches para CVE-2026-18963 (CVSS 9.1), una falla en el flujo de restablecimiento de credenciales que permite a un atacante no autenticado saltear la verificación por correo y tomar control de cualquier cuenta, incluidas las administrativas. Al momento de la publicación no había evidencia de explotación activa ni exploit público conocido; se recomienda actualizar a Keycloak 26.7.2 o a las builds correspondientes de Red Hat build of Keycloak.",
+        "sourceUrl": "https://thehackernews.com/2026/08/critical-keycloak-password-reset-flaw.html",
+        "sourceName": "The Hacker News",
+        "date": "2026-08-24",
+        "language": "es",
+        "highRelevance": true,
+        "vertical": "cross",
+        "topic": "ciberseguridad",
+        "actionable": {
+          "type": "brecha",
+          "text": "Una falla de severidad crítica (9.1) en un sistema de gestión de identidades ampliamente adoptado en banca y gobierno para IAM/SSO reabre la conversación sobre la robustez de los flujos de recuperación de contraseña como punto ciego frente al fraude de toma de cuenta, incluso en proveedores de identidad ya establecidos."
+        }
+      },
       {
         "id": "global-sophos-ai-brand-impersonation-malware-2026-08-21",
         "title": "Sophos detecta campaña de malware que suplanta a Claude, ChatGPT, Copilot y Perplexity para robar credenciales",
@@ -11131,7 +11147,7 @@ const briefing = {
    ========================================================================= */
 
 const FRESH_DAYS = 7;
-const TODAY_ISO = '2026-08-24';
+const TODAY_ISO = '2026-08-25';
 
 const UI_STRINGS = {
     home_label: 'Home',
